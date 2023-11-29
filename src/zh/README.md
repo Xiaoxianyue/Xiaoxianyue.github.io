@@ -4,7 +4,7 @@ layout: BlogHome
 icon: home
 title: an istj's zone
 heroImage: /logo.jpg
-bgImage: /背景图片.jpg
+bgImage: /bgimage.jpg
 heroText: an istj’s zone
 heroFullScreen: true
 tagline: 哥们要进化成程序猿

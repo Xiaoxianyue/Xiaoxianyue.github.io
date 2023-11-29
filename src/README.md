@@ -5,7 +5,7 @@ icon: home
 title: an istj's zone
 heroImage: /logo.jpg
 heroText: an istj's zone
-bgImage: /背景图片.jpg
+bgImage: /bgimage.jpg
 tagline: cheese cheese cheese!
 heroFullScreen: true
 projects:
