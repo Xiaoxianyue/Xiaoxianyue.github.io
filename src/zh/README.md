@@ -2,11 +2,12 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
-heroImage: /logo.svg
-heroText: 你博客的名称
+title: an istj's zone
+heroImage: /logo.jpg
+bgImage: /背景图片.jpg
+heroText: an istj’s zone
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 哥们要进化成程序猿
 projects:
   - icon: project
     name: 项目名称

@@ -2,10 +2,11 @@
 home: true
 layout: BlogHome
 icon: home
-title: Blog Home
-heroImage: /logo.svg
-heroText: 肖羡月
-tagline: 我是大美女哈哈哈哈哈
+title: an istj's zone
+heroImage: /logo.jpg
+heroText: an istj's zone
+bgImage: /背景图片.jpg
+tagline: cheese cheese cheese!
 heroFullScreen: true
 projects:
   - icon: project
