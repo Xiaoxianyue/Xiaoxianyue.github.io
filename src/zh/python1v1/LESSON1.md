@@ -1,7 +1,7 @@
 ---
-title: my_python
+title: 01-变量 Variable
 icon: alias
-date: 2023-11-29 17:45:25
+date: 2023-11-30 20:22:40
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -24,11 +24,15 @@ backToTop: true
 toc: true
 ---
 
-你好，我是大美女。
+## 1. 如何创建笔记
 
-- 1
-- 2
-- 3
-- 4
+文件取名：文件名不能空格，要用–或_代替
 
-- 
+自动生成日期：[https://bornforthis.cn/python/#/](https://bornforthis.cn/python/#/)
+
+在笔记上创建链接`[链接名称](链接)`
+
+
+
+
+
