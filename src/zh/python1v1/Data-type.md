@@ -1,5 +1,5 @@
 ---
-title: 初识数据类型
+title: 02-初识数据类型
 icon: alias
 date: 2023-12-01 20:07:38
 author: XiaoXianYue
