@@ -1,7 +1,7 @@
 ---
-title: my_python
+title: 初识数据类型
 icon: alias
-date: 2023-11-29 17:45:25
+date: 2023-12-01 20:07:38
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -23,6 +23,4 @@ editLink: false
 backToTop: true
 toc: true
 ---
-
-
 
