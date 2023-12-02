@@ -1,15 +1,13 @@
 ---
-title: my_python
+title: 03-Numeric
 icon: alias
-date: 2023-11-29 17:45:25
+date: 2023-12-02 13:24:55
 author: XiaoXianYue
 isOriginal: true
 category: 
     - 课堂笔记
-    - 课后回顾&练习
 tag:
     - 课堂笔记
-    - 课后回顾&练习
 sticky: false
 star: false
 article: true
