@@ -1,0 +1,1 @@
+import{_ as o}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as e,c}from"./app-y_Z4Bf_r.js";const _={};function t(r,n){return e(),c("div")}const a=o(_,[["render",t],["__file","bolg (copy).html.vue"]]);export{a as default};
