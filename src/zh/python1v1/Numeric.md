@@ -106,6 +106,6 @@ num1 = num // 10
 num2 = num % 10
 print(num1 + num2, num2 * 10 + num1)
 #output
-17 
+17 98
 ```
 
