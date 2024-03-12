@@ -114,6 +114,16 @@ export default hopeTheme({
   },
 
   plugins: {
+    search: {
+      maxSuggestions: 16,
+      hotKeys: [],
+      // 你的选项
+      locales: {
+        "/": {
+          placeholder: "搜索",
+        }
+      }
+    },
     blog: true,
 
     // install @waline/client before enabling it
