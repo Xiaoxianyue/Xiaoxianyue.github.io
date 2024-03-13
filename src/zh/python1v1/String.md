@@ -1,5 +1,5 @@
 ---
-title: 字符串
+title: 04-字符串
 icon: alias
 date: 2023-12-21 14:49:25
 author: XiaoXianYue
@@ -293,9 +293,69 @@ sihtrofnrob
 
 :::
 
+```python
+string = "bornforthis"
+select = string[0:11:-1]
+print(select)
+```
+
+这样不会得到结果也不会报错。
+
+why？
+
+![90c25a8d38b54b7d64af82f7ac1366a](./String.assets/90c25a8d38b54b7d64af82f7ac1366a.png)
+
+怎么解决？
 
 
 
+#### 4.5.3 解决方法
+
+##### 4.5.3.1 方法一：调换位置
+
+- 能否解决：可以
+
+- 存在什么问题?少一个字母。
+
+    ```python
+    string = "bornforthis"
+    select = string[11:0:-1]
+    print(select)
+    #output
+    sihtrofnro
+    ```
+
+为什么少一个字母？
+
+——存在一个悖论，因为结束是0，但是0+1时是1，1又代表了从左往右数第二个字母。故而+1是无法解决和实现了。
+
+但是，我们可以利用不写结尾，得到最后一个缺失的字符。 string[11::-1]。
+
+
+
+#####  4.5.3.2 方法二：重新开始写结尾
+
+想想字符串的有序性，从右到左。
+
+为什么要纠结前面两个空的数字是多少？——为了之后的到某一部分的字符串倒序。
+
+```python
+string = "bornforthis"
+select = string[-1:-12:-1]
+print(select)
+#output
+sihtrofnrob
+```
+
+![6496cebcba5eb5321684ba37e3a0fda](./String.assets/6496cebcba5eb5321684ba37e3a0fda.png)
+
+小试牛刀：获取rofn
+
+```python
+string = "bornforthis"
+select = string[-5:-9:-1]
+print(select)
+```
 
 
 
