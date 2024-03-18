@@ -361,6 +361,709 @@ print(select)
 
 
 
+## 5 字符串的内置方法
+
+
+
+### 5.1 .upper（）
+
+将字符串内容全部转成大写。
+
+```python
+string = "taurus"
+upper_string = string.upper()
+print(upper_string)
+#output
+TAURUS
+```
+
+
+
+### 5.2 .lower()
+
+将字符串内容全部转成小写。
+
+```python
+string = "SHERRY"
+lower_string = string.lower()
+print(lower_string)
+#output
+sherry
+```
+
+
+
+### 5.3 .capitalize()
+
+将字符串首字母，转化成大写。【只对第一个字母大写，其他的不变】
+
+```python
+string = "moon in taurus"
+capitalize_string = string.capitalize()
+print(capitalize_string)
+#output
+Moon in taurus
+```
+
+
+
+### 5.4 .title()
+
+将字符串中的每个单词的首字母，转换成大写。
+
+```python
+string = "moon in taurus"
+title_string = string.title()
+print(title_string)
+#output
+Moon In Taurus
+
+#不管是什么间隔，都会转成首字母大写。
+string = "moon-in-taurus"
+title_string = string.title()
+print(title_string)
+#output
+Moon-In-Taurus
+```
+
+
+
+
+
+### 5.5 .startswith()
+
+检测字符串是不是以特定字符或单词开头，返回布尔值。
+
+```python
+string = "sherry"
+startswith_string = string.startswith("s")
+print(startswith_string)
+#output
+True
+
+string = "sherry"
+startswith_string = string.startswith("a")
+print(startswith_string)
+#output
+False
+
+string = "sherry"
+startswith_string = string.startswith("sw")
+print(startswith_string)
+#output
+False
+```
+
+
+
+### 5.6 .endswith()
+
+检测字符串是不就是以特定单词或字符结尾，返回布尔值。
+
+```python
+string = "taurus"
+endswith_string = string.endswith("s")
+print(endswith_string)
+#output
+True
+
+string = "taurus"
+endswith_string = string.endswith("us")
+print(endswith_string)
+#output
+True
+
+string = "taurus"
+endswith_string = string.endswith("u")
+print(endswith_string)
+#output
+False
+```
+
+
+
+### 5.7 .count()
+
+计算特定字符或单词在目标字符串中存在的次数
+
+```python
+string = "taurus"
+count_string = string.count("u")
+print(count_string)
+#output
+2
+
+string = "taurus"
+count_string = string.count("au")
+print(count_string)
+#output
+1
+
+string = "taurus"
+count_string = string.count("d")
+print(count_string)
+#output
+0
+```
+
+
+
+### 5.8 .find()
+
+寻找目标字符或单词在特定字符串中，第一次出现的下标。「也就是出现重复，也只是返回第一次出现的下标」如果是查找单词，那么 find() 返回目标单词的第一个字符的下标。
+
+如果，查询的字符或单词不存在，则返回 -1。
+
+```python
+string = "taurus"
+find_string = string.find("t")
+print(find_string)
+#output
+0
+
+string = "taurus"
+find_string = string.find("b")
+print(find_string)
+#output
+-1
+
+string = "moonintaurus"
+find_string = string.find("in")
+print(find_string)
+#output
+4
+
+string = "moonintaurus"
+find_string = string.find("for")
+print(find_string)
+#output
+-1
+```
+
+
+
+
+
+### 5.9 .index()
+
+寻找目标字符或单词在特定字符串中，第一次出现的下标。如果是查找单词，那么 index() 返回目标单词的第一个字符的下标。
+
+如果，查询的字符或单词不存在，则报错。
+
+```python
+string = "moonintaurus"
+index_string = string.index("i")
+print(index_string)
+#output
+4
+
+string = "moonintaurus"
+index_string = string.index("b")
+print(index_string)
+#output
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\1.py", line 2, in <module>
+    index_string = string.index("b")
+ValueError: substring not found
+
+string = "moonintaurus"
+index_string = string.index("moon")
+print(index_string)
+#output
+0
+
+string = "moonintaurus"
+index_string = string.index("sza")
+print(index_string)
+#output
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\1.py", line 2, in <module>
+    index_string = string.index("sza")
+ValueError: substring not found
+```
+
+
+
+### 5.10 .isdigit()
+
+判断字符串是不是纯数字字符串，字符串中但凡有一个字符是非数字，则返回False
+
+```python
+string = "20040518"
+isdigit_string = string.isdigit()
+print(isdigit_string)
+#output
+True
+
+string = "2004 0518"
+isdigit_string = string.isdigit()
+print(isdigit_string)
+#output
+False
+```
+
+
+
+### 5.11 .isalpha()
+
+判断字符串是不是纯字母字符串，字符串中但凡有一个非字母的，则返回False
+
+```python
+string = "taurus"
+isalpha_string = string.isalpha()
+print(isalpha_string)
+#output
+True
+
+string = " taurus"
+isalpha_string = string.isalpha()
+print(isalpha_string)
+#output
+False
+```
+
+
+
+
+
+### 5.12 .isalnum()
+
+判断字符串是不是纯数字或纯字母、纯数字字母字符串，字符串中但凡出现非数字、字母元素，则返回 False。
+
+```python
+string = "1234567"
+isalnum_string = string.isalnum()
+print(isalnum_string)
+#output
+True
+
+string = "moon"
+isalnum_string = string.isalnum()
+print(isalnum_string)
+#output
+True
+
+string = "moon20040518"
+isalnum_string = string.isalnum()
+print(isalnum_string)
+#output
+True
+
+string = "moon 20040518"
+isalnum_string = string.isalnum()
+print(isalnum_string)
+#output
+False
+```
+
+
+
+### 5.13 .isupper()
+
+判断字符串中的字符否全大写，全大写则返回 True，否则返回 False。
+
+```python
+string = "MOON"
+isupper_string = string.isupper()
+print(isupper_string)
+#output
+True
+
+string = "MOON123[]"
+isupper_string = string.isupper()
+print(isupper_string)
+#output
+True
+
+string = "MOOn123[]"
+isupper_string = string.isupper()
+print(isupper_string)
+#output
+False
+
+string = "moon123[]"
+isupper_string = string.isupper()
+print(isupper_string)
+#output
+False
+```
+
+
+
+### 5.14 .islower()
+
+判断字符串是不分全小写，全小写则返回 True，否则返回 False。
+
+```python
+string = "moon"
+islower_string = string.islower()
+print(islower_string)
+#output
+True
+
+string = "moon123#@"
+islower_string = string.islower()
+print(islower_string)
+#output
+True
+
+string = "moon123#@IN"
+islower_string = string.islower()
+print(islower_string)
+#output
+False
+```
+
+
+
+### 5.15 .isspace()
+
+判断字符串是否为纯空格，多少个空格都可以。纯空格则返回 True，否则返回 False。
+
+```python
+string = "     "
+isspace_string = string.isspace()
+print(isspace_string)
+#output
+True
+
+string = ""
+isspace_string = string.isspace()
+print(isspace_string)
+#output
+False
+```
+
+
+
+### 5.16 .strip
+
+默认去掉目标字符串的前后空白字符，如果指定参数，则去掉指定字符。
+
+```python
+string = "  moonintaurus   "
+strip_string = string.strip()
+print("原本的字符串",string)
+print("去掉前后空格的字符串",strip_string)
+#output
+原本的字符串   moonintaurus   
+去掉前后空格的字符串 moonintaurus
+
+
+string = "---moonintaurus---"
+strip_string = string.strip("-")
+print("原本的字符串",string)
+print("去掉前后空格的字符串",strip_string)
+#output
+原本的字符串 ---moonintaurus---
+去掉前后空格的字符串 moonintaurus
+
+
+string = "--- --moonintaurus-- ---"
+strip_string = string.strip("-")
+print("原本的字符串",string)
+print("去掉前后空格的字符串",strip_string)
+#output
+原本的字符串 --- --moonintaurus-- ---
+去掉前后空格的字符串  --moonintaurus-- #可以看到，只能去掉连续的减号
+
+
+#如果想要去掉减号和空格呢
+string = "--- --moonintaurus-- ---"
+strip_string = string.strip("- ")
+print("原本的字符串",string)
+print("去掉前后空格的字符串",strip_string)
+#output
+原本的字符串 --- --moonintaurus-- ---
+去掉前后空格的字符串 moonintaurus
+```
+
+
+
+### 5.17 .lstrip()
+
+默认去掉字符串左边的空白字符，如果指定参数，则去掉左边的指定字符。
+
+```python
+string = "   moonintaurus-- ---"
+lstrip_string = string.lstrip()
+print("原本的字符串",string)
+print("去掉前后空格的字符串",lstrip_string)
+#output
+原本的字符串    moonintaurus-- ---
+去掉前后空格的字符串 moonintaurus-- ---
+
+
+string = "-----moonintaurus-----"
+lstrip_string = string.lstrip("-")
+print("原本的字符串",string)
+print("去掉前后空格的字符串",lstrip_string)
+#output
+原本的字符串 -----moonintaurus-----
+去掉前后空格的字符串 moonintaurus-----
+
+
+string = "--- --moonintaurus-- ---"
+lstrip_string = string.lstrip("- ")
+print("原本的字符串",string)
+print("去掉前后空格的字符串",lstrip_string)
+#output
+原本的字符串 --- --moonintaurus-- ---
+去掉前后空格的字符串 moonintaurus-- ---
+```
+
+
+
+### 5.18 .rstrip()
+
+默认去掉字符串右边的空白字符，如果指定参数，则去掉右边的指定字符。
+
+```python
+string = "   bornforthis   "
+rstrip_string = string.rstrip()
+print("原本的字符串:", string)
+print("去掉右边空白字符后:", rstrip_string)
+
+# ---output---
+原本的字符串:    bornforthis   
+去掉右边空白字符后:    bornforthis
+
+
+string = "----bornforthis----"
+rstrip_string = string.rstrip('-')
+print("原本的字符串:", string)
+print("去掉右边 '-' 后:", rstrip_string)
+
+# ---output---
+原本的字符串: ----bornforthis----
+去掉右边 '-' 后: ----bornforthis
+
+
+string = "----bornforthis-- --"
+rstrip_string = string.rstrip('- ')  # 不分先后顺序
+print("原本的字符串:", string)
+print("去掉右边 '- ' 后:", rstrip_string)
+
+# ---output---
+原本的字符串: ----bornforthis-- --
+去掉右边 '- ' 后: ----bornforthis
+```
+
+
+
+### 5.19 .replace()
+
+.replace(old,new,count)第一个位置传入待替换得旧字符，第二个位置传入要替换的新字符，默认替换全部，count控制替换次数。
+
+```python
+string = "   moonintaurus   "
+replace_string = string.replace(' ', '*')
+print("原本的字符串",string)
+print("去掉前后空格的字符串",replace_string)
+#output
+原本的字符串    moonintaurus   
+去掉前后空格的字符串 ***moonintaurus***  #默认全都替换掉
+
+
+string = "aiaiai"
+replace_string = string.replace('ai', 'love',1)  #count不用加引号
+print("原本的字符串",string)
+print("去掉前后空格的字符串",replace_string)
+#output
+原本的字符串 aiaiai
+去掉前后空格的字符串 loveaiai
+```
+
+
+
+### 5.20 .split（）
+
+`.split(sep,maxsplit)`以特定字符进行分割，默认空壳分割。 如果传入参数sep ，则以参数进行分割。返回分割后的列表，maxsplit用于控制分割几次。
+
+```PYTHON
+string = "moon in taurus"
+split_string = string.split()
+print("原本的字符串",string)
+print("去掉前后空格的字符串",split_string
+#output
+原本的字符串 moon in taurus
+去掉前后空格的字符串 ['moon', 'in', 'taurus']    #默认空格分割
+
+
+string = "moon-in-taurus"
+split_string = string.split('-')    #以-分割
+print("原本的字符串",string)
+print("去掉前后空格的字符串",split_string)
+#output
+原本的字符串 moon-in-taurus
+去掉前后空格的字符串 ['moon', 'in', 'taurus']
+
+string = "moon-in-taurus"
+split_string = string.split('-',1)
+print("原本的字符串",string)
+print("去掉前后空格的字符串",split_string)     
+#output
+原本的字符串 moon-in-taurus
+去掉前后空格的字符串 ['moon', 'in-taurus']
+      
+```
+
+
+
+### 5.21 .rsplit()
+
+`.rsplit(sep, maxsplit)` 从字符串右边进行分割，也可以传入参数「sep」，进行指定分割。返回分割后的列表。maxsplit 指定分割次数。
+
+```python
+string = "moon-in-taurus"
+rsplit_string = string.rsplit('-')
+print("原本的字符串",string)
+print("去掉前后空格的字符串",rsplit_string)
+#output
+原本的字符串 moon in taurus
+去掉前后空格的字符串 ['moon', 'in', 'taurus']  
+
+
+string = "moon-in-taurus"
+rsplit_string = string.rsplit('-',1)
+print("原本的字符串",string)
+print("去掉前后空格的字符串",rsplit_string
+#output
+原本的字符串 moon-in-taurus
+去掉前后空格的字符串 ['moon-in', 'taurus']
+```
+
+
+
+### 5.22 .join()
+
+以特定字符是字符串间隔。
+
+```python
+string = "moonintaurus"
+join_string = '-'.join(string)
+print("原本的字符串：",string)
+print("加上间隔的字符串：",join_string)
+#output
+原本的字符串： moonintaurus
+加上间隔的字符串： m-o-o-n-i-n-t-a-u-r-u-s
+```
+
+
+
+## 6. 字符串格式化
+
+```python
+string = "Hi Xiaoxianyue,Welcome to Haikou"
+print(string)
+
+#---output---
+Hi Xiaoxianyue,Welcome to Haikou
+```
+
+- 所存在的问题：需要换一个人名或者地区，就需要重新创建一个全新的字符串。
+- 我们希望有类似模版，让我们把不同人名，地区填写进去。而不是每个人都从头创建一个新的字符串。
+
+当然可以使用字符串的加法，大过于复杂冗长。
+
+```python
+str1 = "Hi "
+str2 = ",Welcome to "
+str3 = "."
+string = str1 + "Billkin" + str2 + "Fuzhou" + str3
+print(string)
+#output
+Hi Billkin,Welcome to Fuzhou.
+```
+
+这时存在一个问题：由于Python中不同的数据类型不可以直接相加，除非强制转换类型为字符串。
+
+```python
+string = "money is" + 190
+print(string)
+#output
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\1.py", line 7, in <module>
+    string = "money is" + 190
+TypeError: can only concatenate str (not "int") to str
+
+
+#转换后：
+string = "money is " + str(190)
+print(string)
+#output
+money is 190
+```
+
+——format 就应运而生。
+
+
+
+### 6.1 .format
+
+1.单个花括号{}
+
+```python
+string = "Hi {},Welcome to Beijing".format("XiaoXianyue")
+print(string)
+#output
+Hi XiaoXianyue,Welcome to Beijing
+
+template_string = "Hi {},Welcome to Beijing"
+print(template_string.format("XiaoXianyue"))
+#output
+Hi XiaoXianyue,Welcome to Beijing
+```
+
+
+
+2.一个花括号以上 [按顺序填入]
+
+```python
+template_string = "Hi {},Welcome to {}"
+print(template_string.format("XiaoXianyue","Beijing"))
+#output
+Hi XiaoXianyue,Welcome to Beijing
+
+string = "Hi {},Welcome to {}".format("Xiaoxianyue","Beijing")
+print(string)
+#output
+Hi XiaoXianyue,Welcome to Beijing
+```
+
+
+
+3.多个花括号指定位置
+
+```python
+string = "Hi {1},Welcome to {0}".format("Beijing","Xiaoxianyue")
+print(string)
+#output
+Hi XiaoXianyue,Welcome to Beijing
+
+
+string = "Hi {1},Welcome to {0}"
+print(string.format("Beijing","Xiaoxianyue"))
+#output
+Hi XiaoXianyue,Welcome to Beijing
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
