@@ -262,7 +262,7 @@ print(select)
 
 
 
-## 4.5 字符串倒序
+### 4.5 字符串倒序
 
 #### 4.5.1 实现
 
@@ -361,7 +361,7 @@ print(select)
 
 
 
-## 5 字符串的内置方法
+## 5. 字符串的内置方法
 
 
 
@@ -1046,6 +1046,317 @@ string = "Hi {1},Welcome to {0}"
 print(string.format("Beijing","Xiaoxianyue"))
 #output
 Hi XiaoXianyue,Welcome to Beijing
+```
+
+
+
+4.参数指定
+
+```python
+string = "Hi {name},Welcome to {region}"
+print(string.format(region="Beijing",name="Xiaoxianyue"))
+#output
+Hi XiaoXianyue,Welcome to Beijing
+
+string = "Hi {name},Welcome to {region}"
+print(string.format(name="Xiaoxianyue", region="Beijing"))
+#output
+Hi XiaoXianyue,Welcome to Beijing
+
+template_string = "Hi {name},Welcome to {region}"
+new_string = template_string.format(name="Xiaoxianyue", region="Beijing")
+print(new_string)
+#output
+Hi XiaoXianyue,Welcome to Beijing
+```
+
+
+
+5.保留指定小数位。
+
+```python
+string = "my age is {:.3f}".format(19)
+print(string)
+#output
+my age is 19.000
+
+string = "my age is {:.2f}".format(19)
+print(string)
+#output
+my age is 19.00
+```
+
+
+
+### 6.2 f
+
+1.直接读取变量
+
+```python
+name = "Xiaoxianyue"
+region = "Beijing"
+string = f"hi {name},welcome to {region}"#与format区别：python3.6+，更简洁，省略了format的模版化
+print(string)
+#output
+Hi XiaoXianyue,Welcome to Beijing
+```
+
+2.保留指定位小数
+
+
+```python
+age = 19
+string = f"My age is {age:.3f}"
+print(string)
+#output
+my age is 19.000
+```
+
+
+
+### 6.3 %
+
+- %d: 整数
+- %s：字符串
+- %f：浮点数
+
+1.单个位置传入
+
+```python
+string = "My age is %d"
+new_s = string %19
+print(new_s)
+
+string = "My age is %d"
+print(string % 19)
+
+string = "My age is %d" % 19
+print(string)
+
+#output
+My age is 19
+My age is 19
+My age is 19
+```
+
+
+
+2.多个位置传入
+
+```python
+string = "My age is %d %s"
+new_s = string %(19, "耶耶耶")
+print(new_s)
+
+string = "My age is %d %s"
+print(string % (19, "耶耶耶"))
+
+string = "My age is %d %s" %(19,"耶耶耶")
+print(string)
+
+#output
+My age is 19 耶耶耶
+My age is 19 耶耶耶
+My age is 19 耶耶耶
+```
+
+
+
+3.保留小数位
+
+```python
+string = "My age is %.3f"
+new_s = string %(19.8790)
+print(new_s)
+
+string = "My age is %.3f"
+print(string % (19.12345))
+
+string = "My age is %.3f" %(19.45678)
+print(string)
+
+#output
+My age is 19.879
+My age is 19.123
+My age is 19.457
+```
+
+
+
+### 6.4 f 和 format，% 的优缺点
+
+format 和 % 都像模版，提前做好模版后面有需要试可以直接使用；
+
+而 f 就像在银行当中，柜员边问你边登记，不能提前做好模版。
+
+
+
+## 7. 字符串不可变性
+
+字符串是不可变的，不可以改变字符串中的任何元素，如需改变字符串中的元素，则需要新建一个字符串。
+
+```python
+s = "Hello World!"
+s[0] = "a"
+#报错
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\1.py", line 2, in <module>
+    s[0] = "a"
+TypeError: 'str' object does not support item assignment
+
+```
+
+除了使用 replace 还可以使用字符串拼接：
+
+```python
+s = "Hello World!"
+news = "a" + s[1:]
+print(news)
+#output
+aello World!
+```
+
+
+
+## 8. 字符串转义
+
+
+
+| 转义字符 | 含义                               | 例子                     |
+| -------- | ---------------------------------- | ------------------------ |
+| `\\`     | 反斜杠符号，为了在字符串中得到 `\` | `s = "bor\\nforthis"`    |
+| `\b`     | 退格，类似删除键                   | `s = "bornff\borthis"`   |
+| `\n`     | 换行                               | `s = "bornfor\nthis"`    |
+| `\t`     | 制表符                             | `s = "born\tfor\tthis"`  |
+| `r`      | 取消转义「R 和 r」都可以           | `s = r"born\tfor\tthis"` |
+
+示例代码：
+
+
+
+```python
+s = "moonin\\taurus"
+print(s)
+#output
+moonin\taurus
+
+s = "mooninn\btaurus"
+print(s)
+#output
+moonintaurus
+
+s = "moonin\ntaurus"
+print(s)
+#output
+moonin
+taurus
+
+s = "moon\tin\ttaurus"
+print(s)
+#output
+moon	in	taurus    #间隔四个空格
+
+s = r"moon\tin\ttaurus"
+print(s)
+#output
+moon\tin\ttaurus
+```
+
+
+
+## 9. 字符串的连接
+
+```python
+s1 = "xiao"
+s2 = "xianyue"
+print(s1+s2)
+print(s1,s2)
+#output
+xiaoxianyue
+xiao xianyue
+
+s1 = "*-money-"
+print(s1 * 10)
+#output
+*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-
+
+s1 = "*-money-"
+print(s1 * 10,end="*")
+#output
+*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-*-money-*
+
+```
+
+
+
+## 10. 读取用户的输入
+
+### 10.1 input()读取用户的输入
+
+```python
+user_input = input()
+print(user_input)
+```
+
+### 10.2 input()使用输入提示
+
+但是上面的代码，有点小问题：在运行的时候并不能很直观的知道，程序需要我们输入，何况非程序员用户呢？
+
+![0718bfcdda7aaae1be241b287e08df8](./String.assets/0718bfcdda7aaae1be241b287e08df8.png)
+
+如何解决？——输入提示
+
+input()函数里面支持我们写入字符串进行提示。
+
+```python
+s = input('Enter you name: ')
+print("user's name:", s)
+#output
+Enter you name: xxy
+user's name: xxy
+```
+
+![image-20240320135643853](./String.assets/image-20240320135643853.png)
+
+
+
+### 10.3 input 的特点
+
+#### 10.3.1 input（）得到的类型皆为字符串
+
+```python
+In [2]: type(input(':>>>'))
+:>>>bornforthis
+Out[2]: str
+
+In [3]: type(input(':>>>'))
+:>>>12
+Out[3]: str
+
+In [4]: type(input(':>>>'))
+:>>>12.1
+Out[4]: str
+
+In [5]: type(input(':>>>'))
+:>>>(1, 2, 3, 4)
+Out[5]: str
+
+In [6]: type(input(':>>>'))
+:>>>[1, 2, 3, 4]  
+Out[6]: str
+
+In [7]: type(input(':>>>'))
+:>>>{1, 2, 3, 4, 5}
+Out[7]: str
+
+In [8]: type(input(':>>>'))
+:>>>{'a': 19, 'b': 20}
+Out[8]: str
+
+In [9]: type(input(':>>>'))
+:>>>True
+Out[9]: str
+
 ```
 
 
