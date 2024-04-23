@@ -1,7 +1,7 @@
 ---
 title: OO conception
 icon: alias
-date: 2023-11-29 17:45:25
+date: 2024-4-20 18:45:08
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -195,9 +195,9 @@ Example：Many to one association
     - In data (attributes) 
     - In associations with other classes
 
-### 4.1 inheritance relationship`
+### 4.1 inheritance relationship
 
-Apply the `“is-a”` rule, denoted as a hollow triangle.
+**Apply the `“is-a”` rule**, denoted as a hollow triangle.
 
 tips: “is a”就是父类和子类的关系。
 
@@ -344,13 +344,197 @@ print(d.area())
 
 the method  name is same  but with the  parameters of  different types
 
+```
+class OverloadDemo:
+    def method(self,a):
+        print(a)
+obj = OverloadDemo()
+obj.method(3.14)
+obj.method('sherry')
+obj.method(7)
+```
 
 
 
+## 5. Aggregation vs Composition
+
+### 5.1 vs Association
+
+- Aggregation implies a relationship where the child can exist  independently of the parent. Example: Class (parent) and Student  (child). Delete the Class and the Students still exist.
+
+Aggregation 指子类可以脱离父类而存在
+
+- Composition implies a relationship where the child cannot exist  independent of the parent. Example: House (parent) and Room  (child). Rooms don't exist separate to a House.
+
+Composition 指子类不能脱离父类而存在
+
+**Aggregation和Composition 是特殊类型（具体类型）的Association。**
+
+### 5.2 a whole part relationship and “has a” rule
+
+-  Aggregation represents a whole-part relationship 
+
+- Composition represents a whole-part relationship with a stronger ownership of the part 
+
+    - Each part may belong to only one whole at a  time 
+
+    - When the whole is destroyed, so are all its parts 
+
+    - Has a one to many relationship
+    
+    
+
+**Model aggregation/composition  applying the “has-a” rule (or “has-an”)** 
+
+-  Example scenarios: 
+
+1. Vehicle “has an” Engine 
+
+2. Committee “has a” tutor (as member) 
+
+3. A class has a student
+
+### 5.3 hollow diamond and solid diamond
+
+#### 5.3.1 **Aggregation Denoted as a hollow diamond**
+
+![image-20240422225957230](./OO_conception.assets/image-20240422225957230.png)
+
+− Multiplicity can be represented at both ends of the line. The multiplicity of the composite end may be  more than one (many to may relationship).
+
+> Aggregation 可以是many to many的关系。
+
+ Example: 
+
+- A team ‘has a’ number of employee  to work in; 
+- An  employee can work in  more than one team;  
+
+>这里就是说 hollow diamond 两端可以指向多个对象（无论是子类还是父类）
+
+- however, if a particular  team is removed, the  employees working in  that team will still be  able to work for other  teams.
+
+> Aggregation 特性，父类被移除子类还可以存在
+
+<img src="./OO_conception.assets/image-20240422230800374.png" alt="image-20240422230800374" style="zoom:80%;" />
+
+#### 5.3.2 Composition uses the filled or solid diamond.
+
+![image-20240422231400585](./OO_conception.assets/image-20240422231400585.png)
+
+ The multiplicity of the composite end  must be at most one (one to many  relationship). The larger composite solely  owns the part. The part cannot have  another owner. The symbol shows strong  ownership.
+
+> Composition 只能是一对多的关系。只能有一个父类（owner）。
+
+Example: 
+
+- A branch（部门） ‘has a’ number of employees  working in;
+-  a employee can  only work in a branch and if  a particular branch closes, 
+
+> one to many!!!
+
+- all  employees work in that  branch will be no longer  employed.  
+
+> 父类（owner）消失，子类不能存在。
+
+<img src="./OO_conception.assets/image-20240422232553566.png" alt="image-20240422232553566" style="zoom:80%;" />
 
 
 
+#### 5.3.3 Example
 
+![image-20240422232720598](./OO_conception.assets/image-20240422232720598.png)
+
+ a tutor can only  teach in one of the  campuses, but could  sit in more than one  committee and teach  many courses, which  include  undergraduate or  postgraduate  courses.
+
+<img src="./OO_conception.assets/image-20240422234202083.png" alt="image-20240422234202083" style="zoom:50%;" />
+
+<img src="./OO_conception.assets/image-20240422234221568.png" alt="image-20240422234221568" style="zoom:50%;" />
+
+
+
+## 6. Design Model
+
+### 6.1 Data types
+
+<img src="./OO_conception.assets/image-20240422234938961.png" alt="image-20240422234938961" style="zoom: 80%;" />
+
+**attributes Provide data types  for existing attributes**:  String (e.g.  characters), Integer  (whole numbers),  double (numbers with  decimal places),  Boolean (True or  False) etc.
+
+### 6.2 derived attributes
+
+<img src="./OO_conception.assets/image-20240422235710440.png" alt="image-20240422235710440" style="zoom:67%;" />
+
+derived attributes  the value returned  are derived from  other attributes.
+
+下面代码中的 get_full_name 就是上图说的派生属性。
+
+<img src="./OO_conception.assets/image-20240422235857845.png" alt="image-20240422235857845" style="zoom: 67%;" />
+
+### 6.3 operation
+
+- Primary operations 
+
+1. Get operation: to  get the value of  an attribute 
+
+2. Set operation: to  set/change the  value of an  attribute
+
+<img src="./OO_conception.assets/image-20240423015244456.png" alt="image-20240423015244456" style="zoom:80%;" />
+
+> input and return:
+>
+> - Input arguments (or parameters): names and their data types if  required 
+>
+> - Return data type for the value obtained from executing an operation  if required
+
+
+
+<img src="./OO_conception.assets/image-20240423021016901.png" alt="image-20240423021016901" style="zoom:80%;" />
+
+### 6.4 Visibility
+
+
+
+- Private (-): only directly accessible by an instance  of the class that includes them （本类和实例）
+- Public (+): only accessible by an instance of any  class 
+- Package (~): only directly accessible by an  instances of the class in the same package （程序包）
+- Protected (#): only accessible by an instance of the  class that includes them or a subclass （本类和子类实例）
+
+![image-20240423021442198](./OO_conception.assets/image-20240423021442198.png)
+
+1. **Private**: indicated in two underscores__
+
+    ```python
+    class cup:
+        def __init__(self):
+            self.__content = None
+        def fill(self,ber):
+            self.__content = ber
+        def empty(self):
+            self.__content = None
+    ```
+
+    
+
+2.  **Public**: Python have no  mechanism that effectively  restricts access to any instance  variable or method. All members  in a Python class are public by  default. Any member can be  accessed from outside the class  environment. This differs in  other languages, such as Java,  which has no public attributes.(Python中属性默认公开)
+
+<img src="./OO_conception.assets/image-20240423022113301.png" alt="image-20240423022113301" style="zoom:80%;" />
+
+上面color和content默认是public。
+
+3. **Protected**: accessible within super-class and sub-classes;  indicated in one underscore _
+
+```python
+class cup:
+    def __init__(self,color):
+        self.color = None
+        self._content = None
+    def fill(self,ber):
+        self._content = ber
+    def empty(self):
+        self._content = None
+```
+
+上面content就是Protected的。
 
 
 
