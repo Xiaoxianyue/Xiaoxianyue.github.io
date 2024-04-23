@@ -410,8 +410,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        int a = 1;
-        int b = 2;
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
         if (a > b)
         {
             Console.WriteLine("第一个数大于第二个数");
@@ -432,7 +432,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int tem = 25;
+        int tem = Convert.ToInt32(Console.ReadLine());
         if (tem > 30)
         {
             Console.WriteLine("too hot!");
@@ -458,13 +458,13 @@ class Program
         int score;
         Console.WriteLine("请输入你的分数");
         score = Convert.ToInt32(Console.ReadLine());
-        if (score > 90)
+        if (score > 90 & score <100)
             Console.WriteLine("A");
-        else if (score > 80)
+        else if (score > 80 & score <90)
             Console.WriteLine("B");
-        else if (score > 70)
+        else if (score > 70 & score <80)
             Console.WriteLine("C");
-        else if(score >60)
+        else if(score >60 & score <70)
             Console.WriteLine("D");
         else
             Console.WriteLine("F");
@@ -483,12 +483,12 @@ class Program
     static void Main()
     {
         string name;
-        int key;
+        string password;
         Console.WriteLine("请输入你的用户名：");
         name = Console.ReadLine();
         Console.WriteLine("请输入你的密码：");
         key = Convert.ToInt32(Console.ReadLine());
-        if (name == "admin")  //怎么设置两个条件
+        if (name == "admin" )  //怎么设置两个条件
             Console.WriteLine("欢迎使用！");    
     }
 }
@@ -496,37 +496,669 @@ class Program
 
 5. **奇偶数判断**：编写一个程序，输入一个整数，如果是奇数，打印“这是一个奇数”，如果是偶数，则打印“这是一个偶数”。
 
+```C#
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num;
+        num = Convert.ToInt32(Console.ReadLine());
+        if (num % 2 == 0)
+            Console.WriteLine("这是一个偶数");
+        else
+            Console.WriteLine("这是一个奇数");
+    }
+}
+```
+
 
 
 ### 4.2 switch 语句练习题
 
 6. **简单的日程安排**：编写一个程序，根据用户输入的数字（1-7），输出对应的星期几。例如，1输出“星期一”，2输出“星期二”，以此类推。
+
+```c#
+using System;
+class Program
+{
+    static void Main()
+    {
+        int day;
+        Console.WriteLine("请输入一个数字（1-7）");
+        day = Convert.ToInt32(Console.ReadLine());
+        switch(day)
+        {
+            case 1:
+                Console.WriteLine("Monday");
+                break;
+            case 2:
+                Console.WriteLine("Tuesday");
+                break;
+            case 3:
+                Console.WriteLine("Wednesday");
+                break;
+            case 4:
+                Console.WriteLine("Thursday");
+                break;
+            case 5:
+                Console.WriteLine("Friday");
+                break;
+            case 6:
+                Console.WriteLine("Satuaday");
+                break;
+            case 7:
+                Console.WriteLine("Sunday");
+                break;
+            default:
+                Console.WriteLine("None!");
+                break;
+        }
+    }
+}
+```
+
+
+
 7. **月份的天数**：编写一个程序，接收月份号（1-12），输出该月的天数（不需要考虑闰年）。
+
+```c#
+using System;
+class Program
+{
+    static void Main()
+    {
+        int mon;
+        Console.WriteLine("请输入一个月份（1-12）");
+        mon = Convert.ToInt32(Console.ReadLine());
+        switch(mon)
+        {
+            case 1:
+                Console.WriteLine("31");
+                break;
+            case 2:
+                Console.WriteLine("29");
+                break;
+            case 3:
+                Console.WriteLine("31");
+                break;
+            case 4:
+                Console.WriteLine("30");
+                break;
+            case 5:
+                Console.WriteLine("31");
+                break;
+            case 6:
+                Console.WriteLine("30");
+                break;
+            case 7:
+                Console.WriteLine("31");
+                break;
+            case 8:
+                Console.WriteLine("31");
+                break;
+            case 9:
+                Console.WriteLine("30");
+                break;
+            case 10:
+                Console.WriteLine("31");
+                break;
+            case 11:
+                Console.WriteLine("30");
+                break;
+            case 12:
+                Console.WriteLine("31");
+                break;
+            default:
+                Console.WriteLine("None!");
+                break;
+        }
+    }
+}
+```
+
+优化版本
+
+```c#
+using System;
+
+class Program {
+    static void Main() {
+        // 读取用户输入的月份
+        int month = Convert.ToInt32(Console.ReadLine());
+
+        // 使用switch语句输出该月的天数
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                Console.WriteLine("31天");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                Console.WriteLine("30天");
+                break;
+            case 2:
+                Console.WriteLine("28天");
+                break;
+            default:
+                Console.WriteLine("输入无效的月份");
+                break;
+        }
+    }
+}
+```
+
+
+
 8. **用户角色**：编写一个程序，根据用户输入的角色编码（例如：1代表管理员，2代表用户，3代表访客），打印相应的角色名称。
+
+```c#
+using System;
+class Program
+{
+    static void Main()
+    {
+        int dw;
+        Console.WriteLine("请选择你的角色编号：");
+        dw = Convert.ToInt32(Console.ReadLine());
+        switch(dw)
+        {
+            case 1:
+                Console.WriteLine("调香师");
+                break;
+            case 2:
+                Console.WriteLine("小女孩");
+                break;
+            case 3:
+                Console.WriteLine("律师");
+                break;
+            case 4:
+                Console.WriteLine("幸运儿");
+                break;
+            case 5:
+                Console.WriteLine("病患");
+                break;
+            case 6:
+                Console.WriteLine("心理学家");
+                break;
+            case 7:
+                Console.WriteLine("玩具商");
+                break;
+            case 8:
+                Console.WriteLine("野人");
+                break;
+          
+        }
+    }
+}
+```
+
+
+
 9. **交通信号灯**：编写一个程序，输入信号灯的颜色（红、黄、绿），输出对应的行动指示（例如红灯停，绿灯行，黄灯请注意）。
+
+```c#
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("输入当前信号灯状态：");
+        string TrafficLightCurrent = Console.ReadLine();
+        switch(TrafficLightCurrent)
+        {
+            case "Red":
+                Console.WriteLine("Stop!");
+                break;
+            case "Yellow":
+                Console.WriteLine("Slow down");
+                break;
+            case "Green":
+                Console.WriteLine("Free to go");
+                break;
+        }
+       
+    }
+}
+```
+
+
+
 10. **快餐菜单**：编写一个程序，模拟快餐店的订单过程。用户输入菜单编号，根据编号显示对应的菜名和价格。
 
+```c#
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("输入菜品编号：");
+        int num;
+        num = Convert.ToInt32(Console.ReadLine());
+        switch(num)
+        {
+            case 1:
+                Console.WriteLine("鱼香肉丝 27￥");
+                break;
+            case 2:
+                Console.WriteLine("酸粉肥肠 58￥");
+                break;
+            case 3:
+                Console.WriteLine("农家小炒肉 30￥");
+                break;
+        }
+       
+    }
+}
+```
 
 
 
 
 
+### 4.3 错题
+
+**登录验证**：编写一个程序，要求用户输入用户名和密码。如果用户名是“admin”且密码是“123456”，则打印“欢迎登录”，否则打印“用户名或密码错误”。
+
+```c#
+using System;
+
+class Program {
+    static void Main() {
+        // 读取用户名和密码
+        string username = Console.ReadLine();
+        string password = Console.ReadLine();
+
+        // 验证用户名和密码
+        if (username == "admin" && password == "123456") {
+            Console.WriteLine("欢迎登录");
+        } else {
+            Console.WriteLine("用户名或密码错误");
+        }
+    }
+}
+```
 
 
 
 
 
+## 5. while 循环
+
+逻辑运算符可用于控制循环运行的次数。 例如：
+
+```cs
+int num = 1;
+while(num < 6) 
+{
+   Console.WriteLine(num);
+   num+=2;
+}
+/* 输出
+1
+3
+5
+*/
+```
+
+如果最终没有使循环条件为 false 的语句，则循环将无限循环执行，我们称之为"死循环"。
+
+【填空题】显示 0 到 100 内的所有偶数
+
+```cs
+int num = 0;
+while (_num__ < 100)
+{
+  Console.WriteLine(num);
+  num _+__ = __2_;
+}
+```
+
+### 5.2 while 循环条件控制
+
+我们也可以通过在循环条件中递增 num 的值来控制循环，例如：
+
+```cs
+int num = 0;
+while(++num < 6) 
+   Console.WriteLine(num);
+```
+
+思考一下，`while (num ++ <6)` 和 `while (++num < 6)` 之间有什么区别吗？
+
+当然是有的啦! 循环 `while (++num <6)` 将执行 5 次，因为先自增了 num 的值再判断 `num < 6` 的条件，而 `while (num ++< 6)` 因为先执行再自增 num 的值，所以将会执行 6 次。
+
+【单选题】该循环将被执行几次？
+
+```cs
+int x = 1;
+while (x++ < 5)
+{
+    if (x % 2 == 0)
+        x += 2;
+}
+```
+
+两次。
+
+## 6. for 循环
+
+### 6.1 for 循环
+
+for 循环以特定的次数执行一组语句，具体语法如下：
+
+```cs
+for (单次表达式;条件表达式;末尾循环体) {
+  中间循环体
+}
+/*
+单次表达式:在循环开始之前执行,且只执行一次
+条件表达式:循环是否执行的判断条件
+末尾循环体:每次循环结束以后执行的
+中间循环体:每次循环要执行的代码
+*/
+```
+
+for 循环的执行顺序为:
+
+先执行单次表达式，声明需要的变量,然后判断条件表达式，满足条件则进行中间循环体，最后执行末尾循环体。
+
+需要注意的是，执行完末尾循环体以后，不会再执行单次表达式，而是直接进行条件判断，如果满足条件表达式，则继续进行循环，直到条件不满足条件表达式，通过下面的实例，我们会更容易理解一些：
+
+```cs
+for (int x = 10; x < 15; x++)
+{
+  Console.WriteLine("x的值是: {0}", x);
+}
+/*输出结果为
+x的值是: 10
+x的值是: 11
+x的值是: 12
+x的值是: 13
+x的值是: 14
+*/
+```
+
+> 注意 for 循环条件中使用的是分号
+
+【选词填空】选择填空,创建一个完整的 for 循环
+
+```cs
+for (___;___;___)
+{
+  Console.WriteLine(x);
+}
+```
+
+### 6.2 通过算数运算符控制 for 循环
+
+算术运算符可用于控制循环次数，例如：
+
+```cs
+for (int x = 0; x < 10; x+=3)
+{
+  Console.WriteLine(x);
+}
+
+/* 输出
+0
+3
+6
+9
+*/
+```
+
+当然，用减法也是可以的
+
+```cs
+for (int x = 10; x > 0; x -= 2)
+{
+  Console.WriteLine(x);
+}
+
+/* 输出
+10
+8
+6
+4
+2*/
+```
+
+【填空题】使用 for 循环，打印 0-100 的偶数值
+
+```cs
+_for_ (int x = 0; x < 100; x+= _2__)
+{
+  Console.WriteLine(__x_);
+}
+```
+
+### 6.3 for 循环允许的空参数
+
+如果不需要，可以省略单次表达式和末尾循环体语句，但是请记住，**分号是强制性的。**
+
+例如，省略单次表达式：
+
+```cs
+int x = 10;
+for ( ; x > 0; x -= 3)
+{
+  Console.WriteLine(x);
+}
+```
+
+又或者，末尾循环体语句一起省略：
+
+```cs
+int x = 10;
+for ( ; x > 0 ; )
+{
+  Console.WriteLine(x);
+  x -= 3;
+}
+```
+
+> `for(;;){}` 是一个无限循环。
+
+【填空题】下面的 for 循环会执行几次？
+
+```cs
+int x = 1;
+for ( ; x < 7; )
+{
+  x+=2;
+}
+```
+
+三次
+
+## 7. do-while 循环
+
+### 7.1 do-while 循环
+
+do-while 循环类似于 while 循环，不同的是，do-while 先执行语句再判断循环条件，所以 do-while 循环保证循环体至少执行一次。
+
+例如：
+
+```cs
+int a = 0;
+do {
+  Console.WriteLine(a);
+  a++;
+} while(a < 5);
+
+/* 输出
+0
+1
+2
+3
+4
+*/
+```
+
+> 注意 while 语句之后的分号。
+
+【填空题】填空创建一个有效的 do-while 循环。
+
+```cs
+int x = 0;
+__do_ {
+  Console.WriteLine(x);
+  x+=2;
+}_while__(x < 10) _;__
+```
 
 
 
+### 7.2 do-while 和 while 的区别
 
+即使 do-while 循环的条件判断结果为 false，do 中的语句仍然会运行一次：
 
+```cs
+int x = 42;
+do {
+  Console.WriteLine(x);
+  x++;
+} while(x < 10);
 
+// 输出 42
+```
 
+do-while 循环至少执行一次语句，然后再判断条件，即先执行，后判断。
 
+while 循环只有在判断条件成立之后才执行语句，即先判断，后执行。
 
+【填空题】以下代码，最终输出的结果是？
 
+```cs
+int a = 2;
+do {
+  a+=3;
+} while(a < 4);
+Console.Write(a);
+//output 5
+```
 
+## 8. 结束循环 break 和 continue
+
+### 8.1 break 语句
+
+我们在 switch 语句中看到了 break 的作用。
+
+break 的另一个用途是在循环中：当循环中遇到 break 语句时，循环会立即终止。
+
+```cs
+int num = 0;
+while (num < 20)
+{
+   if (num == 5)
+     break;
+
+   Console.WriteLine(num);
+   num++;
+}
+
+/* 输出:
+0
+1
+2
+3
+4
+*/
+```
+
+> 如果使用嵌套循环（即在另一个循环内有一个循环），break 语句将停止最内层循环的执行，并开始执行块之后的下一行代码。
+
+【填空题】下列代码执行后，打印出的最大数值是?
+
+```cs
+for (int x = 1; x < 8; x++) {
+  if (x > 5)
+    break;
+  Console.WriteLine(x);
+}
+1
+2
+3
+4
+5
+```
+
+### 8.2 continue 语句
+
+```cs
+for (int i = 0; i < 10; i++) {
+  if (i == 5)
+    continue;
+
+  Console.WriteLine(i);
+}
+/* 输出:
+0
+1
+2
+3
+4
+6
+7
+8
+9
+*/
+```
+
+> 正如你所看到的，数字 5 不会被输出，因为 continue  语句会跳过本次循环。
+
+【填空题】填写空白处，使下列代码输出偶数：
+
+```cs
+for(int x=0; x<99; x++) _{__
+    __if_ (x%2 != 0)
+    ___continue;___
+  Console.WriteLine(x);
+}
+```
+
+## 9. 逻辑运算符
+
+### 9.1 逻辑运算符
+
+逻辑运算符用于连接多个表达式，返回 true 或 false。
+
+| 逻辑运算 | 逻辑运算名 | 示例       |
+| -------- | ---------- | ---------- |
+| `&&`     | 与         | `y && y`   |
+| `\|\|`   | 或         | `x \|\| y` |
+| `!`      | 非         | `!x`       |
+
+`&&` (与) 的判断方式如下：
+
+| 左边  | 右边  | 结果  |
+| ----- | ----- | ----- |
+| false | false | false |
+| false | true  | false |
+| true  | false | false |
+| true  | true  | true  |
+
+例如，如果您希望仅在年龄大于 18 且金额大于 100 时才在屏幕上显示文本：
+
+```cs
+int age = 42;
+double money = 540;
+if(age > 18 && money > 100) {
+  Console.WriteLine("Welcome");
+}
+```
+
+"与"运算符用于组合这两个表达式。
+
+> 用"与"逻辑运算符，两个操作数必须同时为真，才能使整个表达式成立。
 
 
 
