@@ -237,7 +237,93 @@ A buyer, seller or an agent in an estate agent  appointment booking system.
 
 ### 2.1  Open-Closed
 
+summary: Software entities should be  open for extension, whilst keeping closed for  modification.
 
+- Open For Extension -The behaviour of the module  can be extended to meet new requirements.
+- Closed For Modification –change to the source  code of the module should be kept to a minimum.
+
+![image-20240424020557350](./OO_principle.assets/image-20240424020557350.png)
+
+### 2.2 Design pattern
+
+上下文−a general reusable solution to a commonly occurring  problem within a given context in software design
+
+> Context helps the understanding the environment of  a problem and reaching an appropriate solution 
+
+设计模版，解决相似问题−is not a finished design to be transformed directly into  code, rather a description or template for how to  solve a problem that can be used in many different  situations.
+
+> A good design pattern captures design knowledge to be  reusedin different settings
+
+
+
+Categories：
+
+- Architectural Patterns: presenting a fundamental  structural schema for a software system −e.g. “MVC” patterns 
+
+- Design Patterns: providing a scheme for refining the  subsystems or components of a software system 
+
+    −General Patterns giving fundamental approaches for assigning  responsibilities to objects; basic well-known design guidelines 
+
+    ​    e.g. the “GRASP” set of patterns. 
+
+    −Design Patterns for more specific but common  contexts/problems. 
+
+    ​    e.g. the “Observer” 
+
+    ​    Usually specific enough to include a UML model of the  outline solution.
+
+#### 2.2.1 **GRASP**
+
+General, Responsibility, Assignment, Software,  Patterns
+
+![image-20240424022601361](./OO_principle.assets/image-20240424022601361.png)
+
+##### 2.2.1.1 Controller
+
+- Problem: Who should be responsible for handling a  system event or business logic?  
+
+    − System event examples: an external input event, e.g., a cashier  scans an item to register a sale or ‘performing a sell check’,  when pressing the spell check button in a word processor 
+
+- Solution: Assign responsibility for handling a system event message to a class 
+
+专门处理逻辑操作的模块。图示如下：
+
+![image-20240424023245910](./OO_principle.assets/image-20240424023245910.png)
+
+##### 2.2.1.2 Polymorphism 多态性
+
+- Problem: How to handle alternative behaviour that  depends on type? How to create pluggable software  components? 
+- Solution: Assign responsibility for the alternative  behaviour – using polymorphic operations – to the types  for which the  behaviour varies.
+
+继承？子类和父类
+
+<img src="./OO_principle.assets/image-20240424025011384.png" alt="image-20240424025011384" style="zoom:80%;" />
+
+![image-20240424030426766](./OO_principle.assets/image-20240424030426766.png)
+
+Actual Solution: Make each type  a subclass of Payment. Payment  will have an operation  “calPayment”. 
+
+– In subclass Credit Card, to  override/redefine the above  inherited operation to define how  it is calculated for credit card  payment （这里是Credit Card覆盖了父类的方法，创建了自己独特的方法。）
+
+– In Cash to reflect how it is done  for cash payment. So, there is no  need to check what type of  Payment it is every time.
+
+– if an Credit Card object is  called, then the ‘calPayment’  method will be executed with a  5% charge
+
+– if an Cash object is called, then  the ‘calPayment’ method will  be executed without any charge
+
+
+
+#### 2.2.2  GoF Patterns
+
+ ‘Gang of Four’ (GOF, Erich Gamma, Richard Helm,  Ralph Johnson, and John Vlissides) analysed 23 Design  patterns which provide solutions to general problems  faced during software development as follows: 
+
+− Creational patterns - manage the creation of objects 
+
+− Structural patterns - describe how objects are  connected together to form more complex objects 
+
+− Behavioural patterns - describe how code is organized,  to assign responsibility or roles to certain classes, and  to specify the way objects communicate with each  other 
+
+![image-20240424032047929](./OO_principle.assets/image-20240424032047929.png)
 
 
 
