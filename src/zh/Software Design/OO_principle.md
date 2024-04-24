@@ -30,7 +30,7 @@ toc: true
 
 ### 1.1 Abstraction
 
-- Data abstraction:  The  developer and other objects in  the system have a high level  summary view (an abstract  view) of what data items are.  It contains the required info  about an object. 
+- Data abstraction:  The  developer and other objects in  the system have a high level  summary view (an abstract  view) of what data items are.  It contains the required information  about an object. 
 -  Procedure abstraction:  A high level summary view  of the operations provided.   The details and how the  methods are coded are  ignored.
 
 就是变量名称和方法名称要简单直接。比如我们想输出一个人的姓名，方法可以叫printname。
@@ -108,15 +108,15 @@ Chinese：操作实现单一功能要求的程度。
 
 2. **Class cohesion**: the degree  of a class achieves a single  requirement.
 
-    类实现单一功能的程度。 
+类实现单一功能的程度。 
 
-    - A class should only  have attributes and  operations related to its  objects（属性和操作要紧密与对象联系） 
+- A class should only  have attributes and  operations related to its  objects（属性和操作要紧密与对象联系） 
 
-    - Data classes should just  handle data. 
+- Data classes should just  handle data. 
 
-        > High class cohesion =  good design
+    > High class cohesion =  good design
 
-    Example：
+Example：
 
 ![image-20240423154427813](./OO_principle.assets/image-20240423154427813.png)
 
@@ -126,11 +126,11 @@ Chinese：操作实现单一功能要求的程度。
 
 这样才是一个好的软件设计。
 
-3.  Specialisation cohesion:  semantic cohesion of  inheritance hierarchies.  Super-class and its  subclasses should be  closely related.
+3. Specialisation cohesion:  semantic cohesion of  inheritance hierarchies.  Super-class and its  subclasses should be  closely related.
 
-    超类和子类要密切关联。
+超类和子类要密切关联。
 
-    > High specialisation  cohesion = good  design
+> High specialisation  cohesion = good  design
 
 ![image-20240423155936427](./OO_principle.assets/image-20240423155936427.png)
 
