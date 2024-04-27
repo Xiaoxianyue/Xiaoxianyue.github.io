@@ -1160,5 +1160,258 @@ if(age > 18 && money > 100) {
 
 > 用"与"逻辑运算符，两个操作数必须同时为真，才能使整个表达式成立。
 
+【单选题】要使 `a&&b` 的结果为 true， B.
+
+A. a 和 b 都必须为 false
+
+B. a 和 b 都必须为 true
+
+C. 只要 a 和 b 有一个为 true
+
+D. 任何情况都不可能
+
+### 9.2 "与"(&&)的逻辑运算
+
+你可以使用两个以上的"与"(&&)运算符
+
+```cs
+int age = 42;
+int grade = 75;
+if(age > 16 && age < 80 && grade > 50) 
+  Console.WriteLine("Hey there");
+```
+
+> 只有当所有的条件都是真的时，整个表达式的判断结果才为真。
+
+【问题】一个判断最多可以使用几个"与"(&&)运算呢? 任意。
+
+### 9.3 "或"(||)的逻辑运算
+
+"或"(||)的逻辑运算,左右两边,只要有一个条件为真,则其运算结果为真。具体可参照下表：
+
+| 左边  | 右边  | 结果  |
+| ----- | ----- | ----- |
+| false | false | false |
+| false | true  | true  |
+| true  | false | true  |
+| true  | true  | true  |
+
+示例：
+
+```cs
+int age = 18;
+int score = 85;
+if (age > 20 || score > 50) {
+    Console.WriteLine("Welcome");
+}
+```
+
+> 和"与"(`&&`)的逻辑运算一样，你可以使用任意数量的"或"(`||`)，甚至,多个"或"(`||`)和"与"(`&&`)语句可以合在一起使用。
+
+下面代码最终输出的结果是？
+
+```cs
+int x = 5; int y = 12;
+if(x>10 || y/x > 1)
+  Console.Write(y-x);
+else
+  Console.Write(y);
+//output 12
+```
+
+### 9.4 "非"(!)的逻辑运算
+
+"非"(`!`)的逻辑运算符只用一个操作符，作用是反转其逻辑状态。例如，如果条件成立，则"非"(!)的逻辑运算以后该条件的返回结果为假，反之亦然。
+
+| 右边  | 结果  |
+| ----- | ----- |
+| true  | false |
+| false | true  |
+
+示例：
+
+```cs
+int age = 8;
+if ( !(age >= 16) ) {
+  Console.Write("您还不满16周岁!");
+}
+
+// 输出: "您还不满16周岁!"
+```
+
+如果 a 是真的，b 是假的,那么 `!(a && b)` 的结果是什么？
+
+真的。
+
+## 10. 三元运算符
+
+### 10.1 三元运算符
+
+我们还是通过实例来讲解三元运算符吧，思考一下下面的实例：
+
+```cs
+int age = 42;
+string msg;
+if(age >= 18)
+  msg = "Welcome";
+else
+  msg = "Sorry";
+
+Console.WriteLine(msg);
+```
+
+上面的代码判断年龄变量的值并将相应的消息显示在屏幕上。
+
+使用三元运算符可以更简洁优雅的表达这个这段代码。三元运算符的格式如下：
+
+> Exp1 ? Exp2 : Exp3;
+
+三元运算符的判断顺序为:先判断Exp1的条件,如果Exp1为真,则执行Exp2,否则,执行Exp3。所以,上述代码使用三元运算符的写法如下：
+
+```cs
+int age = 42;
+string msg;
+msg = (age >= 18) ? "Welcome" : "Sorry";
+Console.WriteLine(msg);
+```
+
+执行以下代码，x 的值是？
+
+```cs
+int x = 5;
+int y = 3;
+x = (x > y) ? y : x;
+x的值是3
+```
+
+## 11. 基础运算
+
+### 11.1 基础运算
+
+现在让我们创建一个简单的项目，反复要求用户输入两个值，然后显示它们的总和，直到用户输入退出。
+
+我们从一个 do-while 循环开始，要求用户输入并计算总和：
+
+```cs
+do {
+  Console.Write("x = ");
+  int x = Convert.ToInt32(Console.ReadLine());
+
+  Console.Write("y = ");
+  int y = Convert.ToInt32(Console.ReadLine());
+
+  int sum = x+y;
+  Console.WriteLine("Result: {0}", sum);
+}
+while(true);
+```
+
+上面的代码会无限循环,我们还需要处理退出事件。 
+
+> 用户也有可能输入一个非整数值导程序在数值类型转换的时候出错。用户的输入是不安全的,我们也将在下面的课程中学习如何处理这一类异常。
+
+下面的循环将会执行几次？
+
+```cs
+do { }
+while(false);
+```
+
+执行一次。
+
+### 11.2 基础运算
+
+如果我们希望用户输入“exit” 的时候可以退出程序循环,那我们可以使用一个 break 语句：
+
+```cs
+Console.Write("x = ");
+string str = Console.ReadLine();
+if (str == "exit")
+  break;
+
+int x = Convert.ToInt32(str);
+```
+
+在上面的代码里,我们对用户的输入值进行了判断,如果用户输入的值是"exit",则退出循环。
+
+所以完整的整个程序应该是：
+
+```cs
+do {
+  Console.Write("x = ");
+  string str = Console.ReadLine();
+  if (str == "exit")
+    break;
+
+  int x = Convert.ToInt32(str);
+
+  Console.Write("y = ");
+  int y = Convert.ToInt32(Console.ReadLine());
+
+  int sum = x + y;
+  Console.WriteLine("Result: {0}", sum);
+}
+while (true);
+```
+
+【单选题】以下哪个方法是用于获取用户输入的？
+
+A. `Console.Write`
+
+B. `Convert.ToInt32`
+
+C. `Console.ReadLine` ✅
+
+## 12.  模块二测验
+
+1. 【填空题】填空,实现打印 x 的值五次
+
+```cs
+int x = 42;
+int num = 0;
+while(num < ___ ) {
+   Console.WriteLine(___);
+   ___ ++; 
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

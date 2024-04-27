@@ -172,7 +172,7 @@ Methods:
 
 <img src="./Software_Testing.assets/image-20240425012712974.png" alt="image-20240425012712974" style="zoom:33%;" />
 
-## 4. Strategies
+## 4. Strategies（策略）
 
  **−Unit testing**  
 
@@ -234,7 +234,9 @@ unittest−unittest单元测试框架，支持测试自动化、共享测试的�
 
 *
 
-<img src="./Software_Testing.assets/image-20240425020503211.png" alt="image-20240425020503211" style="zoom:80%;" />run test and failed.
+<img src="./Software_Testing.assets/image-20240425020503211.png" alt="image-20240425020503211" style="zoom: 67%;" />
+
+run test and failed.
 
 *
 
@@ -242,13 +244,228 @@ unittest−unittest单元测试框架，支持测试自动化、共享测试的�
 
 run test and failed
 
-
+#### 4.1.2  Python unittest: Methods 2
 
 2.  Python unittest framework, TestCase class: assert methods to  perform more specific checks
 
 <img src="./Software_Testing.assets/image-20240425022131559.png" alt="image-20240425022131559" style="zoom:80%;" />
 
+#### 4.1.3 Python unittest: Methods 3
+
+3. Python unittest framework, TestCase class: assert methods to  check the production of exceptions, warnings, and log messages.(用于检查异常、警告和日志消息生成的断言方法)
+
+<img src="./Software_Testing.assets/image-20240425114030180.png" alt="image-20240425114030180" style="zoom:67%;" />
+
+#### 4.1.4
+
+4.  unittest: methods to  organisetest code  −The setUp() method:  defines instructions  that will be executed  before each test  method.  −The tearDown()  method: defines  instructions that will  be executed after  each test method.
+
+![image-20240425115524930](./Software_Testing.assets/image-20240425115524930.png)
+
+上图就是一个模拟测试步骤，刚开始把数据打印出来，最后把数据删除。
 
 
-3. Python unittest framework, TestCase class: assert methods to  check the production of exceptions, warnings, and log messages
+
+#### 4.1.5 Example
+
+1. assert methods: Which passed? Which failed?
+
+<img src="./Software_Testing.assets/image-20240425160258855.png" alt="image-20240425160258855" style="zoom: 80%;" />
+
+test 1 passed，test 2 failed.
+
+
+
+2.  assert methods: Which passed? Which failed?
+
+<img src="./Software_Testing.assets/image-20240425160754637.png" alt="image-20240425160754637" style="zoom:80%;" />
+
+test 3 passed, test 4 failed
+
+
+
+3. assert methods: Which passed? Which failed?
+
+<img src="./Software_Testing.assets/image-20240425161111990.png" alt="image-20240425161111990" style="zoom:80%;" />
+
+
+
+test 6 passed, test 5 failed.
+
+
+
+4.  assertRaisesmethod: The test passes if the expected exception  is raised, is an error if another exception is raised, or fails if no  exception is raised.  
+    - Example: zero division Test result, passed or failed?
+
+<img src="./Software_Testing.assets/image-20240425163140530.png" alt="image-20240425163140530" style="zoom:80%;" />
+
+failed?
+
+5. Example: zero division Test result, passed or failed?
+
+<img src="./Software_Testing.assets/image-20240425163645459.png" alt="image-20240425163645459" style="zoom:80%;" />
+
+failed?
+
+
+
+#### 4.1.6 Test Plan
+
+Example:
+
+![image-20240425164348305](./Software_Testing.assets/image-20240425164348305.png)
+
+
+
+Question: assume(假设) a unit test for the method, changeDate(Date  date) failed when testing an invalid data input, e.g., 29/02/2013.  Which assertion method can be used to pass the test?
+
+![image-20240425164917190](./Software_Testing.assets/image-20240425164917190.png)
+
+
+
+#### 4.1.6 Test Driven Development(TDD)
+
+ −refers to the process of implementing code by  writing your tests first that fail, then writing the  code to make the tests pass 
+
+−builds software through iterations of tests, writing,  and development as necessary, until the features are  finished.  
+
+−allows to consider problem first and code design by  constructing the tests before writing the code
+
+
+
+ **Test Driven Development Processes:**
+
+1. Write a unit test  
+
+2. Run the test which should fail
+
+3. Write the minimum amount of code required  to make the test pass  
+
+4. Run the test to check the new test passes  
+
+5. Refactor the code (i.e. restructuring existing code  without changing its external behavior and to improve the  code) 
+
+    Repeat this process for every feature, as is necessary.
+
+
+
+### 4.2 Integration Testing
+
+**tests complete systems or subsystems  composed of integrated components** 
+
+**测试由集成组件组成的完整系统或子系统**
+
+
+
+#### 4.2.1 Top-down testing
+
+Start with high-level system and integrate from the top-down  replacing individual components by stubs where appropriate
+
+从高层系统开始，自上而下进行集成，在适当的地方用存根取代单个组件
+
+<img src="./Software_Testing.assets/image-20240425170848385.png" alt="image-20240425170848385" style="zoom:80%;" />
+
+
+
+#### 4.2.2 Bottom-up testing  
+
+Integrate individual components in levels until the complete  system is created. In practice, most integration involves a combination of both
+
+逐级整合各个组件，直至形成完整的系统。在实践中，大多数集成都涉及以下两个方面的结合
+
+
+
+### 4.3  System Testing
+
+ System testing of software or hardware is  testing conducted on a complete, integrated system to evaluate  the system's compliance with its specified requirements,  which falls within the scope of black box testing, including:  
+
+软件或硬件的系统测试是对一个完整的集成系统进行的测试，目的是评估系统是否符合其指定要求，属于**黑盒测试**的范围，包括  
+
+−recovery testing  恢复测试
+
+−security testing   安全测试
+
+−graphical user interface testing   用户页面图形测试
+
+−compatibility testing  相容性测试
+
+![image-20240425171754057](./Software_Testing.assets/image-20240425171754057.png)
+
+
+
+### 4.4 Regression Testing
+
+**Regression Testing: to  verify that the software  still performs correctly  after changes were  introduced to ensure any  enhancements or bug  fixes that have not  adversely affected what  was previously built and  tested.**
+
+**回归测试：验证软件在引入更改后是否仍能正常运行，以确保任何增强功能或错误修复不会对之前构建和测试的功能产生不利影响。**
+
+
+
+
+
+###  4.5 Acceptance Testing
+
+Acceptance Testing: to verify if the product is  developed as expected in the standards and specified  criteria and meets all the requirements specified by  customers. 
+
+−**falls under black box testing:** evaluates the overall  functioning of the system against the requirements  (rather than internal working/coding of the system)  
+
+−also known as validation testing, quality assurance  (QA) testing, application testing
+
+验收测试：验证产品是否按照预期标准和指定标准开发，是否满足客户指定的所有要求。
+
+-属于黑盒测试：根据要求评估系统的整体功能（而不是系统的内部工作/编码）
+
+-又称验证测试、质量保证（QA）测试、应用测试
+
+
+
+#### 4.5.1  Acceptance Testing Types
+
+1.  −User Acceptance Testing:  carried out by the actual user.  
+2. −Alpha and Beta Testing:  Alpha testing is a type of  acceptance testing carried  out at developer‟s site by  users, whereas beta testing is carried out at the user’s site. 
+3. −Operational Acceptance Testing: a process of ensuring all  the required components (processes and procedures) of the  system are in place in order to allow user or tester to use it.
+4. −Contact / Regulation Acceptance Testing: the system is  tested against the specified criteria in the contract document  and also tested to check if it meets all the government and  local authority regulations, laws and standards.  
+5. −Business Acceptance Testing: to check whether the system satisfies the business requirements and specifications. 
+
+
+
+
+
+## 5.  Test Scenario and Test Cases
+
+Test Scenarios:  −the high level concept of what to test, i.e. testing of  the end-to-end functionality of a software  application to ensure the business processes and  flows are functioning as needed. Test cases can be  written for each scenario.
+
+Test Cases: −inputs to test the system and the predicted outputs  from these inputs if the system operates according  to its specification
+
+
+
+Example:
+
+- Test Scenario: Validate the login page  
+
+​         −Test Case 1: Enter a valid user name and password 
+
+​         −Test Case 2: Reset your password  
+
+​         −Test Case 3: Enter invalid credentials
+
+<img src="./Software_Testing.assets/image-20240427183528233.png" alt="image-20240427183528233" style="zoom:67%;" />
+
+
+
+![image-20240427183830990](./Software_Testing.assets/image-20240427183830990.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
