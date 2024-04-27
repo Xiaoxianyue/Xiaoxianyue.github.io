@@ -6,7 +6,7 @@ export const zhNavbar = navbar([
     text: "吃了啥",
     icon: "style",
     link: "#",
-  },
+  }
   {
     text: "学了啥",
     icon: "editor",
