@@ -24,7 +24,7 @@ backToTop: true
 toc: true
 ---
 
-![image-20240427214543491](./Gof.assets/image-20240427214543491.png)
+![Snipaste_2024-04-27_21-45-41](./Gof.assets/Snipaste_2024-04-27_21-45-41.png)
 
 ![img](./Gof.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BlbnJpdmVy,size_16,color_FFFFFF,t_70#pic_center.png)
 
