@@ -1369,27 +1369,45 @@ C. `Console.ReadLine` ✅
 ```cs
 int x = 42;
 int num = 0;
-while(num < ___ ) {
-   Console.WriteLine(___);
-   ___ ++; 
+while(num < __5_ ) {
+   Console.WriteLine(_num__);
+   _num__ ++; 
 }
 ```
 
+2. 创建一个有效的 for 循环
+
+```cs
+_for__(_int x =_0_;_X < 10__;_x ++__) {
+  Console.WriteLine(x);
+}
+```
+
+3. 【多选题】下面关于"与"(`&&`),"或"(`||`),"非"(`!`)的描述,哪些是正确的？AD
+
+A. c 为真(true)，则 `(a&&b)||c` 也为真(true)
+
+B. `a&&b`为真(true)，只要 a 或者 b 其中一个条件为真(true)就可以
+
+C. a 和 b 都为真(true)，则 `a&&b` 为假(false)
+
+D. `a||b`为真(true)，只要 a 或者 b 其中一个条件为真(true)就可以
+
+4. 编写程序计算 1 到 100 所有整数的总和；
+
+![image-20240429091116530](./C#_condition_loop.assets/image-20240429091116530.png)
+
+5. 执行完以下代码后，x 的值是？
+
+int x = 4; int y = 9;
+x = (y%x != 0) ? y/x : y;
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+6. 99乘法表
+7. ![image-20240429102515535](./C#_condition_loop.assets/image-20240429102515535.png)
 
 
 
