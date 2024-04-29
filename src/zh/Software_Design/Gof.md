@@ -26,7 +26,7 @@ toc: true
 
 ![Snipaste_2024-04-27_21-45-41](./Gof.assets/Snipaste_2024-04-27_21-45-41.png)
 
-![img](./Gof.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BlbnJpdmVy,size_16,color_FFFFFF,t_70#pic_center.png)
+
 
 **Creational Patterns**
 
@@ -38,7 +38,8 @@ toc: true
 
     封装了系统使用哪些类的知识，并隐藏了如何创建和构建这些类的实例的细节。
 
-    <img src="./Gof.assets/image-20240428105542929.png" alt="image-20240428105542929" style="zoom:50%;" />
+
+![Snipaste_2024-04-28_10-55-36](./Gof.assets/Snipaste_2024-04-28_10-55-36.png)
 
 单例（Singleton）模式：类只能产生一个实例，保证全局使用的是同一对象。
 原型（Prototype）模式：将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。
@@ -54,37 +55,31 @@ An object is created without exposing the creation logic to the  external using 
 
 使用通用接口创建对象时，无需向外部公开创建逻辑。
 
-![image-20240428110026083](./Gof.assets/image-20240428110026083.png)
+![Snipaste_2024-04-28_11-00-23](./Gof.assets/Snipaste_2024-04-28_11-00-23.png)
 
 used to create objects, but allow which subclass to  instantiate, with various sub-types implementing the  interface
 
-用于创建对象，·	允许实例化哪个子类，各种子类都实现了接口
+用于创建对象，允许实例化哪个子类，各种子类都实现了接口
 
-![image-20240428110446105](./Gof.assets/image-20240428110446105.png)
-
-或许我们用这个图总结会更直观：
-
-![img](./Gof.assets/v2-f623251ae1b6ab7b5783ed1b5161e531_r.jpg)
+![Snipaste_2024-04-28_11-04-43](./Gof.assets/Snipaste_2024-04-28_11-04-43.png)
 
 ### 1.2 Python Example:
 
-![image-20240428110827494](./Gof.assets/image-20240428110827494.png)
-
-
+![image-20240430001208187](./Gof.assets/image-20240430001208187.png)
 
 代码实现：
 
-![image-20240428110919296](./Gof.assets/image-20240428110919296.png)
+![Snipaste_2024-04-28_11-09-09](./Gof.assets/Snipaste_2024-04-28_11-09-09.png)
 
 定义了创建对象的类和方法，子类可以覆盖这些类和方法，以指定要创建的派生类型。
 
-<img src="./Gof.assets/image-20240428111326086.png" alt="image-20240428111326086" style="zoom:50%;" />
+![Snipaste_2024-04-28_11-13-22](./Gof.assets/Snipaste_2024-04-28_11-13-22.png)
 
 -在运行时，可以传递一个对象的描述，并返回一个指向该对象新实例的基类指针。
 
-<img src="./Gof.assets/image-20240428112506986.png" alt="image-20240428112506986" style="zoom:67%;" />
+![Snipaste_2024-04-28_11-25-03](./Gof.assets/Snipaste_2024-04-28_11-25-03.png)
 
-![image-20240428112521142](./Gof.assets/image-20240428112521142.png)
+![Snipaste_2024-04-28_11-25-15](./Gof.assets/Snipaste_2024-04-28_11-25-15.png)
 
 ### 1.3 benefits
 
@@ -106,19 +101,16 @@ To support additional object types
 
 1. 汽车生产：
 
-![image-20240428114741849](./Gof.assets/image-20240428114741849.png)
+![Snipaste_2024-04-28_11-47-32](./Gof.assets/Snipaste_2024-04-28_11-47-32.png)
 
 2. 手机生产：
 
-
-
-![image-20240428114826708](./Gof.assets/image-20240428114826708.png)
+![Snipaste_2024-04-28_11-47-57](./Gof.assets/Snipaste_2024-04-28_11-47-57.png)
 
 3. 销售订单：
 
-    ![image-20240428115230675](./Gof.assets/image-20240428115230675.png)
 
-
+![Snipaste_2024-04-28_11-52-21](./Gof.assets/Snipaste_2024-04-28_11-52-21.png)
 
 
 
@@ -146,7 +138,7 @@ To support additional object types
 
     它提供了一个访问所创建实例的全局点。
 
-![image-20240428122528356](./Gof.assets/image-20240428122528356.png)
+![Snipaste_2024-04-28_12-25-19](./Gof.assets/Snipaste_2024-04-28_12-25-19.png)
 
 −Usually used for centralized management of internal  or external resources to provide a global point of  access to themselves. −should avoid introducing unnecessary restrictions in  situations where a sole instance of a class is not  actually required, and also introducing global state  into an application
 
@@ -160,23 +152,21 @@ To support additional object types
 
 Define a private static attribute for the single instance.
 
-<img src="./Gof.assets/image-20240428141941049.png" alt="image-20240428141941049" style="zoom: 67%;" />
+![Snipaste_2024-04-28_14-19-38](./Gof.assets/Snipaste_2024-04-28_14-19-38.png)
 
 Define all constructors to be protected or private. 
 
-<img src="./Gof.assets/image-20240428142025818.png" alt="image-20240428142025818" style="zoom:67%;" />
+![Snipaste_2024-04-28_14-20-20](./Gof.assets/Snipaste_2024-04-28_14-20-20.png)
 
 Define a public static accessor method (i.e. get  method, e.g. with no self in the parameter) in the  class; may only use the accessor method to  manipulate the Singleton.
 
 在类中定义一个公共静态访问器方法（即 get 方法，例如参数中不包含 self）；只能使用访问器方法来操作 Singleton。
 
-<img src="./Gof.assets/image-20240428142353059.png" alt="image-20240428142353059" style="zoom:67%;" />
+![Snipaste_2024-04-28_14-23-43](./Gof.assets/Snipaste_2024-04-28_14-23-43.png)
 
 To run: only object is created
 
-<img src="./Gof.assets/image-20240428142900558.png" alt="image-20240428142900558" style="zoom:67%;" />
-
-
+![Snipaste_2024-04-28_14-28-58](./Gof.assets/Snipaste_2024-04-28_14-28-58.png)
 
 ### 2.3 Use ‘lazy initialization’ (creation on first use)
 
@@ -190,15 +180,15 @@ To run: only object is created
 
 应用单例模式是为了让客户通过单个服务点访问数据库。
 
-<img src="./Gof.assets/image-20240428143341693.png" alt="image-20240428143341693" style="zoom: 80%;" />
+![Snipaste_2024-04-28_14-33-39](./Gof.assets/Snipaste_2024-04-28_14-33-39.png)
 
-<img src="./Gof.assets/image-20240428143416239.png" alt="image-20240428143416239" style="zoom:67%;" />
+![Snipaste_2024-04-28_14-34-13](./Gof.assets/Snipaste_2024-04-28_14-34-13.png)
 
 2. the singleton  pattern is applied to provide  the global access to a file  system
 
 应用单例模式来提供文件系统的全局访问权限
 
-<img src="./Gof.assets/image-20240428143555489.png" alt="image-20240428143555489" style="zoom: 33%;" />
+<img src="./Gof.assets/Snipaste_2024-04-28_14-35-53.png" alt="Snipaste_2024-04-28_14-35-53" style="zoom:33%;" />
 
 
 
@@ -206,9 +196,7 @@ To run: only object is created
 
 日志记录器类为所有应用程序组件提供了一个全局日志记录访问点，以便执行日志记录操作。
 
-​                                                   <img src="./Gof.assets/image-20240428143743178.png" alt="image-20240428143743178" style="zoom:67%;" />     	
-
-
+<img src="./Gof.assets/Snipaste_2024-04-28_14-37-18.png" alt="Snipaste_2024-04-28_14-37-18" style="zoom:33%;" />
 
 
 
@@ -216,7 +204,7 @@ To run: only object is created
 
 These design patterns  relate to class and object  composition.    这些设计模式与类和对象的组成有关。
 
-<img src="./Gof.assets/image-20240428144225045.png" alt="image-20240428144225045" style="zoom:50%;" />
+<img src="./Gof.assets/Snipaste_2024-04-28_14-42-22.png" alt="Snipaste_2024-04-28_14-42-22" style="zoom:50%;" />
 
 结构型模式描述如何将类或对象按某种布局组成更大的结构。它分为类结构型模式和对象结构型模式，前者采用继承机制来组织接口和类，后者釆用组合或聚合来组合对象。
 
@@ -236,11 +224,9 @@ provides an object a placeholder for another object to  control access to it, in
 
 为一个对象提供了另一个对象的占位符，以控制对该对象的访问，包括
 
-<img src="./Gof.assets/image-20240428144919282.png" alt="image-20240428144919282" style="zoom:67%;" />
+![Snipaste_2024-04-28_14-49-15](./Gof.assets/Snipaste_2024-04-28_14-49-15.png)
 
-<img src="./Gof.assets/image-20240428145008787.png" alt="image-20240428145008787" style="zoom:67%;" />
-
-
+![Snipaste_2024-04-28_14-50-06](./Gof.assets/Snipaste_2024-04-28_14-50-06.png)
 
 ### 3.1 Remote Proxy
 
@@ -331,35 +317,57 @@ Example：
 
   ProxyImagewhich is running on a different system can  represent the RealImage in the new system. Using the proxy,  multiple loading of the image can be avoided.
 
+-示例：真实图像包含大量数据，客户需要访问这些数据。  
 
+-解决方案
+
+   具有 display() 操作的图像界面。
+
+  RealImager 运行在不同的系统上，包含从数据库访问和加载的图像信息。
+
+  在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
 
 ### 3.5 Python Example
 
 Image loading：
 
-![image-20240428204237368](./Gof.assets/image-20240428204237368.png)
+![Snipaste_2024-04-28_20-42-34](./Gof.assets/Snipaste_2024-04-28_20-42-34.png)-示例：真实图像包含大量数据，客户需要访问这些数据。  
+
+-解决方案
+
+   具有 display() 操作的图像界面。
+
+  RealImager 运行在不同的系统上，包含从数据库访问和加载的图像信息。
+
+  在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
+
+-示例：真实图像包含大量数据，客户需要访问这些数据。  
+
+-解决方案
+
+   具有 display() 操作的图像界面。
+
+  RealImager 运行在不同的系统上，包含从数据库访问和加载的图像信息。
+
+  在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
 
 Python：
 
-<img src="./Gof.assets/image-20240428204342836.png" alt="image-20240428204342836" style="zoom:67%;" />
+![Snipaste_2024-04-28_20-43-37](./Gof.assets/Snipaste_2024-04-28_20-43-37.png)
 
-![image-20240428204410558](./Gof.assets/image-20240428204410558.png)
-
-
+![Snipaste_2024-04-28_20-44-07](./Gof.assets/Snipaste_2024-04-28_20-44-07.png)
 
 more Example：
 
 the  proxy pattern  provides an proxy  object (i.e. ATM)  to the real object  (i.e. BankBranch)  for the customer  to access
 
-![image-20240428204757451](./Gof.assets/image-20240428204757451.png)
-
-
+![Snipaste_2024-04-28_20-47-50](./Gof.assets/Snipaste_2024-04-28_20-47-50.png)
 
 the Processor has RAM with cache memory; the  proxy pattern provides an proxy object (i.e. Cache) to the real  object (i.e. RAM) for the memory access.
 
 处理器有带高速缓冲存储器的 RAM；代理模式为真实对象（即 RAM）提供了一个代理对象（即高速缓冲存储器），用于内存访问。
 
-<img src="./Gof.assets/image-20240428215000590.png" alt="image-20240428215000590" style="zoom:67%;" />
+![Snipaste_2024-04-28_21-49-56](./Gof.assets/Snipaste_2024-04-28_21-49-56.png)
 
 
 
@@ -373,7 +381,7 @@ the Processor has RAM with cache memory; the  proxy pattern provides an proxy ob
 
  -整合两个独立接口的功能
 
-<img src="./Gof.assets/image-20240429081744392.png" alt="image-20240429081744392" style="zoom:67%;" />
+![Snipaste_2024-04-29_08-17-26](./Gof.assets/Snipaste_2024-04-29_08-17-26.png)
 
 
 
@@ -385,27 +393,29 @@ Example:
 
 (移动硬盘)
 
-<img src="./Gof.assets/image-20240429082006657.png" alt="image-20240429082006657" style="zoom: 33%;" />
+<img src="./Gof.assets/Snipaste_2024-04-29_08-20-03.png" alt="Snipaste_2024-04-29_08-20-03" style="zoom:67%;" />
 
 
 
-![image-20240429091414719](./Gof.assets/image-20240429091414719.png)
 
 
+![Snipaste_2024-04-29_09-14-11](./Gof.assets/Snipaste_2024-04-29_09-14-11.png)
 
 ### 4.1 Python Example
 
-![image-20240429094204341](./Gof.assets/image-20240429094204341.png)
+![Snipaste_2024-04-29_09-42-01](./Gof.assets/Snipaste_2024-04-29_09-42-01.png)
 
-![image-20240429105957412](./Gof.assets/image-20240429105957412.png)
+![Snipaste_2024-04-29_10-59-47](./Gof.assets/Snipaste_2024-04-29_10-59-47.png)
 
-![image-20240429110018315](./Gof.assets/image-20240429110018315.png)
 
-![image-20240429110035689](./Gof.assets/image-20240429110035689.png)
+
+![Snipaste_2024-04-29_11-00-12](./Gof.assets/Snipaste_2024-04-29_11-00-12.png)
+
+![Snipaste_2024-04-29_11-00-33](./Gof.assets/Snipaste_2024-04-29_11-00-33.png)
 
  the database drivers to different types of databases
 
-![image-20240429110108085](./Gof.assets/image-20240429110108085.png)
+![Snipaste_2024-04-29_11-01-05](./Gof.assets/Snipaste_2024-04-29_11-01-05.png)
 
 
 
