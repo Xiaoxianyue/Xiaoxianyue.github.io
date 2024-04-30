@@ -244,7 +244,7 @@ summary: Software entities should be  open for extension, whilst keeping closed 
 
 ![image-20240424020557350](./OO_principle.assets/image-20240424020557350.png)
 
-### 2.2 Design pattern
+## 3.  Design pattern
 
 上下文−a general reusable solution to a commonly occurring  problem within a given context in software design
 
@@ -272,13 +272,13 @@ Categories：
 
     ​    Usually specific enough to include a UML model of the  outline solution.
 
-#### 2.2.1 **GRASP**
+### 3.1 **GRASP**
 
 General, Responsibility, Assignment, Software,  Patterns
 
 ![image-20240424022601361](./OO_principle.assets/image-20240424022601361.png)
 
-##### 2.2.1.1 Controller
+#### 3.1.1 Controller
 
 - Problem: Who should be responsible for handling a  system event or business logic?  
 
@@ -290,7 +290,7 @@ General, Responsibility, Assignment, Software,  Patterns
 
 ![image-20240424023245910](./OO_principle.assets/image-20240424023245910.png)
 
-##### 2.2.1.2 Polymorphism 多态性
+#### 3.1.2 Polymorphism 多态性
 
 - Problem: How to handle alternative behaviour that  depends on type? How to create pluggable software  components? 
 - Solution: Assign responsibility for the alternative  behaviour – using polymorphic operations – to the types  for which the  behaviour varies.
@@ -313,7 +313,7 @@ Actual Solution: Make each type  a subclass of Payment. Payment  will have an op
 
 
 
-#### 2.2.2  GoF Patterns
+### 3.2 GoF Patterns
 
  ‘Gang of Four’ (GOF, Erich Gamma, Richard Helm,  Ralph Johnson, and John Vlissides) analysed 23 Design  patterns which provide solutions to general problems  faced during software development as follows: 
 

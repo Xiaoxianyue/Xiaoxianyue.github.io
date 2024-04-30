@@ -294,12 +294,15 @@ test 6 passed, test 5 failed.
 
 
 
-4.  assertRaisesmethod: The test passes if the expected exception  is raised, is an error if another exception is raised, or fails if no  exception is raised.  
+4. assertRaisesmethod: The test passes if the expected exception  is raised, is an error if another exception is raised, or fails if no  exception is raised.  
+
+    - assertRaises 方法：如果出现预期的异常，则测试通过；如果出现其他异常，则测试出错；如果没有出现异常，则测试失败。  
+
     - Example: zero division Test result, passed or failed?
 
 <img src="./Software_Testing.assets/image-20240425163140530.png" alt="image-20240425163140530" style="zoom:80%;" />
 
-failed?
+passed
 
 5. Example: zero division Test result, passed or failed?
 
@@ -345,7 +348,9 @@ Question: assume(假设) a unit test for the method, changeDate(Date  date) fail
 
 5. Refactor the code (i.e. restructuring existing code  without changing its external behavior and to improve the  code) 
 
-    Repeat this process for every feature, as is necessary.
+    Repeat this process for every feature, as is necessary.在不改变外部行为的情况下重组现有代码，并改进代码）。
+    
+    根据需要，对每个功能重复这一过程。
 
 
 
