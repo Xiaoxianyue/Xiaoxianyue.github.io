@@ -1,5 +1,5 @@
 ---
-title: Software Design
+title: Software Design technique
 icon: alias
 date: 2024-4-30 17:58:42
 author: XiaoXianYue
