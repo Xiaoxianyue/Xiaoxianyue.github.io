@@ -334,6 +334,16 @@ models information gathered from  business requirements, including  entities and
 
 −Foreign Keys: created to enable an attribute to relate  to another entity in a one-to-one or one-to-many  relationship.
 
+**考后回溯：**
+
+```
+1.Composite key里的每一个子集都不是唯一的实体的标注，组合在一起也可能不是唯一的标注，就是用组合键可能会查找出来几个实体。composite key的意义就在于查找（或消除）相似的实体。
+2.super key要识别出唯一的实体！！！但是子集可以是冗余的。
+3.candidate key里每个子集也不能是唯一标注，不然就不是最小的super key了！但是组合在一起后查找的实体必须要有唯一性！！
+```
+
+
+
 
 
 ![image-20240501000504149](./Data_modelling.assets/image-20240501000504149.png)
