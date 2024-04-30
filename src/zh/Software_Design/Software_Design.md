@@ -89,6 +89,8 @@ Based on the concept of objects in which data is encapsulated  with the function
 
 ##### 1.2.1.2  OO Software Design: UML
 
+分为结构图和行为图
+
 ![image-20240430194008040](./Software_Design.assets/image-20240430194008040.png)
 
 
@@ -283,7 +285,7 @@ the read_employee and write_employee method to read and write  the employee data
 
 **Flowchart**: to model  program control  structures
 
-
+> 流程图直观地展示算法的步骤
 
 Example：checking  temperature
 
