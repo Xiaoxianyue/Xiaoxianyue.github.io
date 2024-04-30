@@ -375,3 +375,19 @@ May concern itself with the ethical implications of that discipline
 ![image-20240501035929357](./Ethics.assets/image-20240501035929357.png)
 
 ### 5.1  Association for Computer Machinery
+
+- Founded in 1947 
+- Over 80,000 members in 100 countries
+- Web address https://www.acm.org/code-of-ethics 
+- Produced  
+    - General moral imptives 一般道德箴言
+    -  More specific professional responsibilities   更具体的专业责任
+    - Organizational leadership imperatives 组织领导要求
+    - Compliance with the code 遵守守则
+
+
+
+
+
+
+
