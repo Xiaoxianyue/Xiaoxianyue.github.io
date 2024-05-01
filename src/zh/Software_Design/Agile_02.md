@@ -231,3 +231,5 @@ look like：
 Example： if the total estimated effort for Task 1 is 8 hours at the  start of a sprint, after working on the task, if the team member  believes that it requires another six hours to complete, the  "Effort Remaining" should be updated as 6. 
 
 ![image-20240501204717529](./Agile_02.assets/image-20240501204717529.png)
+
+111
