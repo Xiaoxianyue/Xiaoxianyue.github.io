@@ -385,9 +385,76 @@ May concern itself with the ethical implications of that discipline
     - Organizational leadership imperatives 组织领导要求
     - Compliance with the code 遵守守则
 
+#### 5.1.1 General moral imptives
+
+1.1 Contribute to society and to human well being,  acknowledging that all people are stakeholders in  computing…; 
+
+1.2 Avoid harm…; 
+
+1.3 Be honest and trustworthy…;  
+
+1.4 Be fair and take action not to discriminate…; 
+
+1.5 Respect the work required to produce new ideas,  inventions, creative works and computing artifacts…; 
+
+1.6 Respect privacy …;  
+
+1.7 Honour confidentiality…;
+
+中文：
+
+1.1 为社会和人类福祉做出贡献，承认所有人都是计算机领域的利益相关者.....；
+
+1.2 避免伤害.....；
+
+1.3 诚实守信.....；
+
+1.4 做到公平，不歧视.....；
+
+1.5 尊重产生新想法、新发明、创造性作品和计算机产品所需的工作.....；
+
+1.6 尊重隐私.....；
+
+1.7 遵守保密规定.....；
 
 
 
+#### 5.1.2 More Specific  Professional Responsibilities
 
+2.1 Strive to achieve the high quality in both the processes and products of  professional work….. 
 
+2.2 Maintain high standards of professional competence, conduct and ethical  practice….  
 
+2.3 Know and respect existing laws pertaining to professional work...  
+
+2.4 Accept and provide appropriate professional review...  
+
+2.5 Give comprehensive and thorough evaluations of computer systems and  their impacts, including analysis of possible risks...  
+
+2.6 Perform work only in areas of competence...  
+
+2.7 Foster public awareness and understanding of computing, related  technologies and their consequences...  
+
+2.8 Access computing and communication resources only when authorized  or when compelled by the public good… 
+
+2.9 Design and implement systems that are robustly and usably secure 
+
+中文：
+
+2.1 努力实现专业工作过程和产品的高质量.....
+
+2.2 保持高标准的专业能力、行为和道德操守....  
+
+2.3 了解并尊重与专业工作有关的现行法律...
+
+2.4 接受并提供适当的专业审查...  
+
+2.5 全面彻底地评估计算机系统及其影响，包括分析可能的风险...  
+
+2.6 仅在能力范围内开展工作...  
+
+2.7 促进公众对计算机、相关技术及其后果的认识和了解...  
+
+2.8 只有在获得授权或出于公共利益的需要时，才能使用计算和通信资源...
+
+2.9 设计和实施安全可靠、可用的系统...

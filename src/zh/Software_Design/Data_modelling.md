@@ -150,7 +150,9 @@ also called an ER  schema.
 
 ​                                                                                                                             Note: This module will introduce **Chen’s notation.**
 
-#### 3.2.1.Entity
+<img src="./Data_modelling.assets/a9877a9b-d306-4e9b-8274-18810c1faecb.png" alt="Crow's Foot Erd Examples | ERModelExample.com" style="zoom:50%;" />
+
+#### 3.2.1 Entity
 
 ![image-20240430231255337](./Data_modelling.assets/image-20240430231255337.png)
 
