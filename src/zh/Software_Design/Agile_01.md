@@ -188,13 +188,59 @@ Problems associated with Waterfall model:
 
 #### 2.2.1 Roles
 
-**Product owner** 
+**• product owner**:  
 
-**Scrum master** 
+✓ knows what the customer wants and can then translate the customer's needs back to the  Scrum team  
 
-**Developers (Development Team)**
+与客户沟通需求。
 
+✓ must have the authority to make all decisions necessary to complete the project  
 
+有权作出完成项目所需的所有决定
+
+✓ is responsible for identifying product features, translating them into a prioritised list (i.e.  Product Backlog),  prioritising the list for the next Sprint (i.e. Sprint Backlog), and  continually re-prioritising and refining the list  
+
+负责确定产品功能，将其转化为优先级列表（即 Product Backlog），为下一个 Sprint 确定列表的优先级（即 Sprint Backlog），并不断重新确定和完善列表的优先级
+
+✓ works with customers and stakeholders as well as  working with the Team implementing  the Product Backlog.  
+
+与用户和股东和开发人员协商
+
+**• scrum master**: A person who works closely with the team, sometimes as a member: e.g.  
+
+✓ to guide the team in Scrum practices  
+
+✓ to ensure the team understands and adhere to best Scrum practices 
+
+✓ to facilitate the Scrum ceremonies 
+
+✓ to coach the team to self-organise and self-manage  
+
+✓ to make sure the team is cross-functional  
+
+✓ to keep the team focused on a transcendent goal  
+
+✓ to assist the Product Owner to refine a ready backlog  
+
+✓ to keep team in high morale  
+
+**• development team**: a team of software developers  plus, other scrum roles, stakeholders and users of software products  
+
+#### 2.2.2 Scrum events:  
+
+• Sprint planning meeting  • Daily scrum meeting  • Sprint review meeting  • Sprint retrospect meeting  
+
+#### 2.2.3 Artifacts:
+
+• Product backlog  • Sprint backlog  • Increment (i.e., working features) 
+
+<img src="./Agile_01.assets/image-20240501184622729.png" alt="image-20240501184622729" style="zoom:67%;" />
+
+![image-20240501184811149](./Agile_01.assets/image-20240501184811149.png)
+
+<img src="./Agile_01.assets/image-20240501184847920.png" alt="image-20240501184847920" style="zoom:67%;" />
+
+<img src="./Agile_01.assets/image-20240501185032988.png" alt="image-20240501185032988" style="zoom:67%;" />
 
 ### 2.3 Kanban
 
@@ -259,6 +305,20 @@ Problems associated with Waterfall model:
     ​    -TDD focuses on how code is written and tested  by a given developer, whereas agile focuses on  groups of developers
 
 
+
+### 2.6 Kanban Board
+
+**concepts: consisting of  notes for tasks on the  physical or electronic  board as follows**: 
+
+就是说像Kanban Approach一样把工作写在人人可见的看板上
+
+e.g.  −To Do: lists the tasks  that are not yet  started. (i.e., backlog) −Doing: the tasks that  are in progress −Done: the tasks that  are completed
+
+![image-20240501201628378](./Agile_01.assets/image-20240501201628378.png)
+
+- Scrum Board: Many Scrum teams also adopt select principles  of Kanbanas a visual process tool 
+
+​    −To track work in Sprints (i.e., short, consistent and repetitive  periods of time). A set of tasks need to be completed in each           sprint in which no new activities are allowed to be added) 
 
 ## 3. User Story
 
