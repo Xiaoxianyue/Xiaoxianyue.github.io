@@ -1,5 +1,5 @@
 ---
-title: Database->Data Modelling
+title: Ethics
 icon: alias
 date: 2024-5-01 02:48:34
 author: XiaoXianYue
@@ -24,47 +24,43 @@ backToTop: true
 toc: true
 ---
 
-**Lecture outline and aims** 
+- **Lecture outline and aims** 
 
- We will be looking at ethics and why they are important to us 
+​        ~We will be looking at ethics and why they are important to us 
 
- We will be looking at the role of ethics in Computer Science 
+​        ~ We will be looking at the role of ethics in Computer Science 
 
- We will be looking at ethical frameworks and how we can use them to help guide us , including software design/development 
+​        ~ We will be looking at ethical frameworks and how we can use them to help guide us , including software design/development 
 
 - By the end of the lecture you should - 
 
- Have an appreciation for **professional** ethics 
+​        ~ Have an appreciation for **professional** ethics 
 
- Have an understanding of why professional ethics are a key part of computer science 
+​        ~ Have an understanding of why professional ethics are a key part of computer science 
 
- Be able to apply an appropriate ethical code to a given situation
+​        ~ Be able to apply an appropriate ethical code to a given situation
 
- 我们将探讨道德规范及其对我们的重要性
+​         我们将探讨道德规范及其对我们的重要性
 
- 我们将探讨伦理在计算机科学中的作用
+​         我们将探讨伦理在计算机科学中的作用
 
- 我们将探讨伦理框架，以及如何利用它们来帮助指导我们，包括软件设计/开发。
+​         我们将探讨伦理框架，以及如何利用它们来帮助指导我们，包括软件设计/开发。
 
- 讲座结束时，您应该
+​         讲座结束时，您应该
 
- 对职业道德有所了解
+​         对职业道德有所了解
 
- 理解为什么职业道德是计算机科学的重要组成部分
+​         理解为什么职业道德是计算机科学的重要组成部分
 
- 能够在特定情况下应用适当的道德规范
+​         能够在特定情况下应用适当的道德规范
 
 ## 1. The beginning of Ethics
 
-• Ethics (greek ἠθικόν) – from Ethos (Greek ἔθος = area 
-
-of habitation, habitat):
-
 – Heraclitus (c. 535 – 475 BC) pre-Socratic Greek philosopher considered ethics as to a connection between a habitat and a personality of an individum.
 
-- 赫拉克利特（约公元前 535 - 475 年）前苏格拉底时代的希腊哲学家
+- 赫拉克利特（约公元前 535 - 475 年）前苏格拉底时代的希腊哲学家,认为伦理是栖息地与个体人格之间的联系。
 
-哲学家认为伦理是栖息地与个体人格之间的联系。
+    (也就是个人和群体交互时的行为举止)
 
 – Aristotle (384 – 322 BC) considered ethics to be a practical study, aimed at becoming good and doing good; a person has to poses a collection of ethical virtues or moral virtues (from lat. *moralitas* = manner, character, proper behaviour)
 
@@ -86,9 +82,9 @@ of habitation, habitat):
 
 - 伊曼纽尔-康德（1724 - 1804） 西方哲学的杰出人物西方哲学。
 
-- 《道德形而上学基础》（I.Kant、为人们通常理解的 "道德 "和 "伦理 "提供了哲学基础道德 "和 "道德行为 "的哲学基础。
+- 《道德形而上学基础》（I.Kant、为人们通常理解的 "道德 "和 "伦理 "提供了“道德 "和 "道德行为 "的哲学基础。
 
-- 分析了三个概念：善意、义务概念和命令的性质。义务的概念和命令的性质。
+- 分析了三个概念：善意、义务概念和命令的性质。
 
 
 
@@ -150,15 +146,15 @@ of habitation, habitat):
 
 Protagonist-centric morality
 
-  道德的变形：个人/社会/国家知道什么是 "好"，什么是 "坏"。
+  道德的变形：个人/社会/国家知道什么是 "好"。
 
   什么是 "坏"，并为选择 "坏 "创造理由，因为这会给选择者带来福祉：
 
-  费多尔-陀思妥耶夫斯基的《罪与罚》中罗季昂-拉斯柯尔尼科夫的道德困境
+比如说：  费多尔-陀思妥耶夫斯基的《罪与罚》中罗季昂-拉斯柯尔尼科夫的道德困境
 
-  丹尼尔-笛福的《鲁滨逊漂流记》（文化相对主义问题（星期五是个食人族......）
+​                  丹尼尔-笛福的《鲁滨逊漂流记》（文化相对主义问题（星期五是个食人族......）
 
-  以主角为中心的道德观
+​                  以主角为中心的道德观
 
 
 
