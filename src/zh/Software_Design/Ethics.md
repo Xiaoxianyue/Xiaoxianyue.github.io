@@ -458,3 +458,165 @@ May concern itself with the ethical implications of that discipline
 2.8 只有在获得授权或出于公共利益的需要时，才能使用计算和通信资源...
 
 2.9 设计和实施安全可靠、可用的系统...
+
+
+
+#### 5.1.3 Professional Leadership  Principles
+
+3.1 Ensure that the public good is the central concern during all  professional computing work... 
+
+3.2 Articulate, encourage acceptance of, and evaluate fulfillment  of social responsibilities by members of the organizational or  group...  
+
+3.3 Manage personnel and resources to  enhance the quality of  working life...  
+
+3.4 Articulate, apply, and support policies and processes that  reflect the principles of the Code… 
+
+3.5 Create opportunities for members of the organisationor group  to grow as professionals… 
+
+3.6 Use care when modifying or retiring systems… 
+
+3.7 Recongniseand take special care of systems that become  integrated into the infrastructure of society...
+
+3.1 确保在所有专业计算机工作中以公共利益为中心...
+
+3.2 阐明、鼓励接受并评估组织或团体成员履行社会责任的情况...
+
+3.3 管理人员和资源，提高工作生活质量...
+
+3.4 阐述、应用和支持体现《准则》原则的政策和程序...
+
+3.5 为组织或团体成员创造成长为专业人员的机会...
+
+3.6 在修改或废除制度时要谨慎...
+
+3.7 重新认识并特别关注已融入社会基础设施的系统...
+
+
+
+
+
+### 5.2  IEEE Code of Ethics 
+
+ Founded in 1946  
+
+ Nearly 100,000 members 
+
+ Website https://www.computer.org/about 
+
+ Produced：
+
+​               IEEE Code of Ethics containing ten general  directives  
+
+​               IEEE Code of Conduct containing 5 (fairly generic)  statements of behaviour 
+
+#### 5.2.1 IEEE Code of Ethics
+
+- to hold paramount the safety, health, and welfare of the public,  to strive to comply with ethical design and sustainable  development practices, and to disclose promptly factors that  might endanger the public or the environment; 
+- to avoid real or perceived conflicts of interest whenever  possible, and to disclose them to affected parties when they do  exist; 
+- to be honest and realistic in stating claims or estimates based  on available data;   
+- to reject bribery in all its forms;   
+- to improve the understanding by individuals and society of the  capabilities and societal implications of conventional and  emerging technologies, including intelligent systems; 
+
+- to maintain and improve our technical competence and to  undertake technological tasks for others only if qualified by  training or experience, or after full disclosure of pertinent  limitations;   
+- to seek, accept, and offer honest criticism of technical work, to  acknowledge and correct errors, and to credit properly the  contributions of others;   
+- to treat fairly all persons and to not engage in acts of  discrimination based on race, religion, gender, disability, age,  national origin, sexual orientation, gender identity, or gender  expression; 
+- to avoid injuring others, their property, reputation, or employment  by false or malicious action;   
+- to assist colleagues and co-workers in their professional  development and to support them in following this code of ethics
+
+
+
+#### 5.2.2  IEEE Code of Conduct
+
+ General directives (five) instruct members: 
+
+    - Be respectful of others 
+    - Treat people fairly 
+    - Avoid injuring others, their property, reputation or  employment 
+    - Refrain from retaliation 
+    - Comply with applicable laws in all countries where  IEEE does business and with the IEEE policies and  procedures
+
+
+
+## 6.  Macro ethical issues in IT
+
+- Access to information
+- Intellectual property 
+- Areas of use 
+- Animal experiments 
+- Human experiments
+
+### 6.1 Access to information
+
+1. Single, most complex ethical issue in IT 
+2. Covers a wide range of areas –e.g. DRM, Privacy & confidentiality 隐私与保密,  information divide信息划分, etc. 
+3. Need to strike a balance between protection and openness 信息保护和开放的平衡
+4. Extremely polarised positions 两极分化
+5. Legislation立法 exists that covers this are
+
+### 6.2 Intellectual Property 知识产权
+
+1. Really a subset of the access issue, but often treated in it's right  其实是6.1的一部分，但是有特殊之处要单独处理
+2. What extent do we have a right to protect our own intellectual  property? (Sony rootkit?) 
+3. To what extent do we have an ethical obligation to share our  intellectual property?
+
+### 6.3 Areas of use
+
+1. A very personal area –will depend on persons own individual ethics 
+
+2. Most people have their own line, but working for a company it can be  hard to know when the line has been crossed.  
+
+    & Cambridge Analytica–data science vs data privacy 
+
+    &Cisco –great firewall of China 
+
+    &Debian Social Contract
+
+### 6.4  Animal experiments 
+
+1. Not very common in IT, but does occur 
+2. Primarily concerned with 
+3. Neural networks 
+4. Sensory studies 
+5. Computers and technology used to support animal experiments
+
+### 6.5  Human experiments 
+
+1. Experiments may involve human subjects –these might  involve the following ethical considerations  
+
+2. Consent –can it be given? 
+
+3. Stress –repetitive testing, sensitive issues 
+
+4. Demographics –are they representative? Is there a  case for using an under representative group 
+
+5. Physical impact –sensory, ergonomics, biometrics 
+
+6. Privacy 
+
+7. Benefit
+
+    
+
+## 7. Ethics in Coventry
+
+1. Coventry, like most Universities, has statements, regulations and  policies on research ethics 
+
+2. All final year projects are subject to approval批准 - Ethical portal 
+
+3. All research at Coventry must go through a research ethics  checklist –this includes undergrad dissertations! 
+
+    考文垂的所有研究都必须通过研究伦理检查表，包括本科生的毕业论文！
+
+4. If appropriate, the research must go through the Universities ethics  panel
+
+    如果合适，研究必须通过大学伦理小组的审查
+
+ **Ethics at Coventry：**
+
+ Other activity is governed by 
+
+   Professional ethics (subject) 
+
+   Professional ethics (academic) 
+
+   University policy and procedures (e.g. Equality and diversity  legislation)
