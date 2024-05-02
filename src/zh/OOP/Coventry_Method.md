@@ -363,24 +363,6 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
 
 
 
-### 4.6  **Static class members**  
-
-• Note that we have made the data member of the  class static, so that it is part of the class and not an  instance of the class.  
-
-• One common programming mistake is to confuse  static with const
-
-–Marking a variable as const means ―the value cannot  be changed
-
-–Marking a variable with static means ―the variable is  part of the class and is always present 
-
-- 请注意，我们将该类的数据成员设置为静态，因此它是该类的一部分，而不是该类的实例。  
-
-- 一个常见的编程错误是混淆 static 和 const
-
--将变量标记为 const 意味着 - 变量值不可更改
-
--将变量标记为 static 意味着 - 变量是类的一部分，始终存在
-
 
 
 
