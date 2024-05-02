@@ -24,7 +24,7 @@ backToTop: true
 toc: true
 ---
 
-## 1.**What is Method?**
+## 1. **What is Method?**
 
 We have already met them:
 
@@ -48,7 +48,7 @@ We have already met them:
 
 
 
-**怎么样创建一个方法**
+### 1.1 怎么样创建一个方法
 
 • Calling a method on an object is like accessing a  field  调用对象的方法就像访问字段一样
 
@@ -80,7 +80,7 @@ class Program
 
 
 
- **Return values**
+### 1.2  **Return values**
 
  A method can also return a value to the caller, e.g.:– ReadLine method returns parameter from a user
 
@@ -202,18 +202,6 @@ test is 20
 
 ### 2.4 ref 关键字
 
-```c#
-using System;
-
-class Program
-{
-    static void MethodDemo( ref int i )
-    {
-        i++;
-        Console.WriteLine("i is " + i );
-    }
-```
-
  Keyword ref has been added to the information  about the parameter.
 
 ```c#
@@ -240,8 +228,15 @@ class Program
 • The method call will make changes to the content  of the variable
 
 - 下面的代码调用了新方法，并在参数前加上了 ref
-
 - 方法调用将更改变量的内容
+
+```c#
+//output
+i is 21
+test is 21
+```
+
+
 
 ### 2.5 out 关键字
 
@@ -303,11 +298,7 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
     }
 ```
 
-
-
-## 4.  Variables and Scope
-
-### 4.1 For loop local variables
+### 3.1 For loop local variables
 
 • A special kind of variable can be used when you  create a for loop construction.  
 
@@ -316,7 +307,9 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
 - 在创建 for 循环结构时，可以使用一种特殊的变量。  
 - 这样就可以声明一个控制变量，该变量在循环过程中一直存在：
 
-### 4.2 Introduce
+## 4.  Variables and Scope
+
+### 4.1 Introduce
 
 • Part of a program within which a variable has an  existence is called the scope of a variable.  
 
@@ -342,7 +335,7 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
 
 <img src="./Coventry_Method.assets/image-20240502130812088.png" alt="image-20240502130812088" style="zoom:80%;" />
 
-### 4.4 Exercise
+### 4.2 Exercise
 
 ![image-20240502130903242](./Coventry_Method.assets/image-20240502130903242.png)
 
@@ -353,7 +346,7 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
 
 
 
-### 4.5  **Variables which are Data Members of a Class**
+### 4.3  **Variables which are Data Members of a Class**
 
 • If we want to allow two methods in a class to share  a variable one will have to make the variable a  member of the class. 
 
