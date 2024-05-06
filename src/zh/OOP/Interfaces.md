@@ -1,5 +1,5 @@
 ---
-title: Intheritance
+title: Interface
 icon: alias
 date: 2024-5-06 08:44:29
 author: XiaoXianYue

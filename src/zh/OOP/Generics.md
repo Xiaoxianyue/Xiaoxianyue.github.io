@@ -1,5 +1,5 @@
 ---
-title: Intheritance
+title: Generics
 icon: alias
 date: 2024-5-06 14:22:12
 author: XiaoXianYue
@@ -284,3 +284,4 @@ class Person<T>
 • One generic class can inherit from another
 
 ![image-20240506163707452](./Generics.assets/image-20240506163707452.png)
+
