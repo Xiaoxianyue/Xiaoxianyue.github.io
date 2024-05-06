@@ -130,7 +130,7 @@ class Program
 
 ### 4.1 Use generic class Person
 
-- 类 Person<T> 被声明为通用类型 - 类型 <T> 是将要使用的类型，可以是对象字符串，也可以是任何其他类或结构体
+- 类 `Person<T>` 被声明为通用类型 - 类型 <T> 是将要使用的类型，可以是对象字符串，也可以是任何其他类或结构体
 
 ```c#
 using System;

@@ -162,7 +162,7 @@ static void Main(string[] args)
 
 4. **接口本身的访问修饰符？**
 
-**Internal.**
+public。
 
 如果访问修饰符设置为公共时，所有接口都可访问。
 

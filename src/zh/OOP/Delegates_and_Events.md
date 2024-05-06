@@ -87,7 +87,257 @@ public delegate void NotifyCallback(decimal balance);
 
 - 但原则上，委托可以在一个类中定义
 
+### 1.7
 
+-当你实例化一个委托时，你可以将它的实例与任何具有兼容签名和返回类型的方法关联起来 
+
+-委托用于将方法作为参数传递给其他方法 
+
+-委托类型是密封的-不能从它派生出来
 
 ## 2. 实现一个委托
+
+### 2.1 代码
+
+```c#
+delegate int Operation(int x, int y);
+class Progarm
+{
+    static void Main(string[] args)
+    {
+        Operation operation = Add;
+        int x = operation(4, 5);
+        Console.WriteLine(x);
+
+        operation = Multiple;
+        int y = operation(4, 5);
+        Console.WriteLine(y);
+
+        int Add(int x, int y) => x + y;
+        int Multiple(int x, int y) => x * y;
+
+    }
+}
+```
+
+另一种方法是使用构造函数创建委托对象，并将所需的方法传递给该构造函数.
+
+```c#
+delegate int Operation(int x, int y);
+class Progarm
+{
+    static void Main(string[] args)
+    {
+        Operation operation1 = Add;
+        Operation operation2 = new Operation(Add);
+      
+        int Add(int x, int y) => x + y;
+    }
+}
+```
+
+### 
+
+### 2.2. 将方法签名与委托相匹配
+
+- 如果方法的返回类型和参数集相同，则方法与委托相匹配 
+
+- 请记住，ref、in 和 out 修饰符的作用与往常一样，例如：
+
+delegate void SomeDel(inta, double b); 
+
+Matching method: 
+
+void SomeMethod1(intg, double n) { } 
+
+Not matching :  
+
+double SomeMethod2(int g, double n) { return g + n; }
+
+void SomeMethod3(double n, int g) { } 
+
+void SomeMethod4(ref int g, double n) { } 
+
+void SomeMethod5(out int g, double n) { g = 6; }
+
+### 2.3 Adding methods to a delegate
+
+-委托可以指向具有相同签名和返回类型的多个方法 
+
+-委托中的所有方法都属于一个特殊的列表，称为调用列表 
+
+-当委托被调用时，该列表中的所有方法都会被依次调用。 
+
+-我们可以在该列表中添加多个方法。
+
+- To add methods to a delegate, use the += operation: message += HowAreYou;  
+
+### 2.4 Removing methods from a delegate
+
+•In a similar way, we can remove methods from the delegate using -= operations
+
+```C#
+delegate void Message();
+class Program
+{
+    static void Main(string[] args)
+    {
+        Message message = Hello;
+        message += HowAreYou;
+        message();//call all methods from message
+        message -= HowAreYou;//remove the HowAreYou
+        if (message != null) message();//call Hello
+        message();
+
+        void Hello() => Console.WriteLine("Hello");
+        void HowAreYou() => Console.WriteLine("HowAreYou");
+    }
+}
+//output
+Hello
+HowAreYou
+Hello
+Hello
+```
+
+### 2.5 Combine delegates (multicast delegates)
+
+Delegates can be combined: 
+
+```c#
+delegate void Message();
+class Program
+{
+    static void Main(string[] args)
+    {
+        Message message1 = Hello;
+        Message message2 = HowAreYou;
+        Message message3 = message1 + message2;
+        message3();
+        void Hello() => Console.WriteLine("Hello");
+        void HowAreYou() => Console.WriteLine("HowAreYou");
+    }
+}
+//output
+Hello
+HowAreYou
+```
+
+
+
+### 2.6 Method Invoke()
+
+Another way of calling a delegate is to use **Invoke()** :
+
+```c#
+delegate void Message();
+class Program
+{
+    static void Main(string[] args)
+    {
+        Message message1 = Hello;
+        Message message2 = HowAreYou;
+        Message message3 = message1 + message2;
+        message3.Invoke();
+        void Hello() => Console.WriteLine("Hello");
+        void HowAreYou() => Console.WriteLine("HowAreYou");
+    }
+}
+//same output
+```
+
+**Method Invoke() and operator null?**
+
+![image-20240506204452879](./Delegates_and_Events.assets/image-20240506204452879.png)
+
+### 2.7  Generic delegates 
+
+•Delegates, like other types, can be generic
+
+```c#
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Operation<decimal, int> squareOperation = Square;
+        decimal result1 = squareOperation(5);
+        Console.WriteLine(result1);
+        Operation<int, int> doubleOperation = Double;
+        int result2 = doubleOperation(5);
+        Console.WriteLine(result2);
+
+        decimal Square(int n) => n* n;
+        int Double(int n) => n + n;
+    }
+}
+delegate T Operation<T, K>(K val);//T是输入参数的类型，K是返回值类型！
+```
+
+### 2.8 异步回调
+
+将委托作为参数 
+
+- 由于实例化的委托是一个对象，因此可以将其作为参数传递，或分配给一个属性 
+- 这允许方法接受委托作为参数（并在需要时稍后调用） 
+- 这被称为异步回调： -当<长>进程完成时通知调用者的常用方法
+
+![image-20240506222655870](./Delegates_and_Events.assets/image-20240506222655870.png)
+
+### 2.9  Return delegates from a method
+
+ •the return type of the method is an Operation delegate
+
+![image-20240506223119885](./Delegates_and_Events.assets/image-20240506223119885.png)
+
+
+
+## 3. Event
+
+- 事件使一个类或对象能够在感兴趣的事情发生时通知其他类或对象
+
+- The class that sends (or raises) the event is called the publisher and  the classes that receive (or handle) the event are called subscribers
+
+•事件具有以下属性：
+•发布者决定何时引发事件；订阅者确定针对事件采取的操作
+•一个活动可以有多个订阅者。一个订阅者可以处理多个来自多个发布者的事件
+•从不引发没有订阅者的事件
+•事件通常用于指示用户操作，如按钮点击或菜单图形用户界面中的选择
+
+### 3.1 以编程方式订阅事件
+•定义一个事件处理程序方法，其签名与活动的代表签名：
+
+```c#
+ void HandleCustomEvent(object sender, CustomEventArgs a)  { // Do something useful here }
+```
+
+
+
+使用加法赋值运算符（+=）to attach an event handler  to the event:
+
+```c#
+ publisher.RaiseCustomEvent+= HandleCustomEvent;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

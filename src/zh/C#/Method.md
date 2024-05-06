@@ -440,3 +440,325 @@ a 是要传递给方法的一个变量，称为实际参数，a 的值为 3。�
 > C# 默认的传递方式是按值传递。
 >
 > 正如你所看到的, Sqr 方法不会改变原先变量的值，这意味着它是对传递进来的值而不是对实际变量进行操作。
+
+【填空题】以下代码运行后的最终输出结果是？
+
+```cs
+static void Test(int x) {
+  x = 8;
+}
+static void Main() {
+  int a = 5;
+  Test(a);
+  Console.WriteLine(a); 
+}
+// 5
+```
+
+### 5.2 按引用传递参数
+
+按引用传递参数的时候，实际是把内存地址传递到方法中，在方法内部，对参数进行操作，会直接访问内存地址中的变量，这也意味着，在方法中对形式参数进行操作，会影响实际参数的值。
+
+要按引用传递值，需要在调用和方法定义中都使用 ref 关键字：
+
+```cs
+static void Sqr(ref int x)
+{
+  x = x * x;
+}
+static void Main()
+{
+  int a = 3;
+  Sqr(ref a);
+
+  Console.WriteLine(a); // 输出的结果为:9
+}
+```
+
+通过上面的例子和上一节的例子对比我们可以发现,按引用传递参数，在 Sqr 中对 x 进行操作，会直接影响实际参数。a 的值。
+
+> ref 关键字将内存地址传递给方法，该参数允许方法对实际变量进行操作。
+
+> 按引用传递参数，在定义方法和调用方法时都需要使用 ref 关键字。
+
+【填空题】填空创建一个按引用传递参数的方法，该方法交换两个参数的值：
+
+```cs
+void Swap(__ref_ int x, _ref__ int y)
+{
+  int temp;
+  temp = x;
+  x = y;
+  y = __temp_ ;
+}
+```
+
+> ref ref  temp
+
+### 5.3 按输出传递参数
+
+按输出传递参数和按引用传递参数有点类似，都会直接修改实际参数的值,不同之处在于，按输出传递参数是从方法中输出参数，而不是接受参数传入。按输出传递参数需要使用 out 关键字,如下例子所示:
+
+```cs
+static void GetValues(out int x, out int y)
+{
+  x = 5;
+  y = 42;
+}
+static void Main(string[] args)
+{
+  int a, b;
+  GetValues(out a, out b);
+  //此时,a的值为5,b的值为42
+}
+```
+
+> 类似于 ref 关键字，需要使用按输出传递参数时，在定义方法和调用方法时都需要使用 out 关键字。
+
+【填空题】填空，构建一个使用按输出传递参数的方法来获取用户的输入值
+
+```cs
+static void Ask(out string name)
+{
+    __name_ = Console.ReadLine();
+}
+static void Main(string[] args)
+{
+  string nm;
+  Ask(out nm);
+}
+```
+
+## 6. 方法的重载
+
+### 6.1 方法的重载
+
+方法重载是指多个方法具有相同的名称，但参数不同。
+
+例如，你可能有一个将参数输出到控制台窗口的方法 Print：
+
+```cs
+void Print(int a)
+{
+  Console.WriteLine("Value: "+a);
+}
+```
+
+示例中，"+"运算符用于连接值。如 a 等于 3，则最终控制台的输出文本为“Value:3”。
+
+但是这个方法只接受一个整数参数，如果我们需要传入一个浮点型变量怎么办?
+
+我们可以重载这个方法，使它允许传入一个浮点类型的参数:
+
+```cs
+void Print(double a)
+{
+  Console.WriteLine("Value: "+a);
+}
+```
+
+现在 Print 方法不但可以接受一个整形变量，也可以接受一个浮点型变量了。
+
+【单选题】方法的重载意味着？C.
+
+A. 打印参数
+
+B. 相同的参数，不同的方法名称
+
+C. 相同的方法名称，不同的参数
+
+### 6.2 重载方法的调用
+
+当定义重载方法时，方法的参数根据类型或者数量而不同。
+
+当有重载的方法时，所调用的方法是基于参数的。 整型参数将调用接受整型参数的方法，浮点型参数将调用接受浮点型参数的方法，多个参数将调用接受相同数量参数的方法。
+
+```cs
+static void Print(int a) {
+  Console.WriteLine("Value: " + a);
+}
+static void Print(double a) {
+  Console.WriteLine("Value: " + a);
+}
+static void Print(string label, double a) {
+  Console.WriteLine(label + a);
+}
+
+static void Main(string[] args) {
+  Print(11);
+  Print(4.13);
+  Print("Average: ", 7.57);
+}
+```
+
+> 重载必须是参数不同的方法,不能重载只有返回类型不同的方法声明。
+>
+> 以下声明导致错误。
+>
+> `int PrintName（int a）{}`
+>
+> `float PrintName（int b）{}`
+>
+> `double PrintName（int c）{}`
+
+以下代码运行后最终输出的结果是:
+
+```cs
+static void Print(int a) {
+  Console.WriteLine(a*a);
+}
+static void Print(double a) {
+  Console.WriteLine(a+a);
+}
+static void Main(string[] args) {
+  Print(3);
+}
+//output 9
+```
+
+## 7. 递归
+
+### 7.1 递归
+
+递归方法是一种自我调用的方法。
+
+通过递归很容易解决的一个经典任务就是计算一个数的阶乘。
+
+在数学中，阶乘是指所有小于或等于特定的非负整数（n）的正整数的乘积。 n 的阶乘表示为 `n!`
+
+例如：
+
+> 4! = 4 * 3 * 2 * 1 = 24
+
+### 7.2 递归的算法
+
+通过分析前面的示例跟习题我们可以发现，阶乘的算法可以归纳为重复 `num*num-1`，直到 `num=1`。
+
+基于这个想法，我们实现阶乘的计算方法:
+
+```cs
+static int Fact(int num) {
+  if (num == 1) {
+    return 1;
+  }
+  return num * Fact(num - 1);
+}
+```
+
+在 Fact 递归方法中，if 语句定义了退出条件，这是因为 1 是一个不需要递归的情况。在这种情况下，当 num 等于 1 时，解决方案就是简单地返回 1（1的阶乘是1）。
+
+递归调用放在退出条件之后，并返回乘以 n-1 阶乘的 num。
+
+例如，如果您使用参数 4 调用 Fact 方法，它将执行如下：
+
+返回 `4 *Fact(3)`，即 `4 * 3 *Fact(2)`，即 `4 * 3 * 2 *Fact(1)`，即 `4 * 3 * 2 * 1`。
+
+如果在 Main 函数中调用 Fact 方法:
+
+```cs
+static void Main(string[] args)
+{
+  Console.WriteLine(Fact(6));
+  //输出720
+}
+```
+
+> 当参数 num 不为 1 的时候，Fact 不断的调用自己，直到 num 等于 1 的时候停止，这样我们得到了阶乘的最终计算结果了。当然，如果没有退出条件，Fact 会一直执行下去，即无线循环，也称为死循环。
+
+【单选题】如何阻止递归方法永远调用自己？B.
+
+A. 静态关键字
+
+B. 退出条件
+
+C. Main 函数
+
+## 8. 实践：输出一个金字塔
+
+### 8.1 打印一个金字塔
+
+现在，让我们创建一个方法，使用星号"`*`"将任何高度的金字塔显示到控制台窗口中。
+
+基于这个需求，我们需要定义一个参数来控制金字塔的行数(即金字塔的高度)。
+
+首先，让我们开始声明方法：
+
+```cs
+static void DrawPyramid(int n)
+{
+   //循环控制*号的输出
+}
+```
+
+DrawPyramid 不需要返回值，但是需要一个参数来控制金字塔的高度：
+
+在编程过程中，解决问题所需的逐步逻辑称为算法。 MakePyramid 的算法是：
+
+1. 第一行应包含金字塔顶部中心的一颗星。中心是根据金字塔中的行数计算的。
+
+2. 第一行之后的每行应包含奇数个星号（1,3,5 等），直到达到行数。
+
+基于该算法，代码将使用 for 循环来显示每行的空格和星号：
+
+第一排中心*：（n-1）/2
+
+```c#
+using System;
+
+class Program
+{
+    // 定义一个方法来绘制金字塔
+    // static void DrawPyramid(int n)
+    // {
+    //     // 循环每一层 i 从 1 到 n
+    //     for (int i = 1; i <= n; i++)
+    //     {
+    //         // 打印空格，为了金字塔形状向右对齐
+    //         for (int j = i; j <= n; j++)
+    //         {
+    //             Console.Write("  "); // 每层前的空格数量与层数成反比
+    //         }
+    //         // 打印星号，当前层 i 的星号数量为 2 * i - 1
+    //         for (int k = 1; k <= 2 * i - 1; k++)
+    //         {
+    //             Console.Write("* "); // 在星号后面加一个空格以形成更清晰的金字塔形状
+    //         }
+    //         // 每打印完一层后换行
+    //         Console.WriteLine();
+    //     }
+    // }
+    static void DrawPyramid(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                Console.Write("  ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++)
+            {
+                Console.Write("*" + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    // 主函数
+    static void Main()
+    {
+        // 提示用户输入金字塔的高度
+        Console.Write("请输入金字塔的高度：");
+        int n;
+
+        // 读取用户输入并尝试转换为整数
+        while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+        {
+            Console.WriteLine("输入无效，请输入一个正整数：");
+        }
+
+        // 调用 DrawPyramid 方法绘制金字塔
+        DrawPyramid(n);
+    }
+}
+```
+
