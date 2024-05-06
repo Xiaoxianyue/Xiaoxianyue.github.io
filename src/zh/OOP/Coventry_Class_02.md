@@ -261,7 +261,7 @@ class Account
 
 – protected internal : type or member can be accessed  by any code in the assembly in which it is declared, or  from within a derived class in another assembly 可被访问该程序包或者别的程序包的派生类访问
 
-
+![image-20240506112014686](./Coventry_Class_02.assets/image-20240506112014686.png)
 
 
 

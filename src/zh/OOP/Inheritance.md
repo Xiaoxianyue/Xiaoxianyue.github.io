@@ -71,19 +71,23 @@ class Program
 
 
 
- **Object type “Employee” “IS-A” “Person” as well:**
+### 1.1 **Object type “Employee” “IS-A” “Person” as well:**
 
 ```c#
 Person person = new Employee 
 ```
 
-左父右子  bingo！
+可以这样记：左边是父右边子。
 
-左子右父  达咩！
+**这里再引入一个概念：Object -> Person -> Employee/Client**
+
+可以看出，Object是一切的基类。所以下面这样是可以的。（左Object右Person）
+
+![image-20240506091530812](./Inheritance.assets/image-20240506091530812.png)
 
 
 
-**access modifiers between base class and derived class:**
+### 1.2 **access modifiers between base class and derived class:**
 
 基类的访问修饰符，派生类必须具有相同或更强的访问修饰符：
 
