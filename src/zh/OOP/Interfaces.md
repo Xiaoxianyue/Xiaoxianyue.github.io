@@ -200,6 +200,13 @@ public interface IMovable
 如果一个类实现了一个接口，就意味着接口中描述的每个方法都有相应的实现--该类必须包含接口中描述的所有方法的具体版本
 
 ```c#
+public interface IAccount
+{
+    bool PayInFund(decimal amount);
+    void WithdrawFunds(decimal amount);
+    decimal GetBalance();
+}
+
 public class CustomerAccount:IAccount
 {
     private decimal balance = 0;
