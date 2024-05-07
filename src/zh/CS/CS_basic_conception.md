@@ -186,7 +186,7 @@ D. int
 
 接下来，点击 File-> New-> Project，然后选择 Console Application，如下所示：
 
-![ConsoleApplication](./01.assets/1509346059952336.png)
+![img](./CS_basic_conception.assets/1509346059952336-20240418133021881-cFjZqRvk.png)
 
 输入您的项目的名称，然后单击确定。
 
