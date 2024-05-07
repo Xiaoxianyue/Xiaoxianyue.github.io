@@ -50,11 +50,21 @@ Same upcasting from Employee/Client to Object,  as Object is the base class.
 
 Employee2 line is RUN-TIME error!!!
 
+
+
+> 总结：无论咋样，父类或父类的实例在右边，子类或子类的实例不能在左边！！！ 只能左父右子。
+
+
+
+
+
 #### 1.2.1 Solution
 
 1.  Keyword as. No exception but attempt. 
 
 ![image-20240506095817053](./Interfaces.assets/image-20240506095817053.png)
+
+> as就是一种强制转换类型的方式！！！
 
 2.  Keyword is. IS it acceptable conversion?
 
@@ -62,7 +72,7 @@ Employee2 line is RUN-TIME error!!!
 
  *checks if person is object type of Employee. If  “yes” –converts to Employee and keep the  result in the variable employee*
 
-
+> is操作符用于检查一个表达式的类型是否与指定的类型兼容。
 
 ## 2.  Constructor Management
 
@@ -107,11 +117,41 @@ To stop this to be “constructed” we can throw an  exception:
 
 ![image-20240506103611002](./Interfaces.assets/image-20240506103611002.png)
 
+### 2.4 以多个构造函数为例的整个代码：
 
+```c#
+class Person
+{
+    string name;
+    string address;
+    decimal balance;
+    public Person(string name, string address, decimal balance)
+    {
+        this.name = name;
+        this.address = address;
+        this.balance = balance;
+    }
+    public Person(string name, string address):this(name,address,0){ }
+    public Person(string name) : this(name,"None!", 0) { }
+    public void Print()
+    {
+        Console.WriteLine($"name is {name},live in {address},{balance}");
+    }
 
-
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Person person = new Person("Sherry", "汤臣一品", 777);
+        person.Print();
+    }
+}
+```
 
 ## 3. Interface
+
+### 3.1 实现格式
 
 1. **以I开头：**
 
@@ -145,7 +185,7 @@ public interface IMovable
 }
 ```
 
-3. **常量变量和静态变量在接口中的默认访问修饰符…**
+### 3.2 access modifier
 
 如果没有指定访问修饰符--**默认为 public**，因为接口定义了类所要实现的功能！**这对常量变量和静态变量都有效**--默认情况下，它们在类和结构体中都是私有的！接口中方法，默认访问权限也是public，并且不能修改。
 
@@ -160,17 +200,11 @@ static void Main(string[] args)
 
 
 
-4. **接口本身的访问修饰符？**
-
-public。
-
-如果访问修饰符设置为公共时，所有接口都可访问。
+- 默认为内部接口 - 将访问修饰符设置为公共接口，则所有接口都可访问
 
 ![image-20240506112127473](./Interfaces.assets/image-20240506112127473.png)
 
-
-
-5. Implementation note
+### 3.3 Implementation note
 
 - 如果接口有私有方法和属性 , 默认情况下必须有实现 -,接口的静态方法也是如此：
 
@@ -195,7 +229,7 @@ public interface IMovable
 }
 ```
 
-6. 接口的实现
+### 3.4 接口的实现
 
 如果一个类实现了一个接口，就意味着接口中描述的每个方法都有相应的实现--该类必须包含接口中描述的所有方法的具体版本
 
@@ -241,7 +275,7 @@ public class CustomerAccount:IAccount
 
 ![image-20240506133626431](./Interfaces.assets/image-20240506133626431.png)
 
-7.  Implementing Multiple Interfaces 
+#### 3.4.1 Implementing Multiple Interfaces 
 
 一个类可以根据需要实现尽可能多的接口
 
@@ -249,7 +283,9 @@ public class CustomerAccount:IAccount
 public class BabyAccount:IAccount, IPrintToPaper{ ... 
 ```
 
-8. Designing with interfaces
+
+
+### 3.5 Designing with interfaces
 
 a system creation process :
 
@@ -278,3 +314,43 @@ a system creation process :
 -决定如何测试这些值和操作
 
 -在开发过程中实施组件并对其进行测试
+
+
+
+### 3.6 接口实现的完整代码
+
+```c#
+using System;
+
+interface Ibook
+{
+    public string Name { get; set; }
+    public int Id { get; set; }
+    public double Price { get; set; }
+    public void discountPric(int discount) { }
+    
+}
+class Book : Ibook
+{
+    public string Name { get; set; }
+    public int Id { get; set; }
+    public double Price { get; set; }
+    public double discountPrice(double discount)
+    {
+        double finalprice = Price * discount;
+        return finalprice;
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Book book = new Book();
+        book.Name = "Harry Potter";
+        book.Id = 27;
+        book.Price = 99.4;
+        Console.WriteLine($"The book name is {book.Name},Id is {book.Id},final price is {book.discountPrice(0.8)}");
+    }
+}
+```
+

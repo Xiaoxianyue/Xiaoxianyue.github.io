@@ -65,6 +65,10 @@ class Program
 
 
 
+> boixng 相当于把值类型转换成了引用类型为了方便修改，unboxing相当于把引用类型拿出来使用。
+
+
+
 
 
 ## 2. Testing for type compatibility
