@@ -12,8 +12,8 @@ export default hopeTheme({
     name: "XiaoXianYue",
     url: "https://bougiemoonintaurus.com",
   },
-
-  iconAssets: "fontawesome-with-brands",
+  iconPrefix: "iconfont icon-",
+  iconAssets: "https://bornforthis.cn/icon/iconfont.css",
 
   logo: "/logo.jpg",
 
