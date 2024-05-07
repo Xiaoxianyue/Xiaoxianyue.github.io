@@ -71,7 +71,7 @@ class Program
 
 
 
-## 2. Testing for type compatibility
+## 2. “Is”&“As”
 
 ### 2.1 **is 在运行时评估类型兼容性。**
 
@@ -81,7 +81,7 @@ class Program
 
 ### 2.2 as operator
 
-as 在兼容引用(compatible reference)类型或可归零(nullable)类型之间执行某些类型的转换.as operator 就像一个转换操作。不过，如果转换不成功，as 将返回空值，而不是引发异常： *expression as type*.
+as 在兼容引用(compatible reference)类型或可归零(nullable)类型之间执行某些类型的转换.as operator 就像一个转换操作。不过，**如果转换不成功，as 将返回空值，而不是引发异常**： *expression as type*.
 
 #### 2.2.1 Nullable
 
