@@ -1,6 +1,6 @@
 ---
 title: Software Testing
-icon: alias
+icon: c
 date: 2024-4-24 22:31:09
 author: XiaoXianYue
 isOriginal: true

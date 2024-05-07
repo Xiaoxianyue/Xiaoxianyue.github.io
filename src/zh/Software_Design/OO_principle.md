@@ -1,6 +1,6 @@
 ---
 title: OO principle
-icon: alias
+icon: c
 date: 2024-4-23 2:45:25
 author: XiaoXianYue
 isOriginal: true

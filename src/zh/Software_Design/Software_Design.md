@@ -1,6 +1,6 @@
 ---
 title: Software Design technique
-icon: alias
+icon: c
 date: 2024-4-30 17:58:42
 author: XiaoXianYue
 isOriginal: true

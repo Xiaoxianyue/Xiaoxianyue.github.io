@@ -1,6 +1,6 @@
 ---
 title: Generics
-icon: alias
+icon: c
 date: 2024-5-06 14:22:12
 author: XiaoXianYue
 isOriginal: true

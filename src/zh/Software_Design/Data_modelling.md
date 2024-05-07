@@ -1,6 +1,6 @@
 ---
 title: Database->Data Modelling
-icon: alias
+icon: c
 date: 2024-4-30 22:30:15
 author: XiaoXianYue
 isOriginal: true

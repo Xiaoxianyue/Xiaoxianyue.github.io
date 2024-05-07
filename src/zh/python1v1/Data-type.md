@@ -1,6 +1,6 @@
 ---
 title: 02-初识数据类型
-icon: alias
+icon: python
 date: 2023-12-01 20:07:38
 author: XiaoXianYue
 isOriginal: true

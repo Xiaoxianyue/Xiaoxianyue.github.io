@@ -1,6 +1,6 @@
 ---
 title: Delegates and Event
-icon: alias
+icon: c
 date: 2024-5-06 16:50:33
 author: XiaoXianYue
 isOriginal: true

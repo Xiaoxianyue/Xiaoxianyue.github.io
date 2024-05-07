@@ -1,6 +1,6 @@
 ---
 title: C#->basic conception
-icon: python
+icon: c
 date: 2024-4-18 13:11:28
 author: XiaoXianYue
 isOriginal: true

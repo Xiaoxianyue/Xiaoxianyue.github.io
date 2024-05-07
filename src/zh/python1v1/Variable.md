@@ -1,6 +1,6 @@
 ---
 title: 01-变量 Variable
-icon: alias
+icon: python
 date: 2023-11-30 20:22:40
 author: XiaoXianYue
 isOriginal: true

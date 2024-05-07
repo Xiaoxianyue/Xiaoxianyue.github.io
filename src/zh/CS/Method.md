@@ -1,6 +1,6 @@
 ---
 title: C#->Method
-icon: alias
+icon: c
 date: 2024-4-29 09:05:26
 author: XiaoXianYue
 isOriginal: true

@@ -1,6 +1,6 @@
 ---
 title: Coventry-Class 02
-icon: alias
+icon: c
 date: 2024-5-02 17:13:22
 author: XiaoXianYue
 isOriginal: true

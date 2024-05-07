@@ -1,6 +1,6 @@
 ---
 title: Intheritance
-icon: alias
+icon: c
 date: 2024-5-02 19:47:51
 author: XiaoXianYue
 isOriginal: true

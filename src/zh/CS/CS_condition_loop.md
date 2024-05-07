@@ -1,6 +1,6 @@
 ---
 title: C#->condition and loop
-icon: alias
+icon: c
 date: 2024-4-22 10:24:28
 author: XiaoXianYue
 isOriginal: true

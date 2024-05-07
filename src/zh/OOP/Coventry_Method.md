@@ -1,6 +1,6 @@
 ---
 title: Coventry-Method
-icon: alias
+icon: c
 date: 2024-5-02 10:55:44
 author: XiaoXianYue
 isOriginal: true

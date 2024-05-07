@@ -1,6 +1,6 @@
 ---
 title: Agile 01
-icon: alias
+icon: c
 date: 2024-5-01 15:14:52
 author: XiaoXianYue
 isOriginal: true

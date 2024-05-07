@@ -1,6 +1,6 @@
 ---
 title: 03-数字型
-icon: alias
+icon: python
 date: 2023-12-02 13:24:55
 author: XiaoXianYue
 isOriginal: true

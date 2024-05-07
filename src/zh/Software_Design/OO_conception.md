@@ -1,6 +1,6 @@
 ---
 title: OO conception
-icon: alias
+icon: c
 date: 2024-4-20 18:45:08
 author: XiaoXianYue
 isOriginal: true

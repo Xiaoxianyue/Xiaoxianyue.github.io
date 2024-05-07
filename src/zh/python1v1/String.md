@@ -1,6 +1,6 @@
 ---
 title: 04-字符串
-icon: alias
+icon: python
 date: 2023-12-21 14:49:25
 author: XiaoXianYue
 isOriginal: true

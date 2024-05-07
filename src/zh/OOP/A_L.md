@@ -1,6 +1,6 @@
 ---
 title:  Anonymous Methods and Lambda Expressions
-icon: alias
+icon: c
 date: 2024-5-07 09:35:42
 author: XiaoXianYue
 isOriginal: true

@@ -1,6 +1,6 @@
 ---
 title: Ethics
-icon: alias
+icon: c
 date: 2024-5-01 02:48:34
 author: XiaoXianYue
 isOriginal: true

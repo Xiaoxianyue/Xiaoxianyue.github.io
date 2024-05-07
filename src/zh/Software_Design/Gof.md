@@ -1,6 +1,6 @@
 ---
 title: Design Patterns--Gof
-icon: alias
+icon: c
 date: 2024-4-27 21:22:37
 author: XiaoXianYue
 isOriginal: true
