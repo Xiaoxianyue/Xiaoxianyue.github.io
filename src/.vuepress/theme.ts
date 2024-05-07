@@ -13,7 +13,7 @@ export default hopeTheme({
     url: "https://bougiemoonintaurus.com",
   },
 
-  iconAssets: "iconfont",
+  iconAssets: "fontawesome-with-brands",
 
   logo: "/logo.jpg",
 
