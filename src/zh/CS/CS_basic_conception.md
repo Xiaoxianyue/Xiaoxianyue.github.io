@@ -635,7 +635,7 @@ const int num=2;
 
 C# 支持以下算术运算符：
 
-![ecd1b540c8397913c964d9cd80d5dd1](./C#_basic_conception.assets/ecd1b540c8397913c964d9cd80d5dd1.png)
+![ecd1b540c8397913c964d9cd80d5dd1](./CS_basic_conception.assets/ecd1b540c8397913c964d9cd80d5dd1.png)
 
 **使用示例**
 
