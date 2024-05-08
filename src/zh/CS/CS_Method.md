@@ -762,3 +762,21 @@ class Program
 }
 ```
 
+4. 【填空题】如果一个方法没有返回值,你应该定义方法的返回类型为？void
+
+5. 以下代码运行后最终输出的结果是：
+
+```cs
+static int Test(out int x, int y=4) {
+  x = 6;
+  return x * y;
+}
+static void Main(string[] args) {
+  int a;
+  int z = Test(out a);
+  Console.WriteLine(a + z);
+}
+//output
+30
+```
+

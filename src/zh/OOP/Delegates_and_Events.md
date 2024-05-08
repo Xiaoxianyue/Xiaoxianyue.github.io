@@ -136,7 +136,7 @@ class Progarm
 }
 ```
 
-### 
+
 
 ### 2.2. 将方法签名与委托相匹配
 
@@ -255,7 +255,6 @@ class Program
 •Delegates, like other types, can be generic
 
 ```c#
-
 class Program
 {
     static void Main(string[] args)
@@ -304,7 +303,71 @@ delegate T Operation<T, K>(K val);//T是输入参数的类型，K是返回值类
 •从不引发没有订阅者的事件
 •事件通常用于指示用户操作，如按钮点击或菜单图形用户界面中的选择
 
-### 3.1 以编程方式订阅事件
+### 3.1 实现代码
+
+```c#
+using System;
+
+// 声明一个委托类型，可引用接受字符串参数并返回void的方法
+public delegate void Notify(string message);
+
+// 发布者类，负责声明并触发事件
+class Publisher
+{
+    // 使用 Notify 委托类型声明一个事件
+    public event Notify OnProcessCompleted;
+
+    // 模拟处理过程的方法
+    public void Process()
+    {
+        Console.WriteLine("Processing started...");
+
+        // 模拟一些工作
+        System.Threading.Thread.Sleep(1000);
+
+        // 检查事件是否有订阅者并触发事件，将消息传递给订阅者
+        OnProcessCompleted?.Invoke("Processing completed!");
+    }
+}
+
+// 订阅者类，负责订阅事件并处理事件
+class Subscriber
+{
+    // 订阅事件，将事件与处理方法关联
+    public void Subscribe(Publisher pub)
+    {
+        pub.OnProcessCompleted += HandleProcessCompleted;
+    }
+
+    // 与 Notify 委托类型匹配的方法，当事件被触发时会调用这个方法
+    void HandleProcessCompleted(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+class EventExample
+{
+    static void Main()
+    {
+        // 创建发布者和订阅者对象
+        Publisher pub = new Publisher();
+        Subscriber sub = new Subscriber();
+
+        // 订阅发布者的事件
+        sub.Subscribe(pub);
+
+        // 开始处理，触发事件
+        pub.Process();
+    }
+}
+
+```
+
+
+
+### 3.2 以编程方式订阅事件
+
 •定义一个事件处理程序方法，其签名与活动的代表签名：
 
 ```c#
@@ -318,8 +381,6 @@ delegate T Operation<T, K>(K val);//T是输入参数的类型，K是返回值类
 ```c#
  publisher.RaiseCustomEvent+= HandleCustomEvent;
 ```
-
-
 
 
 

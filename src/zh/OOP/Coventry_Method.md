@@ -246,7 +246,43 @@ What if we want just the change of the variable?
 
 –We just want the results
 
-![image-20240502121610492](./Coventry_Method.assets/image-20240502121610492.png)
+```c#
+static void InitializeAndAddOne(out int i)
+{
+    i = Console.ReadLine();
+    Console.WriteLine("i is: " + i);
+}
+
+static void Main(string[] args)
+{
+    int test;
+    InitializeAndAddOne(out test); // 注意：这里不需要初始化 'test'
+    Console.WriteLine("test is: " + test); // 输出将会是 "test is: 1"
+}
+```
+
+or:
+
+```c#
+using System;
+class Program
+{
+    static void InitializeAndAddOne(out int i)
+    {
+        i = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("i is: " + i);
+    }
+
+    static void Main(string[] args)
+    {
+        int test;
+        InitializeAndAddOne(out test); // 注意：这里不需要初始化 'test'
+        Console.WriteLine("test is: " + test); // 输出将会是 "test is: 1"
+    }
+}
+```
+
+
 
 在C#中，`out`关键字与`ref`关键字类似，都用于通过方法参数传递引用。但`out`关键字有一些特殊之处：
 

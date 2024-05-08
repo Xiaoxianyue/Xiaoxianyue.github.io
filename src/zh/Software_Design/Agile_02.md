@@ -165,6 +165,12 @@ T-shrit animal or other things…
 
 -将冲刺阶段的用户故事分解为任务。估算每项任务所需的小时数，包括设计、开发、测试等。
 
+- To use hours to estimate the amount of effort  required to complete a Task; whereas Story Points  to estimate the amount of effort required to complete  a User Story 
+
+    用小时数估算完成任务所需的工作量；用故事点数估算完成用户故事所需的工作量
+
+    
+
 ![image-20240501200202662](./Agile_02.assets/image-20240501200202662.png)
 
 
@@ -173,17 +179,13 @@ T-shrit animal or other things…
 
 ## 4. Task BreakDown
 
-### 4.1
+### 4.1 Example
 
-- To use hours to estimate the amount of effort  required to complete a Task; whereas Story Points  to estimate the amount of effort required to complete  a User Story 
 
-    用小时数估算完成任务所需的工作量；用故事点数估算完成用户故事所需的工作量
-
-    
 
 ![image-20240501200524124](./Agile_02.assets/image-20240501200524124.png)
 
-### 4.2
+### 4.2 criteria
 
 1. **To create meaningful tasks.** For example, instead of having  ‘coding’ as a task, the tasks can be given as  ‘Develop the  login class’ or ‘Create a user table and save the login data to  the database’
 2. **To create tasks that are right-sized.** As a general guideline  for the size of the tasks is to have tasks that require less than 8  hours. Avoid to break down the tasks that are very small, to a  minute level such as 10, or 30 minutes etc. 
