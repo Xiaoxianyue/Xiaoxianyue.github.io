@@ -1,5 +1,5 @@
 ---
-title: Design Patterns--Gof
+title: Design Patterns--Gof 01
 icon: c
 date: 2024-4-27 21:22:37
 author: XiaoXianYue

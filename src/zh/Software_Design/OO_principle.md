@@ -271,6 +271,22 @@ Categories：
     ​    e.g. the “Observer” 
 
     ​    Usually specific enough to include a UML model of the  outline solution.
+    
+    类别：
+    
+    -体系结构模式：为软件系统提供基本的结构模式，例如“MVC”模式
+    
+    -设计模式：提供细化软件系统的子系统或组件的方案
+    
+    −通用模式，给出了将责任分配给对象的基本方法；众所周知的基本设计准则
+    
+        例如“GRASP”模式集。
+    
+    −针对更具体但常见的上下文/问题的设计模式。
+    
+        例如“观察员”
+        
+        通常足够具体，以包括大纲解决方案的UML模型。
 
 ### 3.1 **GRASP**
 

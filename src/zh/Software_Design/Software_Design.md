@@ -50,7 +50,8 @@ toc: true
 
 1. Structured (function-oriented): 1970s 
 2. Object-oriented (OO):1990s  
-    - Unified Process (UP): e.g. IBM Rational Unified  Process (RUP) provides a framework for object oriented software engineering using **Unified  Modelling Language (UML)**: a standard  language for visualising(可视化）, specifying（指定）, constructing（构建） and documenting（记录） software artefacts.
+    - Unified Process (UP): e.g. IBM Rational Unified  Process (RUP) provides a framework for object oriented software engineering using 
+    - **Unified  Modelling Language (UML)**: a standard  language for visualising(可视化）, specifying（指定）, constructing（构建） and documenting（记录） software artefacts.
 
 #### 1.2.1 Structured  Methodology
 

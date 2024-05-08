@@ -167,7 +167,7 @@ Philosophical and theological integration Many academics will have had a prior f
 
 
 
-## 3.4  Applied Ethics 道德的应用
+### 3.4   Applied Ethics 道德的应用
 
 • Bioethics, Clinical, Business, Social, Professional and Environmental  ethics 
 

@@ -95,8 +95,8 @@ uses the relational data model for  data storage and processing. Data is stored 
 1. Atomicity: this ensures either  all of the transaction succeeds  or none of it does. No part of  it should succeed only. If one  part of the transaction fails,  the whole transaction fails. 
 
 2. Consistency: this ensures  that all data will be  consistent according to  all defined rules,  including constraints  applied on the database.
-3. Isolation: this ensures  that all transactionswill  occur in isolation with no  transaction to be affected  by any other transaction.  For example, atransaction  cannot read data from any  othertransaction that  hasnot yet completed.
-4. Durability: this  ensures that once a  transaction  iscommitted, it will  remain in the system.  Anychanges from the  transactionmust  bestored permanently.
+3. Isolation: this ensures  that all transactions will  occur in isolation with no  transaction to be affected  by any other transaction.  For example, a transaction  cannot read data from any  other transaction that  has not yet completed.
+4. Durability: this  ensures that once a  transaction  is committed, it will  remain in the system.  Any changes from the  transaction must  be stored permanently.
 
 > 原子性：部分出错，整体都不能运行
 
@@ -223,7 +223,7 @@ also called an ER  schema.
 
 ![image-20240430234152727](./Data_modelling.assets/image-20240430234152727.png)
 
-> 一元关系：一个实体和它的特殊类型（子类）直接的关系，如上图的雇员里有监管层，雇员里也有监管和被监管的关系。
+> 一元关系：一个实体和它的特殊类型（**子类**）直接的关系，如上图的雇员里有监管层，雇员里也有监管和被监管的关系。
 
 
 
