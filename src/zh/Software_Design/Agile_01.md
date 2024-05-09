@@ -276,7 +276,9 @@ Problems associated with Waterfall model:
 
 −maintaining simplicity through constant refactoring  of code 不断重构代码
 
-−emphasizes final product −test based approach to requirements and quality 
+−emphasizes final product 
+
+−test based approach to requirements and quality 
 
 −lightweight methods suit small-medium size projects 适合小型企业
 

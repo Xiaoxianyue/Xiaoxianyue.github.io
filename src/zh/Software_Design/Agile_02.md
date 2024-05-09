@@ -194,27 +194,23 @@ T-shrit animal or other things…
 
 To use the Definition of Done (DOD) as a checklist to  produce a list of tasks. The DOD defines the completeness  criteria of a story. For example, DOD may include ‘Coding tasks completed’ or  ‘Unit testing written and passed’. 
 
-**• Example: DOD**
+#### 4.3.1 Example: DOD
 
 ~ User story: As a user, I want to be able to search a product, so that I can  find the product I am looking for
 
-~DOD maybe：
+DOD –> Task
 
-Design for product search is completed ；Code for product search is completed 
+1. Design for product search is completed  –> Produce the design model for product search function
 
-Automated UAT (User Acceptance Tests) for product search is passed 
+2. Code for product search is completed –> Write code for the product search page 
 
-Documentation for product search is updated 产品搜索文档已更新
+3. Automated UAT (User Acceptance Tests) for product search is passed –> Write and run UATs for the product filtering feature 
 
-~根据上面DOD，Tasks或许是以下：
-
-Produce the design model for product search function ；Write code for the product search page 
-
-Write and run UATs for the product filtering feature 
-
-Document the product search features  记录产品搜索功能
+4. Documentation for product search is updated 产品搜索文档已更新 –> Document the product search features  记录产品搜索功能
 
 
+
+ 
 
 ## 5.  Sprint Planning and Tracking
 
@@ -234,4 +230,3 @@ Example： if the total estimated effort for Task 1 is 8 hours at the  start of 
 
 ![image-20240501204717529](./Agile_02.assets/image-20240501204717529.png)
 
-111
