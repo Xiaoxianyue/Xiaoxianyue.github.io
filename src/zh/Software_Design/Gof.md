@@ -415,7 +415,7 @@ Example:
 
 ![Snipaste_2024-04-29_11-00-33](./Gof.assets/Snipaste_2024-04-29_11-00-33.png)
 
- the database drivers to different types of databases
+一个例子是：调用不同的数据库： the database drivers to different types of databases
 
 ![Snipaste_2024-04-29_11-01-05](./Gof.assets/Snipaste_2024-04-29_11-01-05.png)
 
