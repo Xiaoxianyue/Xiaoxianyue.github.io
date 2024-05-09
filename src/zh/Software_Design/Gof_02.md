@@ -1,7 +1,7 @@
 ---
 title: Design Patterns--Gof 02
 icon: c
-date: 2024-4-27 21:22:37
+date: 2024-5-09 16:43:56
 author: XiaoXianYue
 isOriginal: true
 category: 

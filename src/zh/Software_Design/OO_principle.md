@@ -262,16 +262,16 @@ Categories：
 
 - Design Patterns: providing a scheme for refining the  subsystems or components of a software system 
 
-    −General Patterns giving fundamental approaches for assigning  responsibilities to objects; basic well-known design guidelines 
+- General Patterns giving fundamental approaches for assigning  responsibilities to objects; basic well-known design guidelines 
 
-    ​    e.g. the “GRASP” set of patterns. 
+    ​    e.g. the “GRASP” set of patterns
 
-    −Design Patterns for more specific but common  contexts/problems. 
+    - Design Patterns for more specific but common  contexts/problems. 
 
     ​    e.g. the “Observer” 
 
     ​    Usually specific enough to include a UML model of the  outline solution.
-    
+
     类别：
     
     -体系结构模式：为软件系统提供基本的结构模式，例如“MVC”模式
