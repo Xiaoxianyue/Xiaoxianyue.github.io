@@ -1,7 +1,6 @@
 ---
 title: C#->class
-icon: c
-date: 2024-5-09 11:34:56
+date: 2024-05-08 09:06:36
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -10,6 +9,7 @@ category:
 tag:
     - C#
     - 大二下
+icon: c
 sticky: false
 star: false
 article: true
@@ -17,11 +17,11 @@ timeline: true
 image: false
 navbar: true
 sidebarIcon: true
-headerDepth: 5
+headerDepth: 3
+comment: true
 lastUpdated: true
 editLink: false
 backToTop: true
-toc: true
 ---
 
 ## 1. 类和对象
