@@ -1,7 +1,7 @@
 ---
-title: C#->class & Object
+title: C#->class
 icon: c
-date: 2024-5-08 09:22:44
+date: 2024-5-09 11:34:56
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -45,7 +45,7 @@ class BankAccount
 
 > 这个类为对象定义了一个数据类型，但它本身不是一个对象。 一个对象是一个基于类的具体实体，有时也被称为一个类的实例。
 
-【单选题】要使用自定义数据类型，你需要定义： A.
+【单选题】要使用自定义数据类型，你需要定义：
 
 A. 一个类
 
@@ -63,7 +63,7 @@ C. 一个方法
 
 > 一个对象被称为类的一个实例。
 
-【单选题】创建对象的过程被称为？  D.
+【单选题】创建对象的过程被称为？
 
 A. 创建
 
@@ -85,7 +85,7 @@ D. 实例化
 
 > 我们将在下面的章节中学习如何创建类和对象。学完以后，也许你会对类和对象有个更直观的认识。
 
-【单选题】以下哪项决定了对象的当前状态？C.
+【单选题】以下哪项决定了对象的当前状态？
 
 A. 对象的名称
 
@@ -103,7 +103,7 @@ C# 有两种数据存储的方式：值类型(Value Types)和引用类型(Refere
 
 例如，声明值类型的赋值语句 `int x = 10` 可以被认为是：
 
-![6475a5fc04eb0e2cc7d56caedf6cd67](./CS_Class_01.assets/6475a5fc04eb0e2cc7d56caedf6cd67-1715132975301-5.png)
+![](./CS_Class_01.assets/1514346017353396.png)
 
 变量 x 的值存储在堆栈中。
 
@@ -119,7 +119,7 @@ C# 有两种数据存储的方式：值类型(Value Types)和引用类型(Refere
 
 这就是为什么它被称为引用类型 - 它包含一个引用（内存地址）到堆上的实际对象。
 
-![42a71246fbe635a8528e394ec4f6c56](./CS_Class_01.assets/42a71246fbe635a8528e394ec4f6c56-1715132921974-3.png)
+![](./CS_Class_01.assets/1514355240244428.png)
 
 如图所示，Person 类型的 p1对象实际存储在堆(heap)中，栈(stack)中则存放 p1 在堆上的地址。
 
@@ -128,11 +128,11 @@ C# 有两种数据存储的方式：值类型(Value Types)和引用类型(Refere
 > - 栈(stack)：栈的存储空间由编译器自动分配释放，是一些较为固定大小的变量，比如我们使用的 int,dobule 等。
 > - 堆(heap)：堆的存储空间一般是手动申请和释放的，一般用来存放一些需要额外大小的变量，比如对象这类未知大小的。
 
-【单选题】堆和栈哪个用于存放未知大小的变量？heap A.
+【单选题】堆和栈哪个用于存放未知大小的变量？
 
-A. 堆(heap)
+A. 堆
 
-B. 栈(stack)
+B. 栈
 
 ## 3. 实践：创建一个类
 
@@ -163,11 +163,10 @@ public 关键字代表了该成员为公开成员，允许从类的外部访问�
 【填空题】填空，创建一个名为 Car 的类：
 
 ```cs
-__class_ Car
-{_
+___ Car
+ ___
  string color;
  int year;
-}
 ```
 
 > class Car { string color; int year; }
@@ -201,8 +200,8 @@ static void Main(string[] args)
 【填空题】填空，实例化一个 Car 对象，并调用其 `horn()` 方法：
 
 ```cs
-Car c = ___new  Car();
-_c.horn__ ();
+Car c = ___ Car();
+___ ();
 ```
 
 > Car c = new Car(); c.horn();
@@ -235,12 +234,14 @@ static void Main(string[] args)
 
 ```cs
 Dog d = new Dog();
-__d._ age = __7_;
+___ age = ___;
 ```
 
 > Dog d = new Dog(); d.age = 7 ;
 
 ## 4. 封装
+
+### 4.1 封装
 
 封装这个词在编程中的意思，更多是带有保护的意思。比如我们前面提到的银行账户类，我们会定义用户的余额，存款,和取款等各种方法,但是我们并不希望用户能直接修改余额这个变量，所以我们需要对这个类进行封装。
 
@@ -248,7 +249,7 @@ __d._ age = __7_;
 
 > 封装也称为信息隐藏。
 
-【单选题】封装允许你：A.
+【单选题】封装允许你：
 
 A. 赋值给变量
 
@@ -266,7 +267,7 @@ private 修饰符使得成员只能在 class 内部访问，对外部是隐藏�
 
 > protected 将在后面解释
 
-【单选题】哪一个不是 C# 中的访问修饰符？C.
+【单选题】哪一个不是 C# 中的访问修饰符？
 
 A. private
 
@@ -312,16 +313,18 @@ class BankAccount
 【填空题】填空，声明 Person 类，隐藏年龄成员，并使其可以通过 GetAge 方法访问
 
 ```cs
-_class__ Person {
+___ Person {
   private int age;
-  __public__ int GetAge() {
-  __return__ age;
+  ____ int GetAge() {
+  ____ age;
   }
   public void SetAge(int n) {
     age = n;
   }
 }
 ```
+
+> class public return
 
 ## 5. 构造函数
 
@@ -356,7 +359,7 @@ static void Main(string[] args)
 
 当然，使用方法也可以实现相同的功能，但是构造函数的优点是可以自动调用。
 
-【单选题】构造函数在什么时候被调用？C.
+【单选题】构造函数在什么时候被调用？
 
 A. 不能被调用
 
@@ -415,30 +418,6 @@ static void Main(string[] args)
 
 > 2
 
-对比：以下代码输出什么？？
-
-```C#
-class Dog
-{
-    public Dog()
-    { Console.WriteLine(1); }
-
-    public Dog(string name)
-    { Console.WriteLine(name); }
-}
-class Program
-{
-
-
-    static void Main(string[] args)
-    {
-        Dog d = new Dog();
-    }
-}
-```
-
-> 1
-
 ## 6. 属性
 
 ### 6.1 属性
@@ -460,7 +439,6 @@ class Person
     set { name = value; }
   }
 }
-string value = peter
 ```
 
 Person 类具有 Name 属性，该 Name 属性具有 set 和 get 访问器。
@@ -471,15 +449,15 @@ set 访问器用于为 name 变量赋值；  get 用于返回其值。
 >
 > 该属性的名称可以是任何你想要的，但是编码规定属性具有与大写字母相同的私有字段名称。
 
-【多选题】以下哪些是属性的访问器？ B D
+【多选题】以下哪些是属性的访问器？
 
 A. undo
 
-B. set
+B. set✅
 
 C. delete
 
-D. get
+D. get✅
 
 ### 6.2 属性的赋值和读取
 
@@ -513,8 +491,8 @@ class Dog
   private int age;
   public int Age
   {
-      __get_ {_return__ age; }
-    set { age = _value_; }
+      ___ {___ age; }
+    set { age = ___; }
   }
 }
 ```
@@ -540,7 +518,49 @@ class Person
 
 【单选题】跳过哪个访问器可以创建一个只读属性？
 
-A.> 
+A. set
+
+B. return
+
+C. get
+
+### 6.4 使用属性的好处
+
+那么，为什么要使用属性？ 为什么不直接声明成员变量并直接访问呢？
+
+通过属性，您可以选择控制访问变量的逻辑。
+
+例如，您可以在将其分配给变量之前检查 age 的值是否大于 0：
+
+```cs
+class Person
+{
+  private int age=0;
+  public int Age
+  {
+    get { return age; }
+    set {
+      if (value > 0)
+        age = value;
+    }
+  }
+}
+```
+
+你可以使用 get 和 set 访问器来创建任何自定义逻辑。
+
+【填空题】填空，创建一个只读属性 x，访问器的返回值应该是 x 的平方。
+
+```cs
+class A {
+  private int x=8;
+  public int X {
+      ___ { return x ___ x; }
+  }
+}
+```
+
+> get *
 
 ### 6.5 属性的自动创建
 
@@ -575,7 +595,7 @@ static void Main(string[] args)
 ```cs
 class Dog
 {
-  public __int_ Age { __get;_ set; }
+  public ___ Age { ___ set; }
 }
 ```
 
@@ -594,8 +614,8 @@ C. property(属性)
 2. 【填空题】实例化 Cat 类的一个对象，将值 12 传递给构造函数，然后调用该对象的 Meow 方法
 
 ```cs
-Cat c = __new_ Cat(__12_);
-_c.__Meow();
+Cat c = ___ Cat(___);
+___Meow();
 ```
 
 > new 12 c.
@@ -619,8 +639,8 @@ C. 一个对象是类的一个方法。
 5. 【填空题】为 Student 类创建一个公开的方法 `Hello()` ,该方法在控制台显示"Hi”
 
 ```cs
-__class_Student {
- __public_ void Hello() {
+___Student {
+ ___ void Hello() {
     Console.WriteLine("hi");
   }
 }
@@ -634,9 +654,9 @@ __class_Student {
 class Dog
 {
   private int age;
-  __public_ Dog(__int_ val)
+  ___ Dog(___ val)
   { 
-    age = __val_;
+    age = ___;
   }
 }
 ```
@@ -652,3 +672,29 @@ B. get✅
 C. set
 
 D. return
+
+
+
+
+
+
+
+::: details 公众号：AI悦创【二维码】
+
+![](./../../../../../../../gzh.jpg)
+
+:::
+
+::: info AI悦创·编程一对一
+
+AI悦创·推出辅导班啦，包括「Python 语言辅导班、C++ 辅导班、java 辅导班、算法/数据结构辅导班、少儿编程、pygame 游戏开发、Linux、Web、Sql」，全部都是一对一教学：一对一辅导 + 一对一答疑 + 布置作业 + 项目实践等。当然，还有线下线上摄影课程、Photoshop、Premiere 一对一教学、QQ、微信在线，随时响应！微信：Jiabcdefh
+
+C++ 信息奥赛题解，长期更新！长期招收一对一中小学信息奥赛集训，莆田、厦门地区有机会线下上门，其他地区线上。微信：Jiabcdefh
+
+方法一：[QQ](http://wpa.qq.com/msgrd?v=3&uin=1432803776&site=qq&menu=yes)
+
+方法二：微信：Jiabcdefh
+
+:::
+
+![](/zsxq.jpg)
