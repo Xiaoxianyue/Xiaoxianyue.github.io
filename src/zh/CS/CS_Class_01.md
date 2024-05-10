@@ -103,7 +103,7 @@ C# 有两种数据存储的方式：值类型(Value Types)和引用类型(Refere
 
 例如，声明值类型的赋值语句 `int x = 10` 可以被认为是：
 
-![6475a5fc04eb0e2cc7d56caedf6cd67](./CS_Class_Object.assets/6475a5fc04eb0e2cc7d56caedf6cd67-1715132975301-5.png)
+![6475a5fc04eb0e2cc7d56caedf6cd67](./CS_Class_01.assets/6475a5fc04eb0e2cc7d56caedf6cd67-1715132975301-5.png)
 
 变量 x 的值存储在堆栈中。
 
@@ -119,7 +119,7 @@ C# 有两种数据存储的方式：值类型(Value Types)和引用类型(Refere
 
 这就是为什么它被称为引用类型 - 它包含一个引用（内存地址）到堆上的实际对象。
 
-![42a71246fbe635a8528e394ec4f6c56](./CS_Class_Object.assets/42a71246fbe635a8528e394ec4f6c56-1715132921974-3.png)
+![42a71246fbe635a8528e394ec4f6c56](./CS_Class_01.assets/42a71246fbe635a8528e394ec4f6c56-1715132921974-3.png)
 
 如图所示，Person 类型的 p1对象实际存储在堆(heap)中，栈(stack)中则存放 p1 在堆上的地址。
 
