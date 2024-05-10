@@ -186,7 +186,7 @@ test is 20
 
 
 
-### 2.3 **参数按引用传递（Passing Parameter by reference) **
+### 2.3 参数按引用传递（Passing Parameter by reference) 
 
 • Instead of sending the value of a variable into a  method, a reference to that variable is supplied to a  calling method 
 
