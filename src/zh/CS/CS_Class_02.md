@@ -361,3 +361,271 @@ Console.WriteLine(x);//3
 > `double x = Math.Sqrt(arr[1]);` //取数组的第二个数（9），并求其平方根（结果为3）
 >
 > `Console.WriteLine(x);`
+
+## 4. this 关键字
+
+### 4.1 this 关键字
+
+this 关键字在类中使用，并引用当前类的实例，这意味着它指向的是当前对象。
+
+this 关键字其中一个常见用途是将类成员与其他数据（如方法的本地或正式参数）区分开来，如以下示例所示：
+
+```cs
+class Person {
+  private string name;
+  public Person(string name) {
+    this.name = name;
+  }
+}
+```
+
+这里，`this.name` 代表类的成员，而 name 代表构造函数的参数。
+
+> 另一个常见用法是将当前实例作为参数传递给方法：`ShowPersonInfo(this);`
+
+【填空题】使用 this 关键字打印 Person 类的年龄变量。
+
+```cs
+___ Person {
+  private int age;
+  public void Print() {
+    Console.Write(___ age);
+  }
+}
+```
+
+> class this.
+
+### 4.2 readonly(只读) 修饰符
+
+readonly 修饰符防止类的成员在构造之后被修改。 这意味着声明为只读的字段只能在声明它或从构造函数中修改。
+
+```cs
+class Person {
+  private readonly string name = "John"; 
+  public Person(string name) {
+    this.name = name; 
+  }
+}
+```
+
+如果我们试图在其他地方修改名称字段，系统会报错。
+
+readonly 和 const 字段之间有三个主要区别。
+
+首先，一个常量字段在声明时必须被初始化，而一个只读字段可以在没有初始化的情况下声明，如下所示：
+
+```javascript
+readonly string name; // 正确
+const double PI; // 报错
+```
+
+其次，只读字段值可以在构造函数中更改，但常量值不能。
+
+第三，只读字段可以被分配一个计算结果的值，但常量不能，如：
+
+```cs
+readonly double a = Math.Sin(60); // 正确
+const double b = Math.Sin(60); // 报错
+```
+
+【多选题】下面哪些陈述是正确的？
+
+A. 常量应在声明时初始化✅
+
+B. 只读字段只能在声明时初始化
+
+C. 只读字段可以由构造函数初始化✅
+
+D. 常量可以由构造函数初始化
+
+## 5. 索引
+
+### 5.1 索引
+
+索引器允许对象像数组一样被索引。
+
+如前所述，字符串变量实际上是 String 类的一个对象。 而且，String 类实际上是一个 Char 对象的数组。 这样，字符串类实现了一个索引器，所以我们可以通过它的索引来访问任何字符（Char 对象）：
+
+```cs
+string str = "Hello World";
+char x = str[4];
+Console.WriteLine(x);
+//输出"o"
+```
+
+数组使用整数索引，但索引器可以使用任何类型的索引，如字符串，字符等。
+
+【填空题】执行以下代码，最后输出的结果是？
+
+```cs
+string str = "I know C#";
+char x = str[3];
+Console.WriteLine(x);
+```
+
+## 6. 操作符重载
+
+### 6.1 操作符重载
+
+C# 中的大多数运算符都可以被重载，这意味着它们可以被重新定义为自定义的操作。
+
+例如，您可以重新定义类中的加号（`+`）运算符的操作。
+
+考虑具有高度和宽度属性的 Box 类：
+
+```cs
+class Box {
+  public int Height {get; set;}
+  public int Width {get; set;}
+  public Box(int h, int w) {
+    Height = h;
+    Width = w;
+  }
+}
+static void Main(string[] args) {
+  Box b1 = new Box(14, 3);
+  Box b2 = new Box(5, 7);
+}
+```
+
+我们想合并这两个 Box 对象，让它变成一个更大的 Box。
+
+所以，我们需要下面的代码：
+
+```cs
+Box b3 = b1 + b2;
+```
+
+对象 b3 的高度和宽度属性应等于 b1 和 b2 对象的相应属性之和。
+
+> 这是通过运算符重载来实现的。 
+
+【单选题】运算符重载意味着
+
+A. 定义构造函数
+
+B. 定义一个类的常量成员
+
+C. 给运算符自定义操作✅
+
+### 6.2 如何重载操作符
+
+类似于任何其他方法，重载操作符具有返回类型和参数列表。
+
+例如，对于我们的 Box 类，我们重载了`+`运算符：
+
+```cs
+public static Box operator+ (Box a, Box b) {
+  int h = a.Height + b.Height;
+  int w = a.Width + b.Width;
+  Box res = new Box(h, w);
+  return res;
+}
+```
+
+上面的方法定义了一个带有两个 Box 对象参数的重载操作符 `+`，并返回一个新的 Box 对象，其高度和宽度属性等于其参数相应属性的总和。
+
+另外，重载的操作符必须是静态的。
+
+把它放在一起：
+
+```cs
+class Box {
+  public int Height { get; set; }
+  public int Width { get; set; }
+  public Box(int h, int w) {
+    Height = h;
+    Width = w;
+  }
+  public static Box operator+(Box a, Box b) {
+    int h = a.Height + b.Height;
+    int w = a.Width + b.Width;
+    Box res = new Box(h, w);
+    return res;
+  }
+}
+static void Main(string[] args) {
+  Box b1 = new Box(14, 3);
+  Box b2 = new Box(5, 7);
+  Box b3 = b1 + b2;
+
+  Console.WriteLine(b3.Height); //19
+  Console.WriteLine(b3.Width); //10
+}
+```
+
+> 所有的算术运算符和比较运算符都可以重载。 例如，你可以定义大于和小于运算符来比较盒子的大小,并返回一个布尔结果。 请记住，当重载大于运算符时，还应该定义小于运算符。
+
+【填空题】重载 Box 类的大于运算符
+
+```cs
+public static ___ operator ___ (Box a, Box b) {
+  if (a.Height*a.Width > b.Height*b.Width)
+      ___ true;
+  else
+    return false;
+}
+```
+
+> bool ; > ; return
+
+## 7. 模块六测验
+
+1. 【填空题】为类 Book 声明一个析构函数。
+
+```cs
+___ Book {
+___ Book() {
+    //要执行的代码 
+  }
+}
+```
+
+> `class Book { ~ Book() { } }`
+
+2. 【填空题】执行以下代码,最后输出的结果是？
+
+```cs
+class Temp {
+  public int num = 2;
+  public Temp() { num++;}
+  ~Temp() { num++; }
+}
+static void Main(string[] args) {
+  Temp t = new Temp();
+  Console.WriteLine(t.num);
+}
+```
+
+3. 【填空题】将下面代码补充完成：
+
+```cs
+___ void Func ___ {
+  Console.Write("Hi there");
+} 
+static void Main(string[] args) {
+  Func();
+}
+```
+
+> static ; ()
+
+4. 【填空题】执行以下代码，最后输出的结果是？
+
+```cs
+int[] arr = {8, 5, 4};
+Array.Reverse(arr);
+double x = Math.Pow(arr[0], 2);
+```
+
+5. 【填空题】重载 T 类的 `minus(减法)` 操作符
+
+```cs
+public ___ T ___ - (T a, T b) {
+  T res = new T(a.num - b.num);
+    ___ res;
+}
+```
+
+> static ; operator ; return

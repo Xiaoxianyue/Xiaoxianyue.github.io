@@ -356,7 +356,7 @@ static void Main(string[] args)
 
 当然，使用方法也可以实现相同的功能，但是构造函数的优点是可以自动调用。
 
-【单选题】构造函数在什么时候被调用？
+【单选题】构造函数在什么时候被调用？C.
 
 A. 不能被调用
 
@@ -414,6 +414,30 @@ static void Main(string[] args)
 ```
 
 > 2
+
+对比：以下代码输出什么？？
+
+```C#
+class Dog
+{
+    public Dog()
+    { Console.WriteLine(1); }
+
+    public Dog(string name)
+    { Console.WriteLine(name); }
+}
+class Program
+{
+
+
+    static void Main(string[] args)
+    {
+        Dog d = new Dog();
+    }
+}
+```
+
+> 1
 
 ## 6. 属性
 
