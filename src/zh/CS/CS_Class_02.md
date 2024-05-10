@@ -1,7 +1,7 @@
 ---
 title: C#->more class
 icon: c
-date: 2024-4-18 13:11:28
+date: 2024-5-10 10:23:36
 author: XiaoXianYue
 isOriginal: true
 category: 
