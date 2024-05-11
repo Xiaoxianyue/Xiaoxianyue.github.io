@@ -263,6 +263,32 @@ class Program
 
 怎么打印这两数组????
 
+添加索引器！！
+
+```c#
+class Bank<T>
+{
+    public T[] client;
+    public Bank(T[] client)
+    {
+        this.client = client;
+    }
+    public T this[int index]
+    {
+        get { return client[index]; }
+        set { client[index] = value; }
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Bank<int> bank1 = new Bank<int>(new[] { 1, 2, 3 });
+        Console.WriteLine(bank1[0]);
+    }
+}
+```
+
 
 
 ### 4.4 泛型 - 优点
