@@ -289,3 +289,94 @@ class Person<T>
 
 ![image-20240506163707452](./Generics.assets/image-20240506163707452.png)
 
+
+
+
+
+## 5. Where
+
+**Generic classes and restrictions** 
+
+```c#
+class Account
+{
+    public int Id { get; private set; } // A/C number
+    public Account(int _id)
+    {
+        Id = _id;
+    }
+}
+class Bank<T> where T : Account
+{
+    T[] accounts;
+    public Bank(T[] accs)
+    {
+        this.accounts = accs;
+    }
+
+    public void AccountsInfo()
+    {
+        foreach (Account acc in accounts)
+        {
+            Console.WriteLine("A/C : " + acc.Id);
+        }
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Account[] accounts = new Account[] {
+             new Account(1030001),
+             new Account(1030005),
+             new Account(1030009) };
+        Bank<Account> bank = new Bank<Account>(accounts);
+        bank.AccountsInfo();
+        Console.ReadLine();
+    }
+}
+}
+```
+
+ **Generic Methods** 
+
+
+```c#
+abstract class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public Person(string lName, string fName)
+    {
+        FirstName = fName;
+        LastName = lName;
+    }
+    public abstract void Display();
+}
+
+class Client : Person {
+    public Client(string lName, string fName)
+ : base(fName, lName)
+    {
+    }
+    public override void Display()
+    {
+        Console.WriteLine(FirstName + " " + LastName);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Client client2 = new Client("John", "Rembo");
+        Display<Client>(client2);
+        Console.ReadLine();
+    }
+    private static void Display<T>(T person) where T : Person
+    {
+        person.Display();
+    }
+}
+```
+

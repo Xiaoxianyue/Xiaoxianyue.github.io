@@ -307,28 +307,6 @@ The real object gets created only when a client  first requests/accesses the obj
 
 只有当客户端首次请求/访问对象时，才会创建真正的对象，之后就可以引用和重复使用代理对象。这就避免了对象的重复，从而节省了内存。
 
-Example：
-
- −Example: a real image contains a huge size data which  clients needs to access.  
-
-−Solution: 
-
-   Image interfacewhich has operation display(). 
-
-  RealImageruns on the different system and contains the  image information is accessed and loaded from the database. 
-
-  ProxyImagewhich is running on a different system can  represent the RealImage in the new system. Using the proxy,  multiple loading of the image can be avoided.
-
--示例：真实图像包含大量数据，客户需要访问这些数据。  
-
--解决方案
-
-   具有 display() 操作的图像界面。
-
-  RealImager 运行在不同的系统上，包含从数据库访问和加载的图像信息。
-
-  在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
-
 ### 3.5 Python Example
 
 Image loading：

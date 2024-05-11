@@ -175,13 +175,15 @@ Example：Many to one association
 
 ![image-20240418172305293](./OO_conception.assets/image-20240418172305293.png)
 
-### 3.2 Message Passing
+#### 3.1.2 Message Passing
 
 :place Department object reference (held in the  attribute, Department) in the Employee class, thus the Employee object can communicate and send message to the Department  object. i.e. calling the Department object’s method,  display Department(), but not vice versa  
 
 −Sending object: Employee object 
 
 −Receiving object: Department object
+
+前提：是Employee调用Department里的方法！
 
 
 

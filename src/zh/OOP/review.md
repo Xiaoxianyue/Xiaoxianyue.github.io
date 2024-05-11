@@ -112,14 +112,16 @@ static void Main(string[] args)
 
 ## 4. Interface
 
-1. upcastinga downcasting
+1. upcasting downcasting
 2. as & is
 
 ## 5. Generics
 
-Boxing and Unboxing
+1. Boxing and Unboxing
 
-
+2. 完成一个多态的代码
+3. 在数组中的应用
+4. 在继承中的运用
 
 
 

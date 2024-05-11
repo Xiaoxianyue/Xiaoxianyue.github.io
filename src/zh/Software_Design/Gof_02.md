@@ -183,7 +183,7 @@ Template Method pattern determines the general algorithm of subclass behaviour, 
 
 抽象类：确定实现算法的模板方法 TemplateMethod()。该算法可能由一系列其他方法的调用组成，其中一些方法可能是抽象的，必须在继承类中覆盖。
 
-不能覆盖 TemplateMethod() 方法
+不能定义 TemplateMethod() 方法
 
 具体类（ConcreteClass）：子类：可覆盖父类各种方法的子类。
 
