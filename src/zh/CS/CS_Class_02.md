@@ -386,10 +386,10 @@ class Person {
 【填空题】使用 this 关键字打印 Person 类的年龄变量。
 
 ```cs
-___ Person {
+_class__ Person {
   private int age;
   public void Print() {
-    Console.Write(___ age);
+    Console.Write(__this._ age);
   }
 }
 ```

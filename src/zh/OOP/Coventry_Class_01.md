@@ -118,13 +118,13 @@ Console.WriteLine("Name is:" + RobAccount.Name)
 
 ### 2.2 Initial Values in structure
 
- • When a structure is created as a local variable (i.e.  in a block) the values in it are undefined!
+ -When a structure is created as a local variable (i.e.  in a block) the values in it are undefined!
 
 –if you try to use them in your program you will get a  compilation error SO...
 
 –...make sure that you always put a value into a variable  before you try to get something out of it !!!
 
-- 当结构体作为局部变量创建时（即在程序块中），其中的值是未定义的！
+-当结构体作为局部变量创建时（即在程序块中），其中的值是未定义的！
 
 -如果你试图在程序中使用它们，就会出现编译错误，所以...
 
@@ -167,13 +167,13 @@ PrintAccount(RobsAccount)
 
 <img src="./Coventry_Class_01.assets/image-20240502151558899.png" alt="image-20240502151558899" style="zoom: 50%;" />
 
-Designing with Types  
+
+
+### 2.5 使用类型进行设计
 
 • State value to the Account structure makes it easy  for the program to keep track of the particular state  of an account 
 
 •What we have done is created a type which can  hold a number of values (our AccountState  enumerated type) and put it into another type we  have designed which is to hold information about a  bank Account holder. 
-
-### 2.5 使用类型进行设计
 
 --账户结构的状态值可以让程序轻松跟踪账户的特定状态
 

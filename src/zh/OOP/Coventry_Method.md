@@ -392,7 +392,36 @@ in 关键字会使参数通过引用传递 - 与 ref 或 out 关键字类似，�
 
 
 
+## 5. 课后练习
 
+您正在开发一个数学函数库。您首先要开发以下流程图（见图 1），描述计算一个数字的阶乘的算法。您需要为该流程图编写一个等效的 C# 程序编码并测试您的 C# 程序。
+
+```c#
+class Program
+{
+   
+    public static int Func(int n)
+    {
+        int fact = 1;
+        if (n<=1)
+        {
+            return 1;
+        }
+        else
+        {
+            fact = n * Func(n-1);
+            return fact;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        int text = Func(5);
+        Console.WriteLine(text);
+    }
+  
+}
+```
 
 
 

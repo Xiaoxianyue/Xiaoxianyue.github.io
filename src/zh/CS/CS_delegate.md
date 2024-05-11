@@ -101,3 +101,61 @@ toc: true
 ### 总结
 委托和事件在 C# 中用于实现灵活的事件驱动编程模式。它们在异步编程、组件之间的通信、通知机制等方面具有重要作用。
 
+```c#
+using System;
+
+// 声明一个委托类型，可引用接受字符串参数并返回void的方法
+public delegate void Notify(string message);
+
+// 发布者类，负责声明并触发事件
+class Publisher
+{
+    // 使用 Notify 委托类型声明一个事件
+    public event Notify OnProcessCompleted;
+
+    // 模拟处理过程的方法
+    public void Process()
+    {
+        Console.WriteLine("Processing started...");
+        
+        // 模拟一些工作
+        System.Threading.Thread.Sleep(1000);
+        
+        // 检查事件是否有订阅者并触发事件，将消息传递给订阅者
+        OnProcessCompleted?.Invoke("Processing completed!");
+    }
+}
+
+// 订阅者类，负责订阅事件并处理事件
+class Subscriber
+{
+    // 订阅事件，将事件与处理方法关联
+    public void Subscribe(Publisher pub)
+    {
+        pub.OnProcessCompleted += HandleProcessCompleted;
+    }
+
+    // 与 Notify 委托类型匹配的方法，当事件被触发时会调用这个方法
+    void HandleProcessCompleted(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+class EventExample
+{
+    static void Main()
+    {
+        // 创建发布者和订阅者对象
+        Publisher pub = new Publisher();
+        Subscriber sub = new Subscriber();
+        
+        // 订阅发布者的事件
+        sub.Subscribe(pub);
+
+        // 开始处理，触发事件
+        pub.Process();
+    }
+}
+```
+

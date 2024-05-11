@@ -516,7 +516,7 @@ class Person
 }
 ```
 
-【单选题】跳过哪个访问器可以创建一个只读属性？
+【单选题】跳过哪个访问器可以创建一个只读属性？A.
 
 A. set
 
@@ -555,7 +555,7 @@ class Person
 class A {
   private int x=8;
   public int X {
-      ___ { return x ___ x; }
+      __get_ { return x _*__ x; }
   }
 }
 ```
@@ -595,7 +595,7 @@ static void Main(string[] args)
 ```cs
 class Dog
 {
-  public ___ Age { ___ set; }
+  public __int_ Age { _get__ set; }
 }
 ```
 
@@ -614,8 +614,8 @@ C. property(属性)
 2. 【填空题】实例化 Cat 类的一个对象，将值 12 传递给构造函数，然后调用该对象的 Meow 方法
 
 ```cs
-Cat c = ___ Cat(___);
-___Meow();
+Cat c = _new__ Cat(__12_);
+__c._Meow();
 ```
 
 > new 12 c.
@@ -639,8 +639,8 @@ C. 一个对象是类的一个方法。
 5. 【填空题】为 Student 类创建一个公开的方法 `Hello()` ,该方法在控制台显示"Hi”
 
 ```cs
-___Student {
- ___ void Hello() {
+_class__Student {
+ __public_ void Hello() {
     Console.WriteLine("hi");
   }
 }
@@ -654,9 +654,9 @@ ___Student {
 class Dog
 {
   private int age;
-  ___ Dog(___ val)
+  _public__ Dog(_int__ val)
   { 
-    age = ___;
+    age = __val_;
   }
 }
 ```

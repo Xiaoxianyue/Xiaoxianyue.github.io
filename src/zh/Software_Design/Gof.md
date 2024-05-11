@@ -343,16 +343,6 @@ Image loading：
 
   在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
 
--示例：真实图像包含大量数据，客户需要访问这些数据。  
-
--解决方案
-
-   具有 display() 操作的图像界面。
-
-  RealImager 运行在不同的系统上，包含从数据库访问和加载的图像信息。
-
-  在不同系统上运行的 ProxyImage 可以在新系统中代表 RealImage。使用代理可以避免多次加载图像。
-
 Python：
 
 ![Snipaste_2024-04-28_20-43-37](./Gof.assets/Snipaste_2024-04-28_20-43-37.png)

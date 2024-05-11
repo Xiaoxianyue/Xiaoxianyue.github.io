@@ -265,15 +265,109 @@ class Account
 
 
 
+## 6. Lab
+
+1. Code an example of a traffic light controller that uses the following enumerator: 
+
+enum TrafficLight { Red, Green, Amber };
+
+```c#
+using System;
+
+// 定义一个枚举，代表交通信号灯的三种状态：红灯、绿灯、黄灯
+enum TrafficLight { Red, Green, Amber }
+
+class TrafficLightController
+{
+    // 定义一个私有变量来存储当前的信号灯状态
+    private TrafficLight currentLight;
+
+    // 构造函数，初始化交通信号灯状态为红灯
+    public TrafficLightController()
+    {
+        currentLight = TrafficLight.Red;
+    }
+
+    // 方法：改变信号灯的状态
+    public void ChangeLight()
+    {
+        // 使用switch语句来根据当前的信号灯状态切换到下一个状态
+        switch (currentLight)
+        {
+            case TrafficLight.Red:
+                currentLight = TrafficLight.Green; // 红灯变绿灯
+                break;
+            case TrafficLight.Green:
+                currentLight = TrafficLight.Amber; // 绿灯变黄灯
+                break;
+            case TrafficLight.Amber:
+                currentLight = TrafficLight.Red; // 黄灯变红灯
+                break;
+        }
+
+        // 输出当前的信号灯状态
+        Console.WriteLine($"当前信号灯状态: {currentLight}");
+    }
+}
+
+class TestTrafficLightController
+{
+    static void Main(string[] args)
+    {
+        // 创建TrafficLightController的实例
+        TrafficLightController controller = new TrafficLightController();
+
+        // 模拟信号灯变化
+        controller.ChangeLight(); // 切换一次信号灯
+        controller.ChangeLight(); // 再切换一次
+        controller.ChangeLight(); // 再切换一次
+    }
+}
+```
 
 
 
 
 
+2. 编写一个著名的 "Hello World "程序的面向对象版本。您的版本应包括一个封装问候语字符串的类，并具有以下功能： - 带有问候语 "Hello World "的默认构造函数 - 带有字符串参数的构造函数，用于指定问候语 - SetGreeting() 和 GetGreeting() 方法，用于在对象构造完成后指定该对象的问候语，并相应地显示当前的问候语 您应提供一个测试类，以演示其功能 注释供自己参考。
 
 
 
+```c#
+using System;
+class WarmWords
+{
+    private string Greeting;
+    public WarmWords()
+    {
+        Greeting = "Hello World";
+    }
+    public WarmWords(string greeting)
+    {
+        Greeting = greeting;
+    }
+    public string Getgreeting()
+    {
+        
+        return Greeting;
+    }
+    public void SetGreeting(string greeting) 
+    { 
+        this.Greeting = greeting;
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        WarmWords warmwords1 = new WarmWords();
+        Console.WriteLine(warmwords1.Getgreeting());
+        warmwords1.SetGreeting("你好");
+        Console.WriteLine(warmwords1.Getgreeting());
 
+    }
+}
+```
 
 
 
