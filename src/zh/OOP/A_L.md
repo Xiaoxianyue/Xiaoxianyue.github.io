@@ -137,7 +137,7 @@ namespace DelegateAppl
 
 
 
-## 2. Lamda
+## 2. Lambda
 
 ### 2.1 Lambda 表达式
 
@@ -170,18 +170,13 @@ Message hello = () => Console.WriteLine("Hello");
 **在隐式类型 var 的情况下：**
 
 ```c#
-var sum = (x, y) => Console.WriteLine($"{x} + {y} = {x + y}");   //Error!
+var sum = (int x,int y) => Console.WriteLine($"{x} + {y} = {x + y}");   //Error!
  sum(22, 14);    // 22 + 14 = 36
  delegate void Operation(int x, int y);
+//如果是var sum = (x,y)=>...不行！因为隐式类型必须明确类型。
 ```
 
-要明确规定类型：
 
-```c#
-var sum = (int x, int y)=>Console.WriteLine($"{x}+{y}={x+y}");
-sum(22,14);
-delegate void Operation(int x, int y);
-```
 
 #### 2.2.2 参数个数和设置默认参数
 
@@ -239,8 +234,8 @@ Console.WriteLine(result2);
 Lambda 代表一个委托，因此功能与添加/删除操作相同：
 
 ```c#
- varhello = () => Console.WriteLine("the CUC");
- varmessage = () => Console.Write("Hello ");
+ var hello = () => Console.WriteLine("the CUC");
+ var message = () => Console.Write("Hello ");
  message += () => Console.WriteLine("World"); //add anonymous 
 //lambda expression
  message += hello;   // add lambda expression fromhello
@@ -251,18 +246,20 @@ Lambda 代表一个委托，因此功能与添加/删除操作相同：
 Lambda代表一个委托，所以参数传递是一致的
 
 ```c#
- intSum(int[] numbers, IsEqualfunc) {
- intresult = 0;
- foreach(intiin numbers)     {
- if (func(i))
- result += i;
- }
- return result;
+ int Sum(int[] numbers, IsEqual func) 
+ {
+     int result = 0;
+     foreach(int i in numbers)     
+     {
+         if (func(i))
+         result += i;
+     }
+     return result;
  }
  delegate bool IsEqual(int x);
 ```
 
-•方法的返回类型是委托
+•方法的返回类型是委托                                                
 •Lambda表达式对应于该委托：
 
 ```c#
