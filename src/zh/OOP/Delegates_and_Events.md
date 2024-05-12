@@ -383,20 +383,177 @@ class EventExample
 ```
 
 
+请设定您的初始账户余额: 9999999
+请输入您的PIN码以继续：1314
+PIN码错误，请重试。
+请输入您的PIN码以继续：1234
+
+欢迎使用ATM机系统
+1. 查看余额
+2. 存款
+3. 取款
+4. 退出
+请输入您的选择（1-4）：1
+您的账户余额为：$9999999.00
+
+欢迎使用ATM机系统
+1. 查看余额
+2. 存款
+3. 取款
+4. 退出
+请输入您的选择（1-4）：2
+请输入存款金额：1
+存款成功！您的新余额为：$10000000.00
+
+欢迎使用ATM机系统
+1. 查看余额
+2. 存款
+3. 取款
+4. 退出
+请输入您的选择（1-4）：3
+请输入取款金额：1
+取款成功！您的新余额为：$9999999.00
+
+欢迎使用ATM机系统
+1. 查看余额
+2. 存款
+3. 取款
+4. 退出
+请输入您的选择（1-4）：4
+感谢使用我们的ATM服务，再见！
+
+Process finished with exit code 0
 
 
 
 
 
+**题目名称：温度监控系统**
+
+**问题描述：**
+设计一个温度监控系统，当温度超出设定的安全范围时，系统应自动发送警报。你需要使用C#来实现这个功能。
+
+**基本要求：**
+1. 创建一个名为`TemperatureSensor`的类，它包含一个名为`CurrentTemperature`的属性和一个名为`TemperatureChanged`的事件。
+2. `CurrentTemperature`的设值器中应触发`TemperatureChanged`事件，只有在温度与上次读数不同时才触发。
+3. 创建一个名为`Alarm`的类，该类订阅`TemperatureSensor`的`TemperatureChanged`事件，并在温度超过100度或低于-10度时发出警报。
+
+**进阶要求：**
+- 添加一个功能，允许`Alarm`类在警报时记录日志到一个文件中。
+- 提供一个用户界面（可以是命令行界面），允许用户输入温度值并显示警报状态。
+
+**评估标准：**
+- 代码的清晰度和可读性。
+- 事件处理机制的正确实现。
+- 进阶功能的完整性。
 
 
 
+```C#
+using System;
+using System.IO;
 
+// 温度传感器类
+public class TemperatureSensor
+{
+    private int _currentTemperature;
 
+    // 温度变化时触发的事件
+    public event EventHandler<int> TemperatureChanged;
 
+    // 当前温度的属性
+    public int CurrentTemperature
+    {
+        get { return _currentTemperature; }
+        set
+        {
+            // 当温度发生变化时，触发事件
+            if (_currentTemperature != value)
+            {
+                _currentTemperature = value;
+                TemperatureChanged?.Invoke(this, _currentTemperature);
+            }
+        }
+    }
+}
 
+// 警报系统类
+public class Alarm
+{
+    public Alarm(TemperatureSensor sensor)
+    {
+        // 订阅温度变化事件
+        sensor.TemperatureChanged += OnTemperatureChanged;
+    }
 
+    private void OnTemperatureChanged(object sender, int newTemperature)
+    {
+        // 温度超出设定范围时，触发警报
+        if (newTemperature > 100 || newTemperature < -10)
+        {
+            Console.WriteLine($"警报: 温度异常！当前温度为 {newTemperature} 度。");
+            LogTemperature(newTemperature);
+        }
+        else
+        {
+            Console.WriteLine($"当前温度为 {newTemperature} 度。一切正常。");
+        }
+    }
 
+    // 记录温度异常到日志文件
+    private void LogTemperature(int temperature)
+    {
+        string path = "TemperatureLog.txt";
+        using (StreamWriter writer = new StreamWriter(path, true))
+        {
+            writer.WriteLine($"警报时间: {DateTime.Now}, 温度: {temperature}");
+        }
+    }
+}
+
+// 主程序
+class Program
+{
+    static void Main()
+    {
+        TemperatureSensor sensor = new TemperatureSensor();
+        Alarm alarm = new Alarm(sensor);
+
+        // 循环获取用户输入的温度并更新传感器状态
+        while (true)
+        {
+            Console.WriteLine("请输入新的温度值 (整数)：");
+            int newTemperature;
+            if (int.TryParse(Console.ReadLine(), out newTemperature))
+            {
+                sensor.CurrentTemperature = newTemperature;
+            }
+            else
+            {
+                Console.WriteLine("请输入有效的整数温度值！");
+            }
+        }
+    }
+}
+```
+
+- **事件声明：** `public event EventHandler<int> TemperatureChanged;`
+
+    在 `TemperatureSensor`  类中，声明了一个名为`TemperatureChanged`的事件。这里使用了系统提供的泛型委托`EventHandler<T>`，其定义为一个接受两个参数（一个 `object` 和一个泛型参数 `T`  ）的方法。在这个例子中，`T` 被指定为 `int` 类型，对应温度值。
+
+- **事件的订阅**: `sensor.TemperatureChanged += OnTemperatureChanged;`
+
+    在 `Alarm` 类的构造函数中，将 `OnTemperatureChanged` 方法绑定到 `TemperatureSensor` 的 `TemperatureChanged` 事件。这里的 `+=` 操作符用于添加一个事件处理器，即把 `OnTemperatureChanged` 方法作为委托绑定到 `TemperatureChanged` 事件。
+
+- **事件处理方法**: `private void OnTemperatureChanged(object sender, int newTemperature)`
+
+    `OnTemperatureChanged` 是 `Alarm` 类定义的一个方法，用来响应温度变化的事件。此方法的签名与 `EventHandler<int>` 委托的要求一致（接受一个 `object` 和一个 `int` 作为参数），因此它可以作为事件的处理方法。
+
+- `TemperatureChanged?.Invoke(this, _currentTemperature);`：
+
+    - Invoke：触发事件
+    - **this**: 关键字 `this` 代表当前类的实例，也就是 `TemperatureSensor` 类的一个对象。在事件触发时，传递 `this` 作为事件的发送者或来源。这是事件模式中常见的做法，允许事件的接收者知道事件是从哪个对象发出的。
+    - **_currentTemperature**: 这个是 `TemperatureSensor` 类中的私有字段，存储当前的温度值。当温度值发生变化时，这个新的温度值通过事件参数传递给事件的处理方法。在这个案例中，`_currentTemperature` 是一个整数（int），代表当前的温度。
 
 
 

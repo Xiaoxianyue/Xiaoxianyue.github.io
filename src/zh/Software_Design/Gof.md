@@ -176,7 +176,7 @@ To run: only object is created
 
 编程中的 "懒初始化 "是指将创建对象、计算数值或其他昂贵的过程推迟到首次需要时进行。程序只在首次需要时才创建某些资源，从而释放了宝贵的内存空间。
 
-#### 2.3.1 Example
+### 2.4 Example
 
 1. the singleton  pattern is applied to  allow the clients to  access the database via  a single service point.
 

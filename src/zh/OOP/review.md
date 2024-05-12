@@ -125,7 +125,43 @@ static void Main(string[] args)
 
 5. where 关键字
 
-    
+```c#
+using System;
+class Account
+{
+    public int Id { get; set; }
+    public Account(int id)
+    { this.Id = id; }
+}
+class Bank<T> where T:Account
+{
+    T[] account;
+    public Bank(T[] accs)
+    {
+        this .account = accs;
+    }
+    public void AccountInfo()
+    {
+        foreach(Account acc in account)
+        {
+            Console.WriteLine(acc);
+        }
+    }
+
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Account[] a = new Account[] { new Account(234),new Account(342),new Account(345) };
+        Bank<Account> b = new Bank<Account>(a);
+        b.AccountInfo();
+        Console.ReadLine();
+    }
+}
+```
+
+
 
 
 
