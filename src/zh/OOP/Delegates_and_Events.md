@@ -223,6 +223,52 @@ Hello
 HowAreYou
 ```
 
+或者：
+
+```c#
+using System;
+delegate void CustomCallback(string s);
+class TestClass
+{
+    static void Hello(string s)
+    {
+        Console.WriteLine($"  Hello, {s}!");
+    }
+    static void Goodbye(string s)
+    {
+        Console.WriteLine($"  Goodbye, {s}!");
+    }
+    static void Main()
+    {
+        CustomCallback hiDel, byeDel, multiDel, multiMinusHiDel;
+        hiDel = Hello;
+        byeDel = Goodbye;
+        multiDel = hiDel + byeDel;
+        multiMinusHiDel = multiDel - hiDel;
+
+        Console.WriteLine("Invoking delegate hiDel:");
+        hiDel("A");
+        Console.WriteLine("Invoking delegate byeDel:");
+        byeDel("B");
+        Console.WriteLine("Invoking delegate multiDel:");
+        multiDel("C");
+        Console.WriteLine("Invoking delegate multiMinusHiDel:");
+        multiMinusHiDel("D");
+    }
+}
+/* Output:
+Invoking delegate hiDel:
+  Hello, A!
+Invoking delegate byeDel:
+  Goodbye, B!
+Invoking delegate multiDel:
+  Hello, C!
+  Goodbye, C!
+Invoking delegate multiMinusHiDel:
+  Goodbye, D!
+*/
+```
+
 
 
 ### 2.6 Method Invoke()
@@ -366,23 +412,92 @@ class EventExample
 
 
 
-### 3.2 以编程方式订阅事件
-
-•定义一个事件处理程序方法，其签名与活动的代表签名：
+### 3.2 更多例子
 
 ```c#
- void HandleCustomEvent(object sender, CustomEventArgs a)  { // Do something useful here }
+namespace DotNetEvents
+{
+    // Define a class to hold custom event info
+    public class CustomEventArgs : EventArgs
+    {
+        public CustomEventArgs(string message)
+        {
+            Message = message;
+        }
+
+        public string Message { get; set; }
+    }
+
+    // Class that publishes an event
+    class Publisher
+    {
+        // Declare the event using EventHandler<T>
+        public event EventHandler<CustomEventArgs>? RaiseCustomEvent;
+
+        public void DoSomething()
+        {
+            // 在这里编写一些有用的代码 // 然后引发事件。您也可以在执行代码块之前引发事件。
+            OnRaiseCustomEvent(new CustomEventArgs("Event triggered"));
+        }
+
+        // 将事件调用包在受保护的虚拟方法中 // 以允许派生类覆盖事件调用行为
+        protected virtual void OnRaiseCustomEvent(CustomEventArgs e)
+        {
+           // 为事件创建一个临时副本，以避免在空值检查之后、事件发生之前，最后一个订阅者立即取消订阅时，出现 // 竞争条件。
+            EventHandler<CustomEventArgs>? raiseEvent = RaiseCustomEvent;
+
+            // 如果没有订阅者，事件将为空
+            if (raiseEvent != null)
+            {
+                // Format the string to send inside the CustomEventArgs parameter
+                e.Message += $" at {DateTime.Now}";
+
+                // Call to raise the event.
+                raiseEvent(this, e);
+            }
+        }
+    }
+
+    //Class that subscribes to an event
+    class Subscriber
+    {
+        private readonly string _id;
+
+        public Subscriber(string id, Publisher pub)
+        {
+            _id = id;
+
+            // Subscribe to the event
+            pub.RaiseCustomEvent += HandleCustomEvent;
+        }
+
+        // Define what actions to take when the event is raised.
+        void HandleCustomEvent(object? sender, CustomEventArgs e)
+        {
+            Console.WriteLine($"{_id} received this message: {e.Message}");
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            var pub = new Publisher();
+            var sub1 = new Subscriber("sub1", pub);
+            var sub2 = new Subscriber("sub2", pub);
+
+            // Call the method that raises the event.
+            pub.DoSomething();
+
+            // Keep the console window open
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadLine();
+        }
+    }
+}
 ```
 
 
-
-使用加法赋值运算符（+=）to attach an event handler  to the event:
-
-```c#
- publisher.RaiseCustomEvent+= HandleCustomEvent;
-```
-
-- - 
 
 
 

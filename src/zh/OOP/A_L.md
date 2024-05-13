@@ -31,6 +31,10 @@ toc: true
 - 匿名方法不能独立存在 
 - 匿名方法的定义以委托关键字开始：
 
+### 1.1 委托匿名方法的两种实现：
+
+1. 声明委托类型并声明具有匹配签名的方法：
+
 ```c#
 MessageHandler handler = delegate(string mes)
 {
@@ -42,9 +46,21 @@ delegate void MessageHandler(string message)
 
 
 
-匿名方法的另一个例子是将委托所代表的参数作为参数进行转移
+2. 匿名方法的另一个例子是将委托所代表的参数作为参数进行转移
 
-![](./A_L.assets/image-20240507100114460.png)
+```c#
+showmessage("hello", delegate (string mes)
+{
+    Console.WriteLine(mes);
+});
+static void showmessage(string message , MessageHandler handler)
+{
+   handler($"showmessage: {message}");
+}
+delegate void MessageHandler(string mes);
+```
+
+### 1.2 参数
 
 匿名方法 -如果匿名方法使用参数，这些参数必须与委托的参数相匹配。如果匿名方法不需要参数，则带参数的括号会降低：
 
@@ -133,6 +149,85 @@ namespace DelegateAppl
         }
     }
 }
+```
+
+### 1.3 Microsoft
+
+以下两个使用匿名方法来实现委托的例子，可以看到，方法在类里面，创建一个类的实例，再调用委托等于类中实例化的方法，是委托重要的使用方法。
+
+```c#
+// Declare a delegate
+delegate void MultiplyCallback(int i, double j);
+
+class MathClass
+{
+    static void Main()
+    {
+        MathClass m = new MathClass();
+
+        // Delegate instantiation using "MultiplyNumbers"
+        MultiplyCallback d = m.MultiplyNumbers;
+
+        // Invoke the delegate object.
+        Console.WriteLine("Invoking the delegate using 'MultiplyNumbers':");
+        for (int i = 1; i <= 5; i++)
+        {
+            d(i, 2);
+        }
+
+        // Keep the console window open in debug mode.
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
+    }
+
+    // Declare the associated method.
+    void MultiplyNumbers(int m, double n)
+    {
+        Console.Write(m * n + " ");
+    }
+}
+/* Output:
+    Invoking the delegate using 'MultiplyNumbers':
+    2 4 6 8 10
+*/
+```
+
+```c#
+// Declare a delegate
+delegate void Callback();
+
+class SampleClass
+{
+    public void InstanceMethod()
+    {
+        Console.WriteLine("A message from the instance method.");
+    }
+
+    static public void StaticMethod()
+    {
+        Console.WriteLine("A message from the static method.");
+    }
+}
+
+class TestSampleClass
+{
+    static void Main()
+    {
+        var sc = new SampleClass();
+
+        // Map the delegate to the instance method:
+        Callback d = sc.InstanceMethod;
+        d();
+
+        // Map to the static method:
+        d = SampleClass.StaticMethod;
+        d();
+    }
+}
+/* Output:
+    A message from the instance method.
+    A message from the static method.
+*/
 ```
 
 
@@ -281,4 +376,204 @@ enum OperationType
 }
 delegate int Operation (int x, int y);
 ```
+
+
+
+## 3. 怎么声明一个委托的总结
+
+1. 声明委托类型并声明具有匹配签名的方法：
+
+```c#
+delegate int Operation(int x, int y);
+class Progarm
+{
+    static void Main(string[] args)
+    {
+        Operation operation1 = Add;
+        int x = operation1(4, 5);
+        Console.WriteLine(x);
+
+        Operation operation2 = new Operation(Multiple);
+        int y = operation(4, 5);
+        Console.WriteLine(y);
+
+        int Add(int x, int y) => x + y;
+        int Multiple(int x, int y) => x * y;
+
+    }
+}
+```
+
+2. 声明一个匿名方法
+
+```c#
+Operation operation = delegate (int x, int y)
+{
+    return x * y;
+};
+operation(4,5);
+delegate int Operation(int x,int y);
+```
+
+3. 使用Lamber
+
+```c#
+// Instantiate NotifyCallback by using a lambda expression.
+NotifyCallback del4 = name =>  { Console.WriteLine($"Notification received for: {name}"); };
+```
+
+
+
+### 3.1 例子
+
+观察下面的例子
+
+```c#
+// A set of classes for handling a bookstore:
+namespace Bookstore
+{
+    using System.Collections;
+
+    // Describes a book in the book list:
+    public struct Book
+    {
+        public string Title;        // Title of the book.
+        public string Author;       // Author of the book.
+        public decimal Price;       // Price of the book.
+        public bool Paperback;      // Is it paperback?
+
+        public Book(string title, string author, decimal price, bool paperBack)
+        {
+            Title = title;
+            Author = author;
+            Price = price;
+            Paperback = paperBack;
+        }
+    }
+
+    // Declare a delegate type for processing a book:
+    public delegate void ProcessBookCallback(Book book);
+
+    // Maintains a book database.
+    public class BookDB
+    {
+        // List of all books in the database:
+        ArrayList list = new ArrayList();
+
+        // Add a book to the database:
+        public void AddBook(string title, string author, decimal price, bool paperBack)
+        {
+            list.Add(new Book(title, author, price, paperBack));
+        }
+
+        // Call a passed-in delegate on each paperback book to process it:
+        public void ProcessPaperbackBooks(ProcessBookCallback processBook)
+        {
+            foreach (Book b in list)
+            {
+                if (b.Paperback)
+                    // Calling the delegate:
+                    processBook(b);
+            }
+        }
+    }
+}
+
+// Using the Bookstore classes:
+namespace BookTestClient
+{
+    using Bookstore;
+
+    // Class to total and average prices of books:
+    class PriceTotaller
+    {
+        int countBooks = 0;
+        decimal priceBooks = 0.0m;
+
+        internal void AddBookToTotal(Book book)
+        {
+            countBooks += 1;
+            priceBooks += book.Price;
+        }
+
+        internal decimal AveragePrice()
+        {
+            return priceBooks / countBooks;
+        }
+    }
+
+    // Class to test the book database:
+    class Test
+    {
+        // Print the title of the book.
+        static void PrintTitle(Book b)
+        {
+            Console.WriteLine($"   {b.Title}");
+        }
+
+        // Execution starts here.
+        static void Main()
+        {
+            BookDB bookDB = new BookDB();
+
+            // Initialize the database with some books:
+            AddBooks(bookDB);
+
+            // Print all the titles of paperbacks:
+            Console.WriteLine("Paperback Book Titles:");
+
+            // Create a new delegate object associated with the static
+            // method Test.PrintTitle:
+            bookDB.ProcessPaperbackBooks(PrintTitle);
+
+            // Get the average price of a paperback by using
+            // a PriceTotaller object:
+            PriceTotaller totaller = new PriceTotaller();
+
+            // Create a new delegate object associated with the nonstatic
+            // method AddBookToTotal on the object totaller:
+            bookDB.ProcessPaperbackBooks(totaller.AddBookToTotal);
+
+            Console.WriteLine("Average Paperback Book Price: ${0:#.##}",
+                    totaller.AveragePrice());
+        }
+
+        // Initialize the book database with some test books:
+        static void AddBooks(BookDB bookDB)
+        {
+            bookDB.AddBook("The C Programming Language", "Brian W. Kernighan and Dennis M. Ritchie", 19.95m, true);
+            bookDB.AddBook("The Unicode Standard 2.0", "The Unicode Consortium", 39.95m, true);
+            bookDB.AddBook("The MS-DOS Encyclopedia", "Ray Duncan", 129.95m, false);
+            bookDB.AddBook("Dogbert's Clues for the Clueless", "Scott Adams", 12.00m, true);
+        }
+    }
+}
+/* Output:
+Paperback Book Titles:
+   The C Programming Language
+   The Unicode Standard 2.0
+   Dogbert's Clues for the Clueless
+Average Paperback Book Price: $23.97
+*/
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
