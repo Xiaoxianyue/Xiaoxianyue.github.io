@@ -383,6 +383,12 @@ Example:
 
 ![Snipaste_2024-04-29_11-00-33](./Gof.assets/Snipaste_2024-04-29_11-00-33.png)
 
+以上代码逻辑是，创建一个需要调用的类，创建一个Adapter有着这个类一部分的功能。创建一个Target调用Adapter里的方法。
+
+
+
+
+
 一个例子是：调用不同的数据库： the database drivers to different types of databases
 
 ![Snipaste_2024-04-29_11-01-05](./Gof.assets/Snipaste_2024-04-29_11-01-05.png)

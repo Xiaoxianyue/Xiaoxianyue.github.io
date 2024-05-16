@@ -194,7 +194,7 @@ class MathClass
 
 ```c#
 // Declare a delegate
-delegate void Callback();
+delegate void Callback();M
 
 class SampleClass
 {
