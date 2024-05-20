@@ -1,6 +1,6 @@
 ---
-title:Java 01
-icon: alias
+title: Java 01
+icon: java
 date: 2024-5-20 11:18:25
 author: XiaoXianYue
 isOriginal: true
