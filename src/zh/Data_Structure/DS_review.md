@@ -36,6 +36,7 @@ toc: true
 
 ### 2.1 逻辑结构
 
+```c
 L = (D,R)
 
 D = {ai | 1<= i <= n , n>0 , ai为ElemType类型}
@@ -43,6 +44,9 @@ D = {ai | 1<= i <= n , n>0 , ai为ElemType类型}
 R = {r}
 
 r = {<ai,ai+1> | 1 <= i <= n-1}
+```
+
+
 
 有穷性 一致性 序列性！！
 
