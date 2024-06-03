@@ -7,7 +7,7 @@ heroImage: /logo.jpg
 bgImage: /bgimage.jpg
 heroText: an istj’s zone
 heroFullScreen: true
-tagline: 哥们要进化成程序猿
+tagline: 你怎么知道我有一只猪咪
 projects:
   - icon: project
     name: 项目名称
