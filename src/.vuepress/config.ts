@@ -9,13 +9,13 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "en-US",
-      title: "an istj's zone",
+      title: "CHEESE",
       description: "cheese cheese cheese!",
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "an istj's zone",
-      description: "哥们要进化成程序猿",
+      title: "奶酪奶酪",
+      description: "CS我跟你爆了",
     },
   },
 
