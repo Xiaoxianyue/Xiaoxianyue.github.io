@@ -2,10 +2,10 @@
 home: true
 layout: BlogHome
 icon: home
-title: an istj's zone
+title: MMoon
 heroImage: /logo.jpg
 bgImage: /bgimage.jpg
-heroText: an istj’s zone
+heroText: MMoon
 heroFullScreen: true
 tagline: 你怎么知道我有一只猪咪
 projects:

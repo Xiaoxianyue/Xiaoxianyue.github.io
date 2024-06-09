@@ -2,9 +2,9 @@
 home: true
 layout: BlogHome
 icon: home
-title: an istj's zone
+title: MMoon
 heroImage: /logo.jpg
-heroText: an istj's zone
+heroText: MMoon
 bgImage: /bgimage.jpg
 tagline: cheese cheese cheese!
 heroFullScreen: true
