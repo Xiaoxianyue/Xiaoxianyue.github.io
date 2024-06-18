@@ -29,7 +29,7 @@ backToTop:
 
 假设我们使用 MySQL 数据库，创建 `tb_brand` 表：
 
-```
+```java
 CREATE TABLE tb_brand (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE tb_brand (
 
 在 Java 中定义 `Brand` 类：
 
-```
+```java
 public class Brand {
     private int id;
     private String name;
@@ -97,7 +97,7 @@ public class Brand {
 
 使用 JDBC 进行数据库操作。假设我们有一个名为 `BrandDAO` 的数据访问对象类来处理数据库操作。
 
-```
+```java
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -179,7 +179,7 @@ public class BrandDAO {
 
 编写一个测试类来测试上述 CRUD 操作：
 
-```
+```java
 public class BrandTest {
     public static void main(String[] args) {
         BrandDAO brandDAO = new BrandDAO();
