@@ -30,7 +30,7 @@ backToTop:
 假设我们使用 MySQL 数据库，创建 `tb_brand` 表：
 
 ```
-sql复制代码CREATE TABLE tb_brand (
+CREATE TABLE tb_brand (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT
@@ -42,7 +42,7 @@ sql复制代码CREATE TABLE tb_brand (
 在 Java 中定义 `Brand` 类：
 
 ```
-java复制代码public class Brand {
+public class Brand {
     private int id;
     private String name;
     private String description;
@@ -98,7 +98,7 @@ java复制代码public class Brand {
 使用 JDBC 进行数据库操作。假设我们有一个名为 `BrandDAO` 的数据访问对象类来处理数据库操作。
 
 ```
-java复制代码import java.sql.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -180,7 +180,7 @@ public class BrandDAO {
 编写一个测试类来测试上述 CRUD 操作：
 
 ```
-java复制代码public class BrandTest {
+public class BrandTest {
     public static void main(String[] args) {
         BrandDAO brandDAO = new BrandDAO();
 
