@@ -5,9 +5,11 @@ date: 2024-06-18 18:45:25
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 大二下
+    - 课堂笔记
+    - 课后回顾&练习
 tag:
-    - 大二下
+    - 课堂笔记
+    - 课后回顾&练习
 sticky: false
 star: false
 article: true
@@ -19,8 +21,10 @@ headerDepth: 5
 lastUpdated: true
 editLink: false
 backToTop: true
-toc: true                                                                     
+toc: true
 ---
+
+​                                                                   ![image-20240625201736511](./MQTT.assets/image-20240625201736511.png)                                                                             
 
 ​                                                                                    MQTT – Class 2 - Group 12
 

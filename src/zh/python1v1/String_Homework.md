@@ -214,7 +214,18 @@ Your loot box contains a rare item: False
 random_num = random(1, 100)
 ```
 
+Solution：
 
+```python
+import random
+level = int(input("what is your level? "))
+percentage = 100 - (level - 1) * 20
+random_numbers = random.randint(1,100)
+print('Your loot box contains a rare item:', random_numbers <= percentage)
+#output
+what is your level? 1
+Your loot box contains a rare item: True
+```
 
 
 
@@ -251,5 +262,13 @@ total_minutes = (ollie_minute + semi_minute) % 60
 total_hours = ((ollie_hour + semi_hour) + (ollie_minute + semi_minute) // 60) % 24
 total_days = (semi_day + ollie_day) + ((ollie_hour + semi_hour) + (ollie_minute + semi_minute) // 60) // 24
 print('The total time both of them worked together is:{} days and {} hours and {} minutes.'.format(total_days, total_hours, total_minutes))
+#output
+Please enter the number of days Semi has worked:2
+Please enter the number of hours Semi has worked:12
+Please enter the number of minutes Semi has worked:15
+Please enter the number of days ollie has worked:3
+Please enter the number of hours ollie has worked:15
+Please enter the number of minutes ollie has worked:20
+The total time both of them worked together is:6 days and 3 hours and 35 minutes.
 ```
 
