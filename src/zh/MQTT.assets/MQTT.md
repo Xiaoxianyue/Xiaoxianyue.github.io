@@ -19,10 +19,8 @@ headerDepth: 5
 lastUpdated: true
 editLink: false
 backToTop: true
-toc: true
+toc: true                                                                     
 ---
-
-​                                                                   ![image-20240625201736511](./MQTT.assets/image-20240625201736511.png)                                                                             
 
 ​                                                                                    MQTT – Class 2 - Group 12
 
