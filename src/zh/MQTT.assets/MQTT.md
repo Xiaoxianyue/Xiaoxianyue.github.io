@@ -5,11 +5,9 @@ date: 2024-06-18 18:45:25
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 课堂笔记
-    - 课后回顾&练习
+    - 大二下
 tag:
-    - 课堂笔记
-    - 课后回顾&练习
+    - 大二下
 sticky: false
 star: false
 article: true
