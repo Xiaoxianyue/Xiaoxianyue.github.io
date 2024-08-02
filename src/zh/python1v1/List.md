@@ -138,10 +138,8 @@ print(len(student_list))
     student_list[0] = 'Taurus'
     print(student_list)
     
-```
-
+    ```
 - 多个元素修改
-
 ```python
 numbers = [0,1,2,3,4,5,6,7,8,9,10]
 print(numbers)
@@ -386,7 +384,7 @@ True
 True
 ```
 
-
+注意这里inventory只是变量名不是代表内置函数（操作）。
 
 ## 11. 元素出现次数[.count(1)]
 
@@ -496,9 +494,7 @@ print(numbers)
 [0, 9, 4, 7, 1, 2, 3]
 ```
 
-
-
-
+与sort一样，reverse也是一个操作不返回任何值，所以不能直接放进print里面。
 
 
 
