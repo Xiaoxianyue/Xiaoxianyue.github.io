@@ -5,10 +5,10 @@ date: 2024-7-11 23:17:23
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - Java
+    - 论文
     - 大二下
 tag:
-    - Java
+    - 论文
     - 大二下
 sticky: false
 star: false
