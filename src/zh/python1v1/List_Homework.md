@@ -44,6 +44,26 @@ List [1, 2, 3, 4, 5]
 After left-hand rotation [4, 5, 3, 2, 1]
 ```
 
+假设输入为`[1,2,3,3,4,5,3]`，上述方法就行不通。
+
+```python
+lst = [1,2,3,3,4,5,3]
+#我们可以考虑把原列表拆分成两个列表而不是在一个列表里操作
+#拆成[1,2,3,3,4,5]和[3]
+#降低复杂度
+#方法一：pop
+position = lst[-1]
+lst.pop(-1)
+print(lst)
+
+#方法二：列表数据提取
+numbers = lst[:len(lst)-1]
+
+#或者
+number = lst[:-1]
+
+```
+
 
 
 ## Question 02
@@ -109,7 +129,16 @@ Please enter the delimiter you wish to use@
 1@ 2@ 3@ 4@ 5
 ```
 
- 
+ 或者：
+
+```python
+lst = input('Please enter a list of elements, separated by commas:').replace(' ','').split(',')
+tag = input('Please enter the delimiter you wish to use')
+new_lst = tag.join(lst)
+print(new_lst)
+```
+
+
 
 ## Question 04
 
@@ -121,7 +150,7 @@ Solution:
 lst = input('Enter a list of items separated by commas:').replace(' ','').split(',')
 lst_num = list(map(int,lst))
 lst_reverse = lst_num.copy()
-lst_reverse.reverse()
+lst_reverse.reverse()#或者lst_reverse = lst[::-1]
 print('Is the entered list symmetric:',lst_num == lst_reverse)
 ```
 
@@ -138,7 +167,7 @@ b = int(lst_num[-2])
 swap1 = lst_num[a]
 swap2 = lst_num[b]
 lst_num[a], lst_num[b] = lst_num[b], lst_num[a]
-del lst_num[-2:]
+lst_num[:-2]
 print('List After swapping elements', lst_num)
 ```
 
