@@ -190,7 +190,7 @@ lst = [
 ]
 zipdata = zip(lst[0], lst[1], lst[2])
 print(zipdata)
-r = list(zipdata)
+r = list(zipdata) # 强制转换，解包。
 print(r)
 col1 = sum(r[0])
 col2 = sum(r[1])
@@ -220,7 +220,7 @@ lst = [
 ]
 zipdata = zip(lst[0], lst[1], lst[2])
 print(zipdata)
-r = list(zipdata)
+r = list(zipdata) 
 print(tuple(zipdata))
 # col1 = sum(r[0])
 # col2 = sum(r[1])
@@ -234,11 +234,37 @@ print(tuple(zipdata))
 
 
 
+第二种解包：
+
+```python
+lst = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+zipdata = zip(lst[0], lst[1], lst[2])
+print(*zipdata)
+#output
+(1, 4, 7) (2, 5, 8) (3, 6, 9)
+```
 
 
 
 
 
+for循环也可以对zip结果进行输出
+
+```python
+lst1 = [1, 2, 3]
+lst2 = ['a', 'b', 'c']
+zipped = zip(lst1, lst2)
+for num, letter in zipped:
+    print(f'Number:{num}, Letter:{letter}')
+#output
+Number:1, Letter:a
+Number:2, Letter:b
+Number:3, Letter:c
+```
 
 
 
