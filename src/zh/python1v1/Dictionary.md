@@ -647,17 +647,124 @@ print(sorted_data)
 
 :::
 
+### 9.3 例题
+
+#### 1.
+
+**描述**：给定一个字典，其中键是学生的名字，值是一个元组，包含学生的年龄和他们的成绩。编写一个程序，该程序返回按成绩（grade）从小到大排序的学生名单。
+
+**示例输入**：
+
+```python
+students = {
+    'Alice': (20, 85), # name: (age, grade)
+    'Bob': (22, 90),
+    'Charlie': (21, 88)
+}
+```
+
+**示例输出**：
+
+```python
+['Alice', 'Charlie', 'Bob']
+```
+
+
+
+Solution:
+
+```python
+students = {
+    'Alice': (20, 85), # name: (age, grade)
+    'Bob': (22, 90),
+    'Charlie': (21, 88)
+}
+sorted_data = sorted(students.items(), key=lambda item: item[1][1])
+print(list(dict(sorted_data).keys()))
+#output
+['Alice', 'Charlie', 'Bob']
+```
 
 
 
 
 
+## 10. 字典的深浅拷贝
+
+### 10.1 浅拷贝
+
+```python
+original = {'a': 1, 'b': [2, 3]}
+after = original.copy()
+after['a'] = 19
+print(f'After: {after}')
+print(f'Original: {original}')
+#output
+After: {'a': 19, 'b': [2, 3]}
+Original: {'a': 1, 'b': [2, 3]}
+```
+
+
+
+<img src="./Dictionary.assets/image-20240809093712114.png" alt="image-20240809093712114" style="zoom:50%;" />
+
+### 10.2 深拷贝
+
+```python
+import copy
+
+original = {'a': 1, 'b': [2, 3]}
+after = copy.deepcopy(original)
+after['b'] = 4
+print(f'After: {after}')
+print(f'Original: {original}')
+#output
+After: {'a': 1, 'b': 4}
+Original: {'a': 1, 'b': [2, 3]}
+```
+
+
+
+<img src="./Dictionary.assets/image-20240809094406242.png" alt="image-20240809094406242" style="zoom:50%;" />
 
 
 
 
 
+- **浅拷贝**：复制对象，但不复制对象中的嵌套对象。修改浅拷贝的嵌套对象会影响到原始对象。
 
+- **深拷贝**：递归复制对象及其所有嵌套对象。修改深拷贝的任何部分都不会影响原始对象。
 
+### 10.3 例题
 
+**描述**：给定两个字典，编写一个程序，将这两个字典合并成一个。如果同一个键在两个字典中都有，则它的值应为两个字典中的值相加。假设字典中的值都是整数。
+
+**示例输入**：
+
+```python
+dict1 = {'a': 1, 'b': 2, 'c': 3}
+dict2 = {'b': 3, 'c': 4, 'd': 5}
+```
+
+**示例输出**：
+
+```python
+{'a': 1, 'b': 5, 'c': 7, 'd': 5}
+```
+
+Solution:
+
+```python
+dict1 = {'a': 1, 'b': 2, 'c': 3}
+dict2 = {'b': 3, 'c': 4, 'd': 5}
+merged_dict = dict1.copy()
+
+for key, value in dict2.items():
+    if key in merged_dict:
+        merged_dict[key] += value
+    else:
+        merged_dict[key] = value
+print(merged_dict)
+print(dict1)
+```
 

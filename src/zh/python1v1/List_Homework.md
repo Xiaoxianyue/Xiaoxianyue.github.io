@@ -24,7 +24,7 @@ toc: true
 
 ## Question 01
 
-<img src="./List_Homework.assets/image-20240805155715084.png" alt="image-20240805155715084" style="zoom: 67%;" />
+<img src="./List_Homework.assets/image-20240805155715084.png" alt="image-20240805155715084" style="zoom: 80%;" />
 
 Solution：
 
@@ -62,6 +62,24 @@ numbers = lst[:len(lst)-1]
 #或者
 number = lst[:-1]
 
+```
+
+因为逻辑是，最后一个数字是几，就反转几个前面的数字过来。
+
+所以最终代码为：
+
+```python
+string_num = input('Please enter a series of numbers separated by commas:').replace(' ','').split(',')
+int_num = list(map(int, string_num))
+position = int_num[-1]
+number = int_num[:-1]
+plus_num = sorted(number[:position],reverse=True)
+del number[:position]
+number.extend(plus_num)
+print(number)
+#output
+Please enter a series of numbers separated by commas:1,2,3,3,4,5,3
+[3, 4, 5, 3, 2, 1]
 ```
 
 

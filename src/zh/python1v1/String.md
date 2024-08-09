@@ -904,6 +904,11 @@ print("去掉前后空格的字符串",split_string)
 原本的字符串 moon-in-taurus
 去掉前后空格的字符串 ['moon', 'in-taurus']
       
+string = 'I   am good at playing piano.'
+list_string = string.split(' ')
+print(list_string)
+#output
+['I', '', '', 'am', 'good', 'at', 'playing', 'piano.']
 ```
 
 
