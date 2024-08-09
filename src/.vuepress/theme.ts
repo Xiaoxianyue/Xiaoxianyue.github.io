@@ -110,7 +110,7 @@ export default hopeTheme({
     config: {
       "/demo/encrypt.html": ["1234"],
       "/zh/demo/encrypt.html": ["1234"],
-      "/zh/internship/Aricultural_Bank_of_China.html":["7718"],
+      "/zh/internship/Aricultural_Bank_of_China.html":["internship"],
       "/zh/python1v1/":["python1v1"]
     },
   },

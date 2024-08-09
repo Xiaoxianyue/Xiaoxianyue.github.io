@@ -557,7 +557,7 @@ After:
 - 代码里面我们明明只改变了变量y的0号位，**为什么x的0号位跟着一起改变了？**
 - 进一步我们可以观察到，**x和y在电脑中存储的物理地址（id）一模一样。**这会不会是问题的原因？
 
-使用`pythontutor`(https://pythontutor.com/python-compiler.html#mode=edit)我们可以看到：
+使用[pythontutor](https://pythontutor.com/python-compiler.html#mode=edit)我们可以看到：
 
 ![image-20240804214800159](./List.assets/image-20240804214800159.png)
 
