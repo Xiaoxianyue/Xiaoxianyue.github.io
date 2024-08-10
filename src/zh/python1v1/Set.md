@@ -50,7 +50,7 @@ print(set1)
 
 :::
 
-## 2. 两个集合直接的关系
+## 2. 集合的操作
 
 ### 2.1 交集
 
@@ -100,7 +100,32 @@ print(set1 ^ set2)
 
 
 
-### 2.5 思考题
+### 2.5 .add()
+
+```python
+set1 = {1,2,4,5,8}
+set1.add(10)
+print(set1)
+
+#output
+{1,2,4,5,8,10}
+```
+
+### 2.6 创建空白集合
+
+```python
+set1 = set()
+```
+
+### 2.7 .remove()
+
+```python
+set1 = {1,2,3,4,5}
+```
+
+
+
+### 2.6 思考题
 
 #### Question 01
 
@@ -180,9 +205,72 @@ Enter a string: He would have voted for him,but he said no.
 
 
 
+#### Question 03
+
+**描述**：获取用户输入两个序列，转换成集合后，输出：只存在于集合 `A` 而不在 `B` 中的元素集合。
+
+**示例输入**：
+
+```python
+Enter set1: 1, 2, 3, 4, 5
+Enter set2: 4, 5, 6, 7
+```
+
+**示例输出**：
+
+```python
+{1, 2, 3}
+```
+
+**答案：**
+
+```python
+lst1 = input('Enter a set: ').split(',')
+lst2 = input('Enter another set:').split(',')
+set1 = set(map(int,lst1))
+set2 = set(map(int,lst2))
+print(set1-set2)
+#output
+Enter a set: 1,2,3,4,5,6
+Enter another set: 2,3,4
+{1, 5, 6}
+```
 
 
 
+#### Question 04
+
+**描述**：获取用户输入的一个字符串，输出字符串中出现的唯一字符的集合（即每个字符只出现一次）。
+
+**示例输入**：
+
+```python
+string = "programming"
+```
+
+**示例输出**：
+
+```python
+{'p', 'o', 'a', 'i', 'n', 'g'}
+```
+
+**答案：**
+
+```python
+seen_once = set()      #创建一个集合，用于存储只出现一次的字符
+seen_multiple = set()  #创建一个集合，用于存储出现多次的字符
+string = "notation"
+for char in string:
+    #如果字符在 seen_once 集合中，说明它不是唯一的
+    if char in seen_once:
+        # 从 seen_one 集合中移除字符
+        seen_once.remove(char)
+        seen_multiple.add(char)
+    elif char not in seen_multiple:
+        seen_multiple.add(char)
+print(seen_once)
+#output
+```
 
 
 
