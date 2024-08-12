@@ -557,22 +557,23 @@ TODO: 列表数组为 key，元组数据为 Value
 
 `dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}`
 
-Eneter your list:>>>a/b/c
+`Eneter your list:>>>a/b/c`
 
-Eneter your value:>>>13-14-19
+`Eneter your value:>>>13-14-19`
 
 ```python
 key = input('Enter your list:>>>').replace(' ', '').split('/')
 value = input('Enter your value:>>>').replace(' ', '').split('-')
-zipped = zip(key, value)
+int_value = list(map(int,value))
+zipped = zip(key, int_value)
 dictionary = dict(zipped)
 goal_dic = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
-dictionary.update(goal_dic)
-print(dictionary)
+goal_dic.update(dictionary)
+print(goal_dic)
 #output
 Enter your list:>>>a/b/c
-Enter your value:>>>13-14-19
-{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+Enter your value:>>>12-13-14
+{'a': 12, 'b': 13, 'c': 14, 'd': 4, 'e': 5, 'f': 6}
 ```
 
 
