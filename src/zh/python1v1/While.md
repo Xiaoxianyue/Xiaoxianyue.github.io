@@ -274,3 +274,55 @@ Process finished with exit code 0
 
 
 
+```python
+balance = int(input('Enter your balance: '))
+pin = '1234'
+pin_correct = False
+while not pin_correct:
+    user_pin = input('Enter your pin number:')
+    if user_pin != pin:
+        print('Wrong pin number, please try again')
+    else:
+        pin_correct = True
+print('1. check balance')
+print('2. deposit')
+print('3. withdraw')
+print('4. exit')
+operation_num = False
+while not operation_num :
+    operation = input('Enter your choice between 1 and 4: ')
+    if operation == '1':
+        print('Your balance is', balance)
+        continue
+    elif operation == '2':
+        correct_number = False
+        while not correct_number:
+            deposit = input('Enter your deposit: ')
+            if not deposit.isdigit():
+                print('Invalid number, please enter a positive and also integer number')
+            else:
+                balance += int(deposit)
+                print('Your balance is', balance)
+                correct_number = True
+    elif operation == '3':
+        correct_num = False
+        while not correct_num:
+            withdraw = input('Enter your withdraw: ')
+            if not withdraw.isdigit():
+                print('Invalid number, please enter a positive and also integer number')
+            elif int(withdraw) > balance:
+                print('Invalid number, please enter a number smaller than your balance')
+            else:
+                balance -= int(withdraw)
+                print('Your balance is', balance)
+                correct_num = True
+
+    elif operation == '4':
+        print('Goodbye')
+        operation_num = True
+    else:
+        print('Invalid')
+print('Thanks for using this program, bye bye!')
+
+```
+
