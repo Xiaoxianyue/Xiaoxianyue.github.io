@@ -228,7 +228,7 @@ if user_num != random_num:
 
 **运行演示：**
 
-```bash
+```python
 /Users/huangjiabao/anaconda3/envs/Pycharm/bin/python /Users/huangjiabao/GitHub/iMac/Pycharm/StudentCoder/51-lujiux/code.py 
 请设定您的初始账户余额: 9999999
 请输入您的PIN码以继续：1314
@@ -274,6 +274,12 @@ Process finished with exit code 0
 
 
 
+::: code-tabs
+
+
+
+@tab 
+
 ```python
 balance = int(input('Enter your balance: '))
 pin = '1234'
@@ -298,17 +304,33 @@ while not operation_num :
         correct_number = False
         while not correct_number:
             deposit = input('Enter your deposit: ')
-            if not deposit.isdigit():
-                print('Invalid number, please enter a positive and also integer number')
+            find_deposit = deposit.find(".")
+            count_deposit = deposit.count(".")
+            replace_deposit = deposit.replace('.','')
+            if find_deposit == -1:
+                if not replace_deposit.isdigit():
+                    print('Invalid number, please enter a positive number')
+                else:
+                    balance += int(deposit)
+                    print('Your balance is', balance)
+                    correct_number = True
+            elif count_deposit > 1:
+                print('Invalid number, please enter a positive number')
+            elif find_deposit == 0 or find_deposit == -1:
+                print('Invalid number, please enter a positive number')
             else:
-                balance += int(deposit)
-                print('Your balance is', balance)
-                correct_number = True
+                if not replace_deposit.isdigit():
+                    print('Invalid number, please enter a positive number')
+                else:
+                    balance += float(deposit)
+                    print('Your balance is', balance)
+                    correct_number = True
     elif operation == '3':
         correct_num = False
         while not correct_num:
             withdraw = input('Enter your withdraw: ')
-            if not withdraw.isdigit():
+            float_withdraw = withdraw.replace('.','')
+            if not float_withdraw.isdigit():
                 print('Invalid number, please enter a positive and also integer number')
             elif int(withdraw) > balance:
                 print('Invalid number, please enter a number smaller than your balance')
@@ -325,4 +347,96 @@ while not operation_num :
 print('Thanks for using this program, bye bye!')
 
 ```
+
+@tab
+
+```python
+balance = int(input('Enter your balance: '))
+pin = '1234'
+pin_correct = False
+while not pin_correct:
+    user_pin = input('Enter your pin number:')
+    if user_pin != pin:
+        print('Wrong pin number, please try again')
+    else:
+        pin_correct = True
+print('1. check balance')
+print('2. deposit')
+print('3. withdraw')
+print('4. exit')
+operation_num = False
+while not operation_num:
+    operation = input('Enter your choice between 1 and 4: ')
+    if operation == '1':
+        print('Your balance is', balance)
+        continue
+    elif operation == '2':
+        correct_number = False
+        while not correct_number:
+            deposit = input('Enter your deposit: ')
+            replace_deposit = deposit.replace('.', '', 1)
+            if replace_deposit.isdigit():
+                balance += float(deposit)  # float 也可以强制转化整数，但是返回也是浮点数。
+                print('Your balance is', balance)
+                correct_number = True
+            else:
+                print('Invalid number, please enter a positive number')
+    elif operation == '3':
+        correct_num = False
+        while not correct_num:
+            withdraw = input('Enter your withdraw: ')
+            replace_withdraw = withdraw.replace('.', '',1)
+            if replace_withdraw.isdigit():
+                if balance < float(withdraw):
+                    print('Invalid number, please enter a number smaller than your balance')
+                else:
+                    balance -= float(withdraw)
+                    print('Your balance is', balance)
+                    correct_num = True
+            else:
+                print('Invalid number.')
+
+    elif operation == '4':
+        print('Goodbye')
+        operation_num = True
+    else:
+        print('Invalid')
+print('Thanks for using this program, bye bye!')
+```
+
+
+
+:::
+
+改动之后的版本：
+
+`float()`可以对整型，对如(.12 , 12.)等奇怪数字进行转换。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
