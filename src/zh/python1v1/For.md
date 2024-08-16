@@ -51,9 +51,9 @@ print(lst)
 
 
 
-## 2. emerate
+## 2. `emerate`
 
-### 2.1 emerate 用法
+### 2.1 `emerate` 用法
 
 ```python
 lst = ['shelley','python','java']
@@ -171,3 +171,102 @@ print(dictionary)
 ```
 
 :::
+
+
+
+## 3. 课上作业
+
+<img src="./For.assets/007b4bbba020890868039849cab0e45.png" alt="007b4bbba020890868039849cab0e45" style="zoom:50%;" />
+
+```python
+lst = [10, 43, 5, 66, 2, 0, 99]
+maxnum = lst[0]
+for i in lst:
+    if i > maxnum:
+        maxnum = i
+print(maxnum)
+#output
+99
+```
+
+输出最大值的下标，并且不能用 `.index()`:
+
+```python
+lst = [10, 43, 5, 66, 2, 100]
+max_value = lst[0]
+position = 0
+for index, value in enumerate(lst):
+    if value > max_value:
+        max_value = value
+        position = index
+print(position)
+```
+
+有多个最大数值时，返回所有最大值的下标：
+
+::: code-tabs
+
+@tab 列表存储
+
+```python
+nums = [1, 24, 5, 56, 7, 78, 99, 111, 11, 111, 111]
+max_value = nums[0]
+max_tup = []
+for num in nums:
+    if num > max_value:
+        max_value = num
+position = 0
+for i in nums:
+    if i == max_value:
+        max_tup.append(position)
+        position += 1
+    else:
+        position += 1  # 只有在 for 循环中才能这么写
+print(tuple(max_tup))
+#output
+(7, 9, 10)
+```
+
+@tab 元组存储
+
+```python
+nums = [1, 24, 5, 56, 7, 78, 99, 111, 11, 111, 111]
+max_value = nums[0]
+max_tup = tuple()
+for num in nums:
+    if num > max_value:
+        max_value = num
+position = 0
+for i in nums:
+    if i == max_value:
+        max_tup += (position,)
+    position += 1 
+print(max_tup)
+#output
+(7, 9, 10)
+```
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
