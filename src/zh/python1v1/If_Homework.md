@@ -154,24 +154,28 @@ else:
 ```python
 keyword = input("Enter your credit card number: ")
 if not keyword.isdigit():
-    print("Invalid")
-key_str = keyword.replace('',',').strip(',').split(',')
-key = list(map(int, key_str))
-key.reverse()
-s = 0
-for i in range(1, len(key)):
-    t = key[len(key)-1]
-    if i % 2 == 0:
-        t *= 2
-        if t >= 10:
-            t = t % 10 + t // 10
-        s += t
-    else:
-        s += t
-if s % 10 == 0:
-    print('Valid Card')
+    print("Invalid inpute")
 else:
-    print('Invalid Card')
+    s = 0
+    key_str = keyword.replace('',',').strip(',').split(',')
+    key = list(map(int, key_str))
+    key.reverse()
+    if len(key) != 16:
+        print("Invalid length")
+    else:
+        for i in range(1, len(key)):
+            t = key[i-1]
+            if i % 2 == 0:
+                t *= 2
+                if t >= 10:
+                    t = t % 10 + t // 10
+                s += t
+            else:
+                s += t
+        if s % 10 == 0:
+            print('Valid Card')
+        else:
+            print('Invalid Card')
 ```
 
 

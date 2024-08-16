@@ -1,5 +1,5 @@
 ---
-title: Homework1
+title: 变量练习
 icon: python
 date: 2023-12-03 16:16:12
 author: XiaoXianYue
