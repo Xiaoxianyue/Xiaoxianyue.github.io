@@ -397,7 +397,21 @@ for i in range(2, 11, 2):
 
     `range`这些特性使其在处理循环和其他需要数字序列的场景中非常有用。
 
-### 4.3 示例
+### 4.3 用法2
+
+```python
+stu_lst = ['Shelley', 'Leon', 'Henry']
+for index in range(len(stu_lst)):
+    print(stu_lst[index])
+#output
+Shelley
+Leon
+Henry
+```
+
+
+
+### 4.4 示例
 
 
 
@@ -619,27 +633,262 @@ while not num_check:
 
 
 
+## 6. continue & break
+
+### 6.1 continue
+
+用于跳过当前循环剩余的部分，并直接进入下一次循环的判断。也就是说，当循环体内遇到 continue 语句时，会跳过该次循环中 continue 之后的代码，并直接进入下一次循环。
+
+```python
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+#output
+1
+2
+4
+5
+```
+
+### 6.2 break
+
+break 用于立即退出当前正在执行的循环，无论循环条件是否为真。使用 break 可以提前结束循环，常常用于当满足某个条件时不需要继续执行循环体的剩余部分。
+
+注意：循环后代码还是会继续执行的。
+
+```python
+for i in range(10):
+    print(i)
+    if i > 5:
+        break
+print('哈哈哈哈')
+#output
+0
+1
+2
+3
+4
+5
+6
+哈哈哈哈
+```
+
+对比：存在于 while 中的 break。
+
+```python
+i = 0
+while True:
+    print(i)
+    i += 1
+    if i > 5:
+        break
+print('hhhh')
+#output
+0
+1
+2
+3
+4
+5
+hhhh
+```
+
+
+
+## 7. 循环嵌套
+
+### 7.1 基本用法
+
+在 Python 中，嵌套的 for循环是指一个 for 循环内部包含另一个 for 循环。这种结构通常用于处理多维数据结构，比如列表，元组或字典的组合，或者需要在执行多层次的迭代任务时使用。
+
+基本结构：
+
+```python
+for 变量1 in 可迭代对象1:
+    for 变量2 in 可迭代对象2:
+```
+
+每个 for 循环工作原理如下：
+
+- 外层循环可从可迭代对象1中取出元素赋值给变量1；
+- 然后，内层循环开始执行，从可迭代对象2 中逐一取出元素赋值给变量2。
+- 对于外层循环的每一个单独的迭代，内层循环都会完整的执行一次。
+
+例子：
+
+::: code-tabs
+
+@tab
+
+```python
+matrix = [
+    (1, 2),
+    (3, 4),
+]
+for row in matrix:
+    print(row)
+#output
+(1, 2)
+(3, 4)
+```
+
+@tab
+
+```python
+matrix = [
+    (1, 2),
+    (3, 4),
+]
+for row in matrix:
+    for column in row:
+        print(column)
+#output
+1
+2
+3
+4
+```
+
+:::
+
+
+
+### 7.2 二维数组的练习
+
+- 把二维数组里每个值都相加
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+sum = 0
+for row in matrix:
+    for col in row:
+        sum += col
+print(sum)
+#output
+45
+```
+
+不用嵌套也可以实现：
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+sum1 = 0
+for i in matrix:
+    sum1 += sum(i)
+print(sum1)
+```
 
 
 
 
 
+- 把二维数组里的每列相加
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+colum_sum = [0] * len(matrix[0])  # 初始化几列二维数组的结果
+print(colum_sum)
+for i in range(len(matrix[0])):  # 遍历每一个元素，使用第一个列表长度为基石。0 1 2
+    for j in range(len(matrix)):  # 一共几行
+        colum_sum[j] += matrix[j][i]
+print('每列的和：', colum_sum)
+#output
+[0, 0, 0]
+每列的和： [6, 15, 24]
+```
+
+进一步观察在循环什么？
+
+```python
+import time
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+colum_sum = [0] * len(matrix[0])  # 初始化几列二维数组的结果
+print(colum_sum)
+for i in range(len(matrix[0])):  # 遍历每一个元素，使用第一个列表长度为基石。0 1 2
+    for j in range(len(matrix)):  # 一共几行
+        print(f'matrix[{j}][{i}]:{matrix[j][i]:}')
+        colum_sum[j] += matrix[j][i]
+        time.sleep(1)
+print('每列的和：', colum_sum)
+#output
+[0, 0, 0]
+matrix[0][0]:1
+matrix[1][0]:4
+matrix[2][0]:7
+matrix[0][1]:2
+matrix[1][1]:5
+matrix[2][1]:8
+matrix[0][2]:3
+matrix[1][2]:6
+matrix[2][2]:9
+每列的和： [6, 15, 24]
+```
 
 
 
 
 
+### 7.3 九九乘法表
+
+第一种方法：
+
+```python
+for i in range(1, 10):
+    for j in range(1, 10):
+        if j <= i:
+            print(f'{j} * {i} = {i * j} ',end='\t')
+    print()
+#output
+1 * 1 = 1 	
+1 * 2 = 2 	2 * 2 = 4 	
+1 * 3 = 3 	2 * 3 = 6 	3 * 3 = 9 	
+1 * 4 = 4 	2 * 4 = 8 	3 * 4 = 12 	4 * 4 = 16 	
+1 * 5 = 5 	2 * 5 = 10 	3 * 5 = 15 	4 * 5 = 20 	5 * 5 = 25 	
+1 * 6 = 6 	2 * 6 = 12 	3 * 6 = 18 	4 * 6 = 24 	5 * 6 = 30 	6 * 6 = 36 	
+1 * 7 = 7 	2 * 7 = 14 	3 * 7 = 21 	4 * 7 = 28 	5 * 7 = 35 	6 * 7 = 42 	7 * 7 = 49 	
+1 * 8 = 8 	2 * 8 = 16 	3 * 8 = 24 	4 * 8 = 32 	5 * 8 = 40 	6 * 8 = 48 	7 * 8 = 56 	8 * 8 = 64 	
+1 * 9 = 9 	2 * 9 = 18 	3 * 9 = 27 	4 * 9 = 36 	5 * 9 = 45 	6 * 9 = 54 	7 * 9 = 63 	8 * 9 = 72 	9 * 9 = 81 	
+```
+
+第二种方法：
+
+```python
+import time
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        time.sleep(2)
+        print(f'{j} * {i} = {i * j} ',end='\t')
+    print()
+```
 
 
 
+::: warning
 
+但是嵌套循环会使代码复杂度增加，尤其是当循环层数增多时，需要注意代码的可读性和性能。
 
+在尽可能的情况下，避免使用多层嵌套，以免造成代码的运行效率降低。
 
+嵌套循环是编程中常见的一个概念，通过适当使用可以解决很多复杂问题，但也要注意对性能的影响。
 
-
-
-
-
+:::
 
 
 
