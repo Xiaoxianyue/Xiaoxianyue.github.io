@@ -890,7 +890,297 @@ for i in range(1, 10):
 
 :::
 
+打印成倒三角：
+
+```python
+for i in range(1, 10):
+    print("\t\t\t" * (i - 1), end='')   # 算式中总共有3个整型，两个算术运算符，加上后面的一个空格，占位6个，三个制表符
+    for j in range(i, 10):
+        print(f'{i} * {j} = {i * j}\t', end='')
+    print()
+#output
+
+```
 
 
 
 
+
+### 7.4 根据用户输入打印矩形
+
+```python
+import time
+width = int(input('输入矩形的宽度：'))
+height = int(input('输入矩形的高度：'))
+for i in range(height):
+    for j in range(width):
+        print('*', end='')
+        time.sleep(2)
+    print()
+#output
+输入矩形的宽度：5
+输入矩形的高度：3
+*****
+*****
+*****
+```
+
+
+
+```python
+len = int(input('Enter the length of the rectangle:'))
+width = int(input('Enter the width of the rectangle:'))
+for i in range(1, width+1):
+    print('*', end='')
+    for j in range(1, len):
+        print('*', end='')
+    print()
+
+```
+
+
+
+### 7.5 正三角形和菱形的输出
+
+编写一个程序，使用嵌套的 for 循环输出一个由 * 组成的正三角形。行数由用户输入确定。例如：
+输入：行数 = 4
+
+```python
+height = int(input("Enter your height in triangle:"))
+for i in range(1, height + 1):
+    for j in range(height - i):   # 输出每一行前面的空格，为height - 1个
+        print(' ', end='')
+    for k in range(2 * i - 1):   # 找规律输出每一行的*号数
+        print('*', end='')
+    print()
+#output
+Enter your height in triangle:4
+   *
+  ***
+ *****
+*******
+```
+
+
+
+菱形输出
+编写一个程序，使用嵌套的 for 循环输出一个由 * 组成的菱形。行数由用户输入确定。
+
+::: code-tabs
+
+@tab 自己逻辑
+
+```python
+height = int(input("Enter your height in triangle:"))
+for i in range(1, height * 2):
+    if i <= height:
+        for j in range(height - i):   # 输出每一行前面的空格，为height - 1个
+            print(' ', end='')
+        for k in range(2 * i - 1):   # 找规律输出每一行的*号数
+            print('*', end='')
+    else:
+        for t in range(i - height):
+            print(' ', end='')
+        for f in range(2 * height - 1 - (i - height) * 2):
+            print('*', end='')
+    print()
+#output
+Enter your height in triangle:4
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+```
+
+@tab 优化代码
+
+```python
+rows = int(input("输入行数: "))
+for i in range(1, rows + 1):
+    for j in range(rows - i):
+        print(" ", end="")
+    for k in range(2 * i - 1):
+        print("*", end="")
+    print()
+for i in range(rows - 1, 0, -1):
+    for j in range(rows - i):
+        print(" ", end="")
+    for k in range(2 * i - 1):
+        print("*", end="")
+    print()
+```
+
+
+
+### 7.6 空心矩形的输出
+
+::: code-tabs
+
+@tabs 自己逻辑
+
+```python
+length = int(input('Enter the length of the rectangle:'))
+width = int(input('Enter the width of the rectangle:'))
+for i in range(1, width + 1):
+    if i == 1 or i == width:
+        for j in range(1, length + 1):
+            print('*', end='')
+    else:
+        for j in range(1, length + 1):
+            if j == 1 or j == length:
+                print('*', end='')
+            else:
+                print(' ', end='')
+    print()
+#output
+Enter the length of the rectangle:10
+Enter the width of the rectangle:5
+**********
+*        *
+*        *
+*        *
+**********
+```
+
+@tabs 优化代码
+
+```python
+length = int(input('Enter the length of the rectangle:'))
+width = int(input('Enter the width of the rectangle:'))
+for i in range(width):
+    for j in range(length):
+        if i == 0 or i == width - 1 or j == 0 or j == width -1:
+            """观察我们要输出的矩形特点，以上情况输出*，其他情况不输出。"""
+            print('*', end='')
+        else:
+            print(end=' ')
+    print()
+```
+
+
+
+### 7.7 二维数组遍历
+编写一个程序，要求用户输入一个 n×m 的二维数组，**并使用嵌套的 for 循环输出**该二维数组的所有元素。
+
+```python
+length = int(input('输出二维数组的长度：'))
+width = int(input('输出二维数组的宽度：'))
+lst = []
+for i in range(1, length + 1):
+    lst_ele = []
+    for j in range(1, width + 1):
+        print(f'输出二维数组中{i}行{j}列的数字：')
+        num = int(input())
+        lst_ele.append(num)
+    lst.append(lst_ele)
+print('二维数组的内容是：')
+for i in range(length):
+    for j in range(width):
+        print(lst[i][j], end=' ')
+    print()
+#output
+输出二维数组的长度：2
+输出二维数组的宽度：2
+输出二维数组中1行1列的数字：
+12
+输出二维数组中1行2列的数字：
+13
+输出二维数组中2行1列的数字：
+14
+输出二维数组中2行2列的数字：
+15
+二维数组的内容是：
+12 13 
+14 15 
+```
+
+这题如何输出一个二维数组没有想出来：
+
+```python
+for i in range(length):
+    for j in range(width):
+        print(lst[i][j], end=' ')
+    print()
+```
+
+
+
+### 7.8 数字金字塔
+
+编写一个程序，使用嵌套的 for 循环输出一个数字金字塔。行数由用户输入确定，例如：
+输入：行数 = 4
+输出：
+   1
+  2 2
+ 3 3 3
+4 4 4 4
+
+```python
+height = int(input('请输入金字塔的层高：'))
+for i in range(1, height + 1):
+    n = 2 * i - 1
+    for j in range(height - i):
+        print(' ', end='')
+    for k in range(1, n + 1):
+        if k % 2 == 0:
+            print(' ', end='')
+        if k % 2 != 0:
+            print(i, end='')
+    print()
+#output
+请输入金字塔的层高：8
+       1
+      2 2
+     3 3 3
+    4 4 4 4
+   5 5 5 5 5
+  6 6 6 6 6 6
+ 7 7 7 7 7 7 7
+8 8 8 8 8 8 8 8
+```
+
+依旧是前面的空格和后面的数字分开打，后面的一串中又是奇数位有数字而偶数位没有数字。
+
+```python
+height = int(input('请输入金字塔的层高：'))
+for i in range(1, height + 1):
+    for j in range(height - i):
+        print(' ', end='')
+    for k in range(i):
+        print(i, end=' ')
+    print()
+```
+
+一个i后面跟一个空格这样打印也可以。（优化后代码）
+
+
+
+### 7.9 输入：n = 4
+
+输出：
+2 3 4 5
+3 4 5 6
+4 5 6 7
+5 6 7 8
+
+```python
+size = int(input('Enter size of 数字矩阵：'))
+for i in range(1, size+1):
+    for j in range(1, size+1):
+        print(i+j, end=' ')
+    print()
+#output
+Enter size of 数字矩阵：4
+2 3 4 5 
+3 4 5 6 
+4 5 6 7 
+5 6 7 8
+```
+
+
+
+### 7.10 乘法表的非对角线和
+编写一个程序，计算并输出九九乘法表中非对角线元素的和。非对角线元素指 (i != j) 的乘法结果。
