@@ -1015,7 +1015,9 @@ for i in range(rows - 1, 0, -1):
 
 
 
-### 7.6 空心矩形的输出
+### 7.6 空心形状的输出
+
+#### 7.6.1 空心矩形
 
 ::: code-tabs
 
@@ -1058,6 +1060,47 @@ for i in range(width):
         else:
             print(end=' ')
     print()
+```
+
+#### 7.6.2 空心菱形
+
+```python
+rows = int(input('输入行数：'))
+for i in range(1, rows+1):
+    for j in range(rows - i):
+        print(' ', end='')
+    for k in range(2 * i - 1):
+        if k == 0 or k == 2 * i - 2:
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print()
+for i in range(rows-1, 0, -1):
+    for j in range(rows - i):
+        print(' ', end='')
+    for k in range(2 * i -1):
+        if k == 0 or k == 2 * i - 2:
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print()
+#output
+输入行数：8
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
 ```
 
 
@@ -1184,3 +1227,14 @@ Enter size of 数字矩阵：4
 
 ### 7.10 乘法表的非对角线和
 编写一个程序，计算并输出九九乘法表中非对角线元素的和。非对角线元素指 (i != j) 的乘法结果。
+
+```python
+summary = 0
+for i in range(1, 10):
+    for j in range(1, i):
+        summary += i * j
+print(summary)
+#output
+8
+```
+
