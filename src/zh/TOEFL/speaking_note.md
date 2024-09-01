@@ -1,7 +1,7 @@
 ---
 title: 托福口语课上笔记
-icon: python
-date: 2024-8-19 22:47:19
+icon: English
+date: 2024-8-29 22:47:19
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -19,44 +19,14 @@ headerDepth: 5
 lastUpdated: true
 editLink: false
 backToTop: true
-toc: true
+toc: true  
 ---
 
-## 1. 积累
-
-### 1.1 积累逻辑关系词
-
-- **让步**： although ，though ，despite of the fact that…（尽管事实上） ，in spite of…（不管，不顾）。
-
-::: info 
-
-其中 in spite of 语气最重。
-
-:::
-
-- **顺序**：then ，afterward ，first ，followed by ，at the same time ，meanwhile ，in the meantime ，simultaneously（并且）
-
-- **举例**：for example / instance ，to illustrate ，to be more specific ，specifically speaking ，such as
-
-- **对比**：as a comparison ，as compare with ，compared with ，similarly ，on the contrary
-
-- **并列**：both…and… ; not only….but also… ; neither…nor… ; either…or…
-
-- **转折**：however ；but ； instead
-
-- **递进**：what‘s more ；further speaking ；even
-
-- **因果**：because ，since ，due to the reason that ，for ，as ，as a result ，consequently ，so ，therefore ，hence
-
-- **条件**：if ，imagine / suppose that
-
-    
-
-## 2. Task 1 独立题
+## 1. Task 1 独立题
 
 100-130 words
 
-### 2.1 基本结构
+### 1.1 基本结构
 
 **point ：**（3’‘）
 
@@ -81,7 +51,7 @@ toc: true
 
 
 
-### 2.2 Reason 1
+### 1.2 Reason 1
 
 **本体：**
 
@@ -111,11 +81,11 @@ toc: true
 
 
 
-### 2.3 Detail 1
+### 1.3 Detail 1
 
-#### 2.3.1 因果延展
+#### 1.3.1 因果延展
 
-​           
+​         
 
 ​     
 

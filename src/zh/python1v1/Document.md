@@ -258,11 +258,123 @@ Python,C++,c,Java,c#,html,css,javascript,php
 
 
 
+### 2.3 readlines
+
+```python
+file = open('data.txt')
+content = file.readlines()
+print(content)
+file.close()
+```
+
+输出形式：列表
+
+```python
+['1,2,3,4,5,6,7,8,96,0\n', '0,9,8,7,6,5,4,3,2,101\n', '\n', '\n', 'Python,C++,c,Java,c#,html,css,javascript,php\n', '社会,公正,文明,法治,诚信,友善']
+```
 
 
 
+### 2.4 题目
 
+**编程题目：日志文件分析**
 
+**题目描述：**
+
+有一个名为 `server.log` 的日志文件，文件中的每一行记录了服务器的访问日志。每一行的格式如下：
+
+```
+<IP地址> - - [<访问日期>] "GET <URL> HTTP/1.1" <状态码> <返回字节数>
+```
+
+示例内容：
+```
+192.168.1.1 - - [28/Aug/2024:10:23:11 +0000] "GET /index.html HTTP/1.1" 200 1043
+192.168.1.2 - - [28/Aug/2024:10:24:03 +0000] "GET /about.html HTTP/1.1" 404 0
+192.168.1.3 - - [28/Aug/2024:10:25:45 +0000] "GET /contact.html HTTP/1.1" 200 512
+192.168.1.1 - - [28/Aug/2024:10:26:50 +0000] "GET /index.html HTTP/1.1" 200 1043
+```
+
+请你编写一个Python程序，读取 `server.log` 文件，并完成以下任务：
+
+1. **统计每个IP地址的访问次数**，并将结果按访问次数从高到低排序。
+2. **统计返回状态码为404的URL及其出现的次数**，并将结果按出现次数从高到低排序。
+3. **计算返回状态码为200的总字节数**。
+
+**输入文件：** `server.log`
+
+**输出要求：**
+
+1. 输出每个IP地址的访问次数，格式如下：
+   ```
+   IP地址 访问次数
+   ```
+   
+2. 输出状态码为404的URL及其出现的次数，格式如下：
+   ```
+   URL 出现次数
+   ```
+
+3. 输出状态码为200的总字节数，格式如下：
+   ```
+   总字节数: <字节数>
+   ```
+
+**示例输出：**
+
+```
+192.168.1.1 2
+192.168.1.3 1
+192.168.1.2 1
+
+/about.html 1
+
+总字节数: 1555
+```
+
+**编程要求：**
+
+- 请使用 `readlines()` 方法读取文件内容。
+- 你的程序应具有良好的可读性，并包含适当的注释。
+
+**Solution:**
+
+```python
+log_file = 'server.log'
+ip_dict = {}
+url_404_dict = {}
+total_bytes_200 = 0
+
+file = open(log_file)
+lines = file.readlines()
+file.close()
+for line in lines:
+    parts = line.split()
+    ip_address = parts[0]
+    status_code = parts[8]
+    url = parts[6]
+    bytes_returned = parts[9]
+    if ip_address in ip_dict:
+        ip_dict[ip_address] += 1
+    else:
+        ip_dict[ip_address] = 1
+
+    if status_code == '404':
+        if url in url_404_dict:
+            url_404_dict[url] += 1
+        else:
+            url_404_dict[url] = 1
+    elif status_code == '200':
+        total_bytes_200 += int(bytes_returned)
+
+sorted_ip_dict = sorted(ip_dict.items(), key=lambda item: item[1], reverse=True)
+sorted_url_404_dict = sorted(url_404_dict.items(), key=lambda item: item[1], reverse=True)
+for i in sorted_ip_dict:
+    print(i[0], i[1])
+for i in sorted_url_404_dict:
+    print(i[0], i[1])
+print(f'总字节数：{total_bytes_200}')
+```
 
 
 
