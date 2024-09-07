@@ -707,7 +707,9 @@ print('读取的二进制内容：', binary_content)
 file.close()
 ```
 
-拓展：下载保存网络图片
+**拓展：**
+
+1. 下载保存网络图片
 
 ```python
 import requests
@@ -723,19 +725,139 @@ file.write(html.content)
 
 
 
+2. 下载保存网络视频
+
+```python
+import requests
+url = 'https://github.com/AndersonHJB/AndersonHJB.github.io/releases/download/V0.0.1/ride_bike_2024_08_31.1.mp4'
+html = requests.get(url)
+file = open('test.mp4', 'wb')
+file.write(html.content)
+file.close()
+```
 
 
 
+## 4. 文件编码问题
+
+### 4.1 编码不一致导致的问题
+
+#### 4.1.1 问题描述
+
+```python
+file = open('write_file.txt', mode='a', encoding='gbk')
+file.write('哈哈哈哈哈哈哈哈哈哈')
+file.close()
+```
+
+我们会在文件里得到一些乱码：
+
+```python
+��������������������
+```
+
+上面的文件结果无法直接阅读。我们称之为乱码。
+
+上面是直接使用 Pycharm 查看写入文件的，我们再试一次Python读取文件看看有没有问题：
+
+```python
+file = open('write_file.txt', mode='r')
+content = file.read()
+print(content)
+file.close()
+#output
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\d.py", line 2, in <module>
+    content = file.read()
+  File "C:\Users\肖羡月\AppData\Local\Programs\Python\Python310\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb9 in position 0: invalid start byte
+```
+
+结果很明显，不能正常读取。
+
+#### 4.1.2 逐一攻破
+
+**为什么不能正常读取？**
+
+::: note
+
+市面上现在有很多编码，例如：ISO8859, GBK2313等等等等。这里因为我们编码是用 `gbk`编码的，而解码用的是默认的 `utf-8`。
+
+:::
+
+**为什么需要编码？**
+
+::: note
+
+在我们输入文本（用人类的语言组成的文本）的时候，计算机想要存储这段文本，就必须翻译成计算机的语言（101010）进行存储。这时我们每一个编码就相当于把人类语言翻译成计算机语言的翻译系统，不同的编码有着不一样的翻译语法。如果我们用一种翻译语法来把人类语言翻译成计算机语言，就只能用同一种翻译语法把计算机语言翻译成人类语言。如果用不同的翻译语法来翻译，就会导致翻译不出原本的人类语言的意思，导致出现乱码。
+
+:::
+
+**怎么将文件正常读取？**
+
+其实文件中就有辨明我们的错误。在之前的代码中我们有表明编码是GBK，所以我们要选择GBK解码：
+
+![image-20240907110310817](./Document.assets/image-20240907110310817.png)
 
 
 
+我们选择 `更多`，再选择 `GBK`
+
+<img src="./Document.assets/image-20240907110535987.png" alt="image-20240907110535987" style="zoom:50%;" />
+
+正常显示了。上面的操作，仅仅是让Python以我们存储文件时的编码来显示正确我们的文本。
 
 
 
+**怎么正常读取？**
+
+<img src="./Document.assets/image-20240907114210421.png" alt="image-20240907114210421" style="zoom:50%;" />
 
 
 
+## 5. 小技巧：把输出字符串转化为字典
+
+```python
+import json
+file = open('practice.json', 'r')
+content = file.read()
+data = json.loads(content)
+print(type(data))
+print(data)
+file.close()
+```
 
 
 
+## 6. 练习
+
+**题目：**
+
+读取：`practice.json` 文件内容，巧妙使用 json 库进行解析。按规定格式存储到 `exercise.csv` 文件中。
+文件格式参考：
+floor,title,created,updated,link,author,avatar
+1,逝者如斯,2024-09-06,2024-09-06,https://gavin-chen.top/post/d7050bec.html,南方嘉木,/img/link/21-gavin-chen.top.webp
+
+…
+
+**Solution:**
+
+```python
+import json
+file = open('practice.json')
+content = file.read()
+data = json.loads(content)
+data_ex = data["article_data"]
+file2 = open('exercise.csv', 'w', encoding='utf-8-sig')
+file2.write('floor,title,created,updated,link,author,avatar')
+for i in data_ex:
+    file2.write('\n')
+    for i in i.values():
+        file2.write(str(i))
+        file2.write(',')
+
+file.close()
+file2.close()
+```
 
