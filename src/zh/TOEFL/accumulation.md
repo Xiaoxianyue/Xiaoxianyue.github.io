@@ -1,5 +1,5 @@
 ---
-title: 托福杂乱积累
+title: 托福口语积累
 icon: English
 date: 2024-9-01 11:57:31
 author: XiaoXianYue
@@ -24,9 +24,7 @@ backToTop: true
 toc: true
 ---
 
-## 1. 积累
-
-### 1.1 积累逻辑关系词
+## 1. 积累逻辑关系词
 
 - **让步**： although ，though ，despite of the fact that…（尽管事实上） ，in spite of…（不管，不顾）。
 
@@ -53,3 +51,34 @@ toc: true
 - **条件**：if ，imagine / suppose that
 
     
+
+## 2. 多样表达的积累
+
+- **一流的，先进的：**first-class, advanced, cuttting-edge, top-notch
+- **吸收，掌握：**absorb, take in, digesting, master, get hold of
+- **得到（尤指知识）：**gaining，accumulate, attain
+- **拓宽知识面：**widen our scope of knowledge.
+
+
+
+
+
+## 3. 好词积累
+
+- social loafing
+- versatile 多才多艺的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
