@@ -1,5 +1,5 @@
 ---
-title: 托福口语课上笔记
+title: 托福口语——独立题
 icon: English
 date: 2024-8-29 22:47:19
 author: XiaoXianYue
@@ -53,18 +53,6 @@ night/light ; this/these
 #### 3. 语音语调
 
 强读实词，弱读虚词。
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -128,6 +116,8 @@ night/light ; this/these
 
 
 ### 1.3 Detail 1
+
+以下出现的 point 均代表观点1.
 
 #### 1.3.1 因果延展
 
@@ -203,6 +193,176 @@ night/light ; this/these
     **结果说明：**it can save me a lot of time on going about different tiny stores to get different items.
 
     **细化展开：**You know , not only you can get daily necessities such as cleaning detergent , but you also can come by snacks from all over the world.
+
+
+
+#### 1.3.5 观点 + 解释 + 动作细节
+
+- e.g.
+
+    **point :** discuss in groups help boost efficiency.
+
+    **explain:** Discuss in groups help boost efficiency, which means that a lot of can be save as compare to working by oneself. 
+
+    **details:** For example, it might take me a whole day to collect and analyze experiment data without the help of my group mates. 
+
+
+
+#### 1.3.6 对比
+
+::: tabs
+
+@tab 细节 + 结果对比
+
+- 逻辑结构：
+
+    A （动作/细节/行为/步骤/流程）+ 好结果
+
+    ​                         VS
+
+    B（动作/细节/行为/步骤/流程）+ 坏结果
+
+以此凸显 A 的好
+
+-  e.g.
+
+    **Question：**
+
+    你认为孩子们应该帮忙做什么样的活动来培养责任感？养宠物？做家务？照顾小弟弟小妹妹？
+
+    **point：**
+
+    keep a pet. Firstly, I think a good sense of responsibility can only be cultivated with something that you are forced to do at first.
+
+    **A:**
+
+    You know, dog needs you to walk everyday and you can not forget to feed it on time. So it help you to cultivate the ability of perseverance (坚持不懈). 
+
+    **B:**
+
+    However, skipping one or two house chores like sweeping the floor doesn’t matter that much. Therefore, it has nothing to do with building the awareness of responsibility.
+
+    
+
+@tab 与其…还不如
+
+- 结构：
+
+    A: Instead of doing sth. (×)，which + 消极结果，
+
+    B: sb. might as well do sth. (√)，+ 细节、原因、结果都可以
+
+
+
+- e.g.
+
+    **Question:**
+
+    你更愿意在家参加线上面试或者去公司线下面试？
+
+    **point:**
+
+    prefer face-to-face. Firstly, it shows my sincerity and respect.
+
+    **A:**
+
+    Instead of conveniently staying at home talking to the interview over a video call, which may make other think you don’t `cherish this job opportunity;` 
+
+    **B:**
+
+    you might as well overcome this obstacle(障碍物，妨碍) and meet with the interviewer in person, only by doing this can he get the impression that you `take this chance seriously`. 
+
+    标记处为同义表达。
+
+
+
+@tab 人物并列对比
+
+- 结构
+
+    人物1动作 + 人物2动作 
+
+​                         VS
+
+​        人物1结果 + 人物2结果
+
+- e.g.
+
+    **Question:**
+
+    你是更愿意自己解决挑战还是寻求别人的帮助？
+
+    **point:**
+
+    depend on others’ help. Firstly, it is more time efficiency way of dealing with troubles. 
+
+    **动作：**
+
+    You see, I always turn to my friends for assistance when I encounter(遇到，偶然遇见，邂逅) intricate problems, ==whereas== a friend of mine is usually very shy and always do things by herself.
+
+    **结果:**
+
+    ==As a result,== with help of group of people, problems always get solved very quickly for me. However, her efficiency, I heard, was nothing to `brag about`.
+
+    ::: info
+
+    brag    v&n   吹牛，自夸
+
+    :::
+
+
+
+@tab 时间并列对比
+
+- 结构
+
+    
+
+    1.
+
+    {                                                                                                   {                                                                                                                                         
+
+     in the past                                                                                      nowadays
+
+     used to…                                +    过去时    +      现在                   at present
+
+     sb./sth  was/were/had                                                                  as if today / right now
+
+    }                                                                                                    }
+
+    
+
+    2.
+
+    {                                                                                             {
+
+     However / whereas now,                                                       if…
+
+    ​                                                 +    现在时     +     将来 
+
+     at present                                                                                 in the future…
+
+    }                                                                                              }
+
+
+
+- e.g.
+
+    **Question:**
+
+    学校有一块地皮，是建一个体育场，自然实验公园，还是一个学生中心或者客居旅馆？
+
+    **point:**
+
+    **前：**
+
+    **后：**
+
+
+
+
+
+
 
 
 

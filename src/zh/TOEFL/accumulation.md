@@ -67,6 +67,9 @@ toc: true
 
 - social loafing
 - versatile 多才多艺的
+- boost efficiency 提高效率
+- time consuming
+- at one’s disposal 供某人支配，使用
 
 
 
