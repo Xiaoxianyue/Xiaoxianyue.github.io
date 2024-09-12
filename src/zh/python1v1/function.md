@@ -284,6 +284,234 @@ TestGrade(grade=99, name='Lily')
 
 
 
+#### 2.3.4 部分关键字参数
+
+如果选择关键词参数指定，则需要指定全部参数。如果只制定一部分参数的话，只能函数前半部分参数可以省略，后半部分不能被省略。
+
+如果指定参数不全则报错：
+
+```python
+def TestGrade(name, grade):
+    print(name + '的成绩是：' + str(grade) + '分。')
+
+
+TestGrade(name='李雷', 99)  # 虽然位置是对的，但是没有全部指定是会报错的
+```
+
+
+
+需要向函数传入多个参数时，只要排在前面的关键词指定一个参数，其后面的所有参数都要被指定。但是其前面的参数指不指定都可以。
+
+通过下面三种情况说明：
+
+```python
+def TestGrade(name, grade, classroom):
+    print(name + '的成绩是：' + str(grade) + '分。' + '就读于' + classroom + '班。')
+
+TestGrade(name='李雷', grade = 99, classroom = '3')
+
+#output
+李雷的成绩是：99分。就读于3班。
+```
+
+
+
+```python
+def TestGrade(name, grade, classroom):
+    print(name + '的成绩是：' + str(grade) + '分。' + '就读于' + classroom + '班。')
+
+TestGrade('李雷', grade = 99, classroom = '3')
+
+#output
+李雷的成绩是：99分。就读于3班。
+```
+
+
+
+```python
+def TestGrade(name, grade, classroom):
+    print(name + '的成绩是：' + str(grade) + '分。' + '就读于' + classroom + '班。')
+
+
+TestGrade('李雷', grade = 99, '3')
+
+#output
+  File "C:\Coder\Lesson\d.py", line 5
+    TestGrade('李雷', grade = 99, '3')
+                                       ^
+SyntaxError: positional argument follows keyword argument
+```
+
+
+
+
+
+### 2.4 返回值——return
+
+在 Python 中，`return`语句用于从函数中返回值并结束函数的执行。他可以返回一个或多个值，或者什么也不返回。在函数的执行过程中，当遇到 `return`语句是，函数将停止执行，并返回特定的值（如果有）。如果函数没有明确使用 `return`语句，函数默认会返回 `None`
+
+#### 2.4.1 语法
+
+```python
+def 函数名(参数):
+    # 函数体
+    return 返回值
+```
+
+#### 2.4.2 返回单个值
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(1, 2)
+print(result)
+```
+
+在这个例子中，函数 `add`返回两个数的和。当调用 `add(3, 5)`的时候，函数返回 8.
+
+#### 2.4.3 返回多个值
+
+```python
+def get_coordinates():
+    x = 10
+    y = 20
+    return x, y
+
+x_coord, y_coord = get_coordinates()
+print(x_coord, y_coord)
+```
+
+这里， `return` 语句返回了两个值，`x`和 `y`，并将他们分别赋值给 `x_coord`和 `y_coord`
+
+#### 2.4.4 不返回值
+
+```python
+def great():
+    print("Great")
+
+
+result = great()
+print(result)
+
+#output
+Great
+None
+```
+
+在这个例子中， `great`函数没有 `return`语句，因此它默认返回 `None`。
+
+#### 2.4.5 结束函数执行
+
+```python
+def check_number(num):
+    if num > 0:
+        return 'positive number'
+    else:
+        return 'negative number'
+    print('会不会执行？')
+
+print(check_number(5))
+print(check_number(-3))
+
+# output
+positive number
+negative number
+```
+
+我们可以看到，`return`后面的代码都不会被执行。
+
+
+
+**总结：** `return`语句可以返回值并结束函数；
+
+- 如果没有指定 `return`，函数会返回 `None`；
+- `return`可以返回单个值，多值，甚至什么也不返回。
+
+
+
+### 2.5 有无 return 的区别
+
+#### 2.5.1 场景1：函数需要返回计算结果
+
+1. 有 `return`的情况
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)
+```
+
+- 场景：在需要获取函数计算结果并在后续代码中使用的情况下，必须使用 `return`返回结果。
+- 解释：`add`函数返回两个参数的和，调用 `add(3, 5)`返回 8，结果赋值给 `result`，随后可以用于其他操作。
+
+2. 无 `return`的情况
+
+```python
+def add_no_return(a, b):
+    print(a + b)
+    
+result = add_no_return(1, 2)
+print(result)
+```
+
+- 场景：函数只是执行某些操作（例如打印）而不需要返回任何值时，可以不使用 `return`。
+- 解释：函数中没有 `return`，因此它执行 `print`后不返回任何值，`result`的值为 `None`
+
+
+
+#### 2.5.2 场景2：函数控制流程并根据条件返回值
+
+1. 有 `return`的情况
+
+```python
+def check_even_or_odd(num):
+    if num % 2 == 0:
+        return 'Even'
+    return 'Odd'
+
+result = check_even_or_odd(4)
+print(result)
+```
+
+2. 无`return`的情况
+
+```python
+def check_even_or_odd(num):
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print('Odd')
+
+result = check_even_or_odd(4)
+print(result)
+```
+
+
+
+#### 2.5.3 复杂逻辑中的提前终止
+
+1. 有 `return`提前终止
+
+    ```python
+    def find_first_even(numbers):
+        for num in numbers:
+            if num % 2 == 0:
+                return num
+        return None
+    
+    
+    result = find_first_even([1, 2, 3, 4, 5, 6, 7, 8])
+    print(result)
+    
+    # output
+    2
+    ```
+
+相较于Break，continue，return实现作用会更大。前两个操作对象仅限于当前循环，后者则是直接结束整个函数。
+
 
 
 
