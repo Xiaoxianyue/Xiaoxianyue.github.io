@@ -6,10 +6,10 @@ author: XiaoXianYue
 isOriginal: true
 category: 
     - 大三上
-    - 高级算法
+    - 高级算法作业
 tag:
     - 大三上
-    - 高级算法
+    - 高级算法作业
 sticky: false
 star: false
 article: true

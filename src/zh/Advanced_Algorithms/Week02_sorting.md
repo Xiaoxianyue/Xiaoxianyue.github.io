@@ -6,10 +6,10 @@ author: XiaoXianYue
 isOriginal: true
 category: 
     - 大三上
-    - 高级算法
+    - 高级算法课件
 tag:
     - 大三上
-    - 高级算法
+    - 高级算法课件
 sticky: false
 star: false
 article: true
@@ -429,7 +429,114 @@ print(bogoSort(mylist))  # function call
 
 **对比：**
 
-自己总结的方法2与学校方法类似。只是学校手动打乱的方法效率较低，我们的方法避免了打乱的时候可能同一个元素自己与自己交换位置的情况。
+自己总结的方法2与学校方法类似。只是学校手动打乱的方法效率较低，我们的方法避免了打乱的时候可能同一个元素自己与自己交换位#置的情况。
+
+
+
+## 2. Insertion sorting
+
+
+
+### 2.1 排序原理
+
+<img src="./Week02_sorting.assets/image-20240913233744697.png" alt="image-20240913233744697" style="zoom:33%;" />
+
+关于上面图片的例子，我们分步走：
+
+1. 首先，创建一个新的空列表；
+2. 顺序地遍历原列表中的每一个元素
+3. 把第一个数字——3，放入新列表
+4. 把原列表中3后面紧跟的数字7拿出来，与新列表的所有元素比大小，放入前一个数字（可能没有）`可能`小于7、后一个数字（可能没有）`可能`大于7的位置，
+5. 现在得到新列表里的元素为：`[3, 7]`
+6. 然后来到数字4 。与上面同样的方法，尝试将其放进我们新创建的列表。
+7. 可知，4应该放在3和7之间，所以放入4，此时我们的新列表为`[3, 4, 7]`
+8. 重复这个过程，最后输出我们的新列表，就是原列表插入排序后的样子啦。
+
+
+
+### 2.2 功能拆解
+
+#### 2.2.1 新数字插入列表进行排序
+
+我们要实现插入排序的功能，首先要实现的就是怎么把一个数字插入到顺序排序的列表中，并不能破坏其顺序的排列。也就是说，在这个新数字插入前和插入后，列表都是顺序排列的。
+
+::: code-tabs 
+
+@ tab 自己的想法（太过于冗杂）
+
+```python
+# 获取用户输入一个数字，把该数字放到目标列表中合适的位置，最后输出的结果应该是从小到大排序，不能使用排序函数。
+
+def insertion_func(lst):
+    num = int(input('Enter a number: '))
+    for i in range(len(lst)):
+        if lst[i] <= num and lst[i + 1] >= num:
+            lst.insert(i + 1, num)
+            return lst
+        elif lst[0] >= num:
+            lst.insert(0, num)
+            return lst
+        else:
+            lst.insert(len(lst), num)
+            return lst
+
+
+print(insertion_func([4, 8]))
+```
+
+
+
+@tab 最优解：
+
+```python
+def insert_in_order(lst, num):
+    for i in range(len(lst)):
+        if num < lst[i]:
+            lst.insert(i, num)
+            break
+        else:
+            lst.append(num)
+    return lst
+
+
+print(insert_in_order([4, 8], 1))
+```
+
+
+
+### 2.3 完整代码
+
+#### 2.3.1 初级版
+
+```python
+lst = [12, 11, 13, 5, 6]
+sorted_lst = []
+for j in range(len(lst)):
+    for i in range(len(sorted_lst)):
+        if lst[j] < sorted_lst[i]:
+            sorted_lst.insert(i, lst[j])
+            break
+    else:
+        sorted_lst.append(lst[j])  # 如果遍历完还没有找到合适位置，说明 num 最大，放在最后
+
+print("排序后的列表:", sorted_lst)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

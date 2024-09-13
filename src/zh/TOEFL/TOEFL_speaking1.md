@@ -352,27 +352,139 @@ night/light ; this/these
 
     学校有一块地皮，是建一个体育场，自然实验公园，还是一个学生中心或者客居旅馆？
 
-    **point:**
+    **point:** athletic facility. First, it would provide students with a healthy way of living.
 
-    **前：**
+    **前：**You know, in the past, students had to go to gyms outside the campus, which was time consuming and expensive.
 
-    **后：**
-
-
-
-
+    So students would gradually give up exercising.
+    
+    **后：**However, with this new piece of land,  students get a place near their dorms and don’t have to pay much. It’s good for improving students’ health.
 
 
 
+#### 1.3.7 好用的小 tips 或者逻辑结构
+
+1. 当口语考试中需要对一些词进行同义替换，但一时之间又想不起来同义词怎么办？
+
+**细节化。**
+
+名词：
+
+```
+Graded assignments --> marked paper, scored report
+a course --> marking, coding, law
+course grade --> mark, score, A-F
+```
+
+动词：(这个是最不好细化的，最好找同义词或可以解释这个动词的词组)
+
+```
+allow --> permit, given second chance
+do --> accomplish, finish, work on
+improve --> enhance, raise, get a higher score
+```
+
+形容词：
+
+```
+graded --> marked, scored
+additional --> extra, do some extracurricular activities, achieve the task that is not included in the syllabus
+overall --> whole,conprehensive
+```
+
+2. 一个好用逻辑
+
+    句子结构：结果 + 原因 + 背景
+
+    - I felt very exhausted everyday by sitting in my bedroom.
+
+        
+
+### 1.4 Reason2 + Detail2
+
+#### 1.4.1 中心词释义法
+
+- **使用条件句：**
+
+==I mean, by doing…, it is less/more likely   1. for sb. to do sth.==
+
+​                                                                         ==2. that sb. do sth.==
 
 
 
+- **e.g.**
+
+题目：你同不同意这个说法？一个人要想成功，必须先树敌。
+
+**A. 最简单版**
+
+此方法适用于时间不够的版本，直接读题！
+
+```
+Secondly, by making enemies, it is more/less likely that...
+```
+
+**B. 中极版**
+
+读题 + 完整结构版
+
+```
+Secondly, it is conducive to improving their social abilities. I mean, by making enemies, it is more likely that they will gain experience in dealing with complicated interpersonal relationship with rivalries.
+```
+
+**C. 满级版**
+
+不读题 + 完整结构
+
+```
+Secondly, it is conducive to improving their social abilities. I mean, by also knowing what's on your adversary's mind through pretending to be friends and chatting with them, it is more likely that they will gain experience in dealing with complicated interpersonal relationship with rivalries.
+```
 
 
 
+#### 1.4.2 中心词对应人群分析
 
 
 
+**sb. who (什么特性的人) tend to (有什么样的结果) which (什么样的动作)**
+
+- e.g.
+
+题目：有些同学喜欢在课上做笔记而有些同学不喜欢。你更偏向？
+
+A. 初级
+
+此方法较为简单直白，没有细节
+
+```
+前者：Secondly, students who taking notes tend to be more hardworking than others, which help them to consolidate knowledge better.
+后者：Secondly, students who don't take notes tend to have a flexible mind, which usually making them more creative.
+```
+
+B.高级
+
+添加了较多细节
+
+```
+前者：Secondly, it is benefit for students to learn better. Students who prefer to write down key point teathers deliver tend to be more diligent/industrious than others, which helps them to consolidate knowledge better.
+后者：Secondly, it is conducive to avoiding forming a rigid study habit. Students who don't consider notes necessary tend to have a flexible mind, which usually makes them more creative.
+```
+
+:::notes:
+
+还可以添加一些反向的对比增加丰富程度
+
+:::
 
 
 
+### 1.5 万能素材的运用
+
+#### 1.5.1 放松身心类
+
+- 观点句：
+    1. …provides sb. with ==a way to let loose a bit== after a heavy work/life/study.
+    2. sb. is easy to be with because sb./sth. always ==create a relaxing atmosphere==
+    3. sth. helps us to ==release pressure and blow off steam==
+- 延展句：
+    1. You know, by …., sb’s mind gets ==freshen up and energy can be recharged full again==. So I think is/are of great necessity for sb. to help ==loosening one’s belt== a bit since one’s study/work stress is way overwhelming.
