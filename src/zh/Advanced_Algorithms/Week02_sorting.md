@@ -524,6 +524,45 @@ print("排序后的列表:", sorted_lst)
 
 
 
+#### 2.3.2 中极版
+
+改良：不用新建一个列表，直接在原列表上面修改。
+
+```python
+lst = [12, 11, 13, 5, 6]
+
+for j in range(1, len(lst)):
+    for i in range(j):
+        if lst[i] > lst[j]:
+            num = lst[j]  
+            del lst[j]
+            lst.insert(i, num)
+            break
+
+print("排序后的列表:", lst)
+```
+
+
+
+
+
+#### 2.3.3 boss 版
+
+```python
+def insert_sort(nums):
+    for i in range(1, len(nums)):
+        base = nums[i]
+        j = i - 1
+        while j >= 0 and base < nums[j]:
+            nums[j + 1] = nums[j]
+            j -= 1
+            nums[j + 1] = base
+    return nums
+
+
+nums = [3, 1, 7, 9, 2]
+print(insert_sort(nums))
+```
 
 
 
@@ -533,8 +572,19 @@ print("排序后的列表:", sorted_lst)
 
 
 
+## 3. 冒泡排序
+
+```python
+def bubble(lst):
+    for j in range(len(lst)):
+        for i in range(len(lst) - j - 1):
+            if lst[i] > lst[i + 1]:
+                lst[i], lst[i + 1] = lst[i + 1], lst[i]
+    return lst
 
 
+print(bubble([3, 2, 6, 1, 5, 4]))
+```
 
 
 
