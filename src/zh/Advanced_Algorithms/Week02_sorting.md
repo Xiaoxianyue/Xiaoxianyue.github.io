@@ -592,6 +592,107 @@ print(bubble([3, 2, 6, 1, 5, 4]))
 
 
 
+## 4. 快速排序
+
+
+
+### 4.1 排序原理
+
+快速排序的核心操作是“哨兵划分”，其目标是：选择数组中某个元素作为“基准数”，将所有小于基准数的元素移到其左侧，而大于基准数的元素移到其右侧。
+
+
+
+### 4.2 功能拆解
+
+1. 选取数组最左端元素作为基准数，初始化两个指针 i 和 j 分别指向数组的两端。
+2. 设置一个循环，在每轮中使用 i（j）分别寻找第一个比基准数大（小）的元素，然后交换这两个元素。
+3. 循环执行步骤2，直到 i 和 j 相遇时停止，最后将基准数交换到两个子数组的分界线。
+
+
+
+### 4.3 完整代码
+
+```python
+def partition(nums, left, right):
+    i, j = left, right  # 以nums[left]为基数
+    while i < j:  # 把数组第一个数当成基准数
+        while i < j and nums[j] >= nums[left]:  # 从右向左找首个小于基准数的元素
+            j -= 1
+        while i < j and nums[i] <= nums[left]:
+            i += 1
+        nums[i], nums[j] = nums[j], nums[i]
+    nums[i], nums[left] = nums[left], nums[i]
+    return i
+
+
+def quick_sort(nums, left, right):
+    if left >= right:
+        return
+    pivot = partition(nums, left, right)
+    quick_sort(nums, left, pivot - 1)
+    quick_sort(nums, pivot + 1, right)
+
+
+if __name__ == '__main__':
+    nums = [2, 4, 1, 0, 3, 5]
+    quick_sort(nums, 0, len(nums) - 1)
+    print(nums)
+
+```
+
+
+
+### 4.4 功能略解
+
+1. 首先我们要确定基准数，把比基准数小的数放在基准数左边，把比基准数大的数放在基准数右边，并且把比基准数小的且现在已经在基准数左边的数字（们）分为左子数组，把比基准数大的且现在已经在基准数右边的数字（们）分为右子数组。
+2. 然后把我们分好的左右子数组再次分组，在左右子数组内部再找基准数，再把小于基准数的数放基准数左边；大于基准数的数放基准数右边…….
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
