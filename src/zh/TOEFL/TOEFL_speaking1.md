@@ -488,3 +488,51 @@ B.高级
     3. sth. helps us to ==release pressure and blow off steam==
 - 延展句：
     1. You know, by …., sb’s mind gets ==freshen up and energy can be recharged full again==. So I think is/are of great necessity for sb. to help ==loosening one’s belt== a bit since one’s study/work stress is way overwhelming.
+
+
+
+
+
+#### 1.5.2 提升效率
+
+- 类型词组
+    1. save time
+    2. time efficient
+    3. not time consuming
+    4. enhance efficiency and effectiveness
+    5. boost productivity
+    6. not put a drag on efficiency
+
+- 观点句
+    1. a lot of time will be save by sth.
+    2. sth. can be very time-efficient
+    3. sth. will not put a drag on efficiency and effectiveness
+- 延展句
+    1. by…., we get to accomplish more than what we had originally planned to. In this way, more free time is earned for  us to do other things. So we can achieve even more.
+
+
+
+#### 1.5.3 交朋友
+
+- 观点句
+    1. There’s no doubt that sb’s ==social connection can be widened== this way
+    2. I can ==get acquainted with== more people who share mutual interests with myself
+    3. it helps with enhancing our interpersonal relationship with people.
+
+- 延展句
+    1. you know, through…., sb. get to know people from different fields/major/social classes, so 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
