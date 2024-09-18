@@ -180,6 +180,23 @@ print(solution(10))
 
 **要求：**利用递归算法获得指定项的斐波拉契数列。
 
+```python
+def Fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+
+if __name__ == '__main__':
+    lst = []
+    n = 100
+    for i in range(n+1):
+        lst.append(Fibonacci(i))
+    print(lst)
+```
+
 
 
 ### 2.4 递归的优缺点：
