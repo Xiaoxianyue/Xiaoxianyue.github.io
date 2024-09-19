@@ -5,9 +5,9 @@ date: 2024-9-19 16:14:22
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 新东方托福口语笔记
+    - 新东方托福笔记
 tag:
-    - 新东方托福口语笔记
+    - 新东方托福笔记
 sticky: false
 star: false
 article: true

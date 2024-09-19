@@ -75,7 +75,8 @@ toc: true
 - at one’s disposal 供某人支配，使用
 - hardworking = diligent/industrious
 
-
+- transcript 大学成绩单
+- rationality 合理性
 
 
 

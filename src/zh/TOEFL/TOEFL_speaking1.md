@@ -5,9 +5,9 @@ date: 2024-8-29 22:47:19
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 新东方托福口语笔记
+    - 新东方托福笔记
 tag:
-    - 新东方托福口语笔记
+    - 新东方托福笔记
 sticky: false
 star: false
 article: true
@@ -399,6 +399,8 @@ overall --> whole,conprehensive
     - I felt very exhausted everyday by sitting in my bedroom.
 
 :::
+
+
 
 
 
