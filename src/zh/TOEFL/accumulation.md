@@ -58,6 +58,9 @@ toc: true
 - **吸收，掌握：**absorb, take in, digesting, master, get hold of
 - **得到（尤指知识）：**gaining，accumulate, attain
 - **拓宽知识面：**widen our scope of knowledge.
+- **行业：** carrer, vocation
+- **感兴趣：** be interested in, be keen on, have a passion for, derive satisfaction from
+- **关系：** relationship , connection
 
 
 

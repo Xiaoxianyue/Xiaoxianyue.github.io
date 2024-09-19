@@ -398,9 +398,11 @@ overall --> whole,conprehensive
 
     - I felt very exhausted everyday by sitting in my bedroom.
 
-        
+:::
 
-### 1.4 Reason2 + Detail2
+
+
+### 1.4 Reason 2 + Detail 2
 
 #### 1.4.1 中心词释义法
 

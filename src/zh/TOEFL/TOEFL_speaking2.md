@@ -237,3 +237,66 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
     - to be more specific
     - specifically speaking
 
+- if : ———— 可以同义替换成：
+    - Imaging that…
+    - suppose that….
+- 列举项目：
+    - not only… but also…
+    - either…or…
+    - neither…nor…
+
+::: info
+
+一些重复的语义内容要注意识别，该丢就丢。校园题通常会有 10s - 20s 来重复一些废话，剩下的作总结是一定要讲完的。
+
+:::
+
+
+
+#### 1.2.4 练习听力的步骤 （材料：TPO 30 往后）
+
+1. 边听听力边做笔记
+2. 整理笔记
+3. 按照笔记复述第一遍
+4. 根据听力稿添加细节（为什么没听到？？）
+5. 整理语言二次复述
+
+
+
+#### 1.2.5 Rare case
+
+1. 有可能男女（听力人物）都是主角。
+
+    - 答题结构：
+
+        Firstly， the woman says … . And the man gives an example that … .
+
+        Secondly, the woman mentions that … . The man states that / According to the man …
+
+        
+
+
+
+
+
+### 1.3 Task 2 平时练习步骤
+
+1. 45s 计时看阅读
+2. 边听听力边做笔记，30s 计时整理笔记，复述
+3. 根据听力稿整理语言二次复述，不可添加任何笔记
+4. 每一道 Speech Rater 评分
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
