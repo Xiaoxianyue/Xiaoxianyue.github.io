@@ -1,13 +1,13 @@
 ---
-title: 托福口语——独立题
+title: 托福口语01——独立题
 icon: English
 date: 2024-8-29 22:47:19
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 新东方托福笔记
+    - 新东方托福口语笔记
 tag:
-    - 新东方托福笔记
+    - 新东方托福口语笔记
 sticky: false
 star: false
 article: true
@@ -517,12 +517,21 @@ B.高级
 - 观点句
     1. There’s no doubt that sb’s ==social connection can be widened== this way
     2. I can ==get acquainted with== more people who share mutual interests with myself
-    3. it helps with enhancing our interpersonal relationship with people.
+    3. it helps with ==enhancing our interpersonal relationship== with people.
 
 - 延展句
-    1. you know, through…., sb. get to know people from different fields/major/social classes, so 
+    1. you know, through…., sb. get to know people from different fields/major/social classes, so there’s high possibility that sb’s    friend circle will be larger and not only can sb. learn so much from each other/them by exchanging thoughts and new ideas through daily chatting, but also all these social connections can be of help for sb. in the future when sb. hunt for jobs or when sb. encounter hardships in life.
+    
+    
 
+#### 1.5.4 增长知识拓宽视野
 
+- 观点句
+    1. sb. can broaden sb,’s knowledge base and sb’s insight
+    2. widen the scope of sb’s knowledge
+    3. sth. help sb. acquire a wider range of knowledge from different fields
+- 延展句
+    1. through…, it’s a sure thing for sb. to acquire an overarching/comprehensive, systematic and more profound understanding of sth. Therefore, it help to enrich sb.’s spiritual world.
 
 
 

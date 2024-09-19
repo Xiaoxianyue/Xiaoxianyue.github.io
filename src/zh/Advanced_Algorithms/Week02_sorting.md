@@ -657,11 +657,64 @@ if __name__ == '__main__':
 
 
 
+## 5. 归并排序
+
+归并排序（merge sort）是一种基于分治策略的排序算法。包含划分和合并的阶段；
+
+1. 划分阶段：通过递归不断将数组从中点处分开，将长数组的排序问题转换为短数组的排序问题。
+2. 合并阶段：当子数组长度为 1 时终止划分，开始合并，持续的将左右两个较短的有序数组合并为一个较长的有序数组，直至结束。
 
 
 
+### 5.1 划分阶段
+
+::: code-tabs
+
+@tab 自己思路
+
+```python
+def division(lst):
+    if len(lst) <= 1:  # 列表划分的只剩一个数，停止递归。
+        return lst[0]  # 返回单个值
+    else:
+        if len(lst) % 2 == 1:  # 列表数字个数为单
+            n = int(len(lst) // 2)   # 用取整代替除法。强制转换为整型
+            left_lst = lst[:n]  # 不能在 print 里调用，不然会返回 None
+            right_lst = lst[n:]
+            print(f'Division:{lst} -> Left:{left_lst} -> Right: {right_lst}')
+            division(left_lst)
+            division(right_lst)
+
+        elif len(lst) % 2 == 0:
+            n = int(len(lst) / 2)
+            left_lst = lst[:n]
+            right_lst = lst[n:]
+            print(f'Division:{lst} -> Left:{left_lst} -> Right: {right_lst}')
+            division(left_lst)
+            division(right_lst)
 
 
+division([38, 27, 43, 3, 9, 82, 10])
+```
+
+
+
+@tab 优化代码
+
+```python
+def merge_sort_division(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+    print(f'Division:{arr} -> Left:{left} -> Right: {right}')
+    merge_sort_division(left)
+    merge_sort_division(right)
+
+
+merge_sort_division([3, 2, 4, 29, 145, 64, 6])
+```
 
 
 
