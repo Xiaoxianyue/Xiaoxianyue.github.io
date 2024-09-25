@@ -6,8 +6,10 @@ author: XiaoXianYue
 isOriginal: true
 category: 
     - 新东方托福笔记
+    - 托福学习
 tag:
     - 新东方托福笔记
+    - 托福学习
 sticky: false
 star: false
 article: true
