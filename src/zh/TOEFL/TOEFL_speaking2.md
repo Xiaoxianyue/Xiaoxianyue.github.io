@@ -24,11 +24,11 @@ backToTop: true
 toc: true  
 ---
 
-### 1. 校园题构成
 
-### 1.1 Reading
 
-#### 1.1.1 基本信息
+### 1. Reading
+
+#### 1.1 基本信息
 
 - **Time**: 45 s / 50 s
 
@@ -49,7 +49,7 @@ toc: true
 
 :::
 
-#### 1.1.2 材料阅读
+#### 1.2 材料阅读
 
 - ==**要点1——政策（提议）发出方：**==
 
@@ -107,7 +107,7 @@ toc: true
 
 
 
-#### 1.1.3 怎么复述阅读材料？
+#### 1.3 怎么复述阅读材料？
 
 - 复述政策（提议）模版句：
 
@@ -145,9 +145,9 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
 
 
-### 1.2 Listening
+### 2. Listening
 
-#### 1.2.1 注意
+#### 2.1 注意
 
 - 考察核心能力：细节还原；逻辑模仿。
 
@@ -177,7 +177,7 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
     一男一女，其中有一人话多的是主角
 
-#### 1.2.2 记笔记
+#### 2.2 记笔记
 
 1. **常考逻辑符号。**
 
@@ -205,7 +205,7 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
 
 
-#### 1.2.3 常考逻辑段落总结
+#### 2.3 常考逻辑段落总结
 
 - 出现人物：———— 加举例逻辑词
 
@@ -255,7 +255,7 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
 
 
-#### 1.2.4 练习听力的步骤 （材料：TPO 30 往后）
+#### 2.4 练习听力的步骤 （材料：TPO 30 往后）
 
 1. 边听听力边做笔记
 2. 整理笔记
@@ -265,7 +265,7 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
 
 
-#### 1.2.5 Rare case
+#### 2.5 Rare case
 
 1. 有可能男女（听力人物）都是主角。
 
@@ -281,7 +281,7 @@ It is stated in the reading that … + 政策被动句(campus coffee should be c
 
 
 
-### 1.3 Task 2 平时练习步骤
+### 3. Task 2 平时练习步骤
 
 1. 45s 计时看阅读
 2. 边听听力边做笔记，30s 计时整理笔记，复述
