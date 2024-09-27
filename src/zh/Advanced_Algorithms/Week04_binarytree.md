@@ -100,6 +100,450 @@ n2.right = n5
 
 与链表类似，在二叉树中插入与删除节点可以通过修改指针来实现。
 
+1. 下图示意的是插入节点的过程。
+
+![5217dda2d00603619c9fd8cd8629436](./Week04_binarytree.assets/5217dda2d00603619c9fd8cd8629436.jpg)
+
+插入节点的代码：
+
+```python
+class TreeNode:
+    def __init__(self, val: int):
+        self.val = val  # 节点值
+        self.left = None  # 左子节点
+        self.right = None  # 右子节点
+
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+p = TreeNode(val=0)
+n1.left = n1
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n1.left = p
+p.left = n2
+```
+
+去掉刚刚添加的节点？
+
+```python
+class TreeNode:
+    def __init__(self, val: int):
+        self.val = val  # 节点值
+        self.left = None  # 左子节点
+        self.right = None  # 右子节点
+
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+p = TreeNode(val=0)
+n1.left = n1
+n1.right = n3
+n2.left = n4
+n2.right = n5
+
+n1.left = p
+p.left = n2
+
+n1.left = n2
+```
+
+
+
+
+
+可视化输出二叉树：
+
+::: tabs
+
+@tab 
+
+原二叉树
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+def display(root):
+    """打印二叉树为字符树"""
+    lines, *_ = _display_aux(root)
+    for line in lines:
+        print(line)
+
+def _display_aux(node):
+    """返回包含当前子树所有行的列表，以及子树宽度、高度和水平坐标"""
+    if node is None:
+        return [" "], 0, 0, 0
+
+    line = f'{node.val}'
+    width = len(line)
+    height = 1
+    middle = width // 2
+
+    # 只有左子树
+    if node.left and not node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width)
+        shifted_lines = [line + ' ' * width for line in l_lines]
+        return [first_line, second_line] + shifted_lines, l_width + width, l_height + 2, l_width + width // 2
+
+    # 只有右子树
+    if not node.left and node.right:
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * (width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        shifted_lines = [' ' * width + line for line in r_lines]
+        return [first_line, second_line] + shifted_lines, width + r_width, r_height + 2, width // 2
+
+    # 同时有左右子树
+    if node.left and node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        # 对齐高度
+        if l_height < r_height:
+            l_lines += [' ' * l_width] * (r_height - l_height)
+        elif r_height < l_height:
+            r_lines += [' ' * r_width] * (l_height - r_height)
+        merged_lines = [a + ' ' * width + b for a, b in zip(l_lines, r_lines)]
+        return [first_line, second_line] + merged_lines, l_width + width + r_width, max(l_height, r_height) + 2, l_width + width // 2
+
+    # 叶子节点
+    return [line], width, height, middle
+
+# 示例：创建二叉树并打印
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+root.right.right = TreeNode(6)
+
+display(root)
+```
+
+/ output
+
+```python
+  _1 
+ /  \
+ 2  3
+/ \  
+4 5 
+```
+
+
+
+@tab 二叉树添加节点p后
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+def display(root):
+    """打印二叉树为字符树"""
+    lines, *_ = _display_aux(root)
+    for line in lines:
+        print(line)
+
+def _display_aux(node):
+    """返回包含当前子树所有行的列表，以及子树宽度、高度和水平坐标"""
+    if node is None:
+        return [" "], 0, 0, 0
+
+    line = f'{node.val}'
+    width = len(line)
+    height = 1
+    middle = width // 2
+
+    # 只有左子树
+    if node.left and not node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width)
+        shifted_lines = [line + ' ' * width for line in l_lines]
+        return [first_line, second_line] + shifted_lines, l_width + width, l_height + 2, l_width + width // 2
+
+    # 只有右子树
+    if not node.left and node.right:
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * (width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        shifted_lines = [' ' * width + line for line in r_lines]
+        return [first_line, second_line] + shifted_lines, width + r_width, r_height + 2, width // 2
+
+    # 同时有左右子树
+    if node.left and node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        # 对齐高度
+        if l_height < r_height:
+            l_lines += [' ' * l_width] * (r_height - l_height)
+        elif r_height < l_height:
+            r_lines += [' ' * r_width] * (l_height - r_height)
+        merged_lines = [a + ' ' * width + b for a, b in zip(l_lines, r_lines)]
+        return [first_line, second_line] + merged_lines, l_width + width + r_width, max(l_height, r_height) + 2, l_width + width // 2
+
+    # 叶子节点
+    return [line], width, height, middle
+
+# 示例：创建二叉树并打印
+# root = TreeNode(1)
+# root.left = TreeNode(2)
+# root.right = TreeNode(3)
+# root.left.left = TreeNode(4)
+# root.left.right = TreeNode(5)
+# root.right.right = TreeNode(6)
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+p = TreeNode(val=0)
+n1.left = n1
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n1.left = p
+p.left = n2
+
+display(n1)
+```
+
+/ output
+
+```python
+    1 
+   / \
+  _0 3
+ /    
+ 2    
+/ \   
+4 5   
+```
+
+
+
+@tab 
+
+二叉树再删除节点p
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+def display(root):
+    """打印二叉树为字符树"""
+    lines, *_ = _display_aux(root)
+    for line in lines:
+        print(line)
+
+def _display_aux(node):
+    """返回包含当前子树所有行的列表，以及子树宽度、高度和水平坐标"""
+    if node is None:
+        return [" "], 0, 0, 0
+
+    line = f'{node.val}'
+    width = len(line)
+    height = 1
+    middle = width // 2
+
+    # 只有左子树
+    if node.left and not node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width)
+        shifted_lines = [line + ' ' * width for line in l_lines]
+        return [first_line, second_line] + shifted_lines, l_width + width, l_height + 2, l_width + width // 2
+
+    # 只有右子树
+    if not node.left and node.right:
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * (width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        shifted_lines = [' ' * width + line for line in r_lines]
+        return [first_line, second_line] + shifted_lines, width + r_width, r_height + 2, width // 2
+
+    # 同时有左右子树
+    if node.left and node.right:
+        l_lines, l_width, l_height, l_middle = _display_aux(node.left)
+        r_lines, r_width, r_height, r_middle = _display_aux(node.right)
+        first_line = ' ' * (l_middle + 1) + '_' * (l_width - l_middle - 1) + line + '_' * r_middle + ' ' * (r_width - r_middle)
+        second_line = ' ' * l_middle + '/' + ' ' * (l_width - l_middle - 1 + width + r_middle) + '\\' + ' ' * (r_width - r_middle - 1)
+        # 对齐高度
+        if l_height < r_height:
+            l_lines += [' ' * l_width] * (r_height - l_height)
+        elif r_height < l_height:
+            r_lines += [' ' * r_width] * (l_height - r_height)
+        merged_lines = [a + ' ' * width + b for a, b in zip(l_lines, r_lines)]
+        return [first_line, second_line] + merged_lines, l_width + width + r_width, max(l_height, r_height) + 2, l_width + width // 2
+
+    # 叶子节点
+    return [line], width, height, middle
+
+# 示例：创建二叉树并打印
+# root = TreeNode(1)
+# root.left = TreeNode(2)
+# root.right = TreeNode(3)
+# root.left.left = TreeNode(4)
+# root.left.right = TreeNode(5)
+# root.right.right = TreeNode(6)
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+p = TreeNode(val=0)
+n1.left = n1
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n1.left = p
+p.left = n2
+n1.left = n2
+
+display(n1)
+```
+
+/ output
+
+```python
+  _1 
+ /  \
+ 2  3
+/ \  
+4 5 
+```
+
+:::
+
+
+
+::: info
+
+需要注意的是，插入节点可能会改变二叉树的原有逻辑结构，而删除节点通常意味着删除该节点及其所有子树。因此，在二叉树中，插入与删除通常是由一套操作配合完成的，以实现有实际意义的操作。
+
+:::
+
+
+
+
+
+
+
+
+
+## 3. 常见二叉树类型
+
+### 3.1 完美二叉树
+
+完美二叉树(perfect binary tree)所有层的节点都被完全填满。在完美二叉树中，叶节点的度为0，其余所有节点的度都为2；若树的高度为h，则总节点数为$2^{h+1} - 1$，呈现标准的指数级关系，反映了自然界中常见的细胞分裂现象。
+
+::: tips
+
+请注意，在中文社区中，完美二叉树又可以称为满二叉树
+
+:::
+
+### 3.2 完全二叉树
+
+完全二叉树（complete binary tree）只有最底层的节点未被填满，且最底层节点尽量靠左填充。
+
+<img src="./Week04_binarytree.assets/f836df0e315d62fd3e13984f8a56eda.jpg" alt="f836df0e315d62fd3e13984f8a56eda" style="zoom:33%;" />
+
+### 3.3 完满二叉树
+
+完满二叉树（full binary tree）除了叶节点之外，其余所有节点都有两个子节点。
+
+<img src="./Week04_binarytree.assets/11996f9f3adbf474c69e91208810879.jpg" alt="11996f9f3adbf474c69e91208810879" style="zoom: 25%;" />
+
+### 3.4 平衡二叉树
+
+平衡二叉树（balanced binary tree）中任意节点的左子树和右子树的高度差的绝对值不超过1。
+
+<img src="./Week04_binarytree.assets/06a59b571390daafe4e082fe8608c12.jpg" alt="06a59b571390daafe4e082fe8608c12" style="zoom:33%;" />
+
+### 3.5 二叉树退化
+
+当二叉树的每层节点都被填满时，达到“完美二叉树”；当所有节点都偏向一侧时，二叉树退化为“链表”。
+
+- 完美二叉树是理想情况，可以充分发挥二叉树“分治”的优势。
+- 链表则是另一个极端，所有操作都变为线性操作，时间复杂度退化至 O(n)。
+
+<img src="./Week04_binarytree.assets/56eaf3705c725e54d4666ef0f01d78a.jpg" alt="56eaf3705c725e54d4666ef0f01d78a" style="zoom:33%;" />
+
+
+
+::: details
+
+<img src="./Week04_binarytree.assets/8ee88391a9bfff5c4614774a753065a.jpg" alt="8ee88391a9bfff5c4614774a753065a" style="zoom:33%;" />
+
+——chatgpt:
+
+是的，您所上传的图片确实是一个二叉树的形式，虽然从它的结构上看更像是个“退化”的形式。通常情况下，如果二叉树的某些节点只有一个子节点（左子节点或者右子节点），而另一个子节点为空，这样的二叉树被称为“退化二叉树”（或“病态二叉树”）。这会使得树的形状接近于一条线，而不是理想的完全平衡的形状。
+
+从图片来看，这个树的结构比较简洁，每个节点只有一个或者两个子节点，但并没有形成完全的平衡形状。如果这表示一种数据结构，通常会导致某些操作的效率下降，如查找、插入等。
+
+如果您有更多关于二叉树结构的问题，或者需要分析具体的二叉树实现，欢迎进一步探讨。
+
+不完全是一个退化二叉树。
+
+:::
+
+
+
+::: center
+
+表7-1 二叉树的最佳结构和最差结构
+
+:::
+
+|                             | 完美二叉树         | 链表    |
+| --------------------------- | ------------------ | ------- |
+| 第 $i$ 层的节点数量         | $2^{i-1}$          | $1$     |
+| 高度为 $h$ 的树的叶节点数量 | $2^h$              | $1$     |
+| 高度为 $h$ 的树的节点总数   | $2^{h+1} - 1$      | $h + 1$ |
+| 节点总数为 $n$ 的树的高度   | $\log_2 (n+1) - 1$ | $n - 1$ |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
