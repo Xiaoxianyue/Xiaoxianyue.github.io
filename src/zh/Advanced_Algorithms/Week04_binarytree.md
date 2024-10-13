@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第4周ppt——二叉树
+title: 高级算法——第四周略讲——二叉树
 icon: python
 date: 2024-9-26 21:18:12
 author: XiaoXianYue
@@ -532,11 +532,620 @@ display(n1)
 
 
 
+## 4. 二叉树的遍历
+
+### 4.1 广度优先遍历 （BFS）
+
+::: tabs 非递归
+
+@tab 引入队列的实现：
+
+```python
+from collections import deque
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+def level_order(root):
+    queue = deque()
+    queue.append(root)
+    res = []
+    while queue:
+        node = queue.popleft()
+        res.append(node.val)
+        if node.left is not None:
+            queue.append(node.left)
+        if node.right is not None:
+            queue.append(node.right)
+    return res
+
+level_order(n1)
+```
+
+@tab 不用队列，但逻辑相同 (自己方法)
+
+```pyhthon
+
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+
+def printtree(root):
+    queue = []
+    queue.append(root)
+    res = []
+    while queue:
+        length = len(queue)
+        for i in range(length):
+            node = queue[i]
+            res.append(node.val)
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
+        queue = queue[length:]
+        
+    return res
+
+printtree(n1)
+```
+
+@tab 优化后
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+def level_order(root):
+    queue = []
+    if root is not None:
+        queue.append(root)
+    res = []
+
+    while queue:
+        node = queue.pop(0)
+        res.append(node)
+        if node.left is not None:
+            queue.append(node.left)
+        if node.right is not None:
+            queue.append(node.right)
+    return res
+
+level_order(n1)
+```
+
+:::
+
+
+
+::: tabs  递归方法：
+
+@tab 自己方法
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+res = []
+def level_order(root):
+    if not res:
+        res.append(root.val)
+    if root.left:
+        res.append(root.left.val)
+    if root.right:
+        res.append(root.right.val)
+    if root.left is not None:
+        level_order(root.left)
+    if root.right is not None:
+        level_order(root.right)
+
+level_order(n1)
+print(res)
+```
+
+@tab
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+res = []
+def level_order_recursive(root):
+    res = []
+    if root:
+        level_helper([root], res)
+    return res
+
+def level_helper(queue, res):
+    if not queue:
+        return
+    node = queue.pop(0)
+    res.append(node.val)
+    if node.left:
+        queue.append(node.left)
+    if node.right:
+        queue.append(node.right)
+        
+    level_helper(queue, res)
+        
+level_order_recursive()
+
+```
+
+
+
+### 4.2 深度优先遍历（DFS）
+
+#### 4.2.1 pre order
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+res = []
+def pre_order(root):
+    if root is None:
+        return
+    res.append(root.val)
+    if root.left is not None:
+        pre_order(root.left)
+    if root.right is not None:
+        pre_order(root.right)
+
+pre_order(n1)
+print(res)
+```
+
+
+
+#### 4.2.2 In Order
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+res = []
+def in_order(root):
+    if root is None:
+        return
+    
+    if root.left is not None:
+        in_order(root.left)
+    res.append(root.val)
+    if root.right is not None:
+        in_order(root.right)
+
+in_order(n1)
+print(res)
+```
 
 
 
 
 
+#### 4.2.3 Post Order
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val: int):
+        self.val: int = val                # 节点值
+        self.left: 'TreeNode' | None = None  # 左子节点引用
+        self.right: 'TreeNode' | None = None # 右子节点引用
+
+n1 = TreeNode(val=1)
+n2 = TreeNode(val=2)
+n3 = TreeNode(val=3)
+n4 = TreeNode(val=4)
+n5 = TreeNode(val=5)
+n6 = TreeNode(val=6)
+n7 = TreeNode(val=7)
+n1.left = n2
+n1.right = n3
+n2.left = n4
+n2.right = n5
+n3.left = n6
+n3.right = n7
+
+res = []
+def post_order(root):
+    if root is None:
+        return
+    
+    if root.left is not None:
+        post_order(root.left)
+    
+    if root.right is not None:
+        post_order(root.right)
+        
+    res.append(root.val)
+
+post_order(n1)
+print(res)
+```
+
+
+
+## 5. 二叉树的数组表示
+
+![8f5218fb1b1261be094ca8f7d48398e](./Week04_binarytree.assets/8f5218fb1b1261be094ca8f7d48398e.png)
+
+
+
+### 5.1 用二叉树的数组表示实现 BFS DFS
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+class ArrayBinaryTree:
+    """数组表示下的二叉树类"""
+
+    def __init__(self, arr: list[int | None]):
+        """构造方法"""
+        self._tree = list(arr)
+
+    def size(self):
+        """列表容量"""
+        return len(self._tree)
+
+    def val(self, i: int) -> int:
+        """获取索引为 i 节点的值"""
+        if i < 0 or i >= self.size():
+            return None
+        return self._tree[i]
+
+    def left(self, i: int) -> int | None:
+        """获取左子节点的索引"""
+        return 2 * i + 1
+
+    def right(self, i: int) -> int | None:
+        """获取右子节点的索引"""
+        return 2 * i + 2
+
+    def parent(self, i: int) -> int | None:
+        """获取父节点的索引"""
+        return (i - 1) // 2
+
+    def level_order(self) -> list[int]:
+        """层序遍历"""
+        self.res = []
+        # 直接遍历数组
+        for i in range(self.size()):
+            if self.val(i) is not None:
+                self.res.append(self.val(i))
+        return self.res
+
+    def dfs(self, i: int, order: str):
+        """深度优先遍历"""
+        if self.val(i) is None:
+            return
+        # 前序遍历
+        if order == "pre":
+            self.res.append(self.val(i))
+        self.dfs(self.left(i), order)
+        # 中序遍历
+        if order == "in":
+            self.res.append(self.val(i))
+        self.dfs(self.right(i), order)
+        # 后序遍历
+        if order == "post":
+            self.res.append(self.val(i))
+
+    def pre_order(self) -> list[int]:
+        """前序遍历"""
+        self.res = []
+        self.dfs(0, order="pre")
+        return self.res
+
+    def in_order(self) -> list[int]:
+        """中序遍历"""
+        self.res = []
+        self.dfs(0, order="in")
+        return self.res
+
+    def post_order(self) -> list[int]:
+        """后序遍历"""
+        self.res = []
+        self.dfs(0, order="post")
+        return self.res
+```
+
+测试代码：
+
+```python
+"""Driver Code"""
+if __name__ == "__main__":
+    # 初始化二叉树
+    arr = [1, 2, 3, 4, None, 6, None]
+    abt = ArrayBinaryTree(arr)
+
+    # 访问节点
+    i = 1
+    l, r, p = abt.left(i), abt.right(i), abt.parent(i)
+
+    # 遍历树
+    res = abt.level_order()
+    res = abt.pre_order()
+    res = abt.in_order()
+    res = abt.post_order()
+    print(res)
+```
+
+
+
+
+
+## 6. 二叉搜索树（BST）
+
+- 对于根节点，左子树中所有的值 < 根节点 < 右子树中所有的值
+
+- 任意节点的左右子树也是二叉搜索树，同样满足条件1.
+- 我们将二叉搜索树封装为一个类 `BinarySearchTree` ，并声明一个成员变量 root，指向树的根结点。
+
+### 6.1 查找节点
+
+- 给定目标节点值 `num`，可以根据二叉搜索树的性质来查找。
+
+- 我们声明一个节点 `cur`，从二叉树的根节点 root 出发。
+
+    - 若 `cur.val < num` ，说明目标节点在 cur 的右子树中，因此执行 `cur = cur.right`
+    - 若 `cur.val > num` ，说明目标节点在 cur 的左子树中，因此执行 `cur = cur.left`
+    - 若 `cur.val = num` ，说明目标节点就是 `num`
+
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def search(self, root, val):
+        if root is None:
+            return None
+        if val < root.val:
+            return self.search(root.left, val)
+        elif val > root.val:
+            return self.search(root.right, val)
+        else:
+            return root  # 这里是返回了该节点的地址，而不是值
+
+
+if __name__ == '__main__':
+    # 手动创建二叉搜索树
+    bst = BST()
+    bst.root = TreeNode(4)
+    bst.root.left = TreeNode(2)
+    bst.root.right = TreeNode(6)
+
+    bst.root.left.left = TreeNode(1)
+    bst.root.left.right = TreeNode(3)
+
+    bst.root.right.left = TreeNode(5)
+    bst.root.right.right = TreeNode(7)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 7)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
+
+
+
+### 6.2 插入节点
+
+1. 给定一个待插入元素 `num` ，为了保持二叉搜索树“左子树 < 根节点 < 右子树”的性质：
+
+2. 查找插入位置：与查找操作相似，从根节点出发，根据当前节点值和 `num` 的大小关系循环向下搜索，直到越过叶节点（遍历至 None ）时跳出循环。
+
+3. 在该位置插入节点：初始化节点 `num` ，将该节点置于 None 的位置。
+
+::: warning
+
+在代码实现中，需要注意以下两点。
+
+二叉搜索树不允许存在重复节点，否则将违反其定义。因此，若待插入节点在树中已存在，则不执行插入，直接返回。
+为了实现插入节点，我们需要借助节点 `pre` 保存上一轮循环的节点。这样在遍历至 None 时，我们可以获取到其父节点，从而完成节点插入操作。
+
+:::
+
+
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+
+    def search(self, root, val):
+        if root is None:
+            return None
+        if val < root.val:
+            return self.search(root.left, val)
+        elif val > root.val:
+            return self.search(root.right, val)
+        else:
+            return root  # 这里是返回了该节点的地址，而不是值
+
+
+    def insert(self, root, num):
+        if root is None:
+            return TreeNode(num)
+        if num < root.val:
+            root.left = self.insert(root.left, num) # 二叉树找寻路径：根->左->右....
+        elif num > root.val:
+            root.right = self.insert(root.right, num)   
+        return root  # 返回原二叉树
+        
+        
+
+
+
+
+if __name__ == '__main__':
+    bst = BST()
+    bst.root = bst.insert(bst.root,6)
+    bst.insert(bst.root, 3)
+    bst.insert(bst.root, 9)
+    bst.insert(bst.root, 1)
+    bst.insert(bst.root, 2)
+    bst.insert(bst.root, 7)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 3)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
 
 
 
