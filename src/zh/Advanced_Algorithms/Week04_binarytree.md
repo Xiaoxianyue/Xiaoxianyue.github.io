@@ -1149,13 +1149,103 @@ if __name__ == '__main__':
 
 
 
+### 6.3 删除节点
+
+先在二叉树中查找到目标节点，再将其删除。与插入节点类似，我们需要保证在删除操作完成后，二叉搜索树的“左子树 < 根节点 < 右子树”的性质仍然满足。因此，我们根据目标节点的子节点数量，分 0、1 和 2 三种情况，执行对应的删除节点操作。
+
+当待删除节点的度为 0 时，表示该节点是叶节点，可以直接删除。
+
+<img src="./Week04_binarytree.assets/7748085f65164c5deb5f865c920d51f.png" alt="7748085f65164c5deb5f865c920d51f" style="zoom:67%;" />
+
+当待删除节点的度为 1 时，将待删除节点替换为其子节点即可。
+
+当待删除节点的度为 2 时，我们无法直接删除它，而需要使用一个节点替换该节点。由于要保持二叉搜索树“左子树 < 根节点 < 右子树”的性质，因此这个节点可以是右子树的最小节点或左子树的最大节点。
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
 
 
 
 
+class BST:
+    def __init__(self):
+        self.root = None
 
 
+    def search(self, root, val):
+        if root is None:
+            return None
+        if val < root.val:
+            return self.search(root.left, val)
+        elif val > root.val:
+            return self.search(root.right, val)
+        else:
+            return root  # 这里是返回了该节点的地址，而不是值
 
 
+    def insert(self, root, num):
+        if root is None:
+            return TreeNode(num)
+        if num < root.val:
+            root.left = self.insert(root.left, num)
+        elif num > root.val:
+            root.right = self.insert(root.right, num)
+        return root
 
+    def delete(self, root, key):
+        if root is None:
+            return root
+        if root.val > key:
+            root.left = self.delete(root.left, key)
+        elif root.val < key:
+            root.right = self.delete(root.right, key)
+        else:
+            if root.left is None and root.right is None:
+                return None
+            elif root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            else:
+                """找到右子树最小节点"""
+                min_larger_root = self.find_min(root.right)
+                root.val = min_larger_root.val
+                root.right = self.delete(root.right, min_larger_root.val)
+            return root
+                # store = root.right
+                # while store.left is not None:
+                #     store = store.left
+                # store.left = root.left
+                # store.right = root.right
+                # return store
+    def find_min(self, root):
+        current = root
+        while current is not None:
+            current = current.left
+        return current
+
+if __name__ == '__main__':
+    bst = BST()
+    bst.root = bst.insert(bst.root,6)
+    bst.insert(bst.root, 3)
+    bst.insert(bst.root, 9)
+    bst.insert(bst.root, 1)
+    bst.insert(bst.root, 2)
+    bst.insert(bst.root, 7)
+
+    bst.delete(bst.root, 7)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 2)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
 
