@@ -1016,6 +1016,10 @@ if __name__ == "__main__":
     - 若 `cur.val > num` ，说明目标节点在 cur 的左子树中，因此执行 `cur = cur.left`
     - 若 `cur.val = num` ，说明目标节点就是 `num`
 
+::: code-tabs
+
+@tab 递归实现
+
 
 ```python
 class TreeNode:
@@ -1063,6 +1067,59 @@ if __name__ == '__main__':
         print("未找到节点")
 ```
 
+@tab 循环实现
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def search(self, root, val):
+        root = self.root
+        while root:
+            if root.val > val:
+                root = root.left
+            elif root.val < val:
+                root = root.right
+            else:
+                break
+        return root
+
+
+if __name__ == '__main__':
+    # 手动创建二叉搜索树
+    bst = BST()
+    bst.root = TreeNode(4)
+    bst.root.left = TreeNode(2)
+    bst.root.right = TreeNode(6)
+
+    bst.root.left.left = TreeNode(1)
+    bst.root.left.right = TreeNode(3)
+
+    bst.root.right.left = TreeNode(5)
+    bst.root.right.right = TreeNode(7)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 9)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
+
+:::
+
+
+
 
 
 ### 6.2 插入节点
@@ -1082,7 +1139,9 @@ if __name__ == '__main__':
 
 :::
 
+::: code-tabs
 
+@tab 递归实现
 
 ```python
 class TreeNode:
@@ -1121,9 +1180,6 @@ class BST:
             root.right = self.insert(root.right, num)   
         return root  # 返回原二叉树
         
-        
-
-
 
 
 if __name__ == '__main__':
@@ -1143,7 +1199,61 @@ if __name__ == '__main__':
         print("未找到节点")
 ```
 
+@tab 循环实现
 
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def search(self, root, val):
+        root = self.root
+        while root:
+            if root.val > val:
+                root = root.left
+            elif root.val < val:
+                root = root.right
+            else:
+                break
+        return root
+
+    def insert(self, root, num):
+        cur = self.root
+        while cur:
+            if num < cur.val:
+                cur = cur.left
+            elif num > cur.val:
+                cur = cur.right
+        return TreeNode(num)
+
+
+if __name__ == '__main__':
+    bst = BST()
+    bst.root = bst.insert(bst.root,6)
+    bst.insert(bst.root, 3)
+    bst.insert(bst.root, 9)
+    bst.insert(bst.root, 1)
+    bst.insert(bst.root, 2)
+    bst.insert(bst.root, 7)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 5)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
+
+:::
 
 ### 6.3 删除节点
 
@@ -1156,6 +1266,10 @@ if __name__ == '__main__':
 当待删除节点的度为 1 时，将待删除节点替换为其子节点即可。
 
 当待删除节点的度为 2 时，我们无法直接删除它，而需要使用一个节点替换该节点。由于要保持二叉搜索树“左子树 < 根节点 < 右子树”的性质，因此这个节点可以是右子树的最小节点或左子树的最大节点。
+
+::; code-tabs
+
+@tab 递归
 
 ```python
 class TreeNode:
@@ -1245,3 +1359,186 @@ if __name__ == '__main__':
         print("未找到节点")
 ```
 
+@tab 循环
+
+```python
+class TreeNode:
+    """二叉树节点类"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def search(self, root, val):
+        root = self.root
+        while root:
+            if root.val > val:
+                root = root.left
+            elif root.val < val:
+                root = root.right
+            else:
+                break
+        return root
+
+    def insert(self, root, num):
+        cur = self.root
+        while cur:
+            if num < cur.val:
+                cur = cur.left
+            elif num > cur.val:
+                cur = cur.right
+        return TreeNode(num)
+
+    def delete(self, root, key):
+        cur = self.root
+        while cur:
+            if cur.val > key:
+                cur = cur.left
+            elif cur.val < key:
+                cur = cur.right
+            else:
+                if cur.left is None and cur.right is None:
+                    return None
+                elif cur.left is None:
+                    return cur.right
+                elif cur.right is None:
+                    return cur.left
+                else:
+                    min_node = self.find_min(cur.right)
+                    cur.val = min_node.val
+                    self.delete(cur.right, min_node.val)
+                    return cur
+
+
+
+    def find_min(self, current):
+        while current:
+            current = current.left
+        return current
+
+if __name__ == '__main__':
+    # 手动创建二叉搜索树
+    bst = BST()
+    bst.root = TreeNode(4)
+    bst.root.left = TreeNode(2)
+    bst.root.right = TreeNode(6)
+
+    bst.root.left.left = TreeNode(1)
+    bst.root.left.right = TreeNode(3)
+
+    bst.root.right.left = TreeNode(5)
+    bst.root.right.right = TreeNode(7)
+
+    bst.delete(bst.root,5)
+
+    # 测试查找节点
+    node = bst.search(bst.root, 5)
+    if node:
+        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+    else:
+        print("未找到节点")
+```
+
+:::
+
+### 6.4 补充内容
+
+#### 6.4.1 中序遍历有序
+
+如图 7-22 所示，二叉树的中序遍历遵循“左 $\rightarrow$ 根 $\rightarrow$ 右”的遍历顺序，而二叉搜索树满足“左子节点 $<$ 根节点 $<$ 右子节点”的大小关系。
+
+这意味着在二叉搜索树中进行中序遍历时，总是会优先遍历下一个最小节点，从而得出一个重要性质：**二叉搜索树的中序遍历序列是升序的**。
+
+利用中序遍历升序的性质，我们在二叉搜索树中获取有序数据仅需 $O(n)$ 时间，无须进行额外的排序操作，非常高效。
+
+<img src="./Week04_binarytree.assets/904f7f53686d6f50eae19e9b21b10b1.png" alt="904f7f53686d6f50eae19e9b21b10b1" style="zoom:33%;" />
+
+#### 6.4.2 二叉搜索树的效率
+
+给定一组数据，我们考虑使用数组或二叉搜索树存储。观察表 7-2 ，二叉搜索树的各项操作的时间复杂度都是对数阶，具有稳定且高效的性能。只有在高频添加、低频查找删除数据的场景下，数组比二叉搜索树的效率更高。
+
+::: center
+
+表 7-2  数组与搜索树的效率对比
+
+:::
+
+|          | 无序数组 | 二叉搜索树 |
+| :------- | :------- | :--------- |
+| 查找元素 | $O(n)$   | $O(logn)$  |
+| 插入元素 | $O(1)$   | $O(logn)$  |
+| 删除元素 | $O(n)$   | $O(logn)$  |
+
+在理想情况下，二叉搜索树是“平衡”的，这样就可以在 $logn$ 轮循环内查找任意节点。
+
+然而，如果我们在二叉搜索树中不断地插入和删除节点，可能导致二叉树退化为图 7-23 所示的链表，这时各种操作的时间复杂度也会退化为 $O(n)$ 。
+
+<img src="./Week04_binarytree.assets/cc07789286479fa756a58bf6380a830.png" alt="cc07789286479fa756a58bf6380a830" style="zoom: 33%;" />
+
+### 6.5 二叉树的常见应用
+
+- 用作系统中的多级索引，实现高效的查找，插入，删除等操作
+- 作为某些搜索算法的底层数据结构
+- 用于存储数据流，以保持其有序状态
+
+
+
+## 7. 二叉树的时间复杂度
+
+1. **什么是二叉树？**
+
+二叉树是一个树形结构，其中每个节点最多有两个子节点：一个左子节点和一个右子节点。一个常见的例子是**二叉搜索树**，它的性质是：对于每个节点，左子树的所有节点值都小于这个节点的值，右子树的所有节点值都大于这个节点的值。
+
+2. **树的高度是什么？**
+
+树的**高度**指的是从根节点到最深的叶子节点的路径长度。比如：
+
+- 如果一个二叉树只有一个节点，树的高度是 0。
+- 如果一个二叉树有两个节点，根节点和一个叶子节点，那么树的高度是 1。
+
+在一个理想的平衡二叉树中，如果有 `n` 个节点，那么树的高度大约是 $O(\log n)$，这是因为每一层的节点数是前一层的两倍。
+
+3. **为什么是 $O(\log n)$？**
+
+假设你有一棵平衡的二叉树，并且它的高度为 `h`，那么这棵树最多可以容纳的节点数是 $2^h - 1$ 个。也就是说：
+
+- 高度为 1 时，最多有 1 个节点（$2^1 - 1 = 1$）
+- 高度为 2 时，最多有 3 个节点（$2^2 - 1 = 3$）
+- 高度为 3 时，最多有 7 个节点（$2^3 - 1 = 7$）
+
+可以看到，随着树的高度增加，节点的数量呈指数级增长。
+
+要插入、查找或删除一个节点时，你需要从树的根开始，逐层往下找到合适的位置。每向下一层，树的节点数就会减半。换句话说，你在查找的过程中，每一步都缩小了一半的范围。因此，这种操作的时间复杂度是与树的高度成正比的。
+
+对于一个有 `n` 个节点的平衡二叉树，树的高度大约是 $O(\log n)$，所以插入、查找或删除操作的时间复杂度也是 $O(\log n)$。
+
+4. **总结**
+
+- 二叉树操作的时间复杂度通常和树的**高度**有关。
+- 对于一个有 `n` 个节点的**平衡二叉树**，树的高度大约是 $O(\log n)$。
+- 查找、插入、删除操作的复杂度都与树的高度相关，所以在平衡二叉树中的这些操作通常为 $O(\log n)$。
+
+在二叉树的时间复杂度为 $O(\log n)$ 中，底数是 **2**。
+
+:::info **为什么底数是 2？**
+
+这是因为在每一层，平衡二叉树的节点数会 **翻倍**。具体来说：
+
+- 在树的第 0 层（根节点），有 1 个节点。
+- 在树的第 1 层，有 2 个节点。
+- 在树的第 2 层，有 4 个节点。
+- 在树的第 3 层，有 8 个节点。
+
+因此，树的每一层的节点数以 $2^h$ 的形式增长，$h$ 是层数（高度）。这个增长模式导致树的高度与节点总数之间的关系是以 2 为底的对数关系。所以，复杂度表示为 $O(\log_2 n)$，其中底数是 2。
+
+不过，计算机科学中的对数复杂度通常忽略底数，因为不同底数的对数之间的差别只是一个常数倍，并不会影响大规模情况下的渐进复杂度。因此，常常简写为 $O(\log n)$，不具体说明底数。但从数学上讲，这里的底数是 2。
+
+:::
+
+## 8. AVL树
