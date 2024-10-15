@@ -40,7 +40,7 @@ class TreeNode:
 
 在二叉树中，除叶节点外，其他所有节点都包含子节点和非空子树。如图所示，如果讲“节点2”视作父节点，则其左子节点和右子节点分别是“节点4”和“节点5”，左子树是“节点4及其以下节点形成的树”，右子树是“节点5及其以下节点形成的树”。
 
-![IMG_2445(20240926-214838)](./Week04_binarytree.assets/aaa.png)
+![](./Week04_binarytree.assets/aaa.png)
 
 常用术语：
 
@@ -53,7 +53,7 @@ class TreeNode:
 - 节点的深度（depth）：从根结点到该节点所经历边的数量。
 - 节点的高度（height）：从距离该节点最远的叶节点到该节点所经过的边的数量。
 
-![IMG_2446(20240926-221113)](./Week04_binarytree.assets/kskkk.png)
+![](./Week04_binarytree.assets/kskkk.png)
 
 ::: warning
 
@@ -102,7 +102,7 @@ n2.right = n5
 
 1. 下图示意的是插入节点的过程。
 
-![5217dda2d00603619c9fd8cd8629436](./Week04_binarytree.assets/5217dda2d00603619c9fd8cd8629436.jpg)
+![](./Week04_binarytree.assets/5217dda2d00603619c9fd8cd8629436.jpg)
 
 插入节点的代码：
 
@@ -891,7 +891,7 @@ print(res)
 
 ## 5. 二叉树的数组表示
 
-![8f5218fb1b1261be094ca8f7d48398e](./Week04_binarytree.assets/8f5218fb1b1261be094ca8f7d48398e.png)
+![](./Week04_binarytree.assets/8f5218fb1b1261be094ca8f7d48398e.png)
 
 
 
