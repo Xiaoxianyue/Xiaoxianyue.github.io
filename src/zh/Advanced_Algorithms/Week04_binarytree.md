@@ -163,9 +163,7 @@ n1.left = n2
 
 ::: tabs
 
-@tab 
-
-原二叉树
+@tab 原二叉树
 
 ```python
 class TreeNode:
@@ -344,9 +342,7 @@ display(n1)
 
 
 
-@tab 
-
-二叉树再删除节点p
+@tab 二叉树再删除节点p
 
 ```python
 class TreeNode:
