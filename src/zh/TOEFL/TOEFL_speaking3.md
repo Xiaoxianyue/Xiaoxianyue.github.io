@@ -118,7 +118,7 @@ This ability to temporarily put aside, or suspend, our doubt and believe that th
 
 总结转折词前后各一句，术语在最后一句。
 
-![IMG_2444(20240926-170910)](./TOEFL_speaking3.assets/IMG_2444(20240926-170910).PNG)
+![](./TOEFL_speaking3.assets/sss.png)
 
 - 总结：
 
