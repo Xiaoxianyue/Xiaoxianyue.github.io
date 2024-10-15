@@ -151,19 +151,32 @@ This ability to temporarily put aside, or suspend, our doubt and believe that th
 
 :::
 
+- 几个考法内容：
+    - 动植物学
+    - 亲身经历
+    - 步骤型
+    - 2个例子
+    - 经典实验
+
 ### 2.1 听力结构
 
 #### 2.1.1 背景交代
 
-比如生物学，会交代一大段生物的颜色；大小；外貌特点；国籍/居住地 等等等等。**都不要讲。。。**
+背景交代只讲一句话。比如生物学，会交代一大段生物的颜色；大小；外貌特点；国籍/居住地 等等等等。**都不要讲。。。**
+
+- 模版句：（可以自己调整）
 
 ```
-In the lecture, the professor uses (动物) who (动物特性) as an example tp further prove the theory.
+In the lecture, the professor uses (动物) who (动物特性) as an example to further prove the theory.
 ```
 
-模版句可以自己调整。
+::: info
 
+动植物的专有名词没听清咋办？说大类！比如一种树，一种鱼，一种猴子…
 
+万不得已的时候用！
+
+:::
 
 #### 2.1.2 核心细节段 1&2
 
