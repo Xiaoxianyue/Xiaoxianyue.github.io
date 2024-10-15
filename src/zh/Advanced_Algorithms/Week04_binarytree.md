@@ -581,7 +581,7 @@ level_order(n1)
 
 @tab 不用队列，但逻辑相同 (自己方法)
 
-```pyhthon
+```python
 
 class TreeNode:
     """二叉树节点类"""
