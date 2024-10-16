@@ -660,7 +660,6 @@ def partition(nums, left, right):
         while i < j and nums[i] <= nums[left]:
             i += 1
         nums[i], nums[j] = nums[j], nums[i]
-    nums[i], nums[left] = nums[left], nums[i]
     return i
 
 
