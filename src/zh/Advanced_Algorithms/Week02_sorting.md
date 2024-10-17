@@ -755,7 +755,7 @@ def merge_sort_division(arr):
 merge_sort_division([3, 2, 4, 29, 145, 64, 6])
 ```
 
-
+:::
 
 
 
