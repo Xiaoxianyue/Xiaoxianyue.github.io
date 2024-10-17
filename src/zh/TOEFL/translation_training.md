@@ -24,7 +24,7 @@ backToTop: true
 toc: true  
 ---
 
-## 10.15 —— 96
+## **96**．A big party with many people or a small party just with family?
 
 ### 1.中文
 
@@ -168,4 +168,150 @@ In the first place, organizing a large party might be a waste of money and take 
 
     他：After the party the hard work continues as the host cleans up the **mess**.
 
-    
+
+
+
+### 4. 第三段
+
+#### 4.1 自翻
+
+Secondly, everyone is supposed to keep low-pitched with private things. There is complete no need to let a crowd of people in these private things.  For most of  , celebrating birthdays and graduation parties do not intended to social and business (场合) to (维系) the public (形象) of celebrities. Those special things should be simple. Inviting too many guests may make the host to be looked (过于自大). The people who (过分强调) public (形象) are not easy to be (接纳) by their own group.
+
+
+
+#### 4.2 他翻
+
+In the second place, everyone ought to remain modest in his private life. It is absolutely unnecessary to have a large number of people join in these personal events. For most ordinary people, birthday celebrations and graduation parties are not social and commercial occasions which mostly aim at **keeping up** a celebrity's public image. These special occasions ought to be spent in a simple manner. Inviting a crowd of people may give others the impression that the person **attaches too much importance to** himself. Those who overemphasize their importance in public might not be well accepted by the **community**.
+
+
+
+#### 4.3 表达的积累和纠错
+
+- 社交或商业场合: social or commercial occasions
+- 旨在：aim at
+- 公众形象： public image
+- 维系；保持；维持：keep up
+- should be 可以替换成 ought to be
+- 给人感觉… ：give others the impression …
+- 过于自大：attach too much importance to oneself
+- 过分强调：overemphasize 
+- 群体；集体：community
+
+
+
+### 5. 第四段
+
+#### 5.1 自翻
+
+In fact, the huge events in life should be celebrated with the closest people, including families and best friends. Indeed, meaningful moments should be ,comfortable and  . When the birthday or graduation, the valuable gifts you ever gotten are gentle blessing from families. Having delicious food and conversation with them, which seems ordinary, can bring huge happiness and good memories that worth be valued permanently.
+
+
+
+#### 5.2 他翻
+
+Actually, major events in one's life should be celebrated with the closest people, including the family and intimate friends. Indeed, this memorable time is destined to be **carefree** and comfortable, without interference from others. On birthdays or graduation days, the sincere wishes from loved ones are the most precious gifts one could receive. Having a delicious meal together and chatting freely are simple things to do, but they can bring great happiness and memories that will be cherished forever.
+
+
+
+#### 5.3 表达积累与纠错
+
+- 至交，知己：intimate
+- memorable = meaningful
+- 无忧无虑的；不负责任的：carefree
+- 干涉，介入：interference
+
+- 在…的日子里：On (birthdays or graduation) days
+- 真诚的：sincere 
+- 宝贵的：precious
+- 收到（礼物）：receive
+- 巨大的：huge great
+- 珍视；爱护：cherish
+
+
+
+### 6. 第五段
+
+#### 6.1 自翻
+
+In my opinion, it is meaningless to spend our energy in organizing big parties to celebrate things like birthday or graduation. Those memorable moments should be experience with families, but not to be over-public. Although having a lot of guests arrived seems like a great idea, but for most ordinary people, holding simple parties usually is the better choice.
+
+
+
+#### 6.2 他翻
+
+In my opinion, there is definitely no need to **take the** **trouble to** organize a big party to celebrate such events as birthdays or a graduation. These memorable moments should be shared with loved ones instead of **going public**. Although it might seem like a good idea to have a large number of guests, a simple party is usually a better choice for most ordinary people.
+
+
+
+#### 6.3 纠错和积累
+
+语序问题：
+
+1. 尽管让很多宾客到来看起来是个不错的主意。
+
+    Although having a lot of guests arrived seems like a great idea
+
+    Although it might seem like a good idea to have a large number of guests
+
+- 费力做： take the trouble to…
+- 公开：go public
+
+
+
+
+
+### 7. 可替换的表达
+
+worth  ——> deserve
+
+come ——> arise 来临
+
+about ——> regarding 关于，至于
+
+like ——> in favor of
+
+meaningful ——> significant
+
+prefer to do ——> would rather do
+
+specially ——> exceptionally 特别的，格外
+
+handle ——> address 处理
+
+send Invitation ——> send out invitation
+
+a lot of ——> huge quantities of  ——> a large number of ——> a crowd of
+
+place ——> venue 场地，聚集地点
+
+will be  ——> could be 
+
+款待：entertain
+
+at the meantime ——> whilst 同时
+
+清理工作：clean up the mess
+
+should be ——> ought to be
+
+保持低调：remain modest
+
+旨在：aim at
+
+公众形象：public image
+
+simple——> spend in  a simple manner 以一种简单的方式
+
+自大：attach too much importance to…
+
+理应是：destine to be
+
+无拘无束的：carefree
+
+不被他人打扰：without interference form others
+
+value ——> cherish 珍视，爱护
+
+absolutely/completely ——> definitely
+
+费力：take trouble to
