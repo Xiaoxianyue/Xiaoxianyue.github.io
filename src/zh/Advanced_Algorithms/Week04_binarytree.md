@@ -1006,6 +1006,197 @@ if __name__ == "__main__":
 - 任意节点的左右子树也是二叉搜索树，同样满足条件1.
 - 我们将二叉搜索树封装为一个类 `BinarySearchTree` ，并声明一个成员变量 root，指向树的根结点。
 
+### 6.0 补充知识点——类
+
+#### 6.0.1 类的实例化：
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+
+
+dog = Animal()  # 实例化
+```
+
+#### 6.0.2 类的函数调用初始化函数的变量：
+
+::: code-tabs
+
+@tab 报错的情况
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        a = 100
+
+    def print(self):
+        print(a)
+
+
+dog = Animal()  # 实例化
+dog.print()
+
+# output
+Animal created
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\d.py", line 11, in <module>
+    dog.print()
+  File "C:\Coder\Lesson\d.py", line 7, in print
+    print(a)
+NameError: name 'a' is not defined
+```
+
+
+
+@tab 用 self 来实现类中不同函数变量的调用
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        self.a = 100
+
+    def print(self):
+        print(self.a)
+
+
+dog = Animal()  # 实例化
+dog.print()
+
+# output 
+Animal created
+100
+```
+
+:::
+
+#### 6.0.2 函数互相之间调用变量
+
+::: tabs
+
+@tab 那一个函数若是想要调用非初始化函数中的变量呢？ 
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        self.a = 1000
+
+    def print(self, text):
+        self.bo = "Shelley"
+        print(text)
+
+    def add_sum(self):
+        print(self.bo)
+
+
+dog = Animal()  # 实例化
+dog.add_sum()
+
+# output
+Animal created
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\d.py", line 15, in <module>
+    dog.add_sum()
+  File "C:\Coder\Lesson\d.py", line 11, in add_sum
+    print(self.bo)
+AttributeError: 'Animal' object has no attribute 'bo'
+```
+
+报错了！因为我们没有调用 `self.bo` 被定义的函数 `print`，我们调用 `print` 之后再调用 `add_sum`试试。
+
+
+
+@tab
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        self.a = 1000
+
+    def print(self, text):
+        self.bo = "Shelley"
+        print(text)
+
+    def add_sum(self):
+        print(self.bo)
+
+
+dog = Animal()  # 实例化
+dog.print(text = "dog")
+dog.add_sum()
+
+# output
+Animal created
+dog
+Shelley
+```
+
+
+
+:::
+
+#### 6.0.3 类的实例化调用类中变量
+
+::: code-tabs
+
+@tab 通过 self 可以调用任意类中变量
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        self.a = 1000
+
+    def print(self):
+        print(self.a)
+
+
+dog = Animal()  # 实例化
+print(dog.a)
+
+# output
+Animal created
+1000
+```
+
+
+
+
+
+@tab 但是只能调用在初始函数里初始过得变量！
+
+```python
+class Animal():
+    def __init__(self):  # 初始化函数，可有可没有
+        print("Animal created")
+        self.a = 1000
+
+    def print(self):
+        print(self.a)
+        self.b = 1
+
+
+dog = Animal()  # 实例化
+print(dog.a)
+print(dog.b)
+
+# output
+Traceback (most recent call last):
+  File "C:\Coder\Lesson\d.py", line 13, in <module>
+    print(dog.b)
+AttributeError: 'Animal' object has no attribute 'b'
+Animal created
+1000
+```
+
+
+
+:::
+
 ### 6.1 查找节点
 
 - 给定目标节点值 `num`，可以根据二叉搜索树的性质来查找。
@@ -1015,6 +1206,8 @@ if __name__ == "__main__":
     - 若 `cur.val < num` ，说明目标节点在 cur 的右子树中，因此执行 `cur = cur.right`
     - 若 `cur.val > num` ，说明目标节点在 cur 的左子树中，因此执行 `cur = cur.left`
     - 若 `cur.val = num` ，说明目标节点就是 `num`
+
+
 
 ::: code-tabs
 
@@ -1081,18 +1274,18 @@ class TreeNode:
 
 class BST:
     def __init__(self):
-        self.root = None
+        self._root = None
 
-    def search(self, root, val):
-        root = self.root
-        while root:
-            if root.val > val:
-                root = root.left
-            elif root.val < val:
-                root = root.right
+    def search(self,val):
+        cur = self._root
+        while cur:
+            if cur.val > val:
+                cur = cur.left
+            elif cur.val < val:
+                cur = cur.right
             else:
                 break
-        return root
+        return cur
 
 
 if __name__ == '__main__':
@@ -1213,44 +1406,59 @@ class TreeNode:
 
 class BST:
     def __init__(self):
-        self.root = None
+        self._root = None
 
-    def search(self, root, val):
-        root = self.root
-        while root:
-            if root.val > val:
-                root = root.left
-            elif root.val < val:
-                root = root.right
+    def search(self, val):
+        cur = self._root
+        while cur:
+            if cur.val > val:
+                cur = cur.left
+            elif cur.val < val:
+                cur = cur.right
             else:
                 break
-        return root
+        return cur
 
-    def insert(self, root, num):
-        cur = self.root
-        while cur:
-            if num < cur.val:
-                cur = cur.left
-            elif num > cur.val:
+    def insert(self, num):
+        if self._root is None:
+            self._root = TreeNode(num)
+            return
+        cur, pre = self._root, None
+        while cur is not None:
+            # 找到重复节点，直接返回
+            if cur.val == num:
+                return
+            pre = cur
+            # 查找到需要插入的位置
+            if cur.val < num:
                 cur = cur.right
-        return TreeNode(num)
+            else:
+                cur = cur.left
+        # 插入节点
+        node = TreeNode(num)
+        if pre.val < num:
+            pre.right = node
+        else:
+            pre.left = node
 
 
 if __name__ == '__main__':
     bst = BST()
-    bst.root = bst.insert(bst.root,6)
-    bst.insert(bst.root, 3)
-    bst.insert(bst.root, 9)
-    bst.insert(bst.root, 1)
-    bst.insert(bst.root, 2)
-    bst.insert(bst.root, 7)
+    bst.insert(6)
+    bst.insert(3)
+    bst.insert(9)
+    bst.insert(1)
+    bst.insert(2)
+    bst.insert(7)
+
 
     # 测试查找节点
-    node = bst.search(bst.root, 5)
+    node = bst.search(7)
     if node:
-        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
+        print(f"找到了节点，值为: {node.val}")  # 打印该节点的值
     else:
         print("未找到节点")
+
 ```
 
 :::
@@ -1267,7 +1475,7 @@ if __name__ == '__main__':
 
 当待删除节点的度为 2 时，我们无法直接删除它，而需要使用一个节点替换该节点。由于要保持二叉搜索树“左子树 < 根节点 < 右子树”的性质，因此这个节点可以是右子树的最小节点或左子树的最大节点。
 
-::; code-tabs
+::: code-tabs
 
 @tab 递归
 
@@ -1362,87 +1570,7 @@ if __name__ == '__main__':
 @tab 循环
 
 ```python
-class TreeNode:
-    """二叉树节点类"""
 
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
-
-
-class BST:
-    def __init__(self):
-        self.root = None
-
-    def search(self, root, val):
-        root = self.root
-        while root:
-            if root.val > val:
-                root = root.left
-            elif root.val < val:
-                root = root.right
-            else:
-                break
-        return root
-
-    def insert(self, root, num):
-        cur = self.root
-        while cur:
-            if num < cur.val:
-                cur = cur.left
-            elif num > cur.val:
-                cur = cur.right
-        return TreeNode(num)
-
-    def delete(self, root, key):
-        cur = self.root
-        while cur:
-            if cur.val > key:
-                cur = cur.left
-            elif cur.val < key:
-                cur = cur.right
-            else:
-                if cur.left is None and cur.right is None:
-                    return None
-                elif cur.left is None:
-                    return cur.right
-                elif cur.right is None:
-                    return cur.left
-                else:
-                    min_node = self.find_min(cur.right)
-                    cur.val = min_node.val
-                    self.delete(cur.right, min_node.val)
-                    return cur
-
-
-
-    def find_min(self, current):
-        while current:
-            current = current.left
-        return current
-
-if __name__ == '__main__':
-    # 手动创建二叉搜索树
-    bst = BST()
-    bst.root = TreeNode(4)
-    bst.root.left = TreeNode(2)
-    bst.root.right = TreeNode(6)
-
-    bst.root.left.left = TreeNode(1)
-    bst.root.left.right = TreeNode(3)
-
-    bst.root.right.left = TreeNode(5)
-    bst.root.right.right = TreeNode(7)
-
-    bst.delete(bst.root,5)
-
-    # 测试查找节点
-    node = bst.search(bst.root, 5)
-    if node:
-        print(f"找到了节点，值为: {node.val}") # 打印该节点的值
-    else:
-        print("未找到节点")
 ```
 
 :::
