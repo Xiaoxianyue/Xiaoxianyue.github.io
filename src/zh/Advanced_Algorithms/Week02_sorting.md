@@ -502,7 +502,7 @@ def insert_in_order(lst, num):
 print(insert_in_order([4, 8], 1))
 ```
 
-
+:::
 
 ### 2.3 完整代码
 
