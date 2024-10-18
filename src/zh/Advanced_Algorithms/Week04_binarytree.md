@@ -1570,7 +1570,51 @@ if __name__ == '__main__':
 @tab 循环
 
 ```python
+def remove(self, num: int):
+    """删除节点"""
+    # 若树为空，直接提前返回
+    if self._root is None:
+        return
+    # 循环查找，越过叶节点后跳出
+    cur, pre = self._root, None
+    while cur is not None:
+        # 找到待删除节点，跳出循环
+        if cur.val == num:
+            break
+        pre = cur
+        # 待删除节点在 cur 的右子树中
+        if cur.val < num:
+            cur = cur.right
+        # 待删除节点在 cur 的左子树中
+        else:
+            cur = cur.left
+    # 若无待删除节点，则直接返回
+    if cur is None:
+        return
 
+    # 子节点数量 = 0 or 1
+    if cur.left is None or cur.right is None:
+        # 当子节点数量 = 0 / 1 时， child = null / 该子节点
+        child = cur.left or cur.right
+        # 删除节点 cur
+        if cur != self._root:
+            if pre.left == cur:
+                pre.left = child
+            else:
+                pre.right = child
+        else:
+            # 若删除节点为根节点，则重新指定根节点
+            self._root = child
+    # 子节点数量 = 2
+    else:
+        # 获取中序遍历中 cur 的下一个节点
+        tmp: TreeNode = cur.right
+        while tmp.left is not None:
+            tmp = tmp.left
+        # 递归删除节点 tmp
+        self.remove(tmp.val)
+        # 用 tmp 覆盖 cur
+        cur.val = tmp.val
 ```
 
 :::
@@ -1669,4 +1713,111 @@ if __name__ == '__main__':
 
 :::
 
-## 8. AVL树
+## 8. AVL 树
+
+“节点高度”是指从该节点到它的最远叶节点的距离，即所经过的“边”的数量。需要特别注意的是，叶节点的高度为 0
+ ，而空节点的高度为 -1 。我们将创建两个工具函数，分别用于获取和更新节点的高度：
+
+::: tip
+
+AVL 树的平衡因子的绝对值不可以大于1
+
+:::
+
+### 8.1 初始化一个 AVL 树
+
+```python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.height = 0  # 由于 AVL 树的相关操作需要获取节点高度，因此我们需要为节点类添加 height 变量
+        self.left = None
+        self.right = None
+        # 节点的高度：是指从该节点到它最远叶节点的距离，即桥经过的“边”的数量。
+        # 需要特别注意的是：叶节点的高度为 0，而空节点的高度为 -1，我们将创建两个工具函数，分别用于获取和更新节点的高度
+
+        def get_height(self, node):
+            if node is not None:
+                return node.height
+            return -1
+
+        def update_height(self, node):
+            node.height = max([self.height(node.left), self.height(node.right)]) + 1
+            # target = []
+            # target.append(self.height(node.left))
+            # target.append(self.height(node.right))
+            # node.height = max(target) + 1
+
+        # 节点平衡因子
+        # 节点的平衡因子（balance factor）定义为节点左子树的高度减去节点右子树的高度，同时规定空节点平衡因子为 0
+        # 我们同样将获取节点的平衡因子的功能封装成函数，方便后续使用
+        def balance_factor(self, node):
+            # 空节点平衡因子为 0
+            if node is None:
+                return 0
+            # 节点的平衡因子 = 左子树高度 - 右子树高度
+            return self.get_height(node.left) - self.get_height(node.right)
+```
+
+### 8.2 AVL 树的旋转
+
+- AVL 树的特点在于“旋转”的操作，它能够在不影响二叉树的中序遍历序列的前提下，使失衡的节点重新恢复平衡。换一句话说：旋转操作既能保持“二叉搜索树”的性质，也能使树重新变为“平衡二叉树”。
+
+- 我们现将平衡因子的绝对值 > 1 的节点称为 “失衡节点” ，根据节点失衡情况不同，旋转操作分为四种：右旋，左旋，先右旋再左旋，先左旋再右旋。
+
+#### 8.2.1 右旋
+
+节点下方为平衡因子。从底至顶看，二叉树中首个失衡节点是“节点 3”。我们关注以该失衡节点为根节点的子树，将该节点记为 node ，其左子节点记为 child ，执行“右旋”操作。完成右旋后，子树恢复平衡，并且仍然保持二叉搜索树的性质。
+
+
+
+<img src="./Week04_binarytree.assets/IMG_2455(20241018-112420).jpg" alt="IMG_2455(20241018-112420)" style="zoom:33%;" />
+
+
+
+<img src="./Week04_binarytree.assets/IMG_2456(20241018-112433).jpg" alt="IMG_2456(20241018-112433)" style="zoom:33%;" />
+
+
+
+```python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.height = 0  # 由于 AVL 树的相关操作需要获取节点高度，因此我们需要为节点类添加 height 变量
+        self.left = None
+        self.right = None
+        # 节点的高度：是指从该节点到它最远叶节点的距离，即桥经过的“边”的数量。
+        # 需要特别注意的是：叶节点的高度为 0，而空节点的高度为 -1，我们将创建两个工具函数，分别用于获取和更新节点的高度
+
+        def get_height(self, node):
+            if node is not None:
+                return node.height
+            return -1
+
+        def update_height(self, node):
+            node.height = max([self.height(node.left), self.height(node.right)]) + 1
+            # target = []
+            # target.append(self.height(node.left))
+            # target.append(self.height(node.right))
+            # node.height = max(target) + 1
+
+        # 节点平衡因子
+        # 节点的平衡因子（balance factor）定义为节点左子树的高度减去节点右子树的高度，同时规定空节点平衡因子为 0
+        # 我们同样将获取节点的平衡因子的功能封装成函数，方便后续使用
+        def balance_factor(self, node):
+            # 空节点平衡因子为 0
+            if node is None:
+                return 0
+            # 节点的平衡因子 = 左子树高度 - 右子树高度
+            return self.get_height(node.left) - self.get_height(node.right)
+        def right_rotate(self, node):
+            child = node.left
+            grand_child = child.right # 若没有就记成 None。
+            
+            child.right = node
+            node.left = grand_child
+            self.update_height(node)
+            self.update_height(child)
+            return child
+```
+
