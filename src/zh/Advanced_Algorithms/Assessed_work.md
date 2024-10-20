@@ -144,8 +144,101 @@ You may decide, if you wish, to implement the entire class and solutions in C++,
 ### Solution 1 Iterative
 
 ```python
+class TreeNode:
+    """Binary Tree Node Classes"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None  # Initial binary tree
+
+    def search(self, val):
+        cur = self.root  # nodes in a binary tree
+        while cur:  # If you don't know how many loops there could be, a while loop is appropriate.
+            if cur.val > val:  # If the node is larger than the search value, the search value is in the left subtree of the node
+                cur = cur.left
+            elif cur.val < val:  # If the node is smaller than the search value, the search value is in the right subtree of the node
+                cur = cur.right
+            else:  # is equal to the search value, the loop ends
+                return cur
+        return False
+
+
+if __name__ == '__main__':
+    # Create a binary search tree manually
+    bst = BST()
+    bst.root = TreeNode(4)
+    bst.root.left = TreeNode(2)
+    bst.root.right = TreeNode(6)
+
+    bst.root.left.left = TreeNode(1)
+    bst.root.left.right = TreeNode(3)
+
+    bst.root.right.left = TreeNode(5)
+    bst.root.right.right = TreeNode(7)
+
+    # Test
+    node = bst.search(5)
+    if node:
+        print(f"The node was found with the value,the value is {node.val}")  # Print the value of this node
+    else:
+        print("Node not be found")
 
 ```
 
 
+
+### Solution 2 Recursive
+
+```python
+class TreeNode:
+    """binary tree node class"""
+
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def search(self, root, val):
+        if root is None:
+            return None
+        if val < root.val:
+            return self.search(root.left, val)  # Continue searching the left subtree
+        elif val > root.val:
+            return self.search(root.right, val)  # Continue searching the right subtree
+        else:
+            return root  # Here the address of the node is returned instead of the value
+
+
+if __name__ == '__main__':
+    # Creating a binary search tree manually
+    bst = BST()
+    bst.root = TreeNode(4)
+    bst.root.left = TreeNode(2)
+    bst.root.right = TreeNode(6)
+
+    bst.root.left.left = TreeNode(1)
+    bst.root.left.right = TreeNode(3)
+
+    bst.root.right.left = TreeNode(5)
+    bst.root.right.right = TreeNode(7)
+
+    # Test Finding Nodes
+    node = bst.search(bst.root, 7)
+    if node:
+        print(f"The node was found with the value. {node.val}")  # Print the value of this node
+    else:
+        print("Node not be found")
+
+```
 

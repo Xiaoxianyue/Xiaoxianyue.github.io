@@ -1765,6 +1765,8 @@ class TreeNode:
 
 - 我们现将平衡因子的绝对值 > 1 的节点称为 “失衡节点” ，根据节点失衡情况不同，旋转操作分为四种：右旋，左旋，先右旋再左旋，先左旋再右旋。
 
+- <img src="./Week04_binarytree.assets/3579bb330340b1215203a315c12b14a.jpg" alt="3579bb330340b1215203a315c12b14a" style="zoom:67%;" />
+
 #### 8.2.1 右旋
 
 节点下方为平衡因子。从底至顶看，二叉树中首个失衡节点是“节点 3”。我们关注以该失衡节点为根节点的子树，将该节点记为 node ，其左子节点记为 child ，执行“右旋”操作。完成右旋后，子树恢复平衡，并且仍然保持二叉搜索树的性质。
@@ -1820,4 +1822,192 @@ class TreeNode:
             self.update_height(child)
             return child
 ```
+
+#### 8.2.2 左旋
+
+<img src="./Week04_binarytree.assets/IMG_2464(20241020-151125).PNG" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
+
+4 是 node
+
+<img src="./Week04_binarytree.assets/IMG_2465(20241020-151339).PNG" alt="IMG_2465(20241020-151339)" style="zoom:33%;" />
+
+1 是 node
+
+```python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.height = 0  # 由于 AVL 树的相关操作需要获取节点高度，因此我们需要为节点类添加 height 变量
+        self.left = None
+        self.right = None
+
+        # 节点的高度：是指从该节点到它最远叶节点的距离，即桥经过的“边”的数量。
+        # 需要特别注意的是：叶节点的高度为 0，而空节点的高度为 -1，我们将创建两个工具函数，分别用于获取和更新节点的高度
+
+        def get_height(self, node):
+            if node is not None:
+                return node.height
+            return -1
+
+        def update_height(self, node):
+            node.height = max([self.height(node.left), self.height(node.right)]) + 1
+            # target = []
+            # target.append(self.height(node.left))
+            # target.append(self.height(node.right))
+            # node.height = max(target) + 1
+
+        # 节点平衡因子
+        # 节点的平衡因子（balance factor）定义为节点左子树的高度减去节点右子树的高度，同时规定空节点平衡因子为 0
+        # 我们同样将获取节点的平衡因子的功能封装成函数，方便后续使用
+        def balance_factor(self, node):
+            # 空节点平衡因子为 0
+            if node is None:
+                return 0
+            # 节点的平衡因子 = 左子树高度 - 右子树高度
+            return self.get_height(node.left) - self.get_height(node.right)
+
+        def right_rotate(self, node):
+            child = node.left
+            grand_child = child.right  # 若没有就记成 None。
+
+            child.right = node
+            node.left = grand_child
+            self.update_height(node)
+            self.update_height(child)
+            return child
+
+        def left_rotate(self, node):
+            child = node.right
+            grand_child = child.left
+
+            child.left = node
+            node.right = grand_child
+            self.update_height(node)
+            self.update_height(child)
+            return child
+```
+
+#### 8.2.3 先左旋后右旋
+
+<img src="./Week04_binarytree.assets/IMG_2466(20241020-152750).PNG" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
+
+#### 8.2.4 先右旋再左旋
+
+<img src="./Week04_binarytree.assets/bbd9d2ed5fd62e474612bb643219930.jpg" alt="bbd9d2ed5fd62e474612bb643219930" style="zoom:33%;" />
+
+
+
+#### 8.2.5 完整代码
+
+```python
+class TreeNode:
+    """AVL 树节点类"""
+    # 该类用于表示 AVL 树的节点，包含节点的值、左右子节点的引用以及节点的高度
+
+    def __init__(self, val):
+        # 初始化节点时，设置节点值，并将左右子节点初始化为 None，节点高度初始为 0
+        self.val = val  # 节点值
+        self.height = 0  # 节点高度，初始为 0
+        self.left = None  # 左子节点引用，初始为 None
+        self.right = None  # 右子节点引用，初始为 None
+
+    def get_height(self, node):
+        """获取节点高度"""
+        # 如果节点存在，则返回节点的高度；否则返回 -1，表示空节点的高度
+        # 空节点高度为 -1 ，叶节点高度为 0
+        if node is not None:
+            return node.height  # 返回节点的高度
+        return -1  # 空节点返回 -1
+
+    def update_height(self, node):
+        """更新节点高度"""
+        # 节点的高度是左右子树中较高者的高度加 1
+        # 先获取左右子树的高度，更新当前节点的高度
+        node.height = max([self.get_height(node.left), self.get_height(node.right)]) + 1
+        # max([左子树高度, 右子树高度]) + 1
+
+    def balance_factor(self, node):
+        """获取平衡因子"""
+        # 平衡因子是左右子树高度的差，用来判断子树的平衡情况
+        # 空节点平衡因子为 0
+        if node is None:
+            return 0  # 空节点返回 0
+        # 节点的平衡因子等于左子树的高度减去右子树的高度
+        return self.get_height(node.left) - self.get_height(node.right)
+
+    def right_rotate(self, node):
+        """右旋操作"""
+        # 对于左偏的树执行右旋操作，使其重新平衡
+        child = node.left  # 获取左子节点
+        grand_child = child.right  # 获取左子节点的右子节点（孙节点）
+        # 以 child 为新根节点，将 node 作为 child 的右子节点
+        child.right = node  # 原根节点变为右子节点
+        node.left = grand_child  # 原左子节点的右子节点（孙节点）作为 node 的左子节点
+        # 更新旋转后节点的高度
+        self.update_height(node)  # 更新原根节点的高度
+        self.update_height(child)  # 更新新根节点的高度
+        # 返回旋转后的新根节点
+        return child  # 右旋后返回新的子树根节点
+
+    def left_rotate(self, node):
+        """左旋操作"""
+        # 对于右偏的树执行左旋操作，使其重新平衡
+        child = node.right  # 获取右子节点
+        grand_child = child.left  # 获取右子节点的左子节点（孙节点）
+        # 以 child 为新根节点，将 node 作为 child 的左子节点
+        child.left = node  # 原根节点变为左子节点
+        node.right = grand_child  # 原右子节点的左子节点（孙节点）作为 node 的右子节点
+        # 更新旋转后节点的高度
+        self.update_height(node)  # 更新原根节点的高度
+        self.update_height(child)  # 更新新根节点的高度
+        # 返回旋转后的新根节点
+        return child  # 左旋后返回新的子树根节点
+
+    def rotate(self, node):
+        """执行旋转操作，使该子树重新恢复平衡"""
+        # 通过平衡因子判断当前子树是否失衡，若失衡则进行相应的旋转操作
+        balance_factor = self.balance_factor(node)  # 获取节点的平衡因子
+        # 左偏树，平衡因子大于 1 表示左子树过高
+        if balance_factor > 1:
+            if self.balance_factor(node.left) >= 0:
+                # 左子树也是左偏：右旋恢复平衡
+                return self.right_rotate(node)
+            else:
+                # 左子树右偏：先对左子节点进行左旋，再右旋
+                node.left = self.left_rotate(node.left)
+                return self.right_rotate(node)
+        # 右偏树，平衡因子小于 -1 表示右子树过高
+        elif balance_factor < -1:
+            if self.balance_factor(node.right) <= 0:
+                # 右子树也是右偏：左旋恢复平衡
+                return self.left_rotate(node)
+            else:
+                # 右子树左偏：先对右子节点进行右旋，再左旋
+                node.right = self.right_rotate(node.right)
+                return self.left_rotate(node)
+        # 如果当前子树平衡，无需旋转，直接返回当前节点
+        return node  # 平衡的子树直接返回
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
