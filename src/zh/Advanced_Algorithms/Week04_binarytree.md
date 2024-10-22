@@ -1991,13 +1991,76 @@ class TreeNode:
 
 
 
+### 8.2 AVL 树的插入
+
+AVL 树的节点插入操作与二叉搜索树在主体上类似。唯一的区别在于，在 AVL 树中插入节点后，从该节点到根节点的路径上可能会出现一系列失衡节点。因此，我们需要从这个节点开始，自底向上执行旋转操作，使所有失衡节点恢复平衡。代码如下所示：
+
+```python
+def insert(self, val):
+    """插入节点"""
+    self._root = self.insert_helper(self._root, val)
+
+def insert_helper(self, node: TreeNode | None, val: int) -> TreeNode:
+    """递归插入节点（辅助方法）"""
+    if node is None:
+        return TreeNode(val)
+    # 1. 查找插入位置并插入节点
+    if val < node.val:
+        node.left = self.insert_helper(node.left, val)
+    elif val > node.val:
+        node.right = self.insert_helper(node.right, val)
+    else:
+        # 重复节点不插入，直接返回
+        return node
+    # 更新节点高度
+    self.update_height(node)
+    # 2. 执行旋转操作，使该子树重新恢复平衡
+    return self.rotate(node)
+```
 
 
 
+### 8.2 AVL 树的删除
 
+在 AVL 树的插入、删除和旋转操作中，通常只涉及对节点的引用的操作（即指针或引用的改变），并不会复制节点对象。这种行为可以被视为类似于浅拷贝的操作，因为在旋转、平衡等操作中，改变的是节点的引用关系，而不是复制整个子树或节点的内容。
 
+类似地，在二叉搜索树的删除节点方法的基础上，需要从底至顶执行旋转操作，使所有失衡节点恢复平衡。代码如下所示：
 
+```python
+def remove(self, val: int):
+    """删除节点"""
+    self._root = self.remove_helper(self._root, val)
 
+def remove_helper(self, node: TreeNode | None, val: int) -> TreeNode | None:
+    """递归删除节点（辅助方法）"""
+    if node is None:
+        return None
+    # 1. 查找节点并删除
+    if val < node.val:
+        node.left = self.remove_helper(node.left, val)
+    elif val > node.val:
+        node.right = self.remove_helper(node.right, val)
+    else:
+        if node.left is None or node.right is None:
+            child = node.left or node.right
+            # 子节点数量 = 0 ，直接删除 node 并返回
+            if child is None:
+                return None
+            # 子节点数量 = 1 ，直接删除 node
+            else:
+                node = child
+        else:
+            # 子节点数量 = 2 ，则将中序遍历的下个节点删除，并用该节点替换当前节点
+            temp = node.right
+            while temp.left is not None:
+                temp = temp.left
+            node.right = self.remove_helper(node.right, temp.val)
+            node.val = temp.val
+    # 更新节点高度
+    self.update_height(node)
+    # 2. 执行旋转操作，使该子树重新恢复平衡
+    return self.rotate(node)
+```
 
 
 
