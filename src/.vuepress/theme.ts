@@ -113,7 +113,8 @@ export default hopeTheme({
       "/zh/internship/Aricultural_Bank_of_China.html":["internship"],
       "/zh/python1v1/":["python1v1"],
       "/zh/TOEFL/":["tuofu107"],
-      "/zh/Advanced_Algorithms/":["aa100"]
+      "/zh/Advanced_Algorithms/":["aa100"],
+      "/zh/Diary/Daily_assignment.html":["aoligei"]
     },
   },
 
