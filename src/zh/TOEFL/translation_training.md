@@ -340,4 +340,91 @@ absolutely/completely ——> definitely
 
 #### 2.1 自翻
 
-It is agreeable that the couple years in university deserved to be cherished forever. Undoubtedly, (高等教育) is a crucial stage of the way to 
+It is agreeable that the couple years in university deserved to be cherished forever. Undoubtedly, (高等教育) is a crucial stage of the bright way to bright success. However, getting a (学位) only a signal of primary outcome of the study, and the beginning of a mature personality.  As a result, I’d rather believe that college education is the fundamental of success, but not the most important part.
+
+#### 2.2 他翻
+
+As is vastly acknowledged, the precious years spent in the university deserve a person's lifelong cherishment. Higher education doubtlessly **constitutes** a crucial stage during the long journey toward shining success. In spite of this, receiving a college degree only **symbolizes** one's primary academic achievement and the early **maturity** of his personality. Therefore, I would rather prefer to regard university education as a stepping stone toward success rather than the most important factor.
+
+#### 2.3 可修改表达
+
+这是人们普遍认同的：As is vastly acknowledged
+
+高等教育：Higher education
+
+构成；组成：constitute
+
+尽管如此：In spite of
+
+大学学历：college degree
+
+象征，标志：symbolize
+
+学业的：academic
+
+刚刚成熟：early maturity of …
+
+因此：Therefore
+
+我更…而不… ：I would rather do … rather than …
+
+因素：factor
+
+获得：receive
+
+把…看作…: regard … as …
+
+
+
+### 3. 第二段
+
+#### 3.1 自翻
+
+First, we can not delay the importance of higher education in development of a person. This is a special period,  the young is going to be in the society and make himself or herself a (合格) and responsible social member after that. Therefore, all the knowledge, skills, valuable experience in life accumulated in this (象牙塔) will make a great difference in the struggle for success of one person in future. To be more specific, university education is different from primary education that the key points of primary education most are in the most basic theories in the textbooks while the university offer opportunities that apply the knowledge one’s have learned in real life to students and lead the students to be (实事求是). Professors admit that students consider the question in an independent way and giving them sufficient freedom in (抒发) their own perspective. Finally, because of (具备了) the (专业) skills in colleges, the graduates will be more confident in stepping in a new stage of life. 
+
+#### 3.2 他翻
+
+In the first place, we shall never deny the important role higher learning plays in a person's self-development. It is a special period of time before a young adult enters the society and finally turns himself into a **qualified** and responsible social member. Thus, all the knowledge, skills **along with** the precious life experience accumulated inside this **ivory tower** would produce far-reaching influences on a person's future endeavors toward success. To illustrate, unlike **preliminary education** that emphasizes largely on the most fundamental theories in the textbooks, university education provides more opportunities for the students to put what has been learned into practice and guides them to seek truth from the facts. Tutors are allowing independent thinking and give their students more freedom to express personal opinions. Finally, **equipped with** specialized skills **grasped** in the university, graduates would have greater confidence to begin the next stage of life.
+
+
+
+#### 3.3 替换表达
+
+否认：deny
+
+个人发展：self-development
+
+…对…很重要：play a important role in 
+
+…在…之后：… happen before …
+
+进入社会：enter the society
+
+合格的：qualified
+
+因此：Thus
+
+在象牙塔（指学校）中获得的：accumulated inside this ivory tower
+
+有着长远深刻的影响：produce far-reaching influences on
+
+与…不同的是: unlike …, …
+
+初等教育：preliminary education
+
+给 sb 提供 sth ：provide sth for sb
+
+把知识应用于实践：put knowledge into practice
+
+实事求是：seek truth from the facts
+
+抒发，表达观点：express opinions
+
+具备：equipped with
+
+掌握：grasp
+
+专业的：specialized
+
+
+
