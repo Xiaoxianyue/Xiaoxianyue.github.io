@@ -51,9 +51,9 @@ print(lst)
 
 
 
-## 2. `emerate`
+## 2. `enumerate`
 
-### 2.1 `emerate` 用法
+### 2.1 `enumerate` 用法
 
 ```python
 lst = ['shelley','python','java']

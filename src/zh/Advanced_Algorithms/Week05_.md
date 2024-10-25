@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第四周ppt总结
+title: 高级算法——第五周ppt总结
 icon: python
 date: 2024-10-21 9:00:32
 author: XiaoXianYue
@@ -417,6 +417,501 @@ G = {V, E}
     <img src="./Week05_.assets/31a029d30e2e75665147d0aae04973b.jpg" alt="31a029d30e2e75665147d0aae04973b" style="zoom:25%;" />
 
 
+
+
+
+### 4.2 基于邻接矩阵的变换
+
+::: tabs 
+
+@tab Step 1
+
+<img src="./Week05_.assets/3ad4e4ef093fc5301406c9b94abedd8.png" alt="3ad4e4ef093fc5301406c9b94abedd8" style="zoom:50%;" />
+
+@tab Step 2
+
+<img src="./Week05_.assets/012ade3e46371fb2e40d57d0e2f9d01.png" alt="012ade3e46371fb2e40d57d0e2f9d01" style="zoom:50%;" />
+
+@tab Step 3
+
+<img src="./Week05_.assets/72e8bbd7617635b95ffa14dc842af14.png" alt="72e8bbd7617635b95ffa14dc842af14" style="zoom:50%;" />
+
+
+
+@tab Step 4
+
+<img src="./Week05_.assets/74ff6bd106acdc616530b51282e72c6.png" alt="74ff6bd106acdc616530b51282e72c6" style="zoom:50%;" />
+
+@tab Step 5
+
+<img src="./Week05_.assets/8ea7e612ca1db1cca4de43a05c94d9b.png" alt="8ea7e612ca1db1cca4de43a05c94d9b" style="zoom:50%;" />
+
+:::
+
+
+
+```python
+class GraphAdjMat:
+    """基于邻接矩阵实现的无向图类"""
+
+    def __init__(self, vertices: list[int], edges: list[list[int]]):
+        """构造方法，初始化图，接收顶点和边的列表"""
+        # 顶点列表，存储图中的顶点值，元素代表“顶点值”，索引代表“顶点索引”
+        self.vertices: list[int] = []
+        # 邻接矩阵，用二维列表表示图的顶点之间的连接情况，行列索引对应“顶点索引”
+        self.adj_mat: list[list[int]] = []
+        # 遍历传入的顶点值，依次添加到顶点列表中
+        for val in vertices:
+            self.add_vertex(val)
+        # 遍历传入的边列表，依次在邻接矩阵中添加这些边
+        for e in edges:
+            self.add_edge(e[0], e[1])
+
+    def size(self) -> int:
+        """获取顶点数量"""
+        # 返回顶点列表的长度，即图中顶点的数量
+        return len(self.vertices)
+
+    def add_vertex(self, val: int):
+        """添加顶点"""
+        # 获取当前图的顶点数量，方便扩展邻接矩阵
+        n = self.size()
+        # 将新顶点的值添加到顶点列表中
+        self.vertices.append(val)
+        # 创建一个新的行（即新顶点与其他顶点的连接状态），初始化为 0
+        new_row = [0] * (n + 1)  # 新行需要有 n+1 列，因为新增了一个顶点
+        # 将新行添加到邻接矩阵中，表示与其他顶点的连接状态
+        self.adj_mat.append(new_row)
+        # 遍历现有的邻接矩阵，为每一行添加一个新列，表示新顶点的加入
+        for row in self.adj_mat[:-1]:  # 最后一行是刚刚添加的，因此不需要再修改
+            row.append(0)
+
+    def remove_vertex(self, index: int):
+        """删除指定索引的顶点"""
+        # 检查索引是否越界，如果越界则抛出异常
+        if index >= self.size() or index < 0:
+            raise IndexError(f"顶点索引 {index} 超出范围。")
+        # 从顶点列表中移除索引为 index 的顶点
+        self.vertices.pop(index)
+        # 从邻接矩阵中移除对应的行，表示删除该顶点的所有连接
+        self.adj_mat.pop(index)
+        # 从邻接矩阵中移除对应的列，删除该顶点与其他顶点的连接
+        for row in self.adj_mat:
+            row.pop(index)
+
+    def add_edge(self, i: int, j: int):
+        """添加边"""
+        # 检查顶点索引 i 和 j 是否越界
+        if i < 0 or j < 0 or i >= self.size() or j >= self.size():
+            raise IndexError(f"顶点索引 {i} 或 {j} 超出范围。")
+        # 检查是否尝试添加自环（即从顶点 i 到自身的边）
+        if i == j:
+            raise ValueError(f"不允许添加从顶点 {i} 到自身的边。")
+        # 在无向图中，邻接矩阵关于主对角线对称，因此需要设置两个位置的值为 1
+        self.adj_mat[i][j] = 1
+        self.adj_mat[j][i] = 1
+
+    def remove_edge(self, i: int, j: int):
+        """删除边"""
+        # 检查顶点索引 i 和 j 是否越界
+        if i < 0 or j < 0 or i >= self.size() or j >= self.size():
+            raise IndexError(f"顶点索引 {i} 或 {j} 超出范围。")
+        # 检查是否尝试删除自环
+        if i == j:
+            raise ValueError(f"不允许删除从顶点 {i} 到自身的边。")
+        # 删除边，在邻接矩阵中将两个位置的值设为 0
+        self.adj_mat[i][j] = 0
+        self.adj_mat[j][i] = 0
+
+    def print_matrix(self):
+        """打印邻接矩阵"""
+        # 遍历邻接矩阵的每一行
+        for row in self.adj_mat:
+            # 将行中的元素拼接成字符串输出，每个元素之间用空格分隔
+            print(" ".join(map(str, row)))
+
+    def print(self):
+        """打印顶点列表和邻接矩阵"""
+        # 输出顶点列表
+        print("顶点列表 =", self.vertices)
+        # 输出邻接矩阵的标题
+        print("邻接矩阵 =")
+        # 调用内部的 print_matrix 方法，输出矩阵内容
+        self.print_matrix()
+        
+if __name__ == "__main__":
+    # 初始化无向图
+    vertices = [1, 3, 2, 5, 4]
+    edges = [[0, 1], [0, 3], [1, 2], [2, 3], [2, 4], [3, 4]]
+    graph = GraphAdjMat(vertices, edges)
+
+    # 添加边
+    # 顶点 1, 2 的索引分别为 0, 2
+    graph.add_edge(0, 2)
+
+    # 删除边
+    # 顶点 1, 3 的索引分别为 0, 1
+    graph.remove_edge(0, 1)
+
+    # 添加顶点
+    graph.add_vertex(6)
+
+    # 删除顶点
+    # 顶点 3 的索引为 1
+    graph.remove_vertex(1)
+    graph.print()
+```
+
+
+
+### 4.3 DFS
+
+```python
+class GraphAdjMat:
+    """基于邻接矩阵实现的无向图类"""
+
+    def __init__(self, vertices: list[int], edges: list[list[int]]):
+        """构造方法"""
+        # 顶点列表，元素代表“顶点值”，索引代表“顶点索引”
+        self.vertices: list[int] = []
+        # 邻接矩阵，行列索引对应“顶点索引”
+        self.adj_mat: list[list[int]] = []
+        # 添加顶点
+        for val in vertices:
+            self.add_vertex(val)
+        # 添加边
+        # 请注意，edges 元素代表顶点索引，即对应 vertices 元素索引
+        for e in edges:
+            self.add_edge(e[0], e[1])
+
+    def size(self) -> int:
+        """获取顶点数量"""
+        return len(self.vertices)
+
+    def add_vertex(self, val: int):
+        """添加顶点"""
+        n = self.size()
+        self.vertices.append(val)
+        new_row = [0] * (n+1)
+        self.adj_mat.append(new_row)
+        for row in self.adj_mat[:-1]:
+            row.append(0)
+
+
+    def remove_vertex(self, index: int):
+        """删除顶点"""
+        if index >= self.size() or index < 0:
+            raise Exception(f"顶点索引{index}超出范围。")
+        self.vertices.pop(index)
+        self.adj_mat.pop(index)
+        for row in self.adj_mat:
+            row.pop(index)
+
+
+    def add_edge(self, i: int, j: int):
+        """添加边"""
+        if i < 0 or i >= self.size() or j < 0 or j >= self.size():
+            raise IndexError(f"顶点索引{i}和{j}超储范围。")
+        if i == j:
+            raise ValueError(f"不允许添加从顶点{i}到自身的边")
+        self.adj_mat[i][j] = 1
+        self.adj_mat[j][i] = 1
+
+
+
+    def remove_edge(self, i: int, j: int):
+        """删除边"""
+        if i < 0 or i >= self.size() or j < 0 or j>= self.size():
+            raise IndexError(f"顶点索引{i}和{j}超储范围。")
+        if i == j:
+            raise ValueError(f"不允许删除从顶点{i}到自身的边")
+        self.adj_mat[i][j] = 0
+        self.adj_mat[j][i] = 0
+
+
+
+    def print_matrix(self):
+        """打印邻接矩阵"""
+        for row in self.adj_mat:
+            print(" ".join(map(str, row)))
+
+    def print(self):
+        """打印邻接矩阵和顶点列表"""
+        print("顶点列表 =", self.vertices)
+        print("邻接矩阵 =")
+        self.print_matrix()
+
+    def dfs_recursive(self, start: int, visited: list[bool]):
+    """递归方式实现 DFS"""
+    visited[start] = True  # 标记当前顶点为已访问
+    print(self.vertices[start], end=" ")  # 输出当前顶点
+    
+    # 遍历所有与当前顶点相连的顶点
+    for neighbor, is_connected in enumerate(self.adj_mat[start]):
+        if is_connected and not visited[neighbor]:  # 如果有连接且未访问
+            self.dfs_recursive(neighbor, visited)  # 递归访问该顶点
+
+
+    def dfs(self, start_vertex: int):
+        """调用 DFS 遍历"""
+        visited = [False] * self.size()  # 初始化所有顶点都未访问
+        start_index = self.vertices.index(start_vertex)  # 获取起始顶点的索引
+        self.dfs_recursive(start_index, visited)  # 从起始顶点开始递归遍历
+        print()  # 打印结果后的换行
+
+
+if __name__ == "__main__":
+    # 初始化无向图
+    vertices = [1, 3, 2, 5, 4]
+    edges = [[0, 1], [0, 3], [1, 2], [2, 3], [2, 4], [3, 4]]
+    graph = GraphAdjMat(vertices, edges)
+
+    # 添加边
+    # 顶点 1, 2 的索引分别为 0, 2
+    graph.add_edge(0, 2)
+
+    # 删除边
+    # 顶点 1, 3 的索引分别为 0, 1
+    graph.remove_edge(0, 1)
+
+    # 添加顶点
+    graph.add_vertex(6)
+
+    # 删除顶点
+    # 顶点 3 的索引为 1
+    graph.remove_vertex(1)
+    graph.print()
+
+def test_graph_adjmat_dfs():
+    print("=== 测试1：简单图 ===")
+    # 创建图
+    vertices = [0, 1, 2, 3, 4]
+    edges = [[0, 1], [0, 2], [1, 3], [2, 4]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1 3 2 4
+
+    print("\n=== 测试2：环形图 ===")
+    # 创建一个环形图
+    vertices = [0, 1, 2, 3]
+    edges = [[0, 1], [1, 2], [2, 3], [3, 0]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1 2 3
+
+    print("\n=== 测试3：不连通图 ===")
+    # 创建不连通的图
+    vertices = [0, 1, 2, 3, 4]
+    edges = [[0, 1], [2, 3]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1
+    print("DFS 从顶点 2 开始：")
+    graph.dfs(2)   # 从顶点 2 开始进行 DFS 遍历，预期输出 2 3
+
+    print("\n=== 测试4：单一顶点 ===")
+    # 创建只有一个顶点的图
+    vertices = [0]
+    edges = []
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0
+```
+
+
+
+
+
+
+
+
+
+### 4.4 BFS
+
+```python
+class GraphAdjMat:
+    """基于邻接矩阵实现的无向图类"""
+
+    def __init__(self, vertices: list[int], edges: list[list[int]]):
+        """构造方法"""
+        # 顶点列表，元素代表“顶点值”，索引代表“顶点索引”
+        self.vertices: list[int] = []
+        # 邻接矩阵，行列索引对应“顶点索引”
+        self.adj_mat: list[list[int]] = []
+        # 添加顶点
+        for val in vertices:
+            self.add_vertex(val)
+        # 添加边
+        # 请注意，edges 元素代表顶点索引，即对应 vertices 元素索引
+        for e in edges:
+            self.add_edge(e[0], e[1])
+
+    def size(self) -> int:
+        """获取顶点数量"""
+        return len(self.vertices)
+
+    def add_vertex(self, val: int):
+        """添加顶点"""
+        n = self.size()
+        self.vertices.append(val)
+        new_row = [0] * (n+1)
+        self.adj_mat.append(new_row)
+        for row in self.adj_mat[:-1]:
+            row.append(0)
+
+
+    def remove_vertex(self, index: int):
+        """删除顶点"""
+        if index >= self.size() or index < 0:
+            raise Exception(f"顶点索引{index}超出范围。")
+        self.vertices.pop(index)
+        self.adj_mat.pop(index)
+        for row in self.adj_mat:
+            row.pop(index)
+
+
+    def add_edge(self, i: int, j: int):
+        """添加边"""
+        if i < 0 or i >= self.size() or j < 0 or j >= self.size():
+            raise IndexError(f"顶点索引{i}和{j}超储范围。")
+        if i == j:
+            raise ValueError(f"不允许添加从顶点{i}到自身的边")
+        self.adj_mat[i][j] = 1
+        self.adj_mat[j][i] = 1
+
+
+
+    def remove_edge(self, i: int, j: int):
+        """删除边"""
+        if i < 0 or i >= self.size() or j < 0 or j>= self.size():
+            raise IndexError(f"顶点索引{i}和{j}超储范围。")
+        if i == j:
+            raise ValueError(f"不允许删除从顶点{i}到自身的边")
+        self.adj_mat[i][j] = 0
+        self.adj_mat[j][i] = 0
+
+
+
+    def print_matrix(self):
+        """打印邻接矩阵"""
+        for row in self.adj_mat:
+            print(" ".join(map(str, row)))
+
+    def print(self):
+        """打印邻接矩阵和顶点列表"""
+        print("顶点列表 =", self.vertices)
+        print("邻接矩阵 =")
+        self.print_matrix()
+
+    def dfs_recursive(self, start: int, visited: list[bool]):
+        """递归方式实现 DFS"""
+        visited[start] = True  # 标记当前顶点为已访问
+        print(self.vertices[start], end=" ")  # 输出当前顶点
+
+        # 遍历所有与当前顶点相连的顶点
+        for neighbor, is_connected in enumerate(self.adj_mat[start]):
+            if is_connected and not visited[neighbor]:  # 如果有连接且未访问
+                self.dfs_recursive(neighbor, visited)  # 递归访问该顶点
+
+
+    def dfs(self, start_vertex: int):
+        """调用 DFS 遍历"""
+        visited = [False] * self.size()  # 初始化所有顶点都未访问
+        start_index = self.vertices.index(start_vertex)  # 获取起始顶点的索引
+        self.dfs_recursive(start_index, visited)  # 从起始顶点开始递归遍历
+        print()  # 打印结果后的换行
+
+
+    def bfs(self, start_vertex: int):
+        # 获取起始顶点在列表中的索引
+        start_index = self.vertices.index(start_vertex)
+        queue = [start_index]  # 使用列表模拟队列
+        # 初始化所有顶点状态为空
+        visited = [False] * self.size()
+        # 标记顶点为已经访问
+        visited[start_index] = True
+        # 当队列不为空时，进行遍历
+        while queue:
+            # 模拟队列，从队列中取出头部顶点。
+            vertex = queue.pop(0)
+            # 打印当前节点的值
+            print(self.vertices[vertex], end='')
+            # 遍历当前节点的所有与之有边的邻节点
+            for neighbor, is_connect in enumerate(self.adj_mat[vertex]):
+                # 如果存在邻节点且没有被访问过
+                if not visited[neighbor] and is_connect:
+                    visited[neighbor] = True
+                    queue.append(neighbor)
+        print()   # 只为换行
+            
+        
+
+
+if __name__ == "__main__":
+    # 初始化无向图
+    vertices = [1, 3, 2, 5, 4]
+    edges = [[0, 1], [0, 3], [1, 2], [2, 3], [2, 4], [3, 4]]
+    graph = GraphAdjMat(vertices, edges)
+
+    # 添加边
+    # 顶点 1, 2 的索引分别为 0, 2
+    graph.add_edge(0, 2)
+
+    # 删除边
+    # 顶点 1, 3 的索引分别为 0, 1
+    graph.remove_edge(0, 1)
+
+    # 添加顶点
+    graph.add_vertex(6)
+
+    # 删除顶点
+    # 顶点 3 的索引为 1
+    graph.remove_vertex(1)
+    graph.print()
+
+def test_graph_adjmat_dfs():
+    print("=== 测试1：简单图 ===")
+    # 创建图
+    vertices = [0, 1, 2, 3, 4]
+    edges = [[0, 1], [0, 2], [1, 3], [2, 4]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1 3 2 4
+
+    print("\n=== 测试2：环形图 ===")
+    # 创建一个环形图
+    vertices = [0, 1, 2, 3]
+    edges = [[0, 1], [1, 2], [2, 3], [3, 0]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1 2 3
+
+    print("\n=== 测试3：不连通图 ===")
+    # 创建不连通的图
+    vertices = [0, 1, 2, 3, 4]
+    edges = [[0, 1], [2, 3]]
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0 1
+    print("DFS 从顶点 2 开始：")
+    graph.dfs(2)   # 从顶点 2 开始进行 DFS 遍历，预期输出 2 3
+
+    print("\n=== 测试4：单一顶点 ===")
+    # 创建只有一个顶点的图
+    vertices = [0]
+    edges = []
+    graph = GraphAdjMat(vertices, edges)
+    graph.print()  # 打印邻接矩阵
+    print("DFS 从顶点 0 开始：")
+    graph.dfs(0)   # 从顶点 0 开始进行 DFS 遍历，预期输出 0
+```
 
 
 

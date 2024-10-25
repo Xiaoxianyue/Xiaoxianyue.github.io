@@ -176,51 +176,112 @@ R = \text{det}(M) - k \cdot (\text{trace}(M))^2
 
 
 
-### 2.3 What is SIFT, HOG, GIST? And how to extract these features?
 
-#### 1. SIFT Detector and Descriptor —— Scale Invanriant Feature Transform
 
-##### 1.1 Advantages of SIFT
+ ### 2.3 SIFT Detector and Descriptor —— Scale Invanriant Feature Transform
 
-**Locality:** features are local, so robust to occlusion and clutter (no prior segmentation)
+#### 2.3.1 基本信息
 
-**Distinctiveness:** individual features can be matched to a large database of objects
+- 选取关键点后，这些关键点 invariant to scale and rotation.
+- Also, Lowe aimed to create a descriptor that was robust to the variations corresponding to typical viewing conditions. The descriptor is the most-used part of SIFT.
 
-**Quantity:** many features can be generated for even small objects
+- Image content is transformed into local feature coordinates that are invariant to translation, rotation, scale, and other imaging parameters. (图像的内容进行平移，旋转，放大缩小的变换)
 
-**Efficiency:** close to real-time performance
+- Advantages：
+    - 局部性 Locality
+    - 独特性：单一特征与整个数据库比对 Distinctive
+    - Quantity 一个简单的关键点也可以生成大量不同特征
+    - Efficiency
+    - Extensibility
 
-**Extensibility:** can easily be extended to wide range of differing feature types, with each adding robustness
-
-#### Step 1 . Scale-space extrema detection
+#### 2.3.2 Step 1 —— Scale-space extrema detection
 
 - Goal: Identify locations and scales that can be repeatably assigned under different views of the same scene or object.
 
-- Method: search for stable features across multiple scales using a continuous function of scale.
+::: detail Chinese
+
+同一个视图（物体）在不同的位置和比例也可以检测到。
+
+:::
+
+-  Method: search for stable features across multiple scales using a continuous function of scale.
+
+::: detail
+
+用一个比例的连续函数检测在不同比例下的稳定的特征。
+
+:::
 
 - Prior work has shown that under a variety of assumptions, the best function is a Gaussian function.
 
-- The scale space of an image is a function *L(x,y,****)* that is produced from the convolution of a Gaussian kernel (at different scales) with the input image.
+::: detail
 
-##### Step 2 Key point localization
+我们用一个高斯函数来做这个工作
 
+:::
 
-
-
-
-
+The scale space of an image is a function *L(x,y,****)* that is producedfrom the convolution of a Gaussian kernel (at different scales) with the input image
 
 
 
+::: tabs
+
+@tab 为什么选择高斯函数？
+
+高斯函数在图像处理中的一个关键作用是创建图像的**尺度空间**，即在不同尺度下搜索稳定的特征。通过高斯函数，可以实现对图像进行多尺度分析，以便找到那些在不同尺度下都稳定存在的特征。具体来说，高斯函数可以做到这一点的原因有以下几个方面：
+
+- **高斯模糊和图像卷积** 
+
+    高斯函数是一种平滑函数，当我们对图像进行高斯模糊（Gaussian Blur）时，其实是将图像与一个高斯核进行**卷积**操作。这个过程可以平滑图像，消除噪声，同时保留图像的主要结构。高斯模糊有一个重要的性质：它能够根据不同的尺度（即高斯函数的标准差 \(\sigma\)）对图像进行平滑处理。
+
+- **尺度空间**
+
+    尺度空间的概念是为了处理图像中不同大小的特征点（例如角点、边缘等），通过对图像使用不同尺度的高斯核进行卷积，生成多个版本的图像，每个版本对应于不同的尺度。这个过程使得我们能够在不同的尺度下检测图像特征，因为在某些尺度下，特征可能会更加明显或稳定。
+
+数学上，图像的尺度空间 \( L(x, y, \singema) \) 表示的是通过与不同尺度的高斯核 \( G(x, y, \singema) \) 卷积后的图像：
+![image-20241025175332609](./Conclusion.assets/image-20241025175332609.png)
+其中 \( I(x, y) \) 是输入图像，\( G(x, y, \sigma) \) 是高斯核，\(\sigma\) 控制高斯模糊的程度（即尺度)。
+
+- **高斯函数的性质**
+
+    高斯函数的一个重要性质是，它的卷积操作具有**平滑性**和**尺度变换的连续性**。这意味着：
+
+    - 当 \(\sigma\) 变小时，我们在图像中可以捕捉到细节更多的特征。
+
+    - 当 \(\sigma\) 变大时，图像中的噪声和细小结构会被抹去，只留下大尺度的结构特征.
+
+        通过在多个尺度下应用高斯函数，可以有效地捕捉到那些在多种尺度下都保持稳定的特征。也就是说，特征在不同尺度下“稳定”存在，这就是图像特征的**尺度不变性**。
+
+- **总结**
+
+    高斯函数通过在不同尺度下平滑图像，可以构建图像的尺度空间。在这个过程中，我们能够检测到那些在不同尺度下都保持稳定的特征，这就是如何通过高斯函数来实现多尺度特征提取的原理。
 
 
 
+@tab ppt 图片解释
 
 
 
+<img src="./Conclusion.assets/image-20241025175528872.png" alt="image-20241025175528872" style="zoom:33%;" />
+
+1. **尺度空间（Scale Space）** 被分为 **octaves（八度）**。
+
+    第一个八度使用尺度 σ。
+
+    第二个八度使用尺度 2σ。
+
+    后续八度依次类推。
+
+2. 在每个八度中，原始图像被重复地与不同尺度的高斯核进行卷积，产生一组尺度空间图像。
+
+3. 相邻的高斯图像相减，得到差分高斯（DOG，Difference of Gaussians）图像。
+
+4. 在每个八度结束时，高斯图像通过下采样，大小缩小为原图的四分之一，开始下一层八度的计算。
 
 
 
+<img src="./Conclusion.assets/image-20241025180215800.png" alt="image-20241025180215800" style="zoom:33%;" />
 
+<img src="./Conclusion.assets/image-20241025180237444.png" alt="image-20241025180237444" style="zoom: 33%;" />
 
-
+:::
