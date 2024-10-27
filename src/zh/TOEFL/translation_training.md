@@ -428,3 +428,31 @@ In the first place, we shall never deny the important role higher learning plays
 
 
 
+### 4. 第三段
+
+#### 4.1 自翻
+
+Nevertheless, it is doubtable that thinking university education is the most significant factor of individual success. Others should be highlighted. There are abundant celebrities don’t have a university degree but success impressively. Among them, Bill Gates ought to be the focus we concentrated.  He went to 哈佛 but quit the school two years later and build up the Microsoft. Microsoft and its operation system occupied personal computer market and blow waves in informational and technical (行业). His brilliant success have great deal with his inner qualities including wisdom, strong heart, confidence, innovation and the most important one  which is insistently hard-working. Without any word, the essential qualities is actually every successful people （具备).
+
+#### 4.2 他翻
+
+Nevertheless, it is too absolute to define university education as the most important factor in a person's success. Other crucial elements should also be stressed. The world today is filled with **eminent** figures who have never received a university degree but become **astoundingly** successful. Among them, Bill Gates, the richest man on earth, should be brought into the **limelight**. He entered Harvard in 1973 but quit school two years later to set up Microsoft, which has **taken** the IT industry **by storm** and dominates the PC market with its operating systems. His brilliant success owes much to his inner qualities, including wisdom, a strong will, self-confidence, creativity and above all, his everlasting diligence. Evidently, all these critical qualities could be found in each successful talent.
+
+
+
+#### 4.3 替换表达
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

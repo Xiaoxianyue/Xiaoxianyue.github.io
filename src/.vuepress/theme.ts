@@ -114,7 +114,8 @@ export default hopeTheme({
       "/zh/python1v1/":["python1v1"],
       "/zh/TOEFL/":["tuofu107"],
       "/zh/Advanced_Algorithms/":["aa100"],
-      "/zh/Diary/Daily_assignment.html":["aoligei"]
+      "/zh/Diary/Daily_assignment.html":["aoligei"],
+      "/zh/Computer_Vision/":["cv100"]
     },
   },
 

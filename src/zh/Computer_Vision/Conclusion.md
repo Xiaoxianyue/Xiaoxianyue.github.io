@@ -1,5 +1,5 @@
 ---
-title: 计算机视觉
+title: 计算机视觉 L 5 - L 7
 icon: python
 date: 2024-10-20 14:52:40
 author: XiaoXianYue
@@ -285,3 +285,464 @@ The scale space of an image is a function *L(x,y,****)* that is producedfrom 
 <img src="./Conclusion.assets/image-20241025180237444.png" alt="image-20241025180237444" style="zoom: 33%;" />
 
 :::
+
+
+
+#### 2.3.3 Step 2 —— Key point localization
+
+::: tabs
+
+@tab
+
+<img src="./Conclusion.assets/image-20241025203156336.png" alt="image-20241025203156336" style="zoom:50%;" />
+
+- 差分高斯（DoG）极值检测：
+    - 这张图的核心是在**尺度空间中检测DoG的极大值和极小值**。
+    - 在每一个点，它都会和当前图像中的8个邻居进行比较，以及尺度上下的9个邻居进行比较，以此来确定该点是否是一个局部极值。
+    - 对于每个找到的极大值或极小值，输出该点的**位置**和**尺度**，这为后续的特征点描述提供了基础
+
+
+
+@tab
+
+<img src="./Conclusion.assets/image-20241025203217842.png" alt="image-20241025203217842" style="zoom:50%;" />
+
+
+
+图中展示了在32张经过合成变换和噪声添加的图像上进行的实验结果。
+
+左侧图：表示在不同的尺度下，检测到的特征点的比例（% detected）和正确匹配的比例（% correctly matched）。
+
+- 稳定性随着检测尺度的增加而增加，但是到了一定的尺度数量后，稳定性趋于平稳。
+
+右侧图：表示在不同的尺度下，检测到的特征点总数（average no. detected）和成功匹配的特征点数量（average no. matched）。
+
+- 随着检测的尺度数增加，检测到的特征点总数增加，但匹配的特征点数量也有限度。
+
+总结：**对于效率的考虑，通常使用3个尺度采样可以找到最大数量的稳定关键点**，超过或小于这个数都会影响性能。
+
+
+
+@tab
+
+- Once a keypoint candidate is found, perform a detailed fit to nearby data to determine location, scale, and ratio of principal curvatures
+
+- In initial work keypoints were found at location and scale of a central sample point.
+
+- In newer work, they fit a 3D quadratic function to improve interpolation accuracy.
+
+- The Hessian matrix was used to eliminate edge responses
+
+::: detail
+
+一旦找到一个关键点候选点，会对邻近数据进行详细拟合，以确定该关键点的**位置**、**尺度**以及**主曲率比**。
+
+最初的工作中，关键点是根据中央样本点的**位置和尺度**来确定的。
+
+新的工作中，使用了**3D二次函数**来提高插值的准确性。
+
+同时，使用**Hessian矩阵**来消除边缘响应，进一步提高关键点的鲁棒性。
+
+:::
+
+
+
+#### 2.3.4 Step 3 —— Orientation assignment
+
+Compute the gradient magnitudes and orientations in a small  window around the keypoint—at the appropriate scale.
+
+<img src="./Conclusion.assets/image-20241025210350521.png" alt="image-20241025210350521" style="zoom: 33%;" />
+
+<img src="./Conclusion.assets/image-20241025210405715.png" alt="image-20241025210405715" style="zoom: 33%;" />
+
+<img src="./Conclusion.assets/image-20241025210635309.png" alt="image-20241025210635309" style="zoom:50%;" />
+
+<img src="./Conclusion.assets/image-20241025210417636.png" alt="image-20241025210417636" style="zoom: 33%;" />
+
+::: info
+
+- Create histogram of local gradient directions at selected scale
+
+
+
+- Assign canonical orientation at peak of smoothed histogram
+
+
+
+- Each key specifies stable 2D coordinates (x, y, scale,orientation)
+
+:::
+
+
+
+#### 2.3.5 Step 4 —— Keypoint Descriptors
+
+◼ At this point, each keypoint has
+
+ ❑ location
+
+ ❑ scale
+
+ ❑ orientation
+
+◼ Next is to compute a descriptor for the local image region about each keypoint that is
+
+ ❑ highly distinctive
+
+ ❑ invariant as possible to variations such as changes in viewpoint and illumination
+
+::: detail 
+
+- 此时，每个关键点都有
+    - 位置
+    - 比例尺
+    -  方向
+
+- 下一步是计算关于每个关键点的局部图像区域的描述符，即
+    - 高度独特
+    - 尽可能不受视角和光照变化等因素的影响
+
+:::
+
+
+
+1. Take a 16 x16 window around interest point (i.e., at the scale detected).
+
+2. Divide into a 4x4 grid of cells. 
+
+3. Compute histogram of image gradient directions in each cell (8 bins  each).
+
+::: detail
+
+在兴趣点周围（即检测到的比例尺处）开一个 16 x 16 的窗口。
+
+划分为 4x4 网格的单元。
+
+计算每个单元格中图像梯度方向的直方图（每个单元格 8 个分区）。
+
+:::
+
+<img src="./Conclusion.assets/image-20241025214001835.png" alt="image-20241025214001835" style="zoom:50%;" />
+
+<img src="./Conclusion.assets/image-20241025214316084.png" alt="image-20241025214316084" style="zoom:50%;" />
+
+- Example:
+    ![image-20241025215028100](./Conclusion.assets/image-20241025215028100.png)
+
+- 步骤：
+    1. use the normalized region about the keypoint
+    2. compute gradient magnitude and orientation at each point in the region
+    3. weight them by a Gaussian window overlaid on the circle
+    4. create an orientation histogram over the 4ⅹ4 subregions of the window
+    5. 4 X 4 descriptors over 16 X 16 sample array were used in practice.
+    6. 4 X 4 times 8 directions gives a vector of 128 values.
+
+::: detail
+
+**区域归一化**：在特征点附近的归一化区域内进行特征描述符的计算，以确保特征的尺度和旋转不变性。
+
+**梯度计算**：在特征点周围的每个像素处计算梯度的幅度和方向，这帮助提取特征点的方向性信息。
+
+**加权**：将一个高斯窗口叠加在区域上，使得离特征点较远的梯度贡献较小，从而突出了特征点周围的强特征。
+
+**方向直方图**：将该区域划分为4×4的子区域，在每个子区域中统计8个方向的梯度方向直方图。
+
+**128维向量生成**：最终生成4×4×8 = 128维的特征向量，以描述该特征点的局部特性。
+
+:::
+
+
+
+### 2.4 GIST descriptor
+
+1. Compute filter responses (filter bank of Gabor filters)
+2. Divide image patch into 4 x 4 cells
+3. Compute filter response averages for each cell
+4. Size of descriptor is 4 x 4 x N, where N is the size of the filter bank
+
+::: detail
+
+<img src="./Conclusion.assets/image-20241026200417775.png" alt="image-20241026200417775" style="zoom: 50%;" />
+
+:::
+
+::: info Gabor filters？
+
+<img src="./Conclusion.assets/image-20241026201504144.png" alt="image-20241026201504144" style="zoom:50%;" />
+
+<img src="./Conclusion.assets/image-20241026201609469.png" alt="image-20241026201609469" style="zoom: 33%;" />
+
+:::
+
+### 2.5 Histogram of Gradient Orientations(HOG)
+
+#### 2.5.1 Step 1 Image Processing
+
+• Patches can be any size, but there is a fixed ratio, for example, when the patch aspect ratio is 1:2, the patch size can be 100*200, 128*256 or 1000*2000 but not 101*205.
+
+• Here is a picture of 720*475, we choose a patch of 100*200 size to calculate the HOG feature, cut out this patch from the image, and then adjust the size to 64*128.
+
+<img src="./Conclusion.assets/image-20241026201921639.png" alt="image-20241026201921639" style="zoom: 50%;" />
+
+#### 2.5.2 Step 2
+
+Find horizontal and vertical gradients, gradient magnitude and orientations 
+
+<img src="./Conclusion.assets/image-20241026202132232.png" alt="image-20241026202132232" style="zoom:50%;" />
+
+#### 2.5.3 Step 3
+
+1. **图像划分与滑动窗口**：将图像分成 8x8 像素的单元格，然后使用 2x2 的块作为滑动窗口。这样做的目的是对图像进行局部区域的分析，每个区域能够反映该区域的梯度信息。（“8x8 的单元格”代表图像被分成小区域，“2x2 的滑动窗口”表示在8x8区域内的更细粒度滑动，这样可以获得更丰富的梯度信息并保持计算的局部一致性。）
+
+2. **梯度方向与幅值的计算**：对于每个像素，计算其梯度的幅值和方向。每个像素的梯度方向和幅值可以帮助捕捉图像边缘和纹理的方向。
+
+3. **量化梯度方向**：将梯度方向量化成 9 个方向区间（20°到160°），每个区间代表一个方向“桶”（bin），然后根据幅值分布对方向区间内的像素进行统计。量化后的方向信息被记录在直方图中，以便后续进行特征描述。
+
+4. **特征直方图的压缩表示**：每个块（2x2的单元格）内的像素梯度方向和幅值被量化并统计成一个方向直方图。这样的表示方式既能够简化数据，同时保留了足够的边缘和轮廓信息。举例来说，如果一个图像是 8x8 大小，每个像素有三通道值，那么最终的HOG特征将会形成一个包含128维度的特征向量。
+
+5. **可视化**：图中用箭头表示了梯度方向，箭头的长度表示梯度的幅值。右下角的直方图展示了量化后的梯度方向和幅值，这种表示方式能够帮助HOG特征在不同尺度下获得鲁棒性。
+
+#### 2.5.4 Step 4，5
+
+![image-20241026203634591](./Conclusion.assets/image-20241026203634591.png)
+
+step 4：16*16 block normalization
+
+step 5：Concatenate histograms into a feature of : 15 x 7 x 4 x 9 = 3780 dimensions （7：horizontal；15：vertical）
+
+#### 2.5.5 Summary
+
+![image-20241026203906992](./Conclusion.assets/image-20241026203906992.png)
+
+
+
+
+
+
+
+## 3.  Lecture 7
+
+### 3.1 What is bag of features? What about the steps of BOG?
+
+#### 3.1.1  Step
+
+1. Extract local features
+2. Learn “visual vocabulary”
+3. Quantize local features using visual vocabulary
+4. Represent images by frequencies of “visual words
+
+#### 3.1.2  Local feature extraction
+
+![image-20241027102254983](./Conclusion.assets/image-20241027102254983.png)
+
+
+
+#### 3.1.3 Learning the visual vocabulary
+
+视觉词汇就是通过聚类提取的局部特征集合，每个视觉单词对应一个聚类中心。通过这些视觉单词的频率，可以用直方图的形式来表示图像的特征。
+
+- 具体步骤
+
+<img src="./Conclusion.assets/image-20241026212256704.png" alt="image-20241026212256704" style="zoom:33%;" />
+
+Extracted descriptors from the training set （左上角）
+
+::: info 
+
+在提取的描述子上应用聚类算法，将相似的特征聚集在一起，以创建视觉词汇表。每个聚类中心就代表了一个“视觉单词”。
+
+右图中的彩色点表示将描述子经过聚类后，形成了不同类别的视觉单词。
+
+:::
+
+- 怎么聚类？ K-means clustering
+
+    **Goal**: minimize sum of squared Euclidean distances between features **x**i and their nearest cluster centers **m**k
+
+    <img src="./Conclusion.assets/image-20241026212752131.png" alt="image-20241026212752131" style="zoom:50%;" />
+
+​                                            <img src="./Conclusion.assets/image-20241026213551358.png" alt="image-20241026213551358" style="zoom:33%;" />
+
+#### 3.1.4 **Quantize local features using visual vocabulary** and **Represent images by frequencies of “visual words”**
+
+- ==**Spatial pyramid**==
+
+    ::: tabs
+
+    @tab Level 0
+
+    <img src="./Conclusion.assets/image-20241027000432976.png" alt="image-20241027000432976" style="zoom:67%;" />
+
+    
+
+    @tab Level 1
+
+    <img src="./Conclusion.assets/image-20241027000354061.png" alt="image-20241027000354061" style="zoom:67%;" />
+
+    @tab Level 2
+
+    <img src="./Conclusion.assets/image-20241027000414662.png" alt="image-20241027000414662" style="zoom:67%;" />
+
+    :::
+
+    可以根据图片内容生成一些直方图。每个层级的特征通过直方图表示，随着层次的增加，特征的分辨率变高，可以捕捉更细粒度的图像信息。
+
+
+
+
+
+![image-20241026234103011](./Conclusion.assets/image-20241026234103011.png)
+
+- 这个过程就是，首先从图像中提取特征（一般是手工设计的特征），然后通过可以训练的分类器进行分类。常见的特征表示方法包括边缘、纹理等手工特征，而分类器可以是支持向量机（SVM）、K-近邻（KNN）等。
+
+分类器：
+
+::: tabs
+
+@tab K-nearest neighbor classifier
+
+- ==**K-nearest neighbor classifier 工作原理：**==
+
+    给定一个测试样本，通过计算它与训练集中每个样本的距离，找到与之距离最近的训练样本，并将最近样本的标签赋予测试样本。这种方法不需要训练，只需要一个距离或相似度度量。
+
+    <img src="./Conclusion.assets/image-20241026234929476.png" alt="image-20241026234929476" style="zoom:50%;" />
+
+    我们这里用来比对的是（之一）欧几里得距离和余弦距离：
+
+    <img src="./Conclusion.assets/image-20241027003140666.png" alt="image-20241027003140666" style="zoom:50%;" />
+
+    ::: details
+
+    K-最近邻（KNN）分类器 是一种基于实例的学习方法。它不需要训练模型，而是在分类时直接使用训练数据。KNN通过计算新数据点与训练集中所有数据点之间的距离来找到最近的kkk个点，然后通过这些点的标签来决定新数据点的类别。KNN通常使用欧几里得距离，但也可以使用其他距离度量。
+
+    <img src="./Conclusion.assets/image-20241027004515674.png" alt="image-20241027004515674" style="zoom:33%;" />
+
+    :::
+
+    ::: info
+
+    如果我们用直方图来进行比对，有一些特定的公式可以把从图片上提取的直方图和一下特定样本比对：
+
+    <img src="./Conclusion.assets/image-20241027002435332.png" alt="image-20241027002435332" style="zoom:50%;" />
+
+    :::
+
+@tab Linear classifier
+
+- ==**线性分类器—— Linear classifiers**==
+
+    线性分类器的主要步骤如下：
+
+    1. **定义线性函数**：假设线性分类器的形式为
+                                                            f(x) = w * x + b
+       其中，\( w \) 是权重向量，\( x \) 是输入样本特征向量，\( b \) 是偏置。目标是找到最优的\( w \)和\( b \)，以便将不同类别的数据分开。
+
+    2. **选择损失函数**：根据具体的分类器选择损失函数。例如：
+       - 感知机：基于误分类损失。
+       - 支持向量机（SVM）：基于最大化分类间隔的 hinge 损失。
+       - 线性回归：可以用于分类，但通常通过最小化均方误差来优化。
+
+    3. **优化权重和偏置**：使用梯度下降或其他优化算法最小化损失函数，找到最优的权重\( w \)和偏置\( b \)。例如，在支持向量机中，优化的目标是找到一个最大化分类间隔的分隔超平面。
+
+    4. **预测**：对于一个新的样本\( x \)，计算其分类分数
+
+       ​                                                       f(x) = w * x + b
+
+       根据分数的符号来确定类别。通常，正数表示一种类别，负数表示另一种类别。
+
+    5. **评估**：使用验证数据集或交叉验证等方法来评估分类器的性能，并根据需要调整参数以提高模型的泛化能力。
+
+    **总结**
+
+    线性分类器的基本步骤可以归纳为：定义线性模型，选择损失函数，优化模型参数（权重和偏置），然后利用优化后的模型进行预测。
+
+@tab Nearest neighbor VS Linear classifiers
+
+  <img src="./Conclusion.assets/image-20241027102108511.png" alt="image-20241027102108511" style="zoom:50%;" />
+
+@tab Support Vector Machines
+
+<img src="./Conclusion.assets/image-20241027105753823.png" alt="image-20241027105753823" style="zoom:33%;" />
+
+这些分隔线都能够将红色点和棕色点正确分类，因为数据是线性可分的。
+
+但问题是，哪一条分隔线才是最佳的？SVM的目标是找到一个**最优超平面**，这个超平面不仅能分隔两类数据，还能最大化与两类样本之间的间隔（称为“间隔最大化”）。选择间隔更大的分隔线可以提高模型的鲁棒性，对未来数据分类的准确性也更高。
+
+SVM可以通过在高维空间中寻找线性分隔面，进而在原始空间形成非线性边界来解决这个问题。此方法利用了**核函数**，将原始的特征映射到更高维的特征空间，使得在该空间内可以找到一个简单的线性决策边界。
+
+- Example：
+
+    <img src="./Conclusion.assets/image-20241027111558260.png" alt="image-20241027111558260" style="zoom:33%;" />
+
+    图中展示了一个较为复杂的分类问题。在这个例子中，决策边界是曲线的，而不是简单的直线，这是因为数据不是线性可分的。图中展示的是对“人脸”与“非人脸”分类的问题，经过复杂特征的学习后，形成了一个复杂的决策边界，从而可以在原始的空间中精确地区分两类数据。
+
+
+
+@tab 如何训练一个分类器
+
+• Goal: obtain a classifier with **good generalization** or performance on never before seen data
+
+1. Learn *parameters* on the **training set**
+2. Tune *hyperparameters* (implementation choices) on the*held out* **validation set**
+
+3. Evaluate performance on the **test set**
+
+​               • – Crucial: do not peek at the test set when iterating 
+
+​               steps 1 and 2!
+
+
+
+这张幻灯片讲解了机器学习模型的训练和评估流程，目的是得到一个**具有良好泛化能力的分类器**，即在从未见过的数据上也能保持较好的性能。具体步骤如下：
+
+1. **在训练集上学习参数**：
+   - **训练集（Training Set）**用于模型的训练。模型会在这个数据集上学习到特定的参数，以便能够尽可能准确地拟合训练数据。
+   - 在这个过程中，模型内部的参数（如权重）会根据数据进行调整，以最小化预测误差。
+
+2. **在验证集上调整超参数**：
+   - **验证集（Validation Set）**通常是从训练数据中分离出的一部分数据，不用于直接的参数学习，而是用于调整**超参数**。
+   - 超参数是模型构建时的某些设置选项，比如树的深度、学习率等。这些超参数不在训练过程中自动调整，而是由用户通过实验来手动优化。
+   - 验证集用于检查模型在不同超参数下的表现，从而帮助选择最佳的超参数组合。
+   - 需要注意的是，验证集数据不会影响模型的参数，而仅用于选择模型结构。
+
+3. **在测试集上评估模型性能**：
+   - **测试集（Test Set）**是用来评估模型最终性能的数据。它是完全隔离的数据集，模型在之前的训练和验证过程中都没有见过这部分数据。
+   - 测试集的主要目的是提供一个客观的标准来衡量模型的泛化能力。
+   - **重要提醒**：在整个模型的训练和验证过程中，绝对不能提前查看测试集的结果，因为这样会导致数据泄露，使得测试结果的客观性受到影响。
+
+
+
+<img src="./Conclusion.assets/image-20241027112710140.png" alt="image-20241027112710140" style="zoom:50%;" />
+
+这几张图片展示了模型训练过程中数据的分割和验证过程，特别强调了如何通过合理的数据集划分来优化模型的泛化能力和防止过拟合。
+
+1. **不建议直接使用测试集调参**：
+   - 第一张图表明，用测试集来调试和选择超参数是一种不好的做法，因为测试集应该作为模型最终性能的验证，不应该参与模型的训练过程。测试集是模型最终评估的代理，用于反映模型对全新数据的泛化性能，只有在最终评估时才少量使用。
+
+2. **分割训练集和验证集**：
+   - 第二张图展示了一种更好的做法，即将训练数据进一步分割为不同的“折”（fold）用于交叉验证。通常，我们将一部分数据保留为验证集，其他数据用于训练。然后使用该验证集来优化模型的超参数，而测试集仅在最后用于最终模型的性能评估。
+
+3. **交叉验证（Cross-validation）**：
+   - 第三张图展示了交叉验证的方法。交叉验证将训练数据集划分为多个部分（例如五折交叉验证）。每次选择一个“折”作为验证集，其他折用于训练模型，依次轮换，直到每个折都做过一次验证集。最后将各折的结果平均，得到模型的整体性能。这样可以更好地评估模型的稳定性和泛化能力。
+
+这套流程确保了模型的性能评估尽量客观，使得模型不仅在当前数据上表现良好，也能够在全新数据上具有良好的泛化性能。
+
+
+
+:::
+
+#### 3.1.5 Summar
+
+1. **Extract Local Features** from images.
+2. **Cluster Features** to form a visual vocabulary (create visual words).
+3. **Quantize Features** of each image based on the visual vocabulary.
+4. **Build Histograms** of visual words to represent each image.
+5. Optionally, **Classify** images using these histograms as feature vectors.
+
+This approach allows images to be represented by fixed-size vectors, making them suitable for machine learning models that require fixed-length inputs, regardless of the number of keypoints detected in each image.
+
+
+
+### 3.2 Choose recognize model
+
+**We have many images, these images contains grass, person,** **building. Now we want to classify them into three classes.** **How can we design the recognition model? What is the steps?**
