@@ -193,7 +193,7 @@ In the lecture, the professor uses (动物) who (动物特性) as an example to 
 
 :::
 
-![IMG_2462(20241019-105700)](./TOEFL_speaking3.assets/IMG_2462(20241019-105700).PNG)
+![IMG_2462(20241019-105700)](./TOEFL_speaking3.assets/IMG_2462(20241019-105700).png)
 
 
 
@@ -205,7 +205,7 @@ In the lecture, the professor uses (动物) who (动物特性) as an example to 
 
 会出现一些介绍植物或动物器官部分的内容。小技巧：形容词放在主语（动植物）前，动作和目的放主语后。同位语关系去抽象，讲实词。  
 
-<img src="./TOEFL_speaking3.assets/IMG_2463(20241019-112037).PNG" alt="IMG_2463(20241019-112037)" style="zoom:67%;" />
+<img src="./TOEFL_speaking3.assets/IMG_2463(20241019-112037).png" alt="IMG_2463(20241019-112037)" style="zoom:67%;" />
 
 
 
