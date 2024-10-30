@@ -1,5 +1,5 @@
 ---
-title: 计算机视觉 L 8 - L 10
+title: 计算机视觉 L 8 - L 9
 icon: python
 date: 2024-10-27 20:10:05
 author: XiaoXianYue
