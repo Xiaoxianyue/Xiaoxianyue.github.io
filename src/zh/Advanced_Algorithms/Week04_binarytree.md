@@ -1889,7 +1889,7 @@ class TreeNode:
 
 #### 8.2.3 先左旋后右旋
 
-<img src="./Week04_binarytree.assets/IMG_2466(20241020-152750).PNG" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
+<img src="./Week04_binarytree.assets/IMG_2466(20241020-152750).png" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
 
 #### 8.2.4 先右旋再左旋
 
