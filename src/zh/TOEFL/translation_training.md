@@ -442,7 +442,12 @@ Nevertheless, it is too absolute to define university education as the most impo
 
 #### 4.3 替换表达
 
-
+- 把…视作…：define/consider/regard … as…
+- 重视；强调：stress
+- 卓越的，杰出的：eminent；prominent ；distinguish。
+- 杰出的人物：eminent figures
+- abundant 一般用来修饰不可数名词， 一般不直接修饰可数名词的复数形式，改为 an abundant of
+- 
 
 
 
