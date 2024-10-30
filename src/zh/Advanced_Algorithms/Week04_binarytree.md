@@ -1825,7 +1825,7 @@ class TreeNode:
 
 #### 8.2.2 左旋
 
-<img src="./Week04_binarytree.assets/IMG_2464(20241020-151125).png" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
+<img src="./Week04_binarytree.assets/sksksksksksksksk.png" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
 
 4 是 node
 
