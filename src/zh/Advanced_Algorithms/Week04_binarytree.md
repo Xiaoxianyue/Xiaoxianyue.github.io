@@ -1773,11 +1773,11 @@ class TreeNode:
 
 
 
-<img src="./Week04_binarytree.assets/IMG_2455(20241018-112420).jpg" alt="IMG_2455(20241018-112420)" style="zoom:33%;" />
+<img src="./Week04_binarytree.assets/ksksksk.jpg" alt="IMG_2455(20241018-112420)" style="zoom:33%;" />
 
 
 
-<img src="./Week04_binarytree.assets/IMG_2456(20241018-112433).jpg" alt="IMG_2456(20241018-112433)" style="zoom:33%;" />
+<img src="./Week04_binarytree.assets/收拾收拾.jpg" alt="IMG_2456(20241018-112433)" style="zoom:33%;" />
 
 
 
@@ -1889,7 +1889,7 @@ class TreeNode:
 
 #### 8.2.3 先左旋后右旋
 
-<img src="./Week04_binarytree.assets/IMG_2466(20241020-152750).png" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
+<img src="./Week04_binarytree.assets/睡啦卡卡车s.png" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
 
 #### 8.2.4 先右旋再左旋
 
