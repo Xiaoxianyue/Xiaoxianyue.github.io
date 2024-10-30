@@ -1825,11 +1825,11 @@ class TreeNode:
 
 #### 8.2.2 左旋
 
-<img src="./Week04_binarytree.assets/IMG_2464(20241020-151125).PNG" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
+<img src="./Week04_binarytree.assets/IMG_2464(20241020-151125).png" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
 
 4 是 node
 
-<img src="./Week04_binarytree.assets/IMG_2465(20241020-151339).PNG" alt="IMG_2465(20241020-151339)" style="zoom:33%;" />
+<img src="./Week04_binarytree.assets/IMG_2465(20241020-151339).png" alt="IMG_2465(20241020-151339)" style="zoom:33%;" />
 
 1 是 node
 
