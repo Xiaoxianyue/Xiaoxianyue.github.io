@@ -521,7 +521,7 @@ A **random variable** is a variable whose possible values are outcomes of a rand
 - A random variable x denotes a quantity that is **uncertain**
 - Some values occur more than others and this information is captured by a **probability distribution**
 
-![image-20241028201012211](./ppt 89.assets/image-20241028201012211.png)
+![image-20241030151834269](./ppt 89.assets/image-20241030151834269.png)
 
 :::
 
@@ -685,7 +685,7 @@ Learning algorithm: learn parameters θ from training data.
 
 Inference algorithm: Define prior Pr(**w**) and then compute Pr(**w**|**x**) using Bayes’ rule.
 
-<img src="./ppt 89.assets/image-20241029111612208.png" alt="image-20241029111612208" style="zoom:50%;" />
+<img src="./ppt 89.assets/ttt8.png" alt="image-20241029111612208" style="zoom:50%;" />
 
 ### 2. Linear Regression
 

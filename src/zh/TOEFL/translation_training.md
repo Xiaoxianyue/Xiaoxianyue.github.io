@@ -447,9 +447,22 @@ Nevertheless, it is too absolute to define university education as the most impo
 - 卓越的，杰出的：eminent；prominent ；distinguish。
 - 杰出的人物：eminent figures
 - abundant 一般用来修饰不可数名词， 一般不直接修饰可数名词的复数形式，改为 an abundant of
-- 
+- 令人惊奇的：astoundingly 
+- sb. 成为关注的焦点：be brought into the limelight
+- 哈佛：Harvard
+- 建立：set up（强调开始建立的这个动作）；build up（强调慢慢建立的过程）
+- 征服，攻占：take … by storm
+- 行业：market industry
+- 得益于；归功于: … owes to …
+- 坚定地意志：strong will
+- 创造力：creativity
+- 坚持不懈的努力：everlasting diligence = persistent effort
+- 不言而喻的：Evidently
+- 表示 sb. 具备什么品质：possess，show，be characterized by
 
 
+
+### 5. 第四段
 
 
 
