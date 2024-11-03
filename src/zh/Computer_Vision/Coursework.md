@@ -28,11 +28,17 @@ toc: true
 
 
 
-## **1. What is the Gaussian Mixture Model (GMM) or Mixture of Gaussian(MoG) and how** to solve GMM via Expectation Maximization(EM)? **Further, why can the GMM or** MoG be solved well by the EM algorithm? Please explain the reason.
+## 1. Question 01
+
+> 1.1 What is the Gaussian Mixture Model (GMM) or Mixture of Gaussian(MoG) ?
+>
+> 1.2 how to solve GMM via Expectation Maximization(EM)? 
+>
+> 1.3 Further, why can the GMM or MoG be solved well by the EM algorithm? Please explain the reason.
 
 
 
-### 1. What is a Gaussian Mixture Model (GMM)?
+### 1.1 What is a Gaussian Mixture Model (GMM)?
 
 A Gaussian Mixture Model (GMM) is a probabilistic model. GMM assumes all data points are generated from a mixture of several Gaussian distributions, each with unknown parameters. Simply put, GMM assumes that a dataset consists of several different Gaussian distributions, with each distribution corresponding to a "subgroup" or "cluster" within the data. 
 
@@ -43,20 +49,20 @@ $$
 
 where:
 
-- $ K $ is the number of Gaussian distributions,
+- $K$ is the number of Gaussian distributions,
 - $\pi_k$ is  the mixing coefficient for the k-th Gaussian component, satisfying $\sum_{k=1}^K \pi_K$ = 1且 $\pi_k \geq$ 0 
 - $\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}_k, \boldsymbol{\Sigma}_k)$ is the Gaussian probability density function with mean $\mu_k$ and covariance matrix $\Sigma_k$.
 
-### 2. How to solve GMM using Expectation Maximization (EM)
+### 1.2 How to solve GMM using Expectation Maximization (EM)
 
-**GOAL:** to learn parameters $\theta = \{ \lambda_{1...K}, \mu_{1...K}, \Sigma_{1...K} \} $ from training data $ \mathbf{x}_{1...I} $. Estimate the mean, variance, and mixing weights of each Gaussian component.
+**GOAL:** to learn parameters $\theta = \{ \lambda_{1...K}, \mu_{1...K}, \Sigma_{1...K} \}$ from training data $\mathbf{x}_{1...I}$. Estimate the mean, variance, and mixing weights of each Gaussian component.
 
-1. **E-Step (Expectation Step)**: we maximize the bound with respect to the distributions $q(h_i)$by finding the posterior probability distribution  $Pr(h_i | x_i)$ of each hidden variable $ h_i$  given the observation  $x_i$ and the current parameter settings.
+1. **E-Step (Expectation Step)**: we maximize the bound with respect to the distributions $q(h_i)$by finding the posterior probability distribution  $Pr(h_i | x_i)$ of each hidden variable $h_i$  given the observation  $x_i$ and the current parameter settings.
 
-    For each data point $ \mathbf{x}_i$  and each Gaussian component $k$, calculate the responsibility (i.e., posterior probability):
-    $$ \gamma_{ik} = \frac{\pi_k \mathcal{N}(\mathbf{x}_i | \boldsymbol{\mu}_k, \boldsymbol{\Sigma}_k)}{\sum_{j=1}^{K} \pi_j \mathcal{N}(\mathbf{x}_i | \boldsymbol{\mu}_j, \boldsymbol{\Sigma}_j)} $$
+    For each data point $\mathbf{x}_i$  and each Gaussian component $k$, calculate the responsibility (i.e., posterior probability):
+    $$\gamma_{ik} = \frac{\pi_k \mathcal{N}(\mathbf{x}_i | \boldsymbol{\mu}_k, \boldsymbol{\Sigma}_k)}{\sum_{j=1}^{K} \pi_j \mathcal{N}(\mathbf{x}_i | \boldsymbol{\mu}_j, \boldsymbol{\Sigma}_j)}$$
 
-2. **M-Step (Maximization Step)**:we maximize the bound with respect to the parameters $\theta = \{ \lambda_k, \mu_k, \Sigma_k \}_{k=1}^K$. We update the weights $\lambda$ according to the relative total responsibility of each component for the data points. We update the cluster means $\mu$ by computing the weighted mean over the data points where the weights are given by the responsibilities.
+2. **M-Step (Maximization Step)**: we maximize the bound with respect to the parameters $\theta = \{ \lambda_k, \mu_k, \Sigma_k \}_{k=1}^K$. We update the weights $\lambda$ according to the relative total responsibility of each component for the data points. We update the cluster means $\mu$ by computing the weighted mean over the data points where the weights are given by the responsibilities.
 
     Update the mixing coefficients:
     $$ \pi_k = \frac{N_k}{N} $$
@@ -69,12 +75,12 @@ where:
 
     where:
 
-    - $ N$ is the total number of data points,
-    -  $N_k = \sum_{i=1}^{N} \gamma_{ik}$  is the total responsibility for component \( k \).
+    - $N$ is the total number of data points,
+    -  $N_k = \sum_{i=1}^{N} \gamma_{ik}$  is the total responsibility for component $k$.
 
 3. The E- and M-steps are alternated until the bound on the data no longer increases and the parameters no longer change.
 
-### 3. Why does the EM algorithm work well for GMM?
+### 1.3 Why does the EM algorithm work well for GMM?
 
 Using maximum likelihood estimation in a mixed Gaussian model (MoG) is a bit difficult because the likelihood function contains sum terms of multiple Gaussian distributions, which is troublesome to derive directly and simply cannot get the optimal solution easily.
 
@@ -88,9 +94,13 @@ By iterating the E and M steps, the EM algorithm can progressively optimise the 
 
 
 
-## **What about the difference between linear regression and logistic regression?** **If we** want to solve real-world related tasks, how do we choose these two methods?
+## 2. Question 2
 
-### 1. Differences Between Linear Regression and Logistic Regression
+> 2.1 What about the difference between linear regression and logistic regression? 
+>
+> 2.2 If we want to solve real-world related tasks, how do we choose these two methods?
+
+### 2.1 Differences Between Linear Regression and Logistic Regression
 
 1. **Output Type:**
 
@@ -109,7 +119,7 @@ By iterating the E and M steps, the EM algorithm can progressively optimise the 
         - Explanation: Directly fits a linear equation to predict specific numerical values of the dependent variable.
 
     - Logistic Regression:
-        - Formula: $P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \dots + \beta_n X_n)}} $
+        - Formula: $P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \dots + \beta_n X_n)}}$
         - Explanation: Uses the Sigmoid function to map a linear combination to a probability between 0 and 1.
 
 4. **Fitting method**
@@ -137,7 +147,7 @@ By iterating the E and M steps, the EM algorithm can progressively optimise the 
 
     
 
-### 2. How to Choose in Practical Tasks）
+### 2.2 How to Choose in Practical Tasks
 
 1. **Based on the Type of Target Variable**
 
@@ -159,7 +169,13 @@ In summary:
 
 
 
-## **3. There are many feature descriptors to represent the image, for example, HOG, SIFT, GIST, BOW, and so on. Please choose one feature descriptor to explain its definition and function. It is encouraged to analyze/explain the reason or advantage why you select the feature descriptor. **If an example could be used to introduce it, it would be better.
+## 3. Question 3
+
+> 3.1 Please choose one feature descriptor to explain its definition and function. 
+>
+> 3.2 It is encouraged to analyze/explain the reason or advantage why you select the feature descriptor. 
+>
+> 3.3 If an example could be used to introduce it, it would be better.
 
 ### 3.1 What is SIFT?
 
@@ -185,8 +201,8 @@ The SIFT algorithm includes four main steps:
 
         - Gaussian function is a smoothing function, using Gaussian blurring we can smooth the image to remove noise, but at the same time we can still keep the main structure of the image.
         - The image is convolved with Gaussian kernels of different scales to produce images of different scales, note that the scale transformation of the Gaussian convolution is continuous. In this way we can apply the Gaussian pyramid to detect scale-independent keypoints.
-
-​      :::
+    
+    :::
 
 2. **Key point localization**: It precisely locates the key points and removes unstable ones, such as low-contrast points or edge response points.
 
@@ -220,3 +236,16 @@ The SIFT algorithm includes four main steps:
 ### 3.3 **Example:**
 
 Imagine we have two images of the same object. One is a close-up from the front, and the other is taken from the side at a distance, with different lighting conditions. Using the SIFT algorithm, we can detect key points in both images and match them by comparing their feature descriptors. This way, even if the images differ in scale, angle, and lighting, we can still identify that they are images of the same object.
+
+
+
+
+
+## 4. Additional information on assignments
+
+- This article is written in Markdown language (usually used to write articles written in Markdown language), the preparation process using the software Typora and uploaded to my github and personal website, the submitted version for the export of the pdf. format, if you need to visit the website of this article, please click the link [coursework](https://bougiemoonintaurus.com/zh/Computer_Vision/Coursework.html) , password：cvjy
+
+- Some of the visual effects of the article are only visible on the website and not in the pdf.
+
+- The images in the assignment are taken from the ppt that was taught in class.
+
