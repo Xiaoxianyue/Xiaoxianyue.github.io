@@ -65,13 +65,13 @@ where:
 2. **M-Step (Maximization Step)**: we maximize the bound with respect to the parameters $\theta = \{ \lambda_k, \mu_k, \Sigma_k \}_{k=1}^K$. We update the weights $\lambda$ according to the relative total responsibility of each component for the data points. We update the cluster means $\mu$ by computing the weighted mean over the data points where the weights are given by the responsibilities.
 
     Update the mixing coefficients:
-    $$ \pi_k = \frac{N_k}{N} $$
+    $$ \pi_k = \frac{N_k}{N}$$
 
     Update the means:
     $$ \boldsymbol{\mu}_k = \frac{1}{N_k} \sum_{i=1}^{N} \gamma_{ik} \mathbf{x}_i $$
 
     Update the covariance matrices:
-    $$ \boldsymbol{\Sigma}_k = \frac{1}{N_k} \sum_{i=1}^{N} \gamma_{ik} (\mathbf{x}_i - \boldsymbol{\mu}_k)(\mathbf{x}_i - \boldsymbol{\mu}_k)^\top $$
+    $$\boldsymbol{\Sigma}_k = \frac{1}{N_k} \sum_{i=1}^{N} \gamma_{ik} (\mathbf{x}_i - \boldsymbol{\mu}_k)(\mathbf{x}_i - \boldsymbol{\mu}_k)^\top$$
 
     where:
 

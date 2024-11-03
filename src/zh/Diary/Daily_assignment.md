@@ -159,7 +159,7 @@ toc: true
 
 ### 1. 计算机视觉
 
-- [ ] 默写完 Lecture 567 的 Review Question
+- [x] 默写完 Lecture 567 的 Review Question
 - [ ] 复习 Lecture 567 8910
 
 ### 2. 高级算法
