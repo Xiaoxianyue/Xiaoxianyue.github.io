@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第2周ppt——排序算法
+title: 高级算法——第二周ppt——排序算法
 icon: python
 date: 2024-9-08 19:26:19
 author: XiaoXianYue

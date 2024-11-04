@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第3周ppt——搜索算法和堆
+title: 高级算法——第三周ppt——搜索算法和堆
 icon: python
 date: 2024-9-21 21:13:31
 author: XiaoXianYue
