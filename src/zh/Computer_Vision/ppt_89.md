@@ -30,11 +30,11 @@ toc: true
 
 Discrete :
 
-<img src="./ppt 89.assets/image-20241027201718846.png" alt="image-20241027201718846" style="zoom:33%;" />
+<img src="./ppt_89.assets/image-20241027201718846.png" alt="image-20241027201718846" style="zoom:33%;" />
 
 Continuous :
 
-<img src="./ppt 89.assets/image-20241027201744702.png" alt="image-20241027201744702" style="zoom:33%;" />
+<img src="./ppt_89.assets/image-20241027201744702.png" alt="image-20241027201744702" style="zoom:33%;" />
 
 ### 1.2 Joint Probability
 
@@ -75,7 +75,7 @@ Continuous :
 
 边缘化广泛应用于概率和统计学中，用来计算单一变量的分布，即使在实际中我们关注的是联合分布。
 
-<img src="./ppt 89.assets/image-20241027202909032.png" alt="image-20241027202909032" style="zoom:33%;" />
+<img src="./ppt_89.assets/image-20241027202909032.png" alt="image-20241027202909032" style="zoom:33%;" />
 
 :::
 
@@ -87,21 +87,21 @@ Continuous :
 
 • Extract appropriate slice and normalize
 
-<img src="./ppt 89.assets/image-20241027204655653.png" alt="image-20241027204655653" style="zoom: 50%;" />
+<img src="./ppt_89.assets/image-20241027204655653.png" alt="image-20241027204655653" style="zoom: 50%;" />
 
 - 求解公式：
 
-    ![image-20241027204805392](./ppt 89.assets/image-20241027204805392.png)
+    ![image-20241027204805392](./ppt_89.assets/image-20241027204805392.png)
 
 - 延伸至高阶
 
-    ![image-20241027204853946](./ppt 89.assets/image-20241027204853946.png)
+    ![image-20241027204853946](./ppt_89.assets/image-20241027204853946.png)
 
 ### 1.5 Bayes' Rule
 
-<img src="./ppt 89.assets/image-20241027205543522.png" alt="image-20241027205543522" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241027205543522.png" alt="image-20241027205543522" style="zoom:50%;" />
 
-<img src="./ppt 89.assets/image-20241027205602049.png" alt="image-20241027205602049" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241027205602049.png" alt="image-20241027205602049" style="zoom:50%;" />
 
 
 
@@ -119,13 +119,13 @@ Continuous :
 
 - 离散时：
 
-    ![image-20241027221737039](./ppt 89.assets/image-20241027221737039.png)
+    ![image-20241027221737039](./ppt_89.assets/image-20241027221737039.png)
 
 - 连续时:
 
-    ![image-20241027222233423](./ppt 89.assets/image-20241027222233423.png)
+    ![image-20241027222233423](./ppt_89.assets/image-20241027222233423.png)
 
-![image-20241027222244376](./ppt 89.assets/image-20241027222244376.png)
+![image-20241027222244376](./ppt_89.assets/image-20241027222244376.png)
 
 
 
@@ -143,11 +143,11 @@ Continuous :
 
 只有 0 和 1 的情况
 
-<img src="./ppt 89.assets/image-20241027225533474.png" alt="image-20241027225533474" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241027225533474.png" alt="image-20241027225533474" style="zoom:50%;" />
 
 ### 1.9 Beta Distribution
 
-![image-20241027232323261](./ppt 89.assets/image-20241027232323261.png)
+![image-20241027232323261](./ppt_89.assets/image-20241027232323261.png)
 
 ::: details Beta分布和 Bernoulli Distribution 的关系
 
@@ -157,7 +157,7 @@ Continuous :
 
 - **伯努利分布**描述了二元随机变量的分布，即事件成功的概率为 \( p \)（例如投掷硬币正面朝上的概率），其概率质量函数为：
   
-  ![image-20241027234909233](./ppt 89.assets/image-20241027234909233.png)
+  ![image-20241027234909233](./ppt_89.assets/image-20241027234909233.png)
   
 - **Beta分布**可以看作是对这个成功概率 \( p \) 的一个概率模型。Beta分布用于表示 \( p \) 的不确定性。也就是说，我们并不直接知道 \( p \) 的值，而是通过 Beta 分布来描述我们对 \( p \) 的信念。
 
@@ -190,11 +190,11 @@ Beta分布和伯努利分布的关系在于，Beta分布可以作为伯努利分
 
 分类分布（Categorical Distribution）的公式确实涉及概率的表示，但并不是将所有取值的概率相乘，而是通过一个简单的表达式来表明某个特定类别发生的概率。
 
-![image-20241028000705459](./ppt 89.assets/image-20241028000705459.png)
+![image-20241028000705459](./ppt_89.assets/image-20241028000705459.png)
 
 ::: info
 
-![image-20241028110307514](./ppt 89.assets/image-20241028110307514.png)
+![image-20241028110307514](./ppt_89.assets/image-20241028110307514.png)
 
 :::
 
@@ -224,11 +224,11 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 分类分布公式为：
 
-![image-20241028000824104](./ppt 89.assets/image-20241028000824104.png)
+![image-20241028000824104](./ppt_89.assets/image-20241028000824104.png)
 
 这里的 \( x j \) 是向量 \( e 3 \) 中的元素。因为独热向量的第三个位置为1，其他位置为0，上式会变成：
 
-![image-20241028000906053](./ppt 89.assets/image-20241028000906053.png)
+![image-20241028000906053](./ppt_89.assets/image-20241028000906053.png)
 
 因此，掷出“3”的概率就是0.3。
 
@@ -244,11 +244,11 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 @tab 概率密度函数
 
-![image-20241028111502992](./ppt 89.assets/image-20241028111502992.png)
+![image-20241028111502992](./ppt_89.assets/image-20241028111502992.png)
 
 @tab 图形解释
 
-![image-20241028112138008](./ppt 89.assets/image-20241028112138008.png)
+![image-20241028112138008](./ppt_89.assets/image-20241028112138008.png)
 
 - 图中左侧三角形图（a）展示了一个二维情况下的三维空间，表示 λ1,λ2,λ3的所有可能组合。
 
@@ -262,15 +262,15 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 @tab 概率密度函数
 
-![image-20241028113358468](./ppt 89.assets/image-20241028113358468.png)
+![image-20241028113358468](./ppt_89.assets/image-20241028113358468.png)
 
 或者又可以写作：
 
-![image-20241028113429673](./ppt 89.assets/image-20241028113429673.png)
+![image-20241028113429673](./ppt_89.assets/image-20241028113429673.png)
 
 @tab 图示
 
-<img src="./ppt 89.assets/image-20241028113955457.png" alt="image-20241028113955457" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028113955457.png" alt="image-20241028113955457" style="zoom:50%;" />
 
 - 绿色曲线：均值 μ=−3.4方差 σ2=0.25。
 
@@ -289,11 +289,11 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 @tab 概率密度函数
 
-![image-20241028115816229](./ppt 89.assets/image-20241028115816229.png)
+![image-20241028115816229](./ppt_89.assets/image-20241028115816229.png)
 
 @tab 图示
 
-<img src="./ppt 89.assets/image-20241028120312355.png" alt="image-20241028120312355" style="zoom:67%;" />
+<img src="./ppt_89.assets/image-20241028120312355.png" alt="image-20241028120312355" style="zoom:67%;" />
 
 下方的热力图展示了在不同参数组合下正态逆伽马分布的概率密度。每张图上方的括号内容表示具体的参数值组合，例如：
 
@@ -308,19 +308,19 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 ### 1.14 Multivariate Normal Distribution
 
-![image-20241028120701500](./ppt 89.assets/image-20241028120701500.png)
+![image-20241028120701500](./ppt_89.assets/image-20241028120701500.png)
 
 ### 1.15 Normal Inverse Wishart
 
-![image-20241028120731059](./ppt 89.assets/image-20241028120731059.png)
+![image-20241028120731059](./ppt_89.assets/image-20241028120731059.png)
 
-![image-20241028120747482](./ppt 89.assets/image-20241028120747482.png)
+![image-20241028120747482](./ppt_89.assets/image-20241028120747482.png)
 
 ### 1.16 Conjugate Distributions
 
 ::: info 常见的共轭分布
 
- <img src="./ppt 89.assets/image-20241028121314041.png" alt="image-20241028121314041" style="zoom:33%;" />
+ <img src="./ppt_89.assets/image-20241028121314041.png" alt="image-20241028121314041" style="zoom:33%;" />
 
 :::
 
@@ -342,7 +342,7 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
     把后验分布：把先验分布与似然函数相乘，得到的后验分布仍然是 Beta 分布的形式。
 
-    <img src="./ppt 89.assets/image-20241028123535402.png" alt="image-20241028123535402" style="zoom:50%;" />
+    <img src="./ppt_89.assets/image-20241028123535402.png" alt="image-20241028123535402" style="zoom:50%;" />
 
 
 
@@ -352,11 +352,11 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 - 在贝叶斯公式中，后验概率 Pr(y∣x) 是通过结合似然 Pr(x∣y) 和先验分布 Pr(y)计算得到的。共轭分布的一个重要特性是，当我们将先验分布和似然相乘时，得到的后验分布形式与先验分布相同，这就是“共轭”的含义。
 
-<img src="./ppt 89.assets/image-20241028145020012.png" alt="image-20241028145020012" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028145020012.png" alt="image-20241028145020012" style="zoom:50%;" />
 
 ::: details
 
-![image-20241028153349691](./ppt 89.assets/image-20241028153349691.png)
+![image-20241028153349691](./ppt_89.assets/image-20241028153349691.png)
 
 
 
@@ -370,7 +370,7 @@ e 3 = [0, 0, 1, 0, 0, 0]
 
 目标是找到一组参数 θ 使得观测到的数据 X1, X2,…,XI 在该参数下的概率最大化。换句话说，MLE 旨在找到最能解释数据的参数。
 
-<img src="./ppt 89.assets/image-20241028161325093.png" alt="image-20241028161325093" style="zoom:80%;" />
+<img src="./ppt_89.assets/image-20241028161325093.png" alt="image-20241028161325093" style="zoom:80%;" />
 
 We have assumed that data was independent (hence product)
 
@@ -398,7 +398,7 @@ We have assumed that data was independent (hence product)
 
 也假设数据都是独立的。
 
-<img src="./ppt 89.assets/image-20241028163353111.png" alt="image-20241028163353111" style="zoom:67%;" />
+<img src="./ppt_89.assets/image-20241028163353111.png" alt="image-20241028163353111" style="zoom:67%;" />
 
 
 
@@ -410,7 +410,7 @@ We have assumed that data was independent (hence product)
 
 Compute the posterior distribution over possible parameter values using Bayes’ rule:
 
-![image-20241028164632595](./ppt 89.assets/image-20241028164632595.png)
+![image-20241028164632595](./ppt_89.assets/image-20241028164632595.png)
 
 贝叶斯方法的一个核心思想是通过已知的数据来更新关于参数 θ 的知识，得到其后验分布。
 
@@ -437,7 +437,7 @@ Compute the posterior distribution over possible parameter values using Bayes’
 
 后验分布 \( P(θ | x_{1...I}) \) 表示在观察了数据 \( x_{1...I} \) 后，我们对参数 \( θ \) 的更新后的信念。根据贝叶斯定理，后验分布的计算公式为：
 
-<img src="./ppt 89.assets/image-20241028165938691.png" alt="image-20241028165938691" style="zoom: 50%;" />
+<img src="./ppt_89.assets/image-20241028165938691.png" alt="image-20241028165938691" style="zoom: 50%;" />
 
 这里：
 - \( P(x_{1...I} |θ) \) 是似然函数，表示在给定参数 \( θ \) 的条件下观测到数据 \( x_{1...I} \) 的概率。
@@ -462,7 +462,7 @@ Compute the posterior distribution over possible parameter values using Bayes’
 
 • Some parameters more probable than others
 
-<img src="./ppt 89.assets/image-20241028170307868.png" alt="image-20241028170307868" style="zoom:80%;" />
+<img src="./ppt_89.assets/image-20241028170307868.png" alt="image-20241028170307868" style="zoom:80%;" />
 
 Make a prediction that is an infinite weighted sum (integral) of the predictions for each parameter value, where weights are the probabilities.
 
@@ -480,19 +480,19 @@ Make a prediction that is an infinite weighted sum (integral) of the predictions
 
 Evaluate new data point under probability distribution with ML parameters
 
-![image-20241028172139566](./ppt 89.assets/image-20241028172139566.png)
+![image-20241028172139566](./ppt_89.assets/image-20241028172139566.png)
 
 **2. Maximum a posteriori:**
 
 Evaluate new data point under probability distribution with MAP parameters
 
-![image-20241028172155352](./ppt 89.assets/image-20241028172155352.png)
+![image-20241028172155352](./ppt_89.assets/image-20241028172155352.png)
 
 **3. Bayesian:**
 
 Calculate weighted sum of predictions from all possible values of parameters
 
-![image-20241028172212701](./ppt 89.assets/image-20241028172212701.png)
+![image-20241028172212701](./ppt_89.assets/image-20241028172212701.png)
 
 
 
@@ -521,7 +521,7 @@ A **random variable** is a variable whose possible values are outcomes of a rand
 - A random variable x denotes a quantity that is **uncertain**
 - Some values occur more than others and this information is captured by a **probability distribution**
 
-![image-20241030151834269](./ppt 89.assets/image-20241030151834269.png)
+![image-20241030151834269](./ppt_89.assets/image-20241030151834269.png)
 
 :::
 
@@ -535,21 +535,21 @@ In another way …
 
 The conditional probability \( P(x | y = y_1) \) represents the probability of event \( x \) occurring given that event \( y = y_1 \) has already occurred.
 
-<img src="./ppt 89.assets/image-20241028201747950.png" alt="image-20241028201747950" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028201747950.png" alt="image-20241028201747950" style="zoom:50%;" />
 
 ### 3. **The definition of Bayesian Rule**
 
 首先我们得到：
 
-<img src="./ppt 89.assets/image-20241028202519998.png" alt="image-20241028202519998" style="zoom: 50%;" />
+<img src="./ppt_89.assets/image-20241028202519998.png" alt="image-20241028202519998" style="zoom: 50%;" />
 
 然后我们可以进行变换，得到 Bayes’ Rule：
 
-<img src="./ppt 89.assets/image-20241028202639040.png" alt="image-20241028202639040" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028202639040.png" alt="image-20241028202639040" style="zoom:50%;" />
 
 解析 Bayes‘ Rule：
 
-<img src="./ppt 89.assets/image-20241028194942381.png" alt="image-20241028194942381" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028194942381.png" alt="image-20241028194942381" style="zoom:50%;" />
 
 
 
@@ -559,19 +559,19 @@ The conditional probability \( P(x | y = y_1) \) represents the probability of e
 
 Evaluate new data point x* under probability distribution with ML parameters
 
-![image-20241028172139566](./ppt 89.assets/image-20241028172139566.png)
+![image-20241028172139566](./ppt_89.assets/image-20241028172139566.png)
 
 **2. Maximum a posteriori:**
 
 Evaluate new data point x* under probability distribution with MAP parameters
 
-![image-20241028172155352](./ppt 89.assets/image-20241028172155352.png)
+![image-20241028172155352](./ppt_89.assets/image-20241028172155352.png)
 
 **3. Bayesian:**
 
 Calculate weighted sum of predictions from all possible values of parameters
 
-![image-20241028172212701](./ppt 89.assets/image-20241028172212701.png)
+![image-20241028172212701](./ppt_89.assets/image-20241028172212701.png)
 
 
 
@@ -583,11 +583,11 @@ Calculate weighted sum of predictions from all possible values of parameters
 
 Probability Mass Function (PMF)：
 
-<img src="./ppt 89.assets/image-20241028211328059.png" alt="image-20241028211328059" style="zoom: 33%;" />
+<img src="./ppt_89.assets/image-20241028211328059.png" alt="image-20241028211328059" style="zoom: 33%;" />
 
 写作：
 
-<img src="./ppt 89.assets/image-20241028211356956.png" alt="image-20241028211356956" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028211356956.png" alt="image-20241028211356956" style="zoom:50%;" />
 
 
 
@@ -597,13 +597,13 @@ The **Categorical distribution** generalizes the Bernoulli distribution to handl
 
 Probability Mass Function：
 
-<img src="./ppt 89.assets/image-20241028211906427.png" alt="image-20241028211906427" style="zoom: 33%;" />
+<img src="./ppt_89.assets/image-20241028211906427.png" alt="image-20241028211906427" style="zoom: 33%;" />
 
-​                                            <img src="./ppt 89.assets/image-20241028212025558.png" alt="image-20241028212025558" style="zoom:50%;" />   
+​                                            <img src="./ppt_89.assets/image-20241028212025558.png" alt="image-20241028212025558" style="zoom:50%;" />   
 
 
 
-![image-20241028213137862](./ppt 89.assets/image-20241028213137862.png)
+![image-20241028213137862](./ppt_89.assets/image-20241028213137862.png)
 
 
 
@@ -611,15 +611,15 @@ Probability Mass Function：
 
 Probability Density Function (PDF)：
 
-<img src="./ppt 89.assets/image-20241028213430962.png" alt="image-20241028213430962" style="zoom:33%;" />
+<img src="./ppt_89.assets/image-20241028213430962.png" alt="image-20241028213430962" style="zoom:33%;" />
 
-<img src="./ppt 89.assets/image-20241028213441225.png" alt="image-20241028213441225" style="zoom:50%;" />
+<img src="./ppt_89.assets/image-20241028213441225.png" alt="image-20241028213441225" style="zoom:50%;" />
 
 #### 5.4 Multivariate Normal Distribution
 
 The **Multivariate Normal distribution** generalizes the univariate normal distribution to multiple dimensions. It is defined by a mean vector μ\muμ and a covariance matrix Σ.
 
-![image-20241028214510342](./ppt 89.assets/image-20241028214510342.png)
+![image-20241028214510342](./ppt_89.assets/image-20241028214510342.png)
 
 - μ is the d-dimensional mean vector.
 
@@ -649,7 +649,7 @@ Multivariate normal distribution describes multiple continuous variables. Takes 
 
 5. 不同的世界状态的输出对应的模型类型：
 
-    ![image-20241029120131551](./ppt 89.assets/image-20241029120131551.png)
+    ![image-20241029120131551](./ppt_89.assets/image-20241029120131551.png)
 
 ### 1. Model
 
@@ -685,7 +685,7 @@ Learning algorithm: learn parameters θ from training data.
 
 Inference algorithm: Define prior Pr(**w**) and then compute Pr(**w**|**x**) using Bayes’ rule.
 
-<img src="./ppt 89.assets/ttt8.png" alt="image-20241029111612208" style="zoom:50%;" />
+<img src="./ppt_89.assets/ttt8.png" alt="image-20241029111612208" style="zoom:50%;" />
 
 ### 2. Linear Regression
 
@@ -715,13 +715,13 @@ Consider:
 
 - 整个函数可以和简写成：
 
-    ![image-20241029121022435](./ppt 89.assets/image-20241029121022435.png)
+    ![image-20241029121022435](./ppt_89.assets/image-20241029121022435.png)
 
 - Learning algorithm
 
     E.g. MAP
 
-    <img src="./ppt 89.assets/image-20241029121122770.png" alt="image-20241029121122770" style="zoom:50%;" />
+    <img src="./ppt_89.assets/image-20241029121122770.png" alt="image-20241029121122770" style="zoom:50%;" />
 
 - Inference algorithm: just evaluate Pr(**w**|**x,**𝜃) for new data **x**
 
@@ -749,7 +749,7 @@ Consider:
 
 推理算法的目标是通过贝叶斯规则计算后验分布 \( P(w|x) \)。计算后验分布时，我们会定义 \( P(w) \) 的先验分布（这里使用伯努利分布表示二分类的先验概率），然后通过贝叶斯公式：
 
-![image-20241029123211634](./ppt 89.assets/image-20241029123211634.png)
+![image-20241029123211634](./ppt_89.assets/image-20241029123211634.png)
 
 在离散情况下，这可以简化为求和形式。
 
@@ -761,7 +761,7 @@ Consider:
 
 ### 4. Review Questions
 
-![image-20241029124224566](./ppt 89.assets/image-20241029124224566.png)
+![image-20241029124224566](./ppt_89.assets/image-20241029124224566.png)
 
 #### 4.1 
 
