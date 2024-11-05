@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第一周非评估作业
+title: 高级算法——第1周非评估作业
 icon: python
 date: 2024-9-08 16:13:41
 author: XiaoXianYue
@@ -28,7 +28,7 @@ toc: true
 
 ##  非评估任务1：字符串合并
 
-<img src="./Week01_work.assets/image-20240908161653464.png" alt="image-20240908161653464" style="zoom:50%;" />
+<img src="./Week01_ass.assets/image-20240908161653464.png" alt="image-20240908161653464" style="zoom:50%;" />
 
 以下代码均为看懂了学校给的代码的逻辑，然后自己重新写出的版本。
 
@@ -75,7 +75,7 @@ print(merge_string(str1, str2))
 
 ## 非评估任务2：阿姆斯特朗数字
 
-<img src="./Week01_work.assets/image-20240908163030766.png" alt="image-20240908163030766" style="zoom:67%;" />
+<img src="./Week01_ass.assets/image-20240908163030766.png" alt="image-20240908163030766" style="zoom:67%;" />
 
 **Solution （by myself):**
 
@@ -131,7 +131,7 @@ else:
 
 ## 非评估作业 3 ： 阶乘是否能被整除？
 
-<img src="./Week01_work.assets/image-20240908165155571.png" alt="image-20240908165155571" style="zoom:50%;" />
+<img src="./Week01_ass.assets/image-20240908165155571.png" alt="image-20240908165155571" style="zoom:50%;" />
 
 **Solution(by myself):**
 
@@ -217,7 +217,7 @@ else:
 
 ## 非评估任务4：满载糖果的卡车
 
-<img src="./Week01_work.assets/image-20240908172442594.png" alt="image-20240908172442594" style="zoom:50%;" />
+<img src="./Week01_ass.assets/image-20240908172442594.png" alt="image-20240908172442594" style="zoom:50%;" />
 
 
 
@@ -285,7 +285,7 @@ main()
 
 ## 非评估任务5：八皇后
 
-<img src="./Week01_work.assets/image-20240908181946992.png" alt="image-20240908181946992" style="zoom:67%;" />
+<img src="./Week01_ass.assets/image-20240908181946992.png" alt="image-20240908181946992" style="zoom:67%;" />
 
 参考链接：https://en.wikipedia.org/wiki/Eight_queens_puzzle
 

@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第六周ppt总结
+title: 高级算法——第6周ppt总结
 icon: python
 date: 2024-10-30 11:28:41
 author: XiaoXianYue

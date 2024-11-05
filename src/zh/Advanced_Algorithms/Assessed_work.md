@@ -467,6 +467,7 @@ class BinaryTree:
         return lines, n + m + u, max(p, q) + 2, n + u // 2
 
     def remove(self, target):
+
         if self.root is None:  # If the tree is empty, return immediately.
             return False
         elif self.root.data == target:  # if tree root is target
@@ -474,31 +475,33 @@ class BinaryTree:
                 # If the tree root has no children, then `root_child = None`.
                 root_child = self.root.left or self.root.right
                 self.root = root_child  # Directly delete the root node.
-        else:
-            self.root = self.if_left_and_right(self.root)
-
-        """The tree root is not the target"""
-        cur, parent = self.root, None
-        while cur is not None and cur.data != target:
-            parent = cur
-            if target < parent.data:
-                cur = cur.left
-            elif target > parent.data:
-                cur = cur.right
-        # The while loop has ended, and the target node has been found and stored in `cur`.
-        if cur is None:  # case 1:Target not found
-            return  # end the function
-
-        elif cur.left is None or cur.right is None:
-            # If `cur` has no children, then `child = None`.
-            child = cur.right or cur.left
-            # Delete the node `cur` and replace it with its left or right subtree in its position.
-            if target < parent.data:
-                parent.left = child
             else:
-                parent.right = child
+                self.root = self.if_left_and_right(self.root)
+            return True
         else:
-            self.if_left_and_right(cur)
+            """The tree root is not the target"""
+            cur, parent = self.root, None
+            while cur is not None and cur.data != target:
+                parent = cur
+                if target < parent.data:
+                    cur = cur.left
+                elif target > parent.data:
+                    cur = cur.right
+            # The while loop has ended, and the target node has been found and stored in `cur`.
+            if cur is None:  # case 1:Target not found
+                return  # end the function
+
+            elif cur.left is None or cur.right is None:
+                # If `cur` has no children, then `child = None`.
+                child = cur.right or cur.left
+                # Delete the node `cur` and replace it with its left or right subtree in its position.
+                if target < parent.data:
+                    parent.left = child
+                else:
+                    parent.right = child
+            else:
+                self.if_left_and_right(cur)
+
 
     def if_left_and_right(self, node):  # called if delete node whether root or otherwise
         pre = node
@@ -549,9 +552,19 @@ bst.display(bst.root)
 
 
 
+## **Assessed Advanced Task 2**: Implement Dijkstra’s Algorithm  
 
+Using the given code on Aula, in the folder DIJKSTRA-CODE-ADV-TASK-2, complete the existing Python code to produce code that works for the example below (same as Week 6 lecture), plus any other (come up with alternative graphs for testing purposes). You need to complete the code where indicated. 
 
+The code, if working, will output the correct solution for the graph below. 
 
+<img src="./Assessed_work.assets/image-20241105004520083.png" alt="image-20241105004520083" style="zoom: 25%;" />
+
+The output from your code should look something like this – a list of the nodes which is the lowest cost path, as well as the cost itself:
+
+```python
+(['O', 'A', 'B', 'D', 'T'], 13)
+```
 
 
 

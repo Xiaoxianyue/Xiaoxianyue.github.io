@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第二周非评估作业
+title: 高级算法——第2周非评估作业
 icon: python
 date: 2024-9-13 13:59:03
 author: XiaoXianYue

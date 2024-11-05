@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第四周略讲——二叉树
+title: 高级算法——第4周略讲——二叉树
 icon: python
 date: 2024-9-26 21:18:12
 author: XiaoXianYue
@@ -40,7 +40,7 @@ class TreeNode:
 
 在二叉树中，除叶节点外，其他所有节点都包含子节点和非空子树。如图所示，如果讲“节点2”视作父节点，则其左子节点和右子节点分别是“节点4”和“节点5”，左子树是“节点4及其以下节点形成的树”，右子树是“节点5及其以下节点形成的树”。
 
-![](./Week04_binarytree.assets/aaa.png)
+![](./Week04.assets/aaa.png)
 
 常用术语：
 
@@ -53,7 +53,7 @@ class TreeNode:
 - 节点的深度（depth）：从根结点到该节点所经历边的数量。
 - 节点的高度（height）：从距离该节点最远的叶节点到该节点所经过的边的数量。
 
-![](./Week04_binarytree.assets/kskkk.png)
+![](./Week04.assets/kskkk.png)
 
 ::: warning
 
@@ -102,7 +102,7 @@ n2.right = n5
 
 1. 下图示意的是插入节点的过程。
 
-![](./Week04_binarytree.assets/5217dda2d00603619c9fd8cd8629436.jpg)
+![](./Week04.assets/5217dda2d00603619c9fd8cd8629436.jpg)
 
 插入节点的代码：
 
@@ -470,19 +470,19 @@ display(n1)
 
 完全二叉树（complete binary tree）只有最底层的节点未被填满，且最底层节点尽量靠左填充。
 
-<img src="./Week04_binarytree.assets/f836df0e315d62fd3e13984f8a56eda.jpg" alt="f836df0e315d62fd3e13984f8a56eda" style="zoom:33%;" />
+<img src="./Week04.assets/f836df0e315d62fd3e13984f8a56eda.jpg" alt="f836df0e315d62fd3e13984f8a56eda" style="zoom:33%;" />
 
 ### 3.3 完满二叉树
 
 完满二叉树（full binary tree）除了叶节点之外，其余所有节点都有两个子节点。
 
-<img src="./Week04_binarytree.assets/11996f9f3adbf474c69e91208810879.jpg" alt="11996f9f3adbf474c69e91208810879" style="zoom: 25%;" />
+<img src="./Week04.assets/11996f9f3adbf474c69e91208810879.jpg" alt="11996f9f3adbf474c69e91208810879" style="zoom: 25%;" />
 
 ### 3.4 平衡二叉树
 
 平衡二叉树（balanced binary tree）中任意节点的左子树和右子树的高度差的绝对值不超过1。
 
-<img src="./Week04_binarytree.assets/06a59b571390daafe4e082fe8608c12.jpg" alt="06a59b571390daafe4e082fe8608c12" style="zoom:33%;" />
+<img src="./Week04.assets/06a59b571390daafe4e082fe8608c12.jpg" alt="06a59b571390daafe4e082fe8608c12" style="zoom:33%;" />
 
 ### 3.5 二叉树退化
 
@@ -491,13 +491,13 @@ display(n1)
 - 完美二叉树是理想情况，可以充分发挥二叉树“分治”的优势。
 - 链表则是另一个极端，所有操作都变为线性操作，时间复杂度退化至 O(n)。
 
-<img src="./Week04_binarytree.assets/56eaf3705c725e54d4666ef0f01d78a.jpg" alt="56eaf3705c725e54d4666ef0f01d78a" style="zoom:33%;" />
+<img src="./Week04.assets/56eaf3705c725e54d4666ef0f01d78a.jpg" alt="56eaf3705c725e54d4666ef0f01d78a" style="zoom:33%;" />
 
 
 
 ::: details
 
-<img src="./Week04_binarytree.assets/8ee88391a9bfff5c4614774a753065a.jpg" alt="8ee88391a9bfff5c4614774a753065a" style="zoom:33%;" />
+<img src="./Week04.assets/8ee88391a9bfff5c4614774a753065a.jpg" alt="8ee88391a9bfff5c4614774a753065a" style="zoom:33%;" />
 
 ——chatgpt:
 
@@ -887,7 +887,7 @@ print(res)
 
 ## 5. 二叉树的数组表示
 
-![](./Week04_binarytree.assets/8f5218fb1b1261be094ca8f7d48398e.png)
+![](./Week04.assets/8f5218fb1b1261be094ca8f7d48398e.png)
 
 
 
@@ -1469,7 +1469,7 @@ if __name__ == '__main__':
 
 当待删除节点的度为 0 时，表示该节点是叶节点，可以直接删除。
 
-<img src="./Week04_binarytree.assets/7748085f65164c5deb5f865c920d51f.png" alt="7748085f65164c5deb5f865c920d51f" style="zoom:67%;" />
+<img src="./Week04.assets/7748085f65164c5deb5f865c920d51f.png" alt="7748085f65164c5deb5f865c920d51f" style="zoom:67%;" />
 
 当待删除节点的度为 1 时，将待删除节点替换为其子节点即可。
 
@@ -1629,7 +1629,7 @@ def remove(self, num: int):
 
 利用中序遍历升序的性质，我们在二叉搜索树中获取有序数据仅需 $O(n)$ 时间，无须进行额外的排序操作，非常高效。
 
-<img src="./Week04_binarytree.assets/904f7f53686d6f50eae19e9b21b10b1.png" alt="904f7f53686d6f50eae19e9b21b10b1" style="zoom:33%;" />
+<img src="./Week04.assets/904f7f53686d6f50eae19e9b21b10b1.png" alt="904f7f53686d6f50eae19e9b21b10b1" style="zoom:33%;" />
 
 #### 6.4.2 二叉搜索树的效率
 
@@ -1651,7 +1651,7 @@ def remove(self, num: int):
 
 然而，如果我们在二叉搜索树中不断地插入和删除节点，可能导致二叉树退化为图 7-23 所示的链表，这时各种操作的时间复杂度也会退化为 $O(n)$ 。
 
-<img src="./Week04_binarytree.assets/cc07789286479fa756a58bf6380a830.png" alt="cc07789286479fa756a58bf6380a830" style="zoom: 33%;" />
+<img src="./Week04.assets/cc07789286479fa756a58bf6380a830.png" alt="cc07789286479fa756a58bf6380a830" style="zoom: 33%;" />
 
 ### 6.5 二叉树的常见应用
 
@@ -1765,7 +1765,7 @@ class TreeNode:
 
 - 我们现将平衡因子的绝对值 > 1 的节点称为 “失衡节点” ，根据节点失衡情况不同，旋转操作分为四种：右旋，左旋，先右旋再左旋，先左旋再右旋。
 
-- <img src="./Week04_binarytree.assets/3579bb330340b1215203a315c12b14a.jpg" alt="3579bb330340b1215203a315c12b14a" style="zoom:67%;" />
+- <img src="./Week04.assets/3579bb330340b1215203a315c12b14a.jpg" alt="3579bb330340b1215203a315c12b14a" style="zoom:67%;" />
 
 #### 8.2.1 右旋
 
@@ -1773,11 +1773,11 @@ class TreeNode:
 
 
 
-<img src="./Week04_binarytree.assets/ksksksk.jpg" alt="IMG_2455(20241018-112420)" style="zoom:33%;" />
+<img src="./Week04.assets/ksksksk.jpg" alt="IMG_2455(20241018-112420)" style="zoom:33%;" />
 
 
 
-<img src="./Week04_binarytree.assets/收拾收拾.jpg" alt="IMG_2456(20241018-112433)" style="zoom:33%;" />
+<img src="./Week04.assets/收拾收拾.jpg" alt="IMG_2456(20241018-112433)" style="zoom:33%;" />
 
 
 
@@ -1825,11 +1825,11 @@ class TreeNode:
 
 #### 8.2.2 左旋
 
-<img src="./Week04_binarytree.assets/sksksksksksksksk.png" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
+<img src="./Week04.assets/sksksksksksksksk.png" alt="IMG_2464(20241020-151125)" style="zoom:33%;" />
 
 4 是 node
 
-<img src="./Week04_binarytree.assets/sasa.png" alt="IMG_2465(20241020-151339)" style="zoom:33%;" />
+<img src="./Week04.assets/sasa.png" alt="IMG_2465(20241020-151339)" style="zoom:33%;" />
 
 1 是 node
 
@@ -1889,11 +1889,11 @@ class TreeNode:
 
 #### 8.2.3 先左旋后右旋
 
-<img src="./Week04_binarytree.assets/睡啦卡卡车s.png" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
+<img src="./Week04.assets/睡啦卡卡车s.png" alt="IMG_2466(20241020-152750)" style="zoom: 33%;" />
 
 #### 8.2.4 先右旋再左旋
 
-<img src="./Week04_binarytree.assets/bbd9d2ed5fd62e474612bb643219930.jpg" alt="bbd9d2ed5fd62e474612bb643219930" style="zoom:33%;" />
+<img src="./Week04.assets/bbd9d2ed5fd62e474612bb643219930.jpg" alt="bbd9d2ed5fd62e474612bb643219930" style="zoom:33%;" />
 
 
 

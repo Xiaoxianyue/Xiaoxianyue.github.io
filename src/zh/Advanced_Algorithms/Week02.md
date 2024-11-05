@@ -1,5 +1,5 @@
 ---
-title: 高级算法——第二周ppt——排序算法
+title: 高级算法——第2周ppt——排序算法
 icon: python
 date: 2024-9-08 19:26:19
 author: XiaoXianYue
@@ -439,7 +439,7 @@ print(bogoSort(mylist))  # function call
 
 ### 2.1 排序原理
 
-<img src="./Week02_sorting.assets/image-20240913233744697.png" alt="image-20240913233744697" style="zoom:33%;" />
+<img src="./Week02.assets/image-20240913233744697.png" alt="image-20240913233744697" style="zoom:33%;" />
 
 关于上面图片的例子，我们分步走：
 
@@ -578,37 +578,37 @@ print(insert_sort(nums))
 
 1. 一个列表，从第一个元素开始与后面的元素两两比较，如果后面的元素更小，则交换位置。一轮比较下来，最大的元素一定会出现在列表的末尾。
 
-    <img src="./Week02_sorting.assets/image-20241016004717439.png" alt="image-20241016004717439" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004717439.png" alt="image-20241016004717439" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004729430.png" alt="image-20241016004729430" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004729430.png" alt="image-20241016004729430" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004739664.png" alt="image-20241016004739664" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004739664.png" alt="image-20241016004739664" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004749641.png" alt="image-20241016004749641" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004749641.png" alt="image-20241016004749641" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004832145.png" alt="image-20241016004832145" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004832145.png" alt="image-20241016004832145" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004857600.png" alt="image-20241016004857600" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004857600.png" alt="image-20241016004857600" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004911825.png" alt="image-20241016004911825" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004911825.png" alt="image-20241016004911825" style="zoom:25%;" />
 
-    <img src="./Week02_sorting.assets/image-20241016004923465.png" alt="image-20241016004923465" style="zoom:25%;" />
+    <img src="./Week02.assets/image-20241016004923465.png" alt="image-20241016004923465" style="zoom:25%;" />
 
     2. 再进行第二次的整个列表从头到尾的比较，这时剩下的元素中最大的元素也被放到了列表的末尾。过程略，结果如下：
 
-        <img src="./Week02_sorting.assets/image-20241016005202789.png" alt="image-20241016005202789" style="zoom:33%;" />
+        <img src="./Week02.assets/image-20241016005202789.png" alt="image-20241016005202789" style="zoom:33%;" />
 
     3. 第三次比较后：
 
-        <img src="./Week02_sorting.assets/image-20241016005231620.png" alt="image-20241016005231620" style="zoom:33%;" />
+        <img src="./Week02.assets/image-20241016005231620.png" alt="image-20241016005231620" style="zoom:33%;" />
 
     4. 第四次：
 
-        <img src="./Week02_sorting.assets/image-20241016005251912.png" alt="image-20241016005251912" style="zoom:33%;" />
+        <img src="./Week02.assets/image-20241016005251912.png" alt="image-20241016005251912" style="zoom:33%;" />
 
     5. 第五次：
 
-        <img src="./Week02_sorting.assets/image-20241016005309927.png" alt="image-20241016005309927" style="zoom:33%;" />
+        <img src="./Week02.assets/image-20241016005309927.png" alt="image-20241016005309927" style="zoom:33%;" />
 
         
 
