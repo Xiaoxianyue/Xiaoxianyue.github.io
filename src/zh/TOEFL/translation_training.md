@@ -464,13 +464,101 @@ Nevertheless, it is too absolute to define university education as the most impo
 
 ### 5. 第四段
 
+#### 5.1 自翻
+
+Indeed, education is an endless journey whose every phase has its unique meaning. The education of a person start from the ==(这里的 the 不要，因为 birth 是泛指)==birth. Parents would be the first teacher==(这里teachers要加s)== who provide with ==(这里不要with)==starting education for their children.  After that, they will take==(“take formal education”用法不太自然，通常“receive”更恰当。)== formal education in kindergarten and elementary school when teachers help them to understand normal knowledge, and lead them to study the most fundamental theories. A person could obtain more abundant knowledge, get more skills when he comes to the age for junior school==(“reaches the age for junior school”更自然)==.  Undoubtedly, junior education is a prevision==(“prevision”使用不当。可以改为“preparation”来表示“准备”。)== for the new life in university. Even if people graduate from universities, education is still lasting during the enterprise life. As the words says, “Keeping studying until the death”.   Since, either university education or other stage of education are essential factor==s== for one’s success.
 
 
 
+#### 5.2 他翻
+
+Indeed, education is a life-long process and every stage possesses its unique significance. Ever since one's birth, his education has begun. Parents could be considered as the first teachers who render enlightening knowledge to their child. Later, formal education is received from the **kindergarten** and the primary school. During this period,teachers help children **comprehend** common sense and lead them to learn the most basic theories. As soon as a person arrives at the high school age, richer knowledge could be gained and more skills could be grasped. Doubtlessly, preliminary education prepares a person for the new stage of life in the university. Even when one graduates from the university, education is still to be continued **at work**. Just as the old saying goes, "You're never too old to learn". As a result, not only university education, but also education in other periods, could be equally important factors that make a person succeed.
 
 
 
+#### 5.3 替换表达
 
+- **意义：**significance
 
+- **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
 
+- **possess** 拥有，同义替换 have
 
+- **Ever since**，自那时起；自从。后接完成时。可替换为 Since then；From that time on
+
+- **consider as** = regard as = deem as
+
+- **"Render"** ：这里做提供的意思。同义词为 provide。render sth. to sb.
+
+    ::: code-tabs
+
+    @tab 中文意思
+
+    动词：
+
+    1. 使成为
+    2. 呈现
+    3. 渲染
+    4. 提供
+    5. 交付
+    6. 翻译
+    7. 报答
+
+    @tab 中文意思对应的同义词
+
+    Make（使成为）
+
+    Present（呈现）
+
+    Provide（提供）
+
+    Deliver（交付）
+
+    Translate（翻译）
+
+    Depict（描绘）
+
+    Perform（表演，呈现）
+
+    Produce（产生)
+
+    :::
+
+- **enlightening**：“启蒙教育”
+
+    形容词：
+
+    1. 启发性的
+    2. 使人领悟的
+    3. 有教育意义的
+
+- **comprehend：**
+
+    动词：
+
+    1. 理解
+    2. 领会
+    3. 包含
+    4. 包括
+
+- **常识**：common sense
+
+- **到了该…的年纪：**arrive at the … age
+
+- **获得：** **acquire = gain = obtain**
+
+- junior school 一般不指中学，指小学或初中。
+
+- **preliminary：**
+
+    形容词：
+
+    1. 初步的
+    2. 预备的
+    3. 开端的
+    4. 基础的
+
+- **at work：**在工作时
+
+- **Just as an old saying goes:**
+- **后面接原因的词语：hence、so、consequently、as a result、therefore**

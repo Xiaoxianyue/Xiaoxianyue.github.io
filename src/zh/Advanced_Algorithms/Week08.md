@@ -330,3 +330,605 @@ def fib(n: int) -> int:
 3. **统计代码中所有的计算操作**，并将所有操作的执行时间求和，从而得到运行时间。
 
 例如在以下代码中，输入数据大小为 $n$ ：
+
+
+
+### 3.1 Big-O
+
+写作 $T(n)$ ，也叫语句频度，n 代表的是问题规模。
+
+$f(n)$ ，使得$T(n)/f(n)$ 极限值（当 n 趋于无穷大时）为不等于 0 的常数，则称 $f(n)$ 是 $T(n)$ 的同数量级函数，记作 $T(n) = Of(n)$
+
+称 $f(n)$ 为算法的渐进时间复杂度，简称时间复杂度。在数学上，Big-O 符合用来描述一个函数数量级的渐进上界。
+
+如果我们将算法中的一次计算记为 1，那么如果 n 个输入值，算法对每个输入值都做一次运算，那么整个算法的运算量即为 n。这个时候我们就可以说，这是一个时间复杂度为 O(n) 的算法。
+
+**思考：**
+
+- 如果仍有 n 个输入值，但算法对每一个输入值做一次运算这个操作要再重复 n 次，那么整个算法的运算量即为：$n^2$ ，时间复杂度为 $O(n^2)$ 。
+- 如果仍有 n 个输入值，但算法对每一个输入值做一次运算这个操作要再重复 $n + 1$ 次，算法的运算量是 $n * (n+1)$。
+    - 按理说时间复杂度会变为 $O(n^2 + n)$,但是是否会改变呢？
+    - 不会，时间复杂度仍然是 $O(n^2)$。为什么？输入量 n 趋于无穷大时，$n^2$ 已经大到可以忽略掉 $n$ 的存在，直接省略。
+
+![da6e27cda5bb6ff343a2aa1baba0bb5](./Week08.assets/da6e27cda5bb6ff343a2aa1baba0bb5.png)
+
+::: tips
+
+嵌套循环一个n一个m，$O(nm)$
+
+斐波那契数列， $O(2^n)$
+
+:::
+
+::: tabs
+
+@tab 常数阶
+
+```python
+def constant(n: int) -> int:
+    count = 0
+    size = 100000
+    for _ in range(size):
+        count += 1
+    return count
+```
+
+
+
+@tab 线性阶
+
+```python
+def array_traversal(nums):
+    """线性阶（遍历数组）数组的长度为标准"""
+    count = 0
+    for num in nums:
+        count += 1
+    return count
+
+def linear(n):
+    """线性阶，n 的大小为标准"""
+    count = 0
+    for _ in range(n):
+        count += 1
+    return count
+```
+
+
+
+@tab 平方阶 $O(n^2)$
+
+```python
+def quadratic(n: int) -> int:
+    """平方阶"""
+    count = 0
+    # 循环次数与数据大小 n 成平方关系
+    for i in range(n):
+        for j in range(n):   
+            count += 1
+    return count
+
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr) - i - 1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+print(bubble_sort([4,6,1,7,3]))
+```
+
+
+
+@tab 指数阶 $O(2^n)$
+
+```python
+def expontial(n): # 传入 n ，返回2的n次方
+    count = 0
+    base = 1
+    for i in range(n):
+        for j in range(base):
+            count += 1
+        base += 2
+        return count
+```
+
+<img src="./Week08.assets/0b3746a27701db1531921425f4b06c7.png" alt="0b3746a27701db1531921425f4b06c7" style="zoom: 50%;" />
+
+@tab 对数阶 $O(logn)$
+
+每进行一次操作，操作的对象（数据）都减半。时间复杂度就是对数阶。
+
+```python
+def logarithmic(n):
+    count = 0
+    while n > 1:
+        n = n/2
+        count += 1
+    return count
+
+def log_recur(n):
+    if n <= 1:
+        return 0
+    return log_recur(n / 2) + 1
+```
+
+
+
+<img src="./Week08.assets/ac3c69c8095e86698dc1102c4cde6cc.png" alt="ac3c69c8095e86698dc1102c4cde6cc" style="zoom: 50%;" />
+
+
+
+@tab 线性对数阶 $O(nlogn)$
+
+```python
+def linear_log_recur(n: int) -> int:
+    """线性对数阶"""
+    if n <= 1:
+        return 1
+    # 一分为二，子问题的规模减小一半
+    count = linear_log_recur(n // 2) + linear_log_recur(n // 2)
+    # 当前子问题包含 n 个操作
+    for _ in range(n):
+        count += 1
+    return count
+```
+
+<img src="./Week08.assets/c5f4480ea85d6098e1de27e093406bf.png" alt="c5f4480ea85d6098e1de27e093406bf" style="zoom: 50%;" />
+
+
+
+@tab 阶乘阶 $O(n!)$
+
+```python
+def factorial_recur(n):
+    if n == 0:
+        return 1
+    count = 0
+    for i in range(n):
+        count += factorial_recur(n - 1)
+        
+    return count
+```
+
+<img src="./Week08.assets/48a8d102509fac82e55b2effdaa2603-1730942616903-5.png" alt="48a8d102509fac82e55b2effdaa2603" style="zoom:50%;" />
+
+## 4. 空间复杂度（space complexity）
+
+**用于衡量算法占用内存空间随着数据量变大时的增长趋势。这个概念与时间复杂度非常类似。只需将“运行时间”替换为：“占用内存空间”。**
+
+
+
+### 4.1 算法相关空间
+
+算法在运行中使用的内存空间主要包括以下几种。
+
+```python
+class Node:
+    """类"""
+    def __init__(self, x: int):
+        self.val: int = x              # 节点值
+        self.next: Node | None = None  # 指向下一节点的引用
+
+def function() -> int:
+    """函数"""
+    # 执行某些操作...
+    return 0
+
+def algorithm(n) -> int:  # 输入数据
+    A = 0                 # 暂存数据（常量，一般用大写字母表示）
+    b = 0                 # 暂存数据（变量）
+    node = Node(0)        # 暂存数据（对象）
+    c = function()        # 栈帧空间（调用函数）
+    return A + b + c      # 输出数据
+```
+
+- **输入空间：**用于存储算法输入数据
+- **暂存空间：**用于存储算法在运行过程中的变量，对象，函数上下文等数据。
+- **输出空间：**用于存储算法的输出数据
+
+一般情况下，空间复杂度的统计范围是“暂存空间”加上“输出空间”。
+
+<img src="./Week08.assets/005f425bdd7f226d9fad992cebe2209.png" alt="005f425bdd7f226d9fad992cebe2209" style="zoom: 50%;" />
+
+### 4.2 暂存空间
+
+一般分为三个部分。
+
+- **暂存数据：**用于保存算法运行过程中的各种常量，变量，对象等。
+- **栈帧空间：**用于保存调用函数的上下文数据。系统在每次调用函数时都会在栈顶创建一个栈帧，函数返回后，栈帧空间会被释放。
+- **指令空间：**用于保存编译后的程序指令，在实际统计中通常忽略不计。
+
+
+
+### 4.3 空间复杂度的推算
+
+空间复杂度的推算方法与时间复杂度大致相同，只需将统计对象从“操作数量”转为“使用空间大小”。
+而与时间复杂度不同的是，我们通常只关注最差空间复杂度。这是因为内存空间是一项硬性要求，我们必须确保在所有输入数据下都有足够的内存空间预留。
+
+#### 4.3.1 什么是最差空间复杂度？
+
+观察以下代码，最差空间复杂度中的“最差”有两层含义。
+
+```python
+def solution(n):
+    a = 0  # O(1)
+    b = [0] * 1000  # O(1)
+    if n > 10:
+        nums = [0] * n  # O(n)
+```
+
+1. **以最差输入数据为准**：当 $n < 10$ 时，空间复杂度为 $O(1)$ ；但当 $n > 10$ 时，初始化的数组 `nums` 占用 $O(n)$ 空间，因此最差空间复杂度为 $O(n)$ 。
+2. **以算法运行中的峰值内存为准**：例如，程序在执行最后一行之前，占用 $O(1)$ 空间；当初始化数组 `nums` 时，程序占用 $O(n)$ 空间，因此最差空间复杂度为 $O(n)$ 。
+
+
+
+#### 4.3.2 栈帧空间里：
+
+在递归函数中，需要注意统计栈帧空间。观察以下代码：
+
+```python
+def function() -> int:
+    # 执行某些操作
+    return 0
+
+def loop(n: int):
+    """循环的空间复杂度为 O(1)"""
+    for _ in range(n):
+        function()
+
+def recur(n: int):
+    """递归的空间复杂度为 O(n)"""
+    if n == 1:
+        return
+    return recur(n - 1)
+```
+
+函数 `loop()` 和 `recur()` 的时间复杂度都为 $O(n)$ ，但空间复杂度不同。
+
+- 函数 `loop()` 在循环中调用了 $n$ 次 `function()` ，每轮中的 `function()` 都返回并释放了栈帧空间，因此空间复杂度仍为 $O(1)$ 。
+- 递归函数 `recur()` 在运行过程中会同时存在 $n$ 个未返回的 `recur()` ，从而占用 $O(n)$ 的栈帧空间。
+
+### 4.4 常见类型
+
+设输入数据大小为 $n$ ，下图展示了常见的空间复杂度类型（从低到高排列）。
+
+$$
+\begin{aligned}
+O(1) < O(\log n) < O(n) < O(n^2) < O(2^n) \newline
+\text{常数阶} < \text{对数阶} < \text{线性阶} < \text{平方阶} < \text{指数阶}
+\end{aligned}
+$$
+可视化：
+
+<img src="./Week08.assets/b7e62939f90f916a1562ba9cd71dd8a.png" alt="b7e62939f90f916a1562ba9cd71dd8a" style="zoom:50%;" />
+
+#### 4.4.1 常数阶 $O(1)$
+
+常数阶常见于数量与输入数据大小 $n$ 无关的常量、变量、对象。
+
+需要注意的是，在循环中初始化变量或调用函数而占用的内存，在进入下一循环后就会被释放，因此不会累积占用空间，空间复杂度仍为 $O(1)$ ：
+
+```python
+def function() -> int:
+    """函数"""
+    # 执行某些操作
+    return 0
+
+def constant(n: int):
+    """常数阶"""
+    # 常量、变量、对象占用 O(1) 空间
+    a = 0
+    nums = [0] * 10000
+    node = ListNode(0)
+    # 循环中的变量占用 O(1) 空间
+    for _ in range(n):
+        c = 0
+    # 循环中的函数占用 O(1) 空间
+    for _ in range(n):
+        function()
+```
+
+
+
+#### 4.4.2 线性阶 $O(n)$
+
+线性阶常见于元素数量与 $n$ 成正比的数组、链表、栈、队列等：
+
+```python
+def linear(n: int):
+    """线性阶"""
+    # 长度为 n 的列表占用 O(n) 空间
+    nums = [0] * n
+    # 长度为 n 的哈希表占用 O(n) 空间
+    hmap = dict[int, str]()
+    for i in range(n):
+        hmap[i] = str(i)
+```
+
+如下图所示，此函数的递归深度为 $n$ ，即同时存在 $n$ 个未返回的 `linear_recur()` 函数，使用 $O(n)$ 大小的栈帧空间：
+
+```python
+def linear_recur(n: int):
+    """线性阶（递归实现）"""
+    print("递归 n =", n)
+    if n == 1:
+        return
+    linear_recur(n - 1)
+```
+
+<img src="./Week08.assets/a497fe332f6afbae4de30bdfa043254.png" alt="a497fe332f6afbae4de30bdfa043254" style="zoom:50%;" />
+
+#### 4.4.3 指数阶 $O(2^n)$
+
+指数阶常见于二叉树。观察下图，层数为 $n$ 的“满二叉树”的节点数量为 $2^n - 1$ ，占用 $O(2^n)$ 空间：
+
+```python
+def build_tree(n: int) -> TreeNode | None:
+    """指数阶（建立满二叉树）"""
+    if n == 0:
+        return None
+    root = TreeNode(0)
+    root.left = build_tree(n - 1)
+    root.right = build_tree(n - 1)
+    return root
+```
+
+<img src="./Week08.assets/409643a054b1274dd619034ed121b4a.png" alt="409643a054b1274dd619034ed121b4a" style="zoom:50%;" />
+
+#### 4.4.4 对数阶 $O(\log n)$
+
+对数阶常见于分治算法。例如归并排序，输入长度为 $n$ 的数组，每轮递归将数组从中点处划分为两半，形成高度为 $\log n$ 的递归树，使用 $O(\log n)$ 栈帧空间。
+
+再例如将数字转化为字符串，输入一个正整数 $n$ ，它的位数为 $\lfloor \log_{10} n \rfloor + 1$ ，即对应字符串长度为 $\lfloor \log_{10} n \rfloor + 1$ ，因此空间复杂度为 $O(\log_{10} n + 1) = O(\log n)$ 。
+
+
+
+
+
+## 5. 权衡时间与空间
+
+理想情况下，我们希望算法的时间复杂度和空间复杂度都能达到最优。然而在实际情况中，同时优化时间复杂度和空间复杂度通常非常困难。
+
+**降低时间复杂度通常需要以提升空间复杂度为代价，反之亦然**。我们将牺牲内存空间来提升算法运行速度的思路称为“以空间换时间”；反之，则称为“以时间换空间”。
+
+选择哪种思路取决于我们更看重哪个方面。在大多数情况下，时间比空间更宝贵，因此“以空间换时间”通常是更常用的策略。当然，在数据量很大的情况下，控制空间复杂度也非常重要。
+
+
+
+## 6. NP 问题
+
+### 6.1 暴力找图中最短路径
+
+<img src="./Week08.assets/image-20241108110155053.png" alt="image-20241108110155053" style="zoom:50%;" />
+
+```python
+from itertools import permutations
+
+# 定义城市之间的距离，使用字典表示，键是城市对（元组），值是他们之间的距离
+
+distances = {
+    ('A', 'B'): 20, ('A', 'C'): 35, ('A', 'D'): 42,
+    ('B', 'A'): 20, ('B', 'C'): 34, ('B', 'D'): 30,
+    ('C', 'A'): 35, ('C', 'B'): 34, ('C', 'D'): 12,
+    ('D', 'A'): 42, ('D', 'B'): 30, ('D', 'C'): 12
+}
+
+
+def calculate_route_cost(route):
+    cost = 0  # 初始化总成本为0
+    # 遍历路线中的每一对相邻城市，累加它们之间的成本
+    for i in range(len(route) - 1):
+        cost += distances[(route[i], route[i + 1])]
+    # 加上回到起点的成本（最后一个城市到第一个城市）
+    cost += distances[(route[-1], route[0])]
+    return cost
+
+
+cities = ['A', 'B', 'C', 'D']  # 定义所有城市的列表
+
+# 生成所有可能的路径
+all_possible_routes = permutations(cities)
+
+# 初始化最佳路线为 None，因为一开始还没有最佳路线
+# 初始化最佳成本为正无穷大
+best_route = None
+best_score = float('inf')
+
+# 遍历所有可能的路线，找出成本最小的路线
+for route in all_possible_routes:
+    current_score = calculate_route_cost(route)  # 计算当前路径的总成本
+    print(list[route] + [route[0], current_score])
+    # 如果成本比已知的最佳成本更小，则更新最佳路线和最佳成本
+    if current_score < best_score:
+        best_route = route
+        best_score = current_score
+
+# 输出结果
+print("最佳路线：", best_route)
+print("最低成本：", best_score)
+```
+
+::: tips
+
+在 `calculate_route_cost` 函数中，`len(route) - 1` 的原因是我们需要计算相邻城市之间的成本，但不需要在最后一个城市之后再访问一个不存在的城市。具体来说：
+
+- 假设 `route = ['A', 'B', 'C', 'D']`，这是一个可能的行程路线。
+- `len(route) - 1` 的目的是确保我们只遍历到倒数第二个城市的索引位置。
+- 在循环中，我们逐对计算每两个相邻城市之间的成本，即：
+    - `A -> B`
+    - `B -> C`
+    - `C -> D`
+- 这时，循环已经完成了 `A -> B -> C -> D` 的成本计算。
+- 然后，最后我们手动添加从最后一个城市 `D` 回到起始城市 `A` 的成本，这样就完整了一个环形路线。
+
+如果不减去 1，循环会尝试访问一个超出索引范围的元素，比如 `route[4]`（假设 `route` 长度为 4），这会导致错误。
+
+:::
+
+```python
+import itertools                                    # python library for handling iterators
+                                                    # extremely useful!
+dists = [['A','B',20],['A','C',35],['A','D',42],    # list of all edges (distances between cities)
+         ['B','A',20],['B','C',34],['B','D',30],    # could be represented as adjacency matrix
+         ['C','A',35],['C','B',34],['C','D',12],
+         ['D','A',42],['D','B',30],['D','C',12]]
+
+def get_and_convert_perm_list(dests):               # get all the permutations, i.e. possible routes
+    perm_list = list(itertools.permutations(dests)) # this outputs a list of tuples
+    new_perm_list = []                              # convert to a list of lists
+    for item in perm_list:                          # (easier to work with)
+        new_perm_list.append(list(item))
+    return new_perm_list
+
+def TSP_get_dists(dests, dists):
+    results = []                                    # we will build a list of results
+    perm_list = get_and_convert_perm_list(dests)
+    for item in perm_list:                          # for each permutation (i.e. route)
+        item.append(item[0])                        # add the origin as the destination
+        total_dist = 0                              # initialise total distance
+        for i in range(len(item)-1):                # iterate through each permutation
+            for dist in dists:                                  # match each pair in permutation
+                if item[i] == dist[0] and item[i+1] == dist[1]: # with appropriate pair in dist
+                    total_dist = total_dist + dist[2]           # add cost to total distance
+                    if i == len(item)-2:                        # if we've gone through the whole permutation
+                        item.append(total_dist)     # append the total cost to the permutation
+                        print(item)                 # print the permutation with cost for convenience
+                        results.append(item)        # append the permutation with cost to results
+    return results                                  # return results list
+
+TSP_get_dists(['A','B','C','D'],dists)
+```
+
+### 6.2 NP-Hard Problems: Heuristics
+
+- A heuristic function produces a solution in a reasonable time frame that is good enough for solving the problem.
+
+- The solution may not be the best solution.
+
+- The solution might still be valuable because it does not take a long time to find it. 
+
+#### Heuristic algorithms
+
+- Don’t promise to find the best solution.
+
+- Quickly find a ‘good enough’ solution.
+
+- There are several heuristic algorithms that can solve the travelling salesmen problem. For example:
+
+    - Nearest neighbour (greedy algorithm):
+
+    - The salesman starts at a random city and visits the nearest city until all have been visited
+
+#### Nearest neighbour
+
+1. Initialise all vertices as unvisited
+
+2. Select an arbitrary vertex, set it as the current vertex u and mark it as visited.
+
+3. Find the shortest edge connecting u and an unvisited vertex v.
+
+4. Set v as the current vertex u. Mark v as visited.
+
+5. If all the vertices are visited then terminate (moving back to origin) otherwise go to step 3.
+
+
+
+#### 图片演示
+
+::: tabs
+
+@tab
+
+<img src="./Week08.assets/image-20241108112152602.png" alt="image-20241108112152602" style="zoom:50%;" />
+
+@tab
+
+<img src="./Week08.assets/image-20241108112218461.png" alt="image-20241108112218461" style="zoom:50%;" />
+
+@tab
+
+<img src="./Week08.assets/image-20241108112238812.png" alt="image-20241108112238812" style="zoom: 50%;" />
+
+@tab
+
+<img src="./Week08.assets/image-20241108112304990.png" alt="image-20241108112304990" style="zoom:50%;" />
+
+@tab
+
+<img src="./Week08.assets/image-20241108112335778.png" alt="image-20241108112335778" style="zoom:50%;" />
+
+:::
+
+
+
+#### 伪代码
+
+```python
+unvisited ← remaining vertices
+visited ← []
+connections ← NULL
+
+u ← unvisited[0]
+visited ← visited + u
+unvisited ← unvisited - u
+
+while (unvisited ≠ NULL ) 
+     	Find edge e = (u, v) such that: 
+          1. u ∈ visited 
+          2. v ∈ unvisited 
+          3. e has smallest cost
+	u ← v
+     	connections ← connections + e 
+     	visited ← visited + v
+     	unvisited ← unvisited - v
+```
+
+
+
+#### 代码
+
+```python
+# 初始化数据
+unvisited = {'B', 'C', 'D'}  # 使用集合，便于添加和删除
+visited = ['A']
+connections = []
+
+# 假设 edges 列表定义了图的边和它们的权重
+edges = [
+    ('A', 'B', 1),
+    ('A', 'C', 4),
+    ('A', 'D', 3),
+    ('B', 'C', 2),
+    ('B', 'D', 5),
+    ('C', 'D', 1)
+]
+
+# 从当前节点开始
+u = visited[0]
+
+# 只要未访问的节点集中还有节点，就继续循环
+while unvisited:
+    # 找到满足条件的最小成本边 e = (u, v)
+    min_edge = None
+    min_cost = float('inf')
+
+    # 遍历已访问的节点
+    for u in visited:
+        # 查找所有从已访问节点 u 出发且终点在未访问集合中的边
+        for start, end, cost in edges:
+            if start == u and end in unvisited and cost < min_cost:
+                min_cost = cost
+                min_edge = (start, end)
+
+    # 如果找到符合条件的边，将其添加到连接列表中
+    if min_edge:
+        u, v = min_edge  # 获取最小边的起点和终点
+        connections.append((u, v))  # 将边加入连接列表
+        visited.append(v)  # 将终点 v 加入已访问节点列表
+        unvisited.remove(v)  # 从未访问集合中移除 v
+
+# 输出结果
+print("已访问的节点:", visited)
+print("构建的最小生成树连接:", connections)
+```
+

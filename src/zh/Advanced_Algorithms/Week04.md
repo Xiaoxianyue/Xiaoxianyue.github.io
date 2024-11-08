@@ -532,7 +532,9 @@ display(n1)
 
 ### 4.1 广度优先遍历 （BFS）
 
-::: tabs 非递归
+非递归：
+
+::: code-tabs
 
 @tab 引入队列的实现：
 
@@ -665,9 +667,9 @@ level_order(n1)
 
 :::
 
+递归方法：
 
-
-::: tabs  递归方法：
+::: tabs  
 
 @tab 自己方法
 
