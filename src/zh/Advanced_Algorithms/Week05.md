@@ -197,7 +197,9 @@ n1.next = n2
 
 :::
 
-::: tabs 双向链表
+双向链表
+
+::: tabs 
 
 ```python
 class ListNode:
@@ -916,6 +918,403 @@ def test_graph_adjmat_dfs():
 ```
 
 
+
+
+
+## 5. Hashing
+
+哈希表（hash table），又叫散列表，他通过建立键 `key` 与 值`value` 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键，则可以在 $O(1)$ 时间内获取对应的值。
+
+如图 6-1 所示，给定 n 个学生，每个学生都有“姓名”和“学号”两项数据。假如我们希望实现“输入一个学号，返回对应的姓名”的查询功能，则可以采用下图所示的哈希表来实现。
+
+<img src="./Week05.assets/0696f56e224a0f4f2949eb582a5c172.png" alt="0696f56e224a0f4f2949eb582a5c172" style="zoom: 50%;" />
+
+除了哈希表外，数组和链表也可以实现查询功能，它们的效率对比如表 6-1 所示。
+
+- **添加元素：**仅需将元素添加至数组（链表）的尾部即可，使用$O(1)$时间
+- **查询元素：**由于数组（链表）是乱序的，因此需要遍历其中的所有元素，使用 $O(n)$ 时间。
+- **删除元素**：需要先查询元素再从数组（链表）中删除，使用 $O(n)$ 时间。
+
+::: center
+
+表 6-1 元素查询效率对比
+
+:::
+
+|          | 数组   | 链表   | 哈希表 |
+| -------- | ------ | ------ | ------ |
+| 查找元素 | $O(n)$ | $O(n)$ | $O(1)$ |
+| 添加元素 | $O(1)$ | $O(1)$ | $O(1)$ |
+| 删除元素 | $O(n)$ | $O(n)$ | $O(1)$ |
+
+观察发现，**在哈希表中进行增删查改的时间复杂度都是** $O(1)$，非常高效。
+
+
+
+### 5.1 哈希表的常用操作
+
+哈希表的常用操作包括：初始化、查询、添加键值对和删除键值对。示例代码如下：
+
+```python
+hmap: dict = {}
+
+# 添加操作
+# 在哈希表中添加键值对 (key, value)
+hmap[12836] = 'haha'
+hmap[15937] = 'xixi'
+hmap[16758] = 'heihei'
+hmap[13276] = 'hehe'
+hmap[10583] = 'yeye'
+
+# 查询操作
+# 向哈希表中输入键，得到值
+name: str = hmap[15937]
+
+# 删除操作
+# 在哈希表中删除键值对（key，value）
+hmap.pop(10583)
+
+
+class HashTable:
+    def __init__(self, size=10):
+        self.size = size  # 哈希表的大小
+        self.table = [[] for _ in range(size)]  # 初始化哈希表，每个槽都是一个空列表，用于处理冲突
+
+    def _hash(self, key):
+        # 简单的哈希函数：将键转换为字符串后求哈希值，并将其模以哈希表大小
+        return hash(key) % self.size
+
+    def put(self, key, value):
+        # 向哈希表中插入键值对
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                bucket[i] = (key, value)
+                return
+        bucket.append((key, value))
+
+    def get(self, key):
+        # 获取键对应的值
+        index = self._hash(key)
+        bucket = self.table[index]
+        for k, v in bucket:
+            if k == key:
+                return v
+        return None
+
+    def remove(self, key):
+        # 从哈希表中删除键
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                bucket[i] = None
+                return
+        return None
+
+
+# 使用示例
+hash_table = HashTable()
+hash_table.put("name", "Alice")
+print(hash_table.get("name"))  # 输出: Alice
+hash_table.put("name", "Bob")
+print(hash_table.get("name"))  # 输出: Bob
+hash_table.remove("name")
+print(hash_table.get("name"))  # 输出: None
+```
+
+
+
+### 5.2 哈希表的遍历
+
+::: code-tabs
+
+@tab 字典实现
+
+```python
+hmap: dict = {}
+
+# 添加操作
+# 在哈希表中添加键值对 (key, value)
+hmap[12836] = 'haha'
+hmap[15937] = 'xixi'
+hmap[16758] = 'heihei'
+hmap[13276] = 'hehe'
+hmap[10583] = 'yeye'
+
+# 查询操作
+# 向哈希表中输入键，得到值
+name: str = hmap[15937]
+
+# 删除操作
+# 在哈希表中删除键值对（key，value）
+hmap.pop(10583)
+
+# 遍历哈希表
+# 遍历键值对
+for key, value in hmap.items():
+    print(key, '->', value)
+
+# 单独遍历键
+for key in hmap.keys():
+    print(key)
+
+# 单独遍历值
+for value in hmap.values():
+    print(value)
+```
+
+@tab 列表实现
+
+```python
+class HashTable:
+    def __init__(self, size=10):
+        self.size = size  # 哈希表的大小
+        self.table = [[] for _ in range(size)]  # 初始化哈希表，每个槽都是一个空列表，用于处理冲突
+
+    def _hash(self, key):
+        # 简单的哈希函数：将键转换为字符串后求哈希值，并将其模以哈希表大小
+        return hash(key) % self.size
+
+    def put(self, key, value):
+        # 向哈希表中插入键值对
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                # 如果键已存在，则更新值
+                bucket[i] = (key, value)
+                return
+        # 如果键不存在，则添加新的键值对
+        bucket.append((key, value))
+
+    def get(self, key):
+        # 获取键对应的值
+        index = self._hash(key)
+        bucket = self.table[index]
+        for k, v in bucket:
+            if k == key:
+                return v
+        return None  # 如果键不存在，返回None
+
+    def remove(self, key):
+        # 从哈希表中删除键
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                return True
+        return False  # 如果键不存在，返回False
+
+    def items(self):
+        items_lst = []
+        # 遍历哈希表中的所有键值对
+        for bucket in self.table:
+            for item in bucket:
+                items_lst.append(item)
+        return items_lst
+
+    def keys(self):
+        # 遍历哈希表中的所有键
+        key_lst = []
+        for bucket in self.table:
+            for k, _ in bucket:
+                key_lst.append(k)
+        return key_lst
+
+    def values(self):
+        # 遍历哈希表中的所有值
+        value_lst = []
+        for bucket in self.table:
+            for _, v in bucket:
+                value_lst.append(v)
+        return value_lst
+
+
+# 使用示例
+hash_table = HashTable()
+hash_table.put("name", "Alice")
+hash_table.put("age", 25)
+hash_table.put("city", "New York")
+
+# 遍历键值对
+print("Items:")
+for key, value in hash_table.items():
+    print(key, value)
+
+# 遍历键
+print("\nKeys:")
+for key in hash_table.keys():
+    print(key)
+
+# 遍历值
+print("\nValues:")
+for value in hash_table.values():
+    print(value)
+```
+
+@tab 新语法 yield
+
+```python
+class HashTable:
+    def __init__(self, size=10):
+        self.size = size  # 哈希表的大小
+        self.table = [[] for _ in range(size)]  # 初始化哈希表，每个槽都是一个空列表，用于处理冲突
+
+    def _hash(self, key):
+        # 简单的哈希函数：将键转换为字符串后求哈希值，并将其模以哈希表大小
+        return hash(key) % self.size
+
+    def put(self, key, value):
+        # 向哈希表中插入键值对
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                # 如果键已存在，则更新值
+                bucket[i] = (key, value)
+                return
+        # 如果键不存在，则添加新的键值对
+        bucket.append((key, value))
+
+    def get(self, key):
+        # 获取键对应的值
+        index = self._hash(key)
+        bucket = self.table[index]
+        for k, v in bucket:
+            if k == key:
+                return v
+        return None  # 如果键不存在，返回None
+
+    def remove(self, key):
+        # 从哈希表中删除键
+        index = self._hash(key)
+        bucket = self.table[index]
+        for i, (k, v) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                return True
+        return False  # 如果键不存在，返回False
+
+    def items(self):
+        # 遍历哈希表中的所有键值对
+        for bucket in self.table:
+            for item in bucket:
+                yield item
+
+    def keys(self):
+        # 遍历哈希表中的所有键
+        for bucket in self.table:
+            for k, _ in bucket:
+                yield k
+
+    def values(self):
+        # 遍历哈希表中的所有值
+        for bucket in self.table:
+            for _, v in bucket:
+                yield v
+
+
+# 使用示例
+hash_table = HashTable()
+hash_table.put("name", "Alice")
+hash_table.put("age", 25)
+hash_table.put("city", "New York")
+
+# 遍历键值对
+print("Items:")
+for key, value in hash_table.items():
+    print(key, value)
+
+# 遍历键
+print("\nKeys:")
+for key in hash_table.keys():
+    print(key)
+
+# 遍历值
+print("\nValues:")
+for value in hash_table.values():
+    print(value)
+```
+
+功能是把一些特定的值存在一个可迭代容器里。
+
+:::
+
+
+
+### 5.3 哈希表的简单实现
+
+我们先考虑最简单的情况，仅用一个数组来实现哈希表。在哈希表中，我们将数组中的每个空位称为桶（bucket），每一个桶可存储一个键值对。因此，查询操作就是找到 `key` 对应的桶，并在桶中获取 `value`。
+
+那么，如何基于 `key` 定位对应的桶呢？这是通过哈希函数（hash function）实现的。哈希函数作用是用一个较大的输入空间映射到一个较小的输出空间。在哈希表中，输入空间是所有 `key`, 输出空间是所有桶（数组索引）。换句话说，输入一个 `key`，我们可以通过哈希函数得到该 `key` 对应的键值对在数组中的存储位置。
+
+输入一个 `key`，哈希函数的计算过程分为以下两种：
+
+1. 通过某种哈希算法 `hash()`计算得到哈希值。
+2. 将哈希值对桶数量（数组长度）`capacity` 取值，从而获取该 `key`对应的数组索引 `index`
+
+```python
+index = hash(key) # capacity
+```
+
+随后，我们就可以用 `index`在哈希表中访问对应的值，从而获取 `value`。
+
+设数组长度为 `capacity = 100`哈希算法 `hash(key) = key`，易得哈希函数为 `key % 100` 。下图展示了哈希函数的工作原理。
+
+<img src="./Week05.assets/2298620d0f59ba179e5aed2ad41bb9c.png" alt="2298620d0f59ba179e5aed2ad41bb9c" style="zoom:50%;" />
+
+
+
+以下代码实现了一个简单的哈希表。其中，我们将 `key` 和 `value` 分装成一个类 `Pair`，以表示键值对。
+
+```python
+class Pair:
+    """键值对"""
+    def __init__(self,key:int,value:str):
+        self.key = key
+        self.value = value
+class ArrayHashing:
+    def __init__(self):
+        self.buckets: list[Pair | None] = [None] * 100
+
+    def hash_fun(self, key: int) -> int:
+        index = key % 100
+        return index
+
+    def get(self, key:int) -> str:
+        index: int = self.hash_fun(key)
+        pair: Pair = self.buckets[index]
+        if pair is None:
+            return None
+        return pair.value
+
+    def put(self, key:int, value:str):
+        pair = Pair(key, value)
+        index: int = self.hash_fun(key)
+        self.buckets[index] = pair
+
+    def delete(self, key:int):
+        index: int = self.hash_fun(key)
+        self.buckets[index] = None
+
+    def entry_set(self) -> list[Pair]:
+        for pair in self.buckets:
+            if pair is not None:
+                yield pair
+
+    def key_set(self) -> list[Pair]:
+        for pair in self.buckets:
+            if pair is not None:
+                yield pair.key
+    
+    def value_set(self) -> list[Pair]:
+        for pair in self.buckets:
+            if pair is not None:
+                yield pair.value
+```
 
 
 

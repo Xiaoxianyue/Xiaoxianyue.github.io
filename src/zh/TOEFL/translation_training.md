@@ -562,3 +562,18 @@ Indeed, education is a life-long process and every stage possesses its unique si
 
 - **Just as an old saying goes:**
 - **后面接原因的词语：hence、so、consequently、as a result、therefore**
+
+
+
+### 6. 第五段
+
+#### 6.1 自翻
+
+In one word, having the opportunity to receive high education brings life with endless happiness, such meaningful experiment pave the road to one’s success. However, just acquiring the degree of the university isn’t enough to access to the goal if we ignore other factors. A person can achieve success ultimately only through (坚持不懈的努力) and keeping the will of learning after graduation from university.
+
+#### 6.2 他翻
+
+To conclude, the opportunity to receive higher education instills endless happiness into a person's life. Such a meaningful experience also paves the way to his success in the future. Nevertheless, if other important factors are neglected, obtaining a university **diploma** is far from enough to reach the target. Only through unremitting efforts and the **iron determination** to learn even after graduation could it be possible for a person to become successful at last.
+
+#### 6.3 替换表达
+
