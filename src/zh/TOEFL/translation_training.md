@@ -366,7 +366,7 @@ As is vastly acknowledged, the precious years spent in the university deserve a 
 
 因此：Therefore
 
-我更…而不… ：I would rather do … rather than …
+我更…而不… ：I would rather do … rather than do…  or  prefer to do… rather than do…
 
 因素：factor
 
@@ -451,6 +451,7 @@ Nevertheless, it is too absolute to define university education as the most impo
 - sb. 成为关注的焦点：be brought into the limelight
 - 哈佛：Harvard
 - 建立：set up（强调开始建立的这个动作）；build up（强调慢慢建立的过程）
+- dominate: 支配，
 - 征服，攻占：take … by storm
 - 行业：market industry
 - 得益于；归功于: … owes to …
@@ -478,7 +479,7 @@ Indeed, education is a life-long process and every stage possesses its unique si
 
 #### 5.3 替换表达
 
-- **意义：**significance
+- **意义：**significance = mean
 
 - **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
 
@@ -569,7 +570,7 @@ Indeed, education is a life-long process and every stage possesses its unique si
 
 #### 6.1 自翻
 
-In one word, having the opportunity to receive high education brings life with endless happiness, such meaningful experiment pave the road to one’s success. However, just acquiring the degree of the university isn’t enough to access to the goal if we ignore other factors. A person can achieve success ultimately only through (坚持不懈的努力) and keeping the will of learning after graduation from university.
+In one word==（没这个表达。改成In short）==, having the opportunity to receive high==er== education brings life with endless happiness==（bring endless happiness to life)==, such ==a== meaningful experiment pave the road==(用 way 更恰当)== to one’s success. However, just acquiring the degree of the university==（直接就是 university degree）== isn’t enough to access to the goal if we ignore other factors==（while ignoring other factor）==. A person can achieve success ultimately only through (坚持不懈的努力) ==（persistent effort）==and keeping the will of learning ==（应该改为“maintaining a willingness to learn”）== after graduation from university.
 
 #### 6.2 他翻
 
@@ -577,3 +578,57 @@ To conclude, the opportunity to receive higher education instills endless happin
 
 #### 6.3 替换表达
 
+- **"Instill" , 动词**
+    1. 灌输
+    2. 注入
+    3. 逐渐培养
+    4. 逐步灌输
+
+- 表转折：**Nevertheless**
+
+- **"Neglect"** ：
+
+    动词，名词：
+
+    1. 忽视
+    2. 忽略
+    3. 疏忽
+    4. 漠视
+    5. 不重视
+
+- **obtain 的近义词:**
+
+    Acquire（获得，取得）
+
+    Gain（得到，获取）
+
+    Secure（获得，争取到）
+
+    Attain（达到，取得）
+
+    Receive（接受，收到）
+
+    Procure（获得，采购）
+
+- **diploma ：**文凭，毕业证书
+
+- **"Unremitting"** 的中文意思按词性分组如下：
+
+    1. 不懈的
+    2. 坚持不懈的
+    3. 不间断的
+    4. 持续不断的
+
+    其近义词：
+
+    Persistent（持久的，执着的）
+
+    Continuous（连续的，不间断的）
+
+    Relentless（不懈的，不停的）
+
+    Incessant（不停的，不断的）
+
+    Steadfast（坚定的，不动摇的）
+
+-  **iron determination**：钢铁般的意志
