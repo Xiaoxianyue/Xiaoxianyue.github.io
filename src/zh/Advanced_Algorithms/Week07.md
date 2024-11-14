@@ -148,7 +148,7 @@ selected_activities = greedy_activity_selector(activities, start_times, finish_t
 print("被选择的活动:", selected_activities)  # 输出被选择的活动编号
 ```
 
-
+:::
 
 ## 2. Knapsack problem
 
@@ -307,7 +307,7 @@ if __name__ == "__main__":
 
 ### 4.1 注释代码
 
-::: tabs
+::: code-tabs
 
 @tab PPT 伪代码
 

@@ -50,7 +50,7 @@ There are plenties of important events which should be celebrated in our lives. 
 
 #### 2.2 他翻
 
-There are many important events in life that deserve to be celebrated. Whenever such special occasions arise,people will have a lot of plans to make. Holding a birthday or graduation party could be fun. Regarding the scale of these meaningful get-togethers,  some people are in favor of organizing larger parties with many people being invited. Other people, however, would rather hold smaller ones with in the family. I think it is a good idea to keep these personal events as simple as possible no matter how significant they may be.
+There are many important events in life that deserve to be celebrated. Whenever such special occasions arise, people will have a lot of plans to make. Holding a birthday or graduation party could be fun. Regarding the scale of these meaningful get-togethers,  some people are in favor of organizing larger parties with many people being invited. Other people, however, would rather hold smaller ones with in the family. I think it is a good idea to keep these personal events as simple as possible no matter how significant they may be.
 
 
 
@@ -196,6 +196,7 @@ In the second place, everyone ought to remain modest in his private life. It is 
 - 过于自大：attach too much importance to oneself
 - 过分强调：overemphasize 
 - 群体；集体：community
+- manner = way
 
 
 

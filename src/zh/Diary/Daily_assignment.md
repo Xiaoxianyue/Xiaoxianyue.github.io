@@ -202,11 +202,11 @@ toc: true
 ### 1. 计算机视觉
 
 - [ ] 重温 Lecture 9 10 11PPT并复习背诵
-- [ ] 学完 Lecture 14
+- [x] 学完 Lecture 14
 
 ### 2. 高级算法
 
-- [ ] 复习完 Week07
+- [x] 复习完 Week07
 
 ### 3. 托福
 
