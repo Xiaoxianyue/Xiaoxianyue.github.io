@@ -633,3 +633,46 @@ To conclude, the opportunity to receive higher education instills endless happin
     Steadfast（坚定的，不动摇的）
 
 -  **iron determination**：钢铁般的意志
+
+
+
+
+
+## 36. **Is it a good method to give the same grade to all the members who do the same project together?**
+
+### 1. 第一段
+
+####  自翻
+
+The erection of school education bring wide-spread of grading system which is the most common way to evaluate the ability and representation of a student. Nowadays, (任务型) teaching which includes team work is a sign of the brilliant development of the education. In one group, every members has his own assignments, every contribution shall never be (低估). Doubtlessly, educational workers give every member a equal score is fair and reasonable.
+
+#### 他翻
+
+The erection of school education brought forth==（向前，自…以后，副词）== the general adoption==（普及）== of grades, a most commonly-used method to assess==(评价，估价)== the performance==(表现)== and abilities of students. The task-based learning and teaching, which involve coherent==(连续的，一致的)== efforts of a group, marks a brilliant step forward in the field pf education. In a team, each member is assigned to fulfill his/her own duty and every contribution ought to be underestimated==(低估)==.  Without doubt, it is fair and appropriated==(合理的）== for educators==（教育工作者）== to give each group member the same mark at the moment when the evaluation is committed==（承认，委托，交付，犯罪）==.
+
+
+
+### 第二段
+
+#### 自翻
+
+To prove my perspective, firstly, it is necessary to emphasize the value of the team work. Team work is constituted by  (协作的） effort of the members of the team to reach the same goal. When the cooperation is bad, it is very hard for members to complete the assignments effectively, and usually struggle in (模糊的) goal. But as a team works like a good-operating machine, all members heart will connect with others. As a famous (歌词) going, “Combination is energy.” Indeed, team work is crucial for great success of any great career. Every member’s roles that (起指定作用) shall never be (轻视). Thus, to encourage team work, it is the most reasonable decision for the evaluator to give the same score to the whole group.
+
+#### 他翻
+
+In order to testify==(证实)== my standpoint, I would firstly place emphasis on the value of teamwork. Teamwork is a collaborative==()协作的== effort by members of the group working together to achieve common==(共同的)== goals. When the teamwork breaks down, members of the team will find it is difficult to complete tasks effectively and often ==struggle with== obscure==(模糊的，隐藏的，使模糊，使隐藏)== objective==(目标，客观的，公正的)==. When a team operates like a well-oiled==(运转良好的，熟练的)== machine, it will connect the hearts of all members. As is shown in the lyrics==(歌词)== of a famous song, “unity is paramount strength.” Truthfully, teamwork is essential to any success of any great ==cause==. Each member plays an assigned part that should never be looked down upon. Thus giving the entire group the same grade is the most appropriate decision on part of the assessors to encourage teamwork.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
