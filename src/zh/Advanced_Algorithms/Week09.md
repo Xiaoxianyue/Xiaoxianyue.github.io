@@ -525,3 +525,143 @@ if __name__ == '__main__':
     main()
 ```
 
+
+
+
+
+## 7. try except
+
+对于一个需要输入的代码，输入一个整数来判断是奇数还是偶数：
+
+```python
+user_input = input(':>>>')
+if user_input.isdigit():
+    if int(user_input) % 2 == 0:
+        print('even')
+    else:
+        print('odd')
+else:
+    print('需要正常数字')
+```
+
+可以看到，我们需要一个条件判断来排除输入不是整数的情况，让程序不至于报错。
+
+新语法可以使得这个功能更简洁清晰：
+
+```python
+try:
+    # 正常执行的代码
+    pass
+except:
+    # 出现错误的代码
+    pass
+```
+
+### 基础实现
+
+对于上述功能的代码，我们可以这么写：
+
+::: tabs
+
+@tab
+
+```python
+user_input = input(':>>>')
+try:
+    user_input = int(user_input)
+    if user_input % 2 == 0:
+        print(even)
+    else:
+        print(odd)
+except:
+    print('Invalid')
+```
+
+@tab + 条件
+
+当然，except 后面还可以跟条件。什么样的条件？—— **报错类型。** 就是如果代码不是 except 后面跟的报错类型，就不会执行 except 里面的命令。
+
+```python
+user_input = input(':>>>')
+try:
+    user_input = int(user_input)
+    if user_input % 2 == 0:
+        print(even)
+    else:
+        print(odd)
+except TypeError:
+    print('Invalid')
+    
+# output
+:>>>a
+Traceback (most recent call last):
+  File "D:\603\pythonProject1\.venv\Scripts\demo.py", line 3, in <module>
+    user_input = int(user_input)
+ValueError: invalid literal for int() with base 10: 'a'
+```
+
+这里的报错属于 `ValueError` ，于是 except 后接 `TypeError` 会不执行 except 后面的命令，报错。
+
+```python
+user_input = input(':>>>')
+try:
+    user_input = int(user_input)
+    if user_input % 2 == 0:
+        print(even)
+    else:
+        print(odd)
+except ValueError:
+    print('Invalid')
+    
+# output
+:>>>a
+Invalid
+```
+
+@tab + 条件s
+
+当然，一个 except 可以有多个条件，也可以有多个 except
+
+```python
+user_input = input(':>>>')
+try:
+    user_input = int(user_input)
+    if user_input % 2 == 0:
+        print(even)
+    else:
+        print(odd)
+except (ValueError,TypeError):
+    print('Invalid')
+
+except KeyboardInterrupt:
+    print('Interrupted')
+```
+
+:::
+
+### finally
+
+```python
+user_input = input(':>>>')
+try:
+    user_input = int(user_input)
+    if user_input % 2 == 0:
+        print(even)
+    else:
+        print(odd)
+except (ValueError,TypeError):
+    print('Invalid')
+finally:
+    print('a')
+    
+#output
+:>>>h
+Invalid
+a
+```
+
+无论发生什么，代码==最后==都会执行 finally。finally 不能单独存在，必须与 try except 搭配使用。
+
+
+
+## Threading 库
