@@ -664,4 +664,244 @@ a
 
 
 
-## Threading 库
+## 8. 计算密集型和IO密集型
+
+<img src="./Week09.assets/3d4d434a30e9e596f43d19d6da20e17.png" alt="3d4d434a30e9e596f43d19d6da20e17" style="zoom: 33%;" />
+
+> BIOS: B: Base; I: Input; O: Output; S: System
+
+也就是你电脑开机的时候就会启动的。
+
+1. **计算密集型**
+
+> 在上面的时候，我们开启了两个线程，如果这两个线程要同时执行，那同一时期 CPU 上只有一个线程在执行。 那从上图可知，那这两个线程就需要频繁的在上下文切换。 Ps：我们这个绿色表示我们这个线程正在执行，红色代表阻塞。 所以，我们可以明显的观察到，线程的上下文切换也是需要消耗资源的（时间-ms）不断的归还和拿取 GIL 等，切换上下文。明显造成很大的资源浪费。
+
+
+
+2. **IO密集型**
+
+> 我们现在假设，有个服务器程序（Socket）也就是我们新开的一个程序（也就是我们网络爬虫的最底层）开始爬取目标网页了，我们那个网页呢，有两个线程同时运行，我们线程二已经请求成功开始运行了，也就是上图的 （Thread 2）绿色一条路过去。 而我们的线程一（Thread 1）- Datagram（这里它开启了一个 UDP），然后等待数据建立（也就是等待哪些 HTML、CSS 等数据返回）也就是说，在 Ready to receive（recvfrom） 之间都是准备阶段。这样就是有一段时间一直阻塞，而我们的线程二可以一直无停歇也不用切换上下文就一直在运行。这样的 IO 密集型就有很大的好处。
+
+这里我们需要注意的是，我们的多线程是运行在 IO 密集型上的，我们得区分清楚。
+
+还有就是，资源等待，比如有时候我们使用浏览器发起了一个 Get 请求，那浏览器图标上面在转圈圈的时候就是我们请求资源等待的时间，（也就是图上面的 Datagram 到 Ready to receive ）数据建立到数据接收（就是转圈圈的时间）。我们完全就不需要执行它，就让它等待就好。这个时候让另一个线程去执行就好
+
+
+
+## 9. thread
+
+### 非守护线程
+
+```python
+import threading, time
+
+def start(num):
+    time.sleep(num)
+    print(threading.current_thread().name) # 当前线程名称
+    print(threading.current_thread().is_alive()) # 当前线程状态
+    print(threading.current_thread().ident) # 当前线程的编号
+
+print('start')
+# 要使用多线程哪个函数>>>target=函数,name=给这个多线程取个名字
+# 如果你不起一个名字的话，那那它会自己去起一个名字的（pid）也就是个 ident
+# 类似声明
+thread = threading.Thread(target=start,name='my first thread',args=(1,))
+
+# 每个线程写完你不start()的话，就类似只是声明
+thread.start()
+print('stop')
+```
+
+::: info
+
+由上图可知，声明为线程函数的函数也可以有参数，具体传入参数的方法：`args = # 元组`，有几个参数元组里传入多少个参数。
+
+:::
+
+输出：
+
+```python
+start
+stop
+my first thread
+True
+22268
+```
+
+::: important
+
+由输出可知，这个线程函数是在主线程之后才开始执行的。这种函数==**非守护线程**==。
+
+:::
+
+
+
+### .join()
+
+```python
+import threading, time
+
+
+def target(second):
+    print(f"Treading{threading.current_thread().name} is running")
+    print(f"Treading{threading.current_thread().name} sleep {second}s")
+    time.sleep(second)
+    print(f"Treading{threading.current_thread()} ended")
+
+print(f"Treading{threading.current_thread().name} is running")
+
+for i in [1, 5]:
+    t = threading.Thread(target=target, args=[i])
+    t.start()
+    t.join()
+print(f"Treading{threading.current_thread().name} is ended")
+```
+
+
+
+输出：
+
+```python
+TreadingMainThread is running
+TreadingThread-1 (target) is running
+TreadingThread-1 (target) sleep 1s
+Treading<Thread(Thread-1 (target), started 22892)> ended
+TreadingThread-2 (target) is running
+TreadingThread-2 (target) sleep 5s
+Treading<Thread(Thread-2 (target), started 20580)> ended
+TreadingMainThread is ended
+```
+
+::: important
+
+在调用线程函数之后加 `.join()`，这样能保证主线程在子线程结束之后结束。
+
+:::
+
+
+
+::: detail
+
+可以对比看一下不加第15行的代码的输出：
+
+```python
+TreadingMainThread is running
+TreadingThread-1 (target) is running
+TreadingThread-1 (target) sleep 1s
+TreadingThread-2 (target) is running
+TreadingThread-2 (target) sleep 5s
+TreadingMainThread is ended
+Treading<Thread(Thread-1 (target), started 18856)> ended
+Treading<Thread(Thread-2 (target), started 23740)> ended
+```
+
+
+
+在这里我们首先声明了一个方法，叫作 target，它接收一个参数为 second，通过方法的实现可以发现，这个方法其实就是执行了一个 `time.sleep` 休眠操作，second 参数就是休眠秒数，其前后都 print了一些内容，其中线程的名字我们通过 `threading.current_thread().name` 来获取出来，如果是主线程的话，其值就是 `MainThread`，如果是子线程的话，其值就是 Thread-*。
+
+然后我们通过 Thead类新建了两个线程，target参数就是刚才我们所定义的方法名，`args`以列表的形式传递。两次循环中，这里 i 分别就是 1 和 5，这样两个线程就分别休眠 1 秒和 5 秒，声明完成之后，我们调用 start 方法即可开始线程的运行。
+
+观察结果我们可以发现，这里一共产生了三个线程，分别是主线程 MainThread和两个子线程 Thread-1、Thread-2。另外我们观察到，主线程首先运行结束，紧接着 Thread-1、Thread-2 才接连运行结束，分别间隔了 1 秒和 4 秒。这说明主线程并没有等待子线程运行完毕才结束运行，而是直接退出了，有点不符合常理。
+
+如果我们想要主线程等待子线程运行完毕之后才退出，可以让每个子线程对象都调用下 join方法。
+
+:::
+
+
+
+### 守护线程
+
+```python
+import threading, time
+
+def start(num):
+    time.sleep(num)
+    print(threading.current_thread().name)
+    print(threading.current_thread().is_alive())
+    print(threading.current_thread().ident)
+
+print('start')
+thread = threading.Thread(target=start, name='my first thread', args=(1,))
+thread.setDaemon(True)
+thread.start()
+print('stop')
+```
+
+::: info
+
+显而易见，通过 `thread.setDaemon(True)` 命令我们把非守护线程变成了守护线程。
+
+:::
+**守护线程的定义：**不等待子线程的结束，主线程结束所有线程结束。没来得及执行的子线程销毁。
+
+**输出：**
+
+```python
+start
+stop
+```
+
+::: detail
+
+我们把主线程时间延长一点，手动等待子线程运行结束。
+
+```python
+import threading, time
+
+def start(num):
+    time.sleep(num)
+    print(threading.current_thread().name)
+    print(threading.current_thread().is_alive())
+    print(threading.current_thread().ident)
+
+print('start')
+thread = threading.Thread(target=start, name='my first thread', args=(1,))
+thread.setDaemon(True)
+thread.start()
+time.sleep(20)
+print('stop')
+```
+
+**输出：**
+
+```python
+start
+my first thread
+True
+1588
+stop
+```
+
+:::
+
+
+
+### 线程池
+
+```python
+import time
+import threadpool
+
+# 执行比较耗时的函数，需要开多线程
+def get_html(url):
+    time.sleep(3)
+    print(url)
+# 按原本的单线程运行时间为：300s
+# 而多线程池的化：30s
+# 使用多线程执行 telent 函数
+start_time = time.time()
+urls = [i for i in range(100)]
+pool = threadpool.ThreadPool(100) # 建立线程池
+
+# 提交任务给线程池
+requests = threadpool.makeRequests(get_html, urls)
+
+# 开始执行任务
+for req in requests:
+    pool.putRequest(req)
+pool.wait()
+print(":>>>>", time.time() - start_time)
+```
+
+
+

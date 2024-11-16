@@ -492,6 +492,8 @@ def factorial_recur(n):
 
 <img src="./Week08.assets/48a8d102509fac82e55b2effdaa2603-1730942616903-5.png" alt="48a8d102509fac82e55b2effdaa2603" style="zoom:50%;" />
 
+:::
+
 ## 4. 空间复杂度（space complexity）
 
 **用于衡量算法占用内存空间随着数据量变大时的增长趋势。这个概念与时间复杂度非常类似。只需将“运行时间”替换为：“占用内存空间”。**
@@ -833,7 +835,7 @@ TSP_get_dists(['A','B','C','D'],dists)
 
 
 
-#### 图片演示
+##### 图片演示
 
 ::: tabs
 
@@ -861,7 +863,7 @@ TSP_get_dists(['A','B','C','D'],dists)
 
 
 
-#### 伪代码
+##### 伪代码
 
 ```python
 unvisited ← remaining vertices
@@ -885,7 +887,7 @@ while (unvisited ≠ NULL )
 
 
 
-#### 代码
+##### 代码
 
 ```python
 # 初始化数据
