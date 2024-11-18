@@ -688,7 +688,7 @@ a
 
 
 
-## 9. thread
+## 9. 线程
 
 ### 非守护线程
 
@@ -904,4 +904,150 @@ print(":>>>>", time.time() - start_time)
 ```
 
 
+
+## 10. 进程
+
+- **多进程的含义：** 通过上一课时我们知道，由于进程中 GIL 的存在，Python 中的多线程并不能很好地发挥多核优势，一个进程中的多个线程，在同一时刻只能有一个线程运行。而对于多进程来说，每个进程都有属于自己的 GIL，所以，在多核处理器下，多进程的运行是不会受 GIL 的影响的。因此，多进程能更好地发挥多核的优势。总的来说，Python 的多进程整体来看是比多线程更有==优势==的。所以，在条件允许的情况下，能用多进程就尽量用多进程。不过值得注意的是，由于进程是系统进行资源分配和调度的一个独立单位，**所以各个进程之间的数据是无法共享的，如多个进程无法共享一个全局变量，进程之间的数据共享需要有单独的机制来实现**，这在后面也会讲到。
+
+- **多进程的实现：** 
+
+<img src="./Week09.assets/76659c011acc216b7825d4f9baf3dd5.png" alt="76659c011acc216b7825d4f9baf3dd5" style="zoom: 33%;" />
+
+在 Python 中也有内置的库来实现多进程，它就是 multiprocessing。多线程在 IO 密集型用的比较多，也就是在爬虫方面用的比较多。而 CPU 密集型根本就不用多线程。
+
+我们一般的策略是，多进程加多线程，这样的结合是最好。multiprocessing 提供了一系列的组件，如 Process（进程）、Queue（队列）、Semaphore（信号量）、Pipe（管道）、Lock（锁）、Pool（进程池）等，接下来让我们来了解下它们的使用方法。
+
+
+
+### multiprocessing 库
+
+<img src="./Week09.assets/09eb3d32a14d0781772516166dbe304.png" alt="09eb3d32a14d0781772516166dbe304" style="zoom:67%;" />
+
+
+
+### 代码
+
+- 最简单的多进程的使用：
+
+```python
+import multiprocessing
+
+def process(index):
+    print(f"Process:{index}")
+
+if __name__ == '__main__':
+    for i in range(5):
+        p = multiprocessing.Process(target = process, args = (i,))
+        p.start()
+```
+
+- 
+
+```python
+import multiprocessing, time
+
+def start(i):
+    time.sleep(3)
+    print(i)
+    print(multiprocessing.current_process().name)
+    print(multiprocessing.current_process().pid)
+    print(multiprocessing.current_process().is_alive())
+    print(multiprocessing.cpu_count())
+
+if __name__ == '__main__':
+    print('start')
+    p = multiprocessing.Process(target=start, args=(1,),name = 'p1')
+    p.start()
+    print('stop')
+```
+
+```python
+# 输出
+start
+stop
+1
+p1
+18888
+True
+20
+```
+
+- 
+
+```python
+import multiprocessing, time
+
+def process(index):
+    time.sleep(index)
+    print(f'Process: {index}')
+
+if __name__ == '__main__':
+    for i in range(5):
+        p = multiprocessing.Process(target=process, args=[i,])
+        p.start()
+    print(f'CPU number:{multiprocessing.cpu_count()}')
+    for p in multiprocessing.active_children():
+        print(f'Child process name:{p.name} id:{p.pid}')
+    print("Process Ended")
+```
+
+```python
+Process: 0
+CPU number:20
+Child process name:Process-3 id:15888
+Child process name:Process-4 id:15688
+Child process name:Process-5 id:6680
+Child process name:Process-2 id:25484
+Process Ended
+Process: 1
+Process: 2
+Process: 3
+Process: 4
+```
+
+
+
+### 进程池
+
+- **进程池执行多个任务：**
+
+```python
+from multiprocessing import Pool
+def function_square(data):
+    result = data*data
+    return result
+
+if __name__ == '__main__':
+    inputs = [i for i in range(100)]
+	# 那么，我们可以首先声明这个进程池；
+    pool = Pool(processes=4) # 如果不定义数字，他会根据你的电脑情况自行创建
+	# 然后，使用 map 方法，那其实这个 map 方法和正常的 map 方法是一致的。
+	# map：
+	# pool = Pool()
+	# pool.map(main, [i*10 for i in range(10)])
+	# 第一个参数：他会将数组中的每一个元素拿出来，当作函数的一个个参数，然后创建一个个进程，放到进程池里面去运行。
+	# 第二个参数：构造一个数组，然后也就是 0 到 99 的这么一个循环，那我们直接使用 list 构造一下
+    pool_outputs = pool.map(function_square, inputs)
+    pool.close()
+    pool.join()
+    print('Pool  :', pool_outputs)
+```
+
+- **进程池执行单个任务：**
+
+```python
+from multiprocessing import Pool
+def function_square(data):
+	result = data*data
+	return result
+
+if __name__ == '__main__':
+	pool = Pool(processes=4) # 如果你不指定数目的化，它就会根据你电脑状态，自行创建。（按你的电脑自动创建相应的数目）
+	# map 把任务交给进程池
+	# pool.map(function, iterable)
+	pool_outputs = pool.apply(function_square, args=(10, ))
+	pool.close()
+	pool.join()
+	print("Pool     :", pool_outputs)
+```
 
