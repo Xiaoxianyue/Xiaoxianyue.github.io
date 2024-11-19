@@ -471,6 +471,50 @@ concurrent_URLs_example()
 @tab non-concurrent-example-URLs.timeit.py
 
 ```python
+# 引入用于发送 HTTP 请求的 urllib.request 模块
+import urllib.request
+
+# 定义一个包含多个 URL 的列表，这些是我们要尝试访问的地址
+URLS = [
+    'http://www.foxnews.com/',         # Fox News 网站
+    'http://www.cnn.com/',             # CNN 网站
+    'http://europe.wsj.com/',          # 欧洲版华尔街日报
+    'http://www.bbc.co.uk/',           # 英国广播公司
+    'http://some-made-up-domain.com/'  # 一个不存在的域名（用于测试异常处理）
+]
+
+# 定义一个函数，用于加载指定的 URL
+def load_url(url, timeout):
+    """
+    通过指定的 URL 加载数据
+    :param url: 要访问的 URL 地址
+    :param timeout: 超时时间，单位为秒
+    :return: 返回从 URL 读取的内容
+    """
+    # 使用 urllib.request.urlopen 发送 GET 请求
+    # `with` 确保连接资源在使用完成后正确关闭
+    with urllib.request.urlopen(url, timeout=timeout) as conn:
+        return conn.read()  # 从连接中读取返回的数据并返回
+
+# 定义一个函数，按顺序加载 URL 并处理异常
+def non_concurrent_URLs_example():
+    """
+    按顺序（非并发）加载 URL，并对每个请求处理可能出现的异常
+    """
+    # 遍历 URL 列表
+    for url in URLS:
+        try:
+            # 尝试加载 URL，超时时间设为 60 秒
+            data = load_url(url, 60)
+        except Exception as exc:
+            # 如果出现任何异常，打印异常信息
+            print('%r generated an exception: %s' % (url, exc))
+        else:
+            # 如果成功加载 URL，打印页面大小（字节数）
+            print('%r page is %d bytes' % (url, len(data)))
+
+# 调用函数，运行非并发的 URL 加载示例
+non_concurrent_URLs_example()
 ```
 
 
