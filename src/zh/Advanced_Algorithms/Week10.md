@@ -454,5 +454,199 @@ Elapsed time: 2.0041310787200928
 
 
 
+## 6. `asyncio` 库使用
+
+### `gather`
+
+#### 例子 1
+
+```python
+import asyncio
+
+async def foo(num):
+    return num
+
+async def main():
+    coros = [asyncio.create_task(foo(i)) for i in range(10)]
+    done = await asyncio.gather(*coros)
+    print(done)
+    for i in done:
+        print(i)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+**核心作用:**
+
+- 并发执行多个协程： 它会启动传入的多个协程，并尽可能并发地执行它们。
+- 收集所有结果： 在所有协程完成后，它会返回一个包含每个协程结果的列表。
+- 捕获异常： 如果某个协程抛出异常，`asyncio.gather` 会将异常重新抛出，但不会影响其他协程的执行。
+
+**输出：**
+
+```python
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+gather 通常被用来阶段性的一个操作，做完第一步才能做第二步，比如下面这样：
+
+#### 例子 2
+
+```python
+import asyncio
+import time
+
+async def step1(n,start):
+    await asyncio.sleep(n)
+    print('第1阶段已完成')
+    print("此时用时", time.time() - start)
+    return n
+
+async def step2(n,start):
+    await asyncio.sleep(n)
+    print('第2阶段已完成')
+    print("此时用时", time.time() - start)
+    return n
+
+async def main():
+    now = time.time()
+    result = await asyncio.gather(step1(5,now),step2(2,now))
+    for i in result:
+        print(i)
+    print("总用时", time.time() - now)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+**输出：**
+
+```python
+第2阶段已完成
+此时用时 2.012958288192749
+第1阶段已完成
+此时用时 5.010961532592773
+5
+2
+总用时 5.010961532592773
+```
+
+**可以通过上面结果得到结论：**
+
+1. step 1 和 step 2 是并行运行的。
+2. gather 会等待耗时一些的那个完成之后才返回结果，耗时总时间取决于其中任务时间最长的那个
 
 
+
+
+
+### `asyncio.await`
+
+```python
+import asyncio
+
+async def foo(x):
+    await asyncio.sleep(x)
+    return f"Task {x} completed"
+
+async def main():
+    result = await asyncio.gather(
+        foo(1),  # Task 1
+        foo(2),  # Task 2
+        foo(3)   # Task 3
+    )
+    print(result)  # ['Task 1 completed', 'Task 2 completed', 'Task 3 completed']
+
+asyncio.run(main())
+```
+
+**解释：**
+
+1. `foo(1)`、`foo(2)` 和 `foo(3)` 会同时开始执行（并发）。
+2. 每个协程按照自己的逻辑运行，`foo(1)` 需要 1 秒完成，`foo(2)` 需要 2 秒，`foo(3)` 需要 3 秒。
+3. 当所有协程完成后，`gather` 返回一个列表，列表中每个元素对应协程的返回值。
+
+**输出：**
+
+```python
+['Task 1 completed', 'Task 2 completed', 'Task 3 completed']
+```
+
+
+
+### 捕获异常
+
+```python
+import asyncio
+
+async def foo(x):
+    if x == 2:
+        raise ValueError(f"Error in Task {x}")
+    await asyncio.sleep(1)
+    return f"Task {x} completed"
+
+async def main():
+    try:
+        result = await asyncio.gather(foo(1), foo(2), foo(3))
+        print(result)
+    except Exception as e:
+        print(f"Caught exception: {e}")
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+**输出：**
+
+```python
+Caught exception: Error in Task 2
+```
+
+**在这种情况下：**
+
+- 虽然 foo(2) 抛出了异常，gather 仍然会等待其他任务完成。
+- 异常会被 gather 捕获并重新抛出，你可以通过 try...except 处理它。
+
+你可以通过设置 return_exceptions=True，让 gather 在任务失败时返回异常而不是抛出异常：
+
+```python
+import asyncio
+
+async def foo(x):
+    if x == 2:
+        raise ValueError(f"Error in Task {x}")
+    await asyncio.sleep(1)
+    return f"Task {x} completed"
+
+async def main():
+    try:
+        result = await asyncio.gather(foo(1), foo(2), foo(3), return_exceptions=True)
+        print(result)
+    except Exception as e:
+        print(f"Caught exception: {e}")
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+**输出：**
+
+```python
+['Task 1 completed', ValueError('Error in Task 2'), 'Task 3 completed']
+```
+
+注意事项
+
+1. **不保证任务顺序：** `gather` 返回的结果列表中，结果的顺序与传入协程的顺序一致，而不是任务完成的先后顺序。
+2. **任务并发而非并行：** `asyncio` 是基于单线程的协程并发，适合 I/O 密集型任务。如果你需要 CPU 密集型任务，请结合 `concurrent.futures` 或 `multiprocessing`。
