@@ -553,6 +553,8 @@ if __name__ == '__main__':
 
 ### `asyncio.await`
 
+**例子引入：**
+
 ```python
 import asyncio
 
@@ -583,7 +585,97 @@ asyncio.run(main())
 ['Task 1 completed', 'Task 2 completed', 'Task 3 completed']
 ```
 
+**详细说明：**
 
+我们先看一下 `wait` 的语法结构：
+
+```python
+asyncio.wait(aws, *, loop=None, timeout=None, return_when=ALL_COMPLETED)
+```
+
+`wait` 一共有 4 个参数，第一个参数 `aws`，一般是一个任务列表。
+
+第二个 `*` 之后的都是强制关键字参数，即 `loop`、`timeout`、`return_when`。
+
+`loop` 通 `gather` 的参数是一个事件循环，该参数计划在 Python 3.10 中删除。
+
+`timeout`可以指定这组任务的超时时间，请注意，此函数不会引发 `asyncio.TimeoutError`，超时的时候会返回已完成的任务。
+
+`return_when`可以指定什么条件下返回结果，默认是所以任务完成就返回结果列表。
+
+`return_when`的具体参数看下面的表格：
+
+| 参数名            | 含义                                                         |
+| ----------------- | ------------------------------------------------------------ |
+| `FIRST_COMPLETED` | 任何一个 future 完成或取消时返回                             |
+| `FIRST_EXCEPTION` | 任何一个 future 出现错误将返回，如果没有出现异常等价于 `ALL_COMPLETED` |
+| `ALL_COMPLETED`   | 当所有任务完成或者被取消时返回结果，默认值。                 |
+
+```python
+import asyncio,time,aiohttp
+from requests.exceptions import RequestException
+
+start_time = time.time()
+async def request(url):
+	try:
+		async with aiohttp.ClientSession() as session:
+			html = await session.get(url)
+			res = await html.text()
+			# print(res)
+	except RequestException:
+		return None
+
+# async def main(loop):
+# 	url = 'https://static4.scrape.cuiqingcai.com/'
+# 	tasks = [request(url) for _ in range(10)]
+# 	tasks = loop.create_task(tasks)
+
+
+if __name__ == '__main__':
+	url = 'https://ssr4.scrape.center'
+	loop = asyncio.get_event_loop()
+	tasks = [asyncio.ensure_future(request(url)) for _ in range(10)]
+	wait = loop.run_until_complete(asyncio.wait(tasks))
+	print(type(wait))
+	print(time.time() - start_time)
+
+# 输出
+<class 'tuple'>
+6.529097557067871
+```
+
+wait 返回的结果是一个元组，第一部分是完成的任务，第二部分是准备中的任务。
+
+```python
+done, pending = await asyncio.wait(aws)
+```
+
+其中 done 表示完成的任务，可以通过迭代获取每个任务。
+
+pending 表示的是还没执行的任务。
+
+下面看一个例子来进一步了解：
+
+```python
+import asyncio
+
+async def foo(num):
+    await asyncio.sleep(0.99991)
+    return num
+async def main():
+    #coro = foo()
+    coro = [asyncio.create_task(foo(i)) for i in range(10) ]
+    done, pending = await asyncio.wait(coro,timeout=1,return_when="ALL_COMPLETED")
+
+    for coro in done:
+        print(coro.result())
+    print("pending",pending)
+    for item in pending:
+         print(item)    
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
 
 ### 捕获异常
 
@@ -650,3 +742,393 @@ if __name__ == '__main__':
 
 1. **不保证任务顺序：** `gather` 返回的结果列表中，结果的顺序与传入协程的顺序一致，而不是任务完成的先后顺序。
 2. **任务并发而非并行：** `asyncio` 是基于单线程的协程并发，适合 I/O 密集型任务。如果你需要 CPU 密集型任务，请结合 `concurrent.futures` 或 `multiprocessing`。
+
+
+
+### 定义协程
+
+协程就是一个**函数**，只是它满足以下几个特征：
+
+- 依赖 I/O 操作（有 I/O 依赖的操作）
+- 可以在进行 I/O 操作时暂停
+- 无法直接运行
+
+它的作用就是对有大量 I/O 操作的程序进行加速。
+
+Python 协程属于可等待对象，因此可以在其他协程中被等待。
+
+::: tip 什么叫可等待对象？——await
+
+如果前面被标记 await 就表明他是个协程，我们需要等待它返回一个数据。
+
+:::
+
+```python
+# 代码示例 一
+import asyncio
+
+
+async def net():
+    return 11
+
+
+async def main():
+    # net() # error
+    await net()  # right
+
+
+asyncio.run(main())
+
+import asyncio
+
+
+async def net():
+    return 11
+
+
+async def main():
+    # net() # error
+    return await net()  # right
+
+
+print(asyncio.run(main()))
+```
+
+举个例子，我从网络上下载某个数据文件下载到我的本地电脑上，这很显然是一个 I/O 操作。比方这个文件较大（2GB），可能需要耗时 30min 才能下载成功。而在这 30min 里面，它会卡在 await 后面。这个 await 标记了协程，那就意味着它可以被暂停，那既然该任务可以被暂停，我们就把它分离出去。我这个线程继续执行其它任务，它这个 30min 分出去慢慢的传输，我这个程序再运行其他操作。
+
+上面的代码，Python 3.6 会给你报错。报错信息如下：
+
+```python
+Traceback (most recent call last):
+  File "C:/Code/pycharm_daima/爬虫大师班/14-异步编程/test.py", line 26, in <module>
+    asyncio.run(main())
+AttributeError: module 'asyncio' has no attribute 'run'
+```
+
+**为什么会出现这样的报错呢？**
+
+因为从 Python 3.7+ 之后 Python 已经完全支持异步了，Python 3.6 之前只是支持部分异步，许多的方法是非常冗长的。
+
+**一个异步函数调用另一个异步函数：**
+
+```python
+import asyncio
+async def net():
+	return 11
+async def main():
+	# net() # error
+	await net() # right
+asyncio.run(main())
+```
+
+::: tip
+
+异步主要做得是 I/O 类型，CPU 密集型就不需要使用异步。
+
+一个异步调用另一个异步函数，不能直接被调用，必须添加 await
+
+:::
+
+我们使用代码验证一下，不加 await 调用试一试：
+
+```python
+import asyncio
+
+async def net():
+	return 11
+async def main():
+	net() # error
+asyncio.run(main())
+```
+
+输出结果：
+
+```python
+C:/Code/pycharm_daima/爬虫大师班/14-异步编程/test.py:31: RuntimeWarning: coroutine 'net' was never awaited
+  net() # error
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+```
+
+我们添加上 await 即可正常运行：
+
+```python
+import asyncio
+
+async def net():
+	return 11
+async def main():
+	# net() # error
+	await net() # right
+asyncio.run(main())
+```
+
+运行结果：
+
+```python
+C:\Users\clela\AppData\Local\Programs\Python\Python37\python.exe C:/Code/pycharm_daima/异步编程/test.py
+
+Process finished with exit code 0
+```
+
+运行成功并没有报错，接下来我们要输出得到的结果该怎么编写代码呢？直接赋值即可：
+
+```python
+import asyncio
+
+async def net():
+	return 11
+async def main():
+	# net() # error
+	a = await net() # right
+	print(a)
+asyncio.run(main())
+
+# 输出结果：
+11
+```
+
+Ps：async 标记异步，await 标记等待。
+
+**如果我们不想使用 await 来运行异步函数，那这个时候我们就可以按如下方法来运行代码：**
+
+```python
+import asyncio
+
+async def net():
+	return 11
+
+async def main():
+	task = asyncio.create_task(net())
+	await task # right
+	
+asyncio.run(main())
+```
+
+首先我们来定义一个协程，体验一下它和普通进程在实现上的不同之处，代码如下：
+
+::: code-tabs
+
+@tab 原版
+
+```python
+# 代码示例二
+import asyncio
+
+
+async def execute(x):
+    print('Number:', x)
+
+
+coroutine = execute(1) # 创建协程对象
+print('Coroutine:', coroutine)
+print('After calling execute')
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(coroutine) # 事件循环的 run_until_complete 方法运行指定的协程，直到该协程完成。
+print('After calling loop')
+```
+
+@tab 注释版
+
+```python
+# 代码示例二
+import asyncio  # 导入 asyncio 模块: asyncio 是 Python 内置的异步 I/O 框架，用于处理异步任务和事件循环。它允许你编写可以并发执行的代码。
+
+# 定义异步函数
+async def execute(x):
+    """
+    - async def 用来定义一个 异步函数，表示这个函数是可以通过 await 调用或者通过事件循环调度的。
+	- 这里的函数 execute 接收一个参数 x，并打印 Number: x。
+    """
+	print('Number:', x)
+
+# 创建协程对象
+"""
+协程（Coroutine） 是一种可暂停的函数，通常由异步函数返回。
+调用 execute(1) 并不会立即执行 execute 的代码，而是返回一个 协程对象，该对象可以用来描述执行该函数的过程。
+"""
+coroutine = execute(1)
+# 打印协程对象
+print('Coroutine:', coroutine) # coroutine 是 execute(1) 返回的协程对象。
+print('After calling execute') # 第二个 print 是为了说明，在调用 execute(1) 后，并未立即执行 execute 内的代码。
+
+# 获取事件循环
+"""
+事件循环是 asyncio 的核心，用于调度和运行异步任务。
+asyncio.get_event_loop() 获取当前线程的事件循环对象。如果没有事件循环，则会创建一个新的事件循环。
+"""
+loop = asyncio.get_event_loop()
+
+"""
+事件循环的 run_until_complete 方法运行指定的协程，直到该协程完成。
+当运行 coroutine 时，协程中的代码 print('Number:', x) 会被实际执行，输出：1
+"""
+loop.run_until_complete(coroutine)
+print('After calling loop')
+# 协程运行完成后，事件循环返回控制权给主线程。
+"""
+1. 协程：通过 async def 定义，可以暂停和恢复。
+2. 事件循环：通过 asyncio.get_event_loop 获取，用于调度协程。
+3. 运行协程：通过 loop.run_until_complete 执行协程。
+"""
+```
+
+:::
+
+> 事件循环是 `asyncio` 的核心，用于调度和运行异步任务。
+> `asyncio.get_event_loop()` 获取当前线程的事件循环对象。如果没有事件循环，则会创建一个新的事件循环。
+
+代码示例二中，我们首先引入了 `asyncio` 这个包，这样我们才可以使用 `async` 和 `await`，然后我们使用 `async` 定义了一个 `execute ` 方法，方法接收一个数字参数，方法执行之后会打印这个数字。
+
+随后我们直接调用了这个方法，然而这个方法并没有执行，而是返回了一个 `coroutine`协程对象。
+
+随后我们使用 `get_event_loop` 方法创建了一个事件循环 `loop`，并调用了 `loop`对象的 `run_until_complete`方法将协程注册到事件循环 `loop`中，然后启动。最后我们才看到了 `execute`方法打印了输出结果。
+
+可见，`async`定义的方法就会变成一个无法直接执行的 `coroutine`对象，必须将其注册到事件循环中才可以执行。
+
+### Task 显式地进行声明
+
+上面我们还提到了 task，它是对 coroutine 对象的进一步封装，它里面相比 coroutine 对象多了**运行状态**，比如 running、finished 等，我们可以用这些状态来获取协程对象的执行情况。
+
+在上面的例子中，当我们将 coroutine 对象传递给 `run_until_complete` 方法的时候，实际上它进行了一个操作就是将 coroutine 封装成了 task 对象，我们也可以显式地进行声明，如下所示：
+
+```python
+"""
+project = 'Code', file_name = 'yibudaima', author = 'AI悦创'
+time = '2020/4/22 19:24', product_name = PyCharm, 公众号：AI悦创
+# code is far away from bugs with the god animal protecting
+    I love animals. They taste delicious.
+"""
+import asyncio
+
+async def execute(x):
+	print('Number:', x)
+	return x
+
+coroutine = execute(1)
+print('Coroutine:', coroutine)
+print('After calling execute')
+loop = asyncio.get_event_loop()
+task = loop.create_task(coroutine)
+print('Task:', task)
+loop.run_until_complete(task)
+print('Task:', task)
+# print('Task:', task.result())
+print('After calling loop')
+```
+
+运行结果：
+
+```python
+Coroutine: <coroutine object execute at 0x10e0f7830>
+After calling execute
+Task: <Task pending coro=<execute() running at demo.py:4>>
+Number: 1
+Task: <Task finished coro=<execute() done, defined at demo.py:4> result=1>
+After calling loop
+```
+
+这里我们定义了 loop 对象之后，接着调用了它的 `create_task` 方法将 coroutine 对象转化为了 task 对象，随后我们打印输出一下，发现它是 pending 状态。接着我们将 task 对象添加到事件循环中得到执行，随后我们再打印输出一下 task 对象，发现它的状态就变成了 finished，同时还可以看到其 result 变成了 1，也就是我们定义的 execute 方法的返回结果。
+
+
+
+
+
+## 7. 什么是事件循环？
+
+**事件循环（Event Loop）** 是一种编程结构，用于管理异步操作的执行。它是异步编程的核心，负责调度和运行多个协程（异步任务）。在 Python 的 `asyncio` 模块中，事件循环是实现异步操作的关键组件。
+
+### 7.1 事件循环的核心作用
+
+1. **调度协程和任务**：将协程或任务（由 `async def` 定义）分派到 CPU 执行。
+2. **管理 I/O 操作**：监听网络 I/O、文件 I/O 等操作的完成。
+3. **执行回调函数**：当某些事件完成后，事件循环会调用注册的回调函数。
+4. **任务并发**：通过在任务等待时执行其他任务，实现并发。
+
+简而言之，事件循环会不断循环检查是否有任务需要执行，并按需切换任务。
+
+### 7.2 事件循环的运行原理
+
+事件循环的工作流程可以分为以下步骤：
+
+1. **初始化**：创建一个事件循环。
+2. **任务注册**：将协程、回调函数、Future（未来对象）等加入事件循环的队列。
+3. **运行循环**：开始循环，从队列中提取任务，执行可运行的任务。
+4. 任务挂起与恢复：
+    - 如果某个任务需要等待（如等待 I/O 完成），事件循环会挂起该任务。
+    - 当等待条件满足时，事件循环会恢复挂起的任务继续执行。
+5. **结束**：当所有任务完成，事件循环退出。
+
+### 7.3 Python 中的事件循环
+
+在 Python 的 `asyncio` 模块中，事件循环由 `asyncio.get_event_loop` 或 `asyncio.run` 提供，核心方法包括：
+
+1. **`run_until_complete(task)`**：运行一个任务直到完成。
+2. **`create_task(coroutine)`**：将协程包装为任务，并注册到事件循环。
+3. **`run_forever()`**：持续运行事件循环（通常用于服务型应用）。
+4. **`stop()`**：停止事件循环。
+
+::: code-tabs
+
+@tab 事件循环的一个简单示例
+
+```python
+import asyncio
+
+async def task1():
+    print("Task 1 is starting")
+    await asyncio.sleep(2)
+    print("Task 1 is completed")
+
+async def task2():
+    print("Task 2 is starting")
+    await asyncio.sleep(1)
+    print("Task 2 is completed")
+
+async def main():
+    await asyncio.gather(task1(), task2())  # 并发运行两个任务
+
+# 获取事件循环并运行
+asyncio.run(main())
+```
+
+@tab 输出
+
+```python
+Task 1 is starting
+Task 2 is starting
+Task 2 is completed
+Task 1 is completed
+```
+
+
+
+:::
+
+### 7.4 事件循环的特点
+
+1. **单线程**：事件循环通常运行在单线程中，但通过协程实现并发。
+2. **非阻塞**：任务之间不会阻塞，可以高效地处理多个 I/O 操作。
+3. **任务切换**：基于协程的挂起和恢复机制，而非线程切换。
+
+### 7.5 与传统多线程的区别
+
+| 特性         | 多线程编程       | 异步事件循环     |
+| ------------ | ---------------- | ---------------- |
+| **并发模型** | 多线程并发       | 单线程并发       |
+| **开销**     | 线程切换开销较大 | 协程切换开销较小 |
+| **任务等待** | 阻塞等待         | 非阻塞等待       |
+| **适用场景** | CPU 密集型任务   | I/O 密集型任务   |
+
+### 7.6 事件循环的实际应用
+
+1. **网络编程**：如处理 HTTP 请求的异步 Web 框架（FastAPI、aiohttp）。
+2. **文件操作**：异步读取和写入文件。
+3. **任务调度**：调度并发任务，避免阻塞。
+4. **高性能爬虫**：通过异步 I/O 高效抓取网页内容。
+
+
+
+### 7.7 总结
+
+事件循环是异步编程的核心组件，负责调度任务和管理异步 I/O。它通过协程实现非阻塞的并发操作，适合处理大量 I/O 密集型任务。理解事件循环的运行机制是掌握 Python 异步编程的关键。

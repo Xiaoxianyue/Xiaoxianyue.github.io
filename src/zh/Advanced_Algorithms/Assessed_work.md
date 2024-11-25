@@ -552,19 +552,219 @@ bst.display(bst.root)
 
 
 
-## **Assessed Advanced Task 2**: Implement Dijkstra’s Algorithm  
+## **Assessed Advanced Task **Implement a concurrent headline scraper** 
 
-Using the given code on Aula, in the folder DIJKSTRA-CODE-ADV-TASK-2, complete the existing Python code to produce code that works for the example below (same as Week 6 lecture), plus any other (come up with alternative graphs for testing purposes). You need to complete the code where indicated. 
+In the lecture this week there is an example of a concurrent application that reports the size of the data at different URLs. 
 
-The code, if working, will output the correct solution for the graph below. 
+If you look at the folder ADVANCED-TASK-3-CODE, you will find a program which goes to a set of URLs and gets the first 5 headlines back. However, it does not do this concurrently. 
 
-<img src="./Assessed_work.assets/image-20241105004520083.png" alt="image-20241105004520083" style="zoom: 25%;" />
+Your task this week is the 3rd and final advanced viva task. All 5 standard tasks have been set, so this is your final task. 
 
-The output from your code should look something like this – a list of the nodes which is the lowest cost path, as well as the cost itself:
+The task is to implement a concurrent version of the code in ADVANCED-TASK-3-CODE, which should do the same thing, but faster. 
+
+To do this, you should continue to use concurrent.futures, as well as the Python newspaper module. The major work is in integrating these two things so that they work properly. 
+
+You should check that the headlines are being retrieved correctly (both number and content). NB, it does not matter if some headlines turn out to be a section heading or other non-news content (which can happen, depending on how the news site has been organised). 
+
+You should use timeit (there’s an example in the code given) to compare and test the non-concurrent and concurrent versions. If the concurrent version is working properly, it should be faster than the non-concurrent version. The bigger the test number, the better the effect. 
+
+It may be useful to look at the documentation on concurrent.futures as well as newspaper.
+
+
 
 ```python
-(['O', 'A', 'B', 'D', 'T'], 13)
+import newspaper
+from newspaper import Article
+
+def get_headlines():
+
+    URLs = ['http://www.foxnews.com/',
+            'http://www.cnn.com/',
+            'http://www.derspiegel.de/',
+            'http://www.bbc.co.uk/',
+            'https://theguardian.com',]
+
+    for url in URLs:
+        result = newspaper.build(url, memoize_articles=False)
+        print('\n''The headlines from %s are' % url, '\n')
+        for i in range(1,6):
+            art = result.articles[i]
+            art.download()
+            art.parse()
+            print(art.title)
+
+if __name__ == '__main__':
+    import timeit
+    elapsed_time = timeit.timeit("get_headlines()", setup="from __main__ import get_headlines", number=2)/2             
+    print(elapsed_time) 
 ```
 
 
 
+### 1. 引言
+
+本程序旨在通过 Python 编程实现对新闻网站头条的爬取，并利用并发技术提升运行效率。代码中使用了 `newspaper` 模块进行新闻内容解析，并通过 `concurrent.futures` 模块实现多线程并发处理。我们对比了非并发版本与并发版本的性能，证明并发技术在 I/O 密集型任务中的显著优势。
+
+### 2. 使用模块和工具
+
+1. **`newspaper` 模块**：
+    - 用于从指定的新闻网站中抓取文章链接及其内容。
+    - 支持文章的下载、解析和标题提取。
+    - 示例方法：
+        - `newspaper.build(url)`：从指定 URL 构建新闻资源对象。
+        - `art.download()`：下载文章内容。
+        - `art.parse()`：解析文章内容以提取标题等信息。
+2. **`concurrent.futures` 模块**：
+    - 用于简化并发编程，提供线程池和进程池接口。
+    - 在此代码中，使用 `ThreadPoolExecutor` 来实现多线程的并发任务。
+3. **`timeit` 模块**：
+    - 用于测试代码块的运行时间，以评估性能差异。
+
+### 3. 非并发版本实现
+
+#### 3.1 代码部分
+
+```python
+def get_headlines():
+    URLs = [
+        'http://www.foxnews.com/',
+        'http://www.cnn.com/',
+        'http://www.derspiegel.de/',
+        'http://www.bbc.co.uk/',
+        'https://theguardian.com',
+    ]
+
+    for url in URLs:
+        result = newspaper.build(url, memoize_articles=False)
+        print(f'\nThe headlines from {url} are:\n')
+        for i in range(5):  # 确保爬取5条头条
+            try:
+                art = result.articles[i]
+                art.download()
+                art.parse()
+                print(art.title)
+            except IndexError:
+                print(f"Less than 5 articles available on {url}")
+                break
+```
+
+#### 3.2 功能分析
+
+1. **URL 列表**：定义了 5 个新闻网站的 URL，作为爬取的目标。
+2. 逐一处理：
+    - 使用 `newspaper.build(url)` 构建新闻资源对象。
+    - 遍历前 5 条文章（索引 0-4），调用 `download()` 和 `parse()` 方法下载并解析文章内容。
+    - 打印提取的标题。
+3. 异常处理：
+    - 如果目标网站少于 5 篇文章，捕获 `IndexError` 并打印提示信息。
+
+#### 3.3 缺点
+
+- **串行执行**：每个 URL 的处理需要等待上一个完成，导致 I/O 阻塞时间较长。
+- **性能瓶颈**：对于包含大量目标 URL 的任务，运行时间可能大幅增加。
+
+### 4. 并发版本实现
+
+#### 4.1 代码部分
+
+```python
+def get_headlines_concurrently():
+    URLs = [
+        'http://www.foxnews.com/',
+        'http://www.cnn.com/',
+        'http://www.derspiegel.de/',
+        'http://www.bbc.co.uk/',
+        'https://theguardian.com',
+    ]
+
+    def fetch_headlines(url):
+        try:
+            result = newspaper.build(url, memoize_articles=False)
+            headlines = []
+            for i in range(5):  # 确保爬取5条头条
+                try:
+                    art = result.articles[i]
+                    art.download()
+                    art.parse()
+                    headlines.append(art.title)
+                except IndexError:
+                    break
+            return url, headlines
+        except Exception as e:
+            return url, [f"Error fetching articles: {e}"]
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future_to_url = {executor.submit(fetch_headlines, url): url for url in URLs}
+        for future in concurrent.futures.as_completed(future_to_url):
+            url, headlines = future.result()
+            print(f'\nThe headlines from {url} are:\n')
+            for headline in headlines:
+                print(headline)
+```
+
+#### 4.2 功能分析
+
+1. **定义 `fetch_headlines` 函数**：
+    - 封装每个 URL 的爬取逻辑：
+        - 调用 `newspaper.build(url)` 创建资源对象。
+        - 遍历前 5 篇文章，爬取标题。
+        - 使用 `try-except` 捕获 `IndexError` 和其他异常。
+    - 返回结果为 `(URL, headlines)`。
+2. **多线程并发爬取**：
+    - 使用 `ThreadPoolExecutor` 创建线程池。
+    - 利用 `executor.submit(fetch_headlines, url)` 将每个 URL 的爬取任务提交到线程池中。
+    - 使用 `concurrent.futures.as_completed()` 处理任务结果并打印每个网站的头条。
+3. **线程池的优势**：
+    - 并行化每个 URL 的爬取任务。
+    - 利用 CPU 等待时间执行其他任务，显著提升 I/O 密集型任务的效率。
+
+#### 4.3 异常处理
+
+- 捕获构建新闻资源对象或文章下载时的所有异常，避免程序因错误退出。
+
+### **5. 性能对比**
+
+#### 5.1 代码部分
+
+```python
+if __name__ == '__main__':
+    # 非并发版本运行时间
+    non_concurrent_time = timeit.timeit("get_headlines()", setup="from __main__ import get_headlines", number=2) / 2
+    print(f"Non-concurrent version average time: {non_concurrent_time:.2f} seconds")
+
+    # 并发版本运行时间
+    concurrent_time = timeit.timeit("get_headlines_concurrently()", setup="from __main__ import get_headlines_concurrently", number=2) / 2
+    print(f"Concurrent version average time: {concurrent_time:.2f} seconds")
+```
+
+#### 5.2 功能分析
+
+1. **非并发运行时间**：调用 `get_headlines()`，计算多次运行的平均时间。
+2. **并发运行时间**：调用 `get_headlines_concurrently()`，计算多次运行的平均时间。
+3. 性能评估：
+    - 理论上，并发版本的运行时间显著低于非并发版本。
+    - I/O 密集型任务（如网络请求）更能体现并发的优势。
+
+### **6. 结果示例和分析**
+
+#### 6.1 示例输出
+
+```
+Non-concurrent version average time: 10.25 seconds
+Concurrent version average time: 4.12 seconds
+```
+
+#### 6.2 结果分析
+
+- 非并发版本因串行处理每个 URL，导致总运行时间为各任务运行时间的总和。
+- 并发版本利用线程池并行处理多个 URL，同时下载、解析文章，显著缩短运行时间。
+- 在 URL 数量较多或网络延迟较大时，并发性能优势更为显著。
+
+
+### 7. 结论
+
+通过对比非并发与并发版本的运行效率，可以得出以下结论：
+
+1. **并发技术的必要性**：在处理 I/O 密集型任务（如网络爬取）时，并发技术能够充分利用等待时间执行其他任务，从而显著提高整体效率。
+2. **代码模块化设计**：通过封装爬取逻辑为函数并结合线程池，使代码具备更高的可读性和可扩展性。
+3. **应用场景**：本程序适用于需要快速抓取多网站数据的场景，如新闻聚合器、实时数据分析等。
