@@ -120,7 +120,7 @@ SIFT GIST HOG ORB SURF
 
 4. **keypoint descriptor**
 
-    Using local feature ==gradients== and rotation to describe each keypoint region.
+    Using local feature ==gradients== and rotation to describe each ==keypoint region==.
 
 
 
@@ -138,7 +138,12 @@ SIFT GIST HOG ORB SURF
 
 #### *HOG
 
-- **Image Processing:** cut out a patch and adjust the size to 64*128
+- ==Image== Processing: Cut out a patch and adjust its size to 64*128
+- Find horizontal and vertical gradients , gradient magnitude and orientations.
+- Compute histogram bins. ==Quantize== gradient orientations ==in==to 9 bins
+
+- 16 * 16 block normalization, ==normalize vectors with L2==
+- Concatenate histograms ==in==to a feature with 3780 dimensions
 
 
 
@@ -147,10 +152,12 @@ SIFT GIST HOG ORB SURF
 ### *5. random variable? Types?
 
 - Discrete and Continuous
-- May be results of a experiment or real word measurements.
-- Some values occur more than others and that information is captured
+- May be results of a experiment (flipping a coin) or real word measurements (temperature).
+- Some values occur more than others and that information is captured by a probability distribution.
 
-- a random variable donate ==denotes== a quantise ==quantity== that is uncertain.
+- a random variable ==denotes== a ==quantity== that is uncertain.
+
+- If obverse several instances of x we get different values.
 
 ### 6. Conditional Probability
 
@@ -162,9 +169,9 @@ The relative ==propensity== of the variable x to take different outcomes given t
 
 ### *7. Fitting probability distributions method
 
-- Maximum Likelihood  
-- Maximum a Posteriori
-- ==approach==
+- Maximum Likelihood: Evaluate the new data point $x^*$ under the probability distribution $Pr(x^*|\theta)$ with ML parameters
+- Maximum a Posteriori: ~
+- Bayesian approach: compute weighted sum of predictions from all possible values of parameters
 
 
 
@@ -186,8 +193,8 @@ Continuous : Regression
 
 ### *10. Two Models (data —— world state)
 
-- Model contigency ==contingency== of the world state on data $Pr(w|x)$ : Discrimination
-- Model contigency ==contingency== of the data on the world state $Pr(x|w):$ Generative
+- Model contigency ==contingency== of the world state on data $Pr(w|x)$ : Discriminative models
+- Model contigency ==contingency== of the data on the world state $Pr(x|w):$ Generative models
 
 
 
@@ -207,7 +214,9 @@ Represent ==density== $Pr(x)$ as ==marginalization== of joint ==density== with a
 
 ### 13. independence?
 
-==Two variables== x and y are independent if their joint probability distribution ==factorizes as==$Pr(x,y) = Pr(x)Pr(y)$
+==Two variables== x and y are independent if their joint probability distribution ==factorizes as==
+
+$Pr(x,y) = Pr(x)Pr(y)$
 
 
 
@@ -238,19 +247,24 @@ $Pr(x_3|x_1,x_2)=Pr(x_3|x_2)$
 
 image segmentation (图像分割) 
 
-::: tip
+#### MRF & CRF
 
-MRF 是无向图。邻居间的关系被叫做“团”。**CRF = MRF conditioned on X**
+**MRF:**
 
-<img src="./conclude.assets/image-20241124165445666.png" alt="image-20241124165445666" style="zoom: 67%;" />
+- Undirected graphical model
+- Contextual constraints connect neighbors
+- Neighborhood relations define cliques
 
-:::
+**CFR:**
 
-CRF 的其他特性：
+- MRF specifies joint distribution on Y
+- For any probability distribution, you can condition it on some other variables X
 
-⚫ **Contextual constraints (spatial, temporal) connect neighbors**
+**CRF= MRF conditioned on X**
 
-⚫ **model dependencies between pixels**
+![image-20241126201150562](./conclude.assets/image-20241126201150562.png)
+
+
 
 ### 17. 图的概率分布的表示
 
@@ -265,10 +279,8 @@ CRF 的其他特性：
 
 ### *18. Chain and tree model
 
-- chain model: 
-- tree model: model connections between world variables are organized as a tree. Disregard directionality in directed model
-
-
+- chain model: Only model connections between a world variable w and its1  ==preceding== and 1 ==subsequent variables== .
+- tree model: ==connection between world variables== are organized as a Tree. Disregard directionality ==of connections==  for directed models.
 
 ### 19. Directed model for chain
 
@@ -282,14 +294,19 @@ CRF 的其他特性：
 
 <img src="./conclude.assets/image-20241124171319143.png" alt="image-20241124171319143" style="zoom:50%;" />
 
-### *21. Lattice (grid) model
+<img src="./conclude.assets/image-20241126203042315.png" alt="image-20241126203042315" style="zoom:50%;" />
 
-consider 
+### 21. Lattice (grid) model
 
-### *22. what is Markov random field
+Consider ==model with one unknown== word ==state== at each pixel in the image —— take a form of a grid.
 
-- A set of 
-- 
+
+
+### 22. what is Markov random field
+
+- A set of site S = {1…N} corresponds N pixel ==locations==.
+- A set of ==random variable== ${w_n}_1^N$ ==associate with each sites==.
+- A set of neighbors ${N_n}_1^N$ at each sites.
 
 
 
@@ -310,27 +327,25 @@ consider
 
  
 
-### *25. what is Subspace Identity model? what’s its function?
+### 25. what is Subspace Identity model? what’s its function?
 
-$x^{ij}$ denotes the $j^{th}$ of obversed data examples from $i^{th}$ of identities(individuals)
+$x^{ij}$ denotes $j^{th}$ J of obversed data examples from $i^{th}$ I of identities.
 
-$x_{ij}=\mu+\phi h_i+ \varepsilon_{ij}$
+Generative equation:
 
-$Pr(h_i) = Norm_{h_i}[0,I]$服从正态分布，均值 0，方差 I
-
-$Pr(x_{ij}|h_i) = Norm_{x_{ij}}[\mu+\phi h_i,\sum]$
+$x^{ij} = \mu + \phi h_i + $ 
 
 **Reduction high-dimension to low-dimension.**
 
-### *26. Probabilistic linear discriminant analysis
+### 26. Probabilistic linear discriminant analysis
 
-$$
+$x^{ij} = \mu + \phi h_i + s_{ij} + $
 
-### *27. Probabilistic form of both
+### 27. Probabilistic form of both
 
 
 
-### 28. Non-linear models 
+### 28. Non-linear models
 
 are more complex than linear model 
 
@@ -342,7 +357,7 @@ are more complex than linear model
 
 ## 问答题大题
 
-### 1. *BOF？
+### 1. BOF？
 
 - Local Features Extraction: Use SIFT
 
@@ -350,12 +365,12 @@ are more complex than linear model
 
     Visual vacabulary is a collection of local features. They often are extracted by clustering. A visual word corresponds to a cluster center.
 
--  Quantize the features using visual vacabulary. Using k-clustering. Compute the minimum
+-  Quantize the features using visual vacabulary. Using k-clustering. Compute the minimum sum of squared Euclidean distances between a local feature and its nearest cluster center.
 - Represent the image by the frequencies of visual words
 
 
 
-### 2. *image classification
+### 2. image classification
 
 - Data collections. Collect and Label images in corresponding classes (grass, people, building…). 
 
@@ -363,14 +378,14 @@ are more complex than linear model
     - Scale-space extrema detection. Build a Gaussian Pyramid to detect keypoints which are scale-invariant.
     - Keypoints localization. Locate the keypoints and remove unstable one.
     - Orientation assignment. Assign 1 or more dominant orintations for each keypoint region.
-    - Keypoint descriptors. *
+    - Keypoint descriptors. Use local ==image== grandients and rotation to describe ==each keypoint region==
 - Clustering local feature.
     - Quantize local features using visual vocabulary.  Use k-clustering: compute the minimum sum of squared ==Euclidean== distance between a local feature and it nearest clustering center. 
     - Represent images using the frequencies of visual words. assume a outcome with 10th (number 0-9) visual words is [1,2,2,5,8,8]. Construct a 10-dimensional histogram [0120010020]
 
 - Divide those data in 2 groups. One for training set. One for testing set.
 - Training:
-    - feed those histograms with their labels into a machine learning classifier.
+    - feed those histograms ==with their labels== into a machine learning classifier.
     - train the classifier to learn to differentiate the classes of data
 - Testing:
     - Put testing data into a learned classifier.
@@ -384,7 +399,7 @@ $Pr(x) = Stud_x[\mu,\sum,v]$ is described as a distribution robust against data 
 
 - Goal: to find the parameters $\theta=[\mu,\sum,v]$ from training data $x_1...I$ . $\mu$ is the mean, $\sum$ is the ==covariance==, $v$ is degrees of freedom.
 - E-step: We maximize the bound on data with respect to distribution $q_i(h_i)$ by finding the posterior probability distribution $Pr(h_i|x_i,\theta)$ ==of each hidden variable== given that obversed data $x_i$ and current parameters setting $\theta$. $Pr(h_i|x_i,\theta)$ use gamma distribution as a prior probability for ==scaling factor==.
-- M-step: We maximize the bound on data with respect with parameters. We update $\mu$ and $\sum$ by ==the average of data weighted by expectation from E-step==. Because no closed-form solution for v, we use grid search to find the best value v which maximizes the likelihood.
+- M-step: We maximize the bound on data with respect to parameters. We update $\mu$ and $\sum$ by ==the average of data weighted by expectation from E-step==. Because no closed-form solution for v, we use grid search to find the best value v which maximizes the likelihood.
 - Alternate E-step and M-step until the bound on data no longer increases and the parameters no longer change.
 
 

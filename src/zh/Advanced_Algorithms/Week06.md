@@ -112,32 +112,6 @@ for node, distance in shortest_path.items():
 
 
 
-### 1.3 图示说明
-
-<img src="./../../../../../../肖羡月/Documents/WeChat Files/wxid_enbz777a762f12/FileStorage/File/2024-11/Week06.assets/e562381f303733f11fcb3c19105da6a.jpg" alt="e562381f303733f11fcb3c19105da6a" style="zoom:50%;" />
-
-
-
-1. 初始点：A,对自己的初始距离为 0 ,与其他所有顶点的距离都是无穷大。
-2. A ——> B
-    - 直接路径：A -> B  距离：1
-    - 其他路径：
-        - 1. A -> C -> B 距离：6
-        - 2. A -> C -> D -> B 距离：10
-    - 选择：直接路径
-3. A ——> C
-    - 直接路径：A -> C 距离：4
-    - 其他路径：
-        - 1. A -> B -> C 距离：3
-        - 2. A -> B -> D -> C 距离：7
-    - 选择：其他路径1
-4. A ——> D
-    - 1. A  -> C -> D 距离5
-          2. A -> B -> D 距离6
-          3. A -> C -> B -> D 距离11
-          4. A -> B -> C -> D 距离4
-    - 选择：路径 4
-
 
 
 ## 2. Prim’s algorithm
