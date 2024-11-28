@@ -24,6 +24,30 @@ backToTop: true
 toc: true
 ---
 
+​                                                                                                                                                             ![img](./Report.assets/wps1.png)
+
+​                                                                                                                               School of Computing, Engineering and Mathematics (CEM)
+
+​                                                                                                                                Faculty of Engineering, Environment and Computing (EEC)
+
+ **CUH500CMD ADVANCED ALGORITHMS** | 2024
+
+ 
+
+**PORTFOLIO OF CODE | REPORT**
+
+ 
+
+**NAME:**  Xiao XianYue
+
+ 
+
+**SID:** **14553435**
+
+
+
+
+
 ## STD  1
 
 ### 1. pseudocode
@@ -62,7 +86,7 @@ def selection_sort(arr):
 print(selection_sort([5, 4, 3, 2, 1]))
 ```
 
-
+<img src="./Report.assets/image-20241128102748273.png" alt="image-20241128102748273" style="zoom: 50%;" />
 
 #### Solution 2
 
@@ -82,14 +106,14 @@ print(selection_sort([5, 4, 3, 2, 1]))
 
 The one is written according to the pseudo-code above.
 
-
+<img src="./Report.assets/image-20241128102827847.png" alt="image-20241128102827847" style="zoom:50%;" />
 
 ### **3. Explaining the code**
 
 #### Solution 1
 
 -  Firstly,`result = []`: I create an empty list `result` to store the final sorted elements. (adding elements one by one)
-- Secondly, we use a outer loop:`for i in range(len(arr) - 1, 0, -1):`. This loop processes the elements from back to front, accessing the last element of the unsorted list first, so why is it (the range) designed this way? Because I want to use the inner loop to compare the size of the element before index i ( There is exactly i elements in front of the element at index i ) with the element at index i. This inner function loop’s range is i which means that one time the out loop implements, i times the inner loop executes. That makes the code elegant and intuitive.  (To add some clarification, as I understand it, **the number of times the outer loop is executed is equivalent to the number of times that we find the minimum value and add them to the `result`**.  The last time there is no need to compare, because there is only one value left in the original list, it is added directly to the result.) 
+-  Secondly, I use a outer loop:`for i in range(len(arr) - 1, 0, -1):`. This loop processes the elements from back to front, accessing the last element of the unsorted list first.
 - Thirdly, `min = arr[i]`:  I set a variable  `min` that is currently used to store the minimum value of the element value of the current unsorted list. Initialize this variable to the element at index i.
 
 - Fourthly, `for j in range(i + 1, len(arr)):` I use the inner loop to find the minimum elements in the unsorted list. As stated above, the inner loop is executed i times to compare the smallest value (which is stored as  `min`) in the unsorted list. `if arr[j] < min: min = arr[j]`
@@ -120,17 +144,71 @@ This is code written according to the given pseudo-code, without having to creat
 
 ==**We try to evaluate both codes in terms of readability and conciseness.**==
 
-- **Solution 1：**
-    - **Readability:** Obviously, this solution is more readable, the logic is intuitive, and the use of `result` to store the sort result is easy to understand.
-    - **Conciseness:** Higher space complexity by not directly manipulating the original array. Code is more lengthy.
+#### Readability and conciseness
 
-- **Solution 2：**
-    - **Readability:** Beginners may need more time to understand the logic of index swapping, not very readable.
-    - **Conciseness: ** Compact, elegant and logical. In-place sorting, no extra space required, more efficient.
+**Solution 1:**
 
+- ```python
+    for i in range(len(arr) - 1, 0, -1):
+    ```
 
+    The order of traversal of the outer loop: back-to-front traversal is a bit uncommon and can be confusing. Generally the selection ordering is traversed from front to back, which is more in line with most people's understanding.
 
+- ```python
+    arr.remove(min)
+    ```
 
+    The `remove` method: each time the minimum value is removed it changes the structure of the array, which may not make it easy to understand and may affect efficiency. Removing elements adds complexity to the code.
+
+- ```python
+    min = arr[i]
+    ```
+
+    Actually, it's not good to use `min` as a variable name! `min` is a built-in function in Python, which is confusing to the reader.
+
+**Solution 2:**
+
+- The traversal order of the outer loop: traversing from front to back is consistent with how people normally do things in order and is easy to understand.
+
+```python
+for i in range(len(arr))
+```
+
+- The code is simple and easy to read. There are no complex delete operations or extra data structures. It follows the basic logic of selective sorting and clearly expresses each step of the operation。
+
+```python
+arr[i], arr[min_index] = arr[min_index], arr[i]
+```
+
+==**We try to evaluate both codes in terms of complexity**==
+
+#### Complexity
+
+**Solution 1:**
+
+- Time Complexity:
+    1. Outer loop: `for i in range(len(arr) - 1, 0, -1)` This loop traverses the array from back to front, n-1 times, where n is the length of the array.
+    2. Inner loop: `for j in range(i)` This loop iterates through the array from 0 to i-1. In the worst case, the inner loop will be executed at most n times (when `i = n-1`).
+    3. remove(min): Each time `arr.remove(min)` is called to remove the minimum value, the Python list's remove method needs to scan the entire array to find the element and remove it, with time complexity $O(n)$. In the worst case, this operation is performed n-1 times, with each removal reducing the length of the array.
+    4. Combined time complexity: $O(n) \times O(n) + O(n) \times O(n) = O(n^2)$ (worst case)
+
+- Space complexity: $O(n)$ (because an extra list of results is used)
+
+**Solution 2:**
+
+- Space complexity: there is no other storage space $O(1)$
+
+- Time Complexity:
+
+    1. outer loop: `for i in range(len(arr))` This loop traverses the entire array `n` times.
+
+    2. inner loop: `for j in range(i + 1, len(arr))` This loop iterates from `i+1` to `n-1` one at a time, and in the worst case the time complexity of the inner loop is O(n²). 3. swap operation: Swapping elements is a constant time operation O(n²).
+
+    3. Swap operation: Swapping elements is a constant time operation O(1).
+
+    4. combined time complexity: the total time complexity of the outer and inner loops is O(n²), so the time complexity of the algorithm is $O(n²)$
+
+    **Overall Solution 2 is less complex than Solution 1.**
 
 ## STD 2
 
@@ -152,7 +230,7 @@ class BST:
     def __init__(self):
         self.root = None  # Initial binary tree
 
-    def search(self, val):
+    def find_i(self, val):
         cur = self.root  # nodes in a binary tree
         while cur:  # If you don't know how many loops there could be, a while loop is appropriate.
             if cur.val > val:  # If the node is larger than the search value, the search value is in the left subtree of the node
@@ -160,7 +238,7 @@ class BST:
             elif cur.val < val:  # If the node is smaller than the search value, the search value is in the right subtree of the node
                 cur = cur.right
             else:  # is equal to the search value, the loop ends
-                return cur
+                return True
         return False
 
 
@@ -178,20 +256,21 @@ if __name__ == '__main__':
     bst.root.right.right = TreeNode(7)
 
     # Test
-    node = bst.search(5)
-    if node:
-        print(f"The node was found with the value,the value is {node.val}")  # Print the value of this node
-    else:
-        print("Node not be found")       
+    print(bst.find_i(7))  # Expected output: True
+    print(bst.find_i(20))  # Expected output: False
+    print(bst.find_i(4))  # Expected output: True
+    print(bst.find_i(100))  # Expected output: False
+    print(bst.find_i(6))  # Expected output: True
+    print(bst.find_i(2))  # Expected output: True
 ```
 
-
+![image-20241128111253478](./Report.assets/image-20241128111253478.png)
 
 #### Recursive
 
 ```python
 class TreeNode:
-    """binary tree node class"""
+    """Binary Tree Node Classes"""
 
     def __init__(self, val):
         self.val = val
@@ -201,21 +280,35 @@ class TreeNode:
 
 class BST:
     def __init__(self):
-        self.root = None
+        self.root = None  # Initial binary tree
 
-    def search(self, root, val):
-        if root is None:
-            return None
-        if val < root.val:
-            return self.search(root.left, val)  # Continue searching the left subtree
-        elif val > root.val:
-            return self.search(root.right, val)  # Continue searching the right subtree
+    def find_r(self,target):
+        """
+        Recursively searches for the target in the BST.
+        Returns True if found, False if not found, None if invalid input or empty tree.
+        """
+        if self.root:
+            if self.find_r_helper(target, self.root):  # if find_r_helper return True
+                return True
+            return False  # # if find_r_helper return False
         else:
-            return root  # Here the address of the node is returned instead of the value
+            return None
+
+    def find_r_helper(self,target,root):
+        if root is None:
+            return False
+
+        if target > root.val and root.right:
+            return self.find_r_helper(target,root.right)  # Search in the right subtree
+        elif target < root.val and root.left:
+            return self.find_r_helper(target,root.left)  # Search in the left subtree
+
+        if target == root.val:
+            return True
 
 
 if __name__ == '__main__':
-    # Creating a binary search tree manually
+    # Create a binary search tree manually
     bst = BST()
     bst.root = TreeNode(4)
     bst.root.left = TreeNode(2)
@@ -227,15 +320,17 @@ if __name__ == '__main__':
     bst.root.right.left = TreeNode(5)
     bst.root.right.right = TreeNode(7)
 
-    # Test Finding Nodes
-    node = bst.search(bst.root, 7)
-    if node:
-        print(f"The node was found with the value. {node.val}")  # Print the value of this node
-    else:
-        print("Node not be found")
+    # Test
+    print(bst.find_r(4))  # Expected: True
+    print(bst.find_r(9))  # Expected: False
+    print(bst.find_r(6))  # Expected: True
+    print(bst.find_r(0))  # Expected: False
+    print(bst.find_r(3))  # Expected: True
+    print(bst.find_r(7))  # Expected: True
+    print(bst.find_r(5))  # Expected: True
 ```
 
-
+<img src="./Report.assets/image-20241128111010185.png" alt="image-20241128111010185" style="zoom:50%;" />
 
 ### 2. **Explaining the code**
 
@@ -268,8 +363,8 @@ Create a class that operates on binary trees. Initialise this binary tree to be 
 3. 
 
 ```python
-def search(self, val):
-    cur = self.root  # nodes in a binary tree
+    def find_i(self, val):
+        cur = self.root  # nodes in a binary tree
 ```
 
 Use a function to implement the search function to increase the modularity of the code and ease of calling. Create the variable `cur` initialised to the root node of the binary tree. **This means that the following code will traverse the binary tree beginning with the root node.** `val` is the value of the node we need to find.
@@ -277,20 +372,20 @@ Use a function to implement the search function to increase the modularity of th
 4. 
 
 ```python
- while cur: 
-     if cur.val > val:  
-         cur = cur.left
-     elif cur.val < val:  
-         cur = cur.right
-     else:  
-         return cur
-return Fasle
+         while cur:  # If you don't know how many loops there could be, a while loop is appropriate.
+            if cur.val > val:  # If the node is larger than the search value, the search value is in the left subtree of the node
+                cur = cur.left
+            elif cur.val < val:  # If the node is smaller than the search value, the search value is in the right subtree of the node
+                cur = cur.right
+            else:  # is equal to the search value, the loop ends
+                return True
+        return False
 ```
 
 - I use a **while loop** to traverse the binary tree because I don't know how many times we have to do the loop. If I knew exactly how many times the loop was going to be executed, a for loop would be more appropriate.
 - If `val` is less than the current node value, it means that `val` exists in the left subtree of the current node. If `val` is greater than the current node value, it means that `val` exists in the right subtree of the current node. 
 
-- Until a node with the same value as `val` is found, return it and the function ends.
+- Until a node with the same value as `val` is found, return True and the function ends.
 
 - If while loop ends (`cur` node is empty, binary tree nodes are all traversed) no corresponding node is found, there is no node in the binary tree with the value val. Returns False.
 
@@ -298,7 +393,7 @@ return Fasle
 
 ```python
 if __name__ == '__main__':
-    # Creating a binary search tree manually
+    # Create a binary search tree manually
     bst = BST()
     bst.root = TreeNode(4)
     bst.root.left = TreeNode(2)
@@ -310,12 +405,14 @@ if __name__ == '__main__':
     bst.root.right.left = TreeNode(5)
     bst.root.right.right = TreeNode(7)
 
-    # Test Finding Nodes
-    node = bst.search(bst.root, 7)
-    if node:
-        print(f"The node was found with the value. {node.val}")  # Print the value of this node
-    else:
-        print("Node not be found")
+    # Test
+    print(bst.find_r(4))  # Expected: True
+    print(bst.find_r(9))  # Expected: False
+    print(bst.find_r(6))  # Expected: True
+    print(bst.find_r(0))  # Expected: False
+    print(bst.find_r(3))  # Expected: True
+    print(bst.find_r(7))  # Expected: True
+    print(bst.find_r(5))  # Expected: True
 ```
 
 Manually create a binary tree for searching. 
@@ -327,23 +424,45 @@ Manually create a binary tree for searching.
 Only the following codes are different from Iterative, the logic of all other codes are exactly the same, you can refer to the description above.
 
 ```python
- def search(self, root, val):
-        if root is None:
-            return None
-        if val < root.val:
-            return self.search(root.left, val)  # Continue searching the left subtree
-        elif val > root.val:
-            return self.search(root.right, val)  # Continue searching the right subtree
+    def find_r(self,target):
+        """
+        Recursively searches for the target in the BST.
+        Returns True if found, False if not found, None if invalid input or empty tree.
+        """
+        if self.root:
+            if self.find_r_helper(target, self.root):  # if find_r_helper return True
+                return True
+            return False  # # if find_r_helper return False
         else:
-            return root  # Here the address of the node is returned instead of the value
+            return None
 ```
 
--  The recursive code pass in an extra variable `root`,  which is a binary tree to be processed. The code recursively disassembles the binary tree step by step.
-- If the binary tree is empty, the function ends, indicates that the currently traversed binary tree is empty.
-- If it is not empty, then the code moves on.
-- If val is less than the current node, the `search` function is called, but the incoming binary tree is changed to the left subtree of the current node.
-- If val is greater than the current node, call `search` function, but change the incoming binary tree to the right subtree of the current node.
-- Finds the binary tree whose root node is val, and returns its root node.
+-  Create a recursive find function, `find_r`.
+- If the tree exists, check if `find_r_helper` finds the corresponding node value.
+- If it does, return True
+- If it does, True. If it doesn't, False.
+- If the tree does not exist, return False
+
+```python
+
+    def find_r_helper(self,target,root):
+        if root is None:
+            return False
+
+        if target > root.val and root.right:
+            return self.find_r_helper(target,root.right)  # Search in the right subtree
+        elif target < root.val and root.left:
+            return self.find_r_helper(target,root.left)  # Search in the left subtree
+
+        if target == root.val:
+            return True
+```
+
+- Creates a function to find the value of a node `find_r_helper`.
+- If the incoming tree is empty, return False.
+- If the node value is less than the find value, recursively search its right subtree.
+- If the node value is greater than the lookup value, recursively search the left subtree.
+- If at this level of recursion the node value is equal to the find value, return True and pass it back one level at a time, with `find_r_helper` returning True at the end.
 
 <img src="./Report.assets/report4.png" alt="report4" style="zoom:50%;" />
 
@@ -355,14 +474,16 @@ Only the following codes are different from Iterative, the logic of all other co
 
 - Time Complexity:
 
-    The time complexity of both solutions is $O(logn)$
+    The time complexity of both solutions is $O(logn)$ (best case): because for each recursion/loop, half the tree of nodes needs to be detected, in line with the definition of the $logn$ function.
 
 - Space Complexity:
 
-    - **Iterative：**Only a pointer `cur` is used to point to the current node, no recursive call stack is needed.$O(1)$
-    - **Recursive:**  Context information (function call stack) needs to be saved for each recursive call, and the maximum recursion depth is the height of the tree. $O(n)$
+    - **Iterative:** Only a pointer `cur` is used to point to the current node, no recursive call stack is needed.**$O(1)$**
+    - **Recursive:**  Since the depth of the recursion is the most significant source of space consumption, the space complexity is mainly determined by the maximum depth of the recursion.
+        - Worst Space Complexity: If the tree degenerates to a chained list (i.e., the height of the tree is `n`), then the maximum depth of the recursion is `n` and the space complexity is $O(n)$.
+        - Best space complexity: if the tree is balanced (i.e., the height of the tree is `log n`), then the maximum depth of the recursion is `log n` and the space complexity is $O(log n)$.
 
-- To summarise, Recursive has a higher space complexity, especially when dealing with trees of greater depth which can lead to StackOverflow. Iterative code is not as elegant as Recursive but has a low space complexity.
+- To summary, Recursive has a higher space complexity, especially when dealing with trees of greater depth which can lead to StackOverflow. Iterative code is not as elegant as Recursive but has a low space complexity.
 
 
 
@@ -430,9 +551,9 @@ class GraphAdjMat:
         self.adj_mat[i][j] = 1
         self.adj_mat[j][i] = 1
         if self.edge_num() - edge_number == 1:
-            print("An edge has been added")
+            return
         else:
-            print("No edge has been added")
+            return False
 
 
     def remove_edge(self, i: int, j: int):
@@ -444,19 +565,17 @@ class GraphAdjMat:
         self.adj_mat[i][j] = 0
         self.adj_mat[j][i] = 0
         if edge_number - self.edge_num() == 1:
-            print("An edge has been removed")
+            return
         else:
-            print("No edge has been removed")
-
-
+            return False
 
 
     def print_matrix(self):
         n = self.size()
-        print("     " + "   ".join(map(str, range(1, n + 1))))
-        print("     " + "-" * (4 * n - 1))
+        print("     " + "   ".join(map(str, range(n))))
+        print("index" + "-" * (4 * n - 1))
         for i, row in enumerate(self.adj_mat):
-            print(f"{i + 1} |" + "   ".join(map(str, row)))
+            print(f"{i} |" + "   ".join(map(str, row)))
 
     def print(self):
         print("Vertex list = ", self.vertices)
@@ -469,8 +588,11 @@ if __name__ == "__main__":
     vertices = [1, 3, 2, 5, 4]
     edges = [[0, 1], [0, 3], [1, 2], [2, 3], [2, 4], [3, 4]]
     graph = GraphAdjMat(vertices, edges)
+    graph.remove_edge(0,1)
     graph.print()
 ```
+
+![image-20241128120125671](./Report.assets/image-20241128120125671.png)
 
 ### **2. Explaining the Code**
 
@@ -488,9 +610,7 @@ class GraphAdjMat:
             self.add_edge(e[0], e[1])
 ```
 
-Initialise a graph by putting all its nodes into `vertices` and all its edges into `adj_mat` ( a big list over some small lists). `adj_mat` is in the form of an adjacency matrix, where each value in the matrix indicates whether or not an edge exists between two vertices, with 1 indicating presence and 0 indicating absence.
-
-Two `for` loops, the first initialises all the node values in `vertices`t, the second initialises each edge in `adj_mat`. (According to the parameters passed in.)
+`vertices` for vertex; `adj_mat` is the adjacency matrix of the graph.
 
 2. 
 
@@ -513,13 +633,12 @@ View the current number of vertices of the graph.
             row.append(0)
 ```
 
-A function that implements the function of adding nodes. 
-
-- Firstly, check the current number of vertices stored into the variable `n`. 
-- Second, add the value of the new node directly to the vertex list. 
-- Third, create a list of length `n + 1` (since the number of nodes becomes n + 1 after the new node is added), all with value 0 (the new node doesn't have any edges yet), as a new element of the edge list of the graph. 
-- Fourth, add the new list to the edge list `adj_mat` of the graph. 
-- **Fifth, except for the newly added element of the edge list (which happens to be at the end of the queue), All existing rows of the adjacency matrix (except the last row of the new addition) are appended with a value `0`, indicating that the new vertex is not connected to any other vertex. **
+- To add a node to the graph:
+    - First, get the current number of vertices `n`.
+    - Add the new node value to the `vertices` list.
+    - Create a new row for the adjacency matrix with `n + 1` zeros, representing no edges for the new node.
+    - Append this new row to the adjacency matrix `adj_mat`.
+    - **For all existing rows (except the new one), append a `0` to indicate no connection to the new node.**
 
 
 4. 
@@ -534,11 +653,10 @@ A function that implements the function of adding nodes.
             row.pop(index)
 ```
 
-A function that implements the function of removing nodes. 
-
-- Firstly, check that the incoming index value is greater than the length of the vertex list or less than 0. If it is out of specification, throw an exception manually. 
-- Secondly, the vertex list removes the value at the index, and the edge list removes the list at the index. 
-- Thirdly, iterates through the edge list and deletes the element at index for each list in the edge list.
+- To remove a node from the graph:
+    - Check if the index is valid; if it's out of bounds (less than 0 or greater than the list length), raise an exception.
+    - Remove the vertex at the given index from the `vertices` list and the corresponding row from the `adj_mat`.
+    - Iterate through the `adj_mat` and remove the element at the given index from each row.
 
 5. 
 
@@ -619,11 +737,6 @@ Same logic as adding edges above.
       - Use 1 to show there's an edge.
       - Use 0 if there's no edge.
 
-`print:`
-
-- Start by printing the list of vertices to show all the nodes in the graph.
-- After that, print the header for the adjacency matrix, and then call the `print_matrix` function to display the matrix itself.
-
 ### 3. Visualise some code
 
 Initialised to the graph below, with the vertex list and edge list labelled in it.
@@ -645,7 +758,44 @@ Try adding a vertex with a value of 7 and add edges 2-7; 4-7.
    - The way the logic is written for adding and removing vertices and edges makes it flexible enough to use in different types of graph implementations.
    - Using an adjacency matrix works well for undirected graphs, but it might need some tweaks if you want to handle directed or weighted graphs.
 
+GOOD MODULARITY AND REUSABILITY!
 
+==**We try to evaluate both codes in terms of Efficiency**==
+
+```python
+for val in vertices:
+    self.add_vertex(val)
+for e in edges:
+    self.add_edge(e[0], e[1])
+```
+
+- Using a for loop to add nodes and edges each time the class is initialized would be a slow operation when dealing with large graphs.
+
+```python
+def add_vertex(self, val: int):
+    n = self.size()
+    self.vertices.append(val)
+    new_row = [0] * (n + 1)
+    self.adj_mat.append(new_row)
+    for row in self.adj_mat[:-1]:
+        row.append(0)
+```
+
+- And count the number of vertices `self.size` every time you call the functions that add vertices and add edges. Wouldn't it be better to just count the number of vertices when initializing?
+
+```python
+def remove_vertex(self, index: int):
+    if index >= self.size() or index < 0:
+        raise IndexError(f"Index {index} is out of range.")
+    self.vertices.pop(index)
+    self.adj_mat.pop(index)
+    for row in self.adj_mat:
+        row.pop(index)
+```
+
+- After deleting the vertices, each row of the entire adjacency matrix must be traversed to delete the elements column by column, which is also a less time-efficient (as $O(n)$) operation.
+
+POOR EFFICIENCY!!
 
 ## ADV 1
 
@@ -808,6 +958,8 @@ bst.display(bst.root)
 
 ```
 
+<img src="./Report.assets/image-20241128120355036.png" alt="image-20241128120355036" style="zoom:50%;" />
+
 ### 2. **Explaining the Code**
 
 Only the `remove` function and the `if_left_and_right` function are discussed here. The rest of the functions are code given in Aula.
@@ -881,12 +1033,7 @@ def remove(self, target):
 
 **After the `while` loop, the node `cur` with value `target` and its parent `parent` have been found:**
 
-- If `cur` is null, it means that the entire binary tree does not contain a node with value `target`, so return directly.
-- If `cur` exists and either the left or right child node of `cur` is empty, or both are null:
-    - Set `child` to store the one child node of `cur` that exists (e.g., if the right child exists, `child` equals the right child; if the left child exists, `child` equals the left child. If neither child exists, `child` will be null).
-    - If `target < parent.data`, it indicates that `cur` is the left child of its parent. Replace it with `child`.
-    - If `target > parent.data`, it indicates that `cur` is the right child of its parent. Replace it with `child`.
-- If both the left and right child nodes of `cur` exist, perform operations using the `if_left_and_right` function.
+The logic of this part of the code is the same as in the first step dealing with the root node. You can refer to the explanation of the first step.
 
 4. 
 
@@ -914,27 +1061,22 @@ def _delete_node_with_two_children(self, node):
     return node
 ```
 
-**This function is used when the node to be deleted has both left and right child nodes, allowing the smallest value node in the right subtree to replace the value of the node to be deleted.**
+This function handles the case when the node to be deleted has both left and right children. It replaces the node with the smallest value in the right subtree.
 
-- Pass in `node`, which is the node to be deleted.
+- Input: `node` (the node to be deleted).
+- Set `re_node` to the right child of the target node to find the smallest node in the right subtree. Also, store its parent as `pre`.
+- Use a `while` loop to find the smallest node by moving left through the tree. `pre` keeps track of the parent of `re_node`.
+- Once the smallest node is found, its value replaces the value of the node to be deleted.
 
-- Initialise `re_node` as the right child of the target node to locate the smallest node in the right subtree; also record its parent with `pre`.
+If `re_node` has a right child:
 
-- Use a `while` loop to find the smallest node in the binary tree `re_node` (i.e., keep traversing left child nodes). `pre` stores the parent node of `re_node`.
+- If `re_node` is a left child of its parent, update the parent's left pointer to `re_node.right`.
+- If `re_node` is a right child of its parent, update the parent's right pointer to `re_node.right`.
 
-- After exiting the `while` loop, the value stored in `re_node` is the value to replace the node to be deleted.
+If `re_node` has no children:
 
-- **If `re_node` has a right child:**
-  
-    - If `re_node` is a left child of its parent, update the left pointer of the parent to `re_node.right`.
-    
-        If `re_node` is a right child of its parent, update the right pointer of the parent to `re_node.right`.
-    
-- **`re_node` has no children**:
-  
-    - If `re_node` is a left child of its parent, clear the left pointer of the parent;
-    
-    - If `re_node` is a right child of its parent, clear the right pointer of the parent.
+- If `re_node` is a left child, set the parent's left pointer to `None`.
+- If `re_node` is a right child, set the parent's right pointer to `None`.
 
 ### 3. Visualise the code (steps)
 
@@ -944,13 +1086,23 @@ def _delete_node_with_two_children(self, node):
 
 ==**Efficiency Evaluation**==
 
-- The logic for deleting the root node is clear, but there’s some inconsistency due to repeated parts of the logic. Abstracting common operations into helper methods would make the code simpler and easier to read.
-- When deleting a node, searching for the smallest node in the right subtree can be optimized. Maintaining auxiliary pointers during insertion and deletion could eliminate the need for repeated searches.
-- In the `_delete_node_with_two_children` method, the process of finding the smallest node in the right subtree involves extra conditional checks, which could be streamlined to make it more efficient.
+- **Redundancy in Traversal**: The code redundantly checks the left and right children of the node both in `remove` and in the helper function `_delete_node_with_two_children`. For example:
+    - In `remove`, we check if `cur.left` or `cur.right` is `None` to determine if the node has one or no children.
+    - Then, in `_delete_node_with_two_children`, we check again to remove the in-order successor node.
+- **Space Complexity**: The space complexity is $O(1)$ because no additional memory is used other than a few pointers for traversal.
+- **Time Complexity**: The time complexity is $O(h)$, where `h` is the height of the tree. In a balanced BST, this is $O(log n)$, but in the worst case (unbalanced), it could be $O(n)$.
 
 ==**Quality Evaluation**==
 
-The code is robust and handles all types of nodes correctly, whether it’s the root node, a node with children, or a leaf node. I tested the deletion process on various nodes, and it worked without any errors, successfully completing all operations as expected.
+- **Function and Variable Names:**
+    - Function names like `remove` and `_delete_node_with_two_children` are clear but could be made more descriptive. For example, `_delete_node_with_two_children` could be renamed to `delete_with_two_children` for better readability.
+    - Variable names such as `cur`, `parent`, and `child` are standard, but `cur` could be renamed to `current_node` for better clarity. Similarly, `pre` and `re_node` should be renamed to `parent` and `successor`.
+
+- **Input Validation:** The code lacks input validation. For instance, there’s no check for invalid input like a `None` value for `target`. Input validation could be added to ensure robustness.
+
+- **Code Structure**
+    - Redundancy: There are redundant checks for nodes with one or no children. These could be refactored into a separate helper function.
+    - The logic in `_delete_node_with_two_children` is functional but could be simplified or split into smaller functions for clarity.
 
 
 
@@ -1065,7 +1217,7 @@ if __name__ == '__main__':
 
 ```
 
-
+Test outcome is in “Explaining the Code”
 
 ### 2. **Explaining the Code**
 
