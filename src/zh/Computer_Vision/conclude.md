@@ -377,7 +377,7 @@ are more complex than linear model
 - Extract Local Features. use SIFT.
     - Scale-space extrema detection. Build a Gaussian Pyramid to detect keypoints which are scale-invariant.
     - Keypoints localization. Locate the keypoints and remove unstable one.
-    - Orientation assignment. Assign 1 or more dominant orintations for each keypoint region.
+    - Orientation assignment. Assign 1 or more dominant orientations for each keypoint region.
     - Keypoint descriptors. Use local ==image== grandients and rotation to describe ==each keypoint region==
 - Clustering local feature.
     - Quantize local features using visual vocabulary.  Use k-clustering: compute the minimum sum of squared ==Euclidean== distance between a local feature and it nearest clustering center. 
@@ -398,24 +398,24 @@ are more complex than linear model
 $Pr(x) = Stud_x[\mu,\sum,v]$ is described as a distribution robust against data with a heavy tail.
 
 - Goal: to find the parameters $\theta=[\mu,\sum,v]$ from training data $x_1...I$ . $\mu$ is the mean, $\sum$ is the ==covariance==, $v$ is degrees of freedom.
-- E-step: We maximize the bound on data with respect to distribution $q_i(h_i)$ by finding the posterior probability distribution $Pr(h_i|x_i,\theta)$ ==of each hidden variable== given that obversed data $x_i$ and current parameters setting $\theta$. $Pr(h_i|x_i,\theta)$ use gamma distribution as a prior probability for ==scaling factor==.
+- E-step: We maximize the bound on data with respect to distribution $q_i(h_i)$ by finding the posterior probability distribution $Pr(h_i|x_i,\theta^{[t]})$ ==of each hidden variable== given that obversed data $x_i$ and current parameters setting $\theta$. $Pr(h_i|x_i,\theta)$ use gamma distribution as a conjugate prior probability for ==scaling factor==.
 - M-step: We maximize the bound on data with respect to parameters. We update $\mu$ and $\sum$ by ==the average of data weighted by expectation from E-step==. Because no closed-form solution for v, we use grid search to find the best value v which maximizes the likelihood.
 - Alternate E-step and M-step until the bound on data no longer increases and the parameters no longer change.
 
-
+![image-20241128214557485](./conclude.assets/image-20241128214557485.png)
 
 ### 4. *What is the factor analysis? How to use Expectation Maximization to solve ~?
 
-$Pr(\mu, \phi\phi^T+\sum)$ 
+$Pr(\mu, \phi\phi^T+\sum)$ where $\phi\phi^T$ is a full ==covariance== model over subspace with the factors (==columns== of the matrix) determining the subspace modeled. $\sum$ is a ==diagonal== matrix that accounts for all remaining variation.
 
-- Goal: to learn the $\theta=[\mu,\phi,\sum]$ from training data $x_1...I$. $\mu$ is mean, $\phi$ is 
+- Goal: to learn the $\theta=[\mu,\phi,\sum]$ from training data $x_1...I$. $\mu$ is mean, $\phi$ is a factor loading matrix, $\sum$ is a unique variation matrix.
 
-- E-step: We maximize the bound with respect to distribution $q_i(h_i)$ by finding the posterior probability distribution $Pr(h_i|x_i,\theta)$ of each hidden factor given that the obversed data and current parameter settings. In other word, 
+- E-step: We maximize the bound with respect to distribution $q_i(h_i)$ by finding the posterior probability distribution $Pr(h_i|x_i,\theta^{[t]})$ of each hidden factor $h_i$ given that the obversed data and current parameter settings. In other word, $Pr(h_i|x_i,\theta^{[t]})$ specifies the contribution of each hidden factor for i-th data point.
 
-- M-step: We maximize the bound with respect to parameters $\theta$. We update $\mu$ by computing the average of data point weighted by …. We update $\phi$ 
+- M-step: We maximize the bound with respect to parameters $\theta$. We update $\mu$ by computing the average of data point weighted by posterior expectations of lantent factors from E-step. We update $\phi$ by the covariances captured by latent factors.
 - Alternate E and M until….
 
-
+![image-20241128213934033](./conclude.assets/image-20241128213934033.png)
 
 
 
@@ -423,9 +423,9 @@ $Pr(\mu, \phi\phi^T+\sum)$
 
 ### 5.**What is Mixture of Gaussians (MoG)? How to use EM to solve MoG?**
 
-is described as a weighted sum of kth normal distribution
+is described as a weighted sum of k-th normal distribution
 
-- Goal: …. $\sum$ is the variance
+- Goal: …. $\sum$ is the variance 
 
 - 
-- 
+-  

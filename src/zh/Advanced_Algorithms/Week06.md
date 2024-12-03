@@ -154,8 +154,6 @@ Prim's 算法是一种贪心算法,用来求解加权无向连接图的最小生
 
 ### 2.5 举个例子
 
-<img src="./../../../../../../肖羡月/Documents/WeChat Files/wxid_enbz777a762f12/FileStorage/File/2024-11/Week06.assets/942be49dcef642a79a698dd4e2ccb7a.jpg" alt="942be49dcef642a79a698dd4e2ccb7a" style="zoom:50%;" />
-
 - Step 1：初始化
 
     - 起始节点,选择节点A ,加入生成树。
