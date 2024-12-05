@@ -22,7 +22,6 @@ lastUpdated: true
 editLink: false
 backToTop: true
 toc: true
-
 ---
 
 ## 1. Dijkstra’s algorithm
