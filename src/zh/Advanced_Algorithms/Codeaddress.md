@@ -38,7 +38,7 @@ week 02 $P_{4}$
 
 ppt 有原代码！！
 
-[Insertion](https://bougiemoonintaurus.com/zh/Advanced_Algorithms/Week0203.html#_2-insertion-sort)
+[Insertion](http://172.23.50.132:8080/zh/Advanced_Algorithms/Week0203.html#_2-insertion-sort)
 
 
 
@@ -106,9 +106,7 @@ def merge(a,b):
 
 ppt 有伪代码 $P_{18}$
 
-[binary search](https://bougiemoonintaurus.com/zh/Advanced_Algorithms/Week0203.html#_2-1-how-it-works)
-
-
+[binary search](http://172.23.50.132:8080/zh/Advanced_Algorithms/Week0203.html#_2-1-how-it-works)
 
 ### Interpolation search
 
@@ -130,6 +128,26 @@ def Interpolation_search(arr,val):
 
 arr = [1,2,3,4,5,6,7,8]
 print(Interpolation_search(arr,1))
+```
+
+要求写出递归形式：
+
+```python
+def interpolation_search(arr, start, end, key):
+    if start <= end and arr[start] <= key <= arr[end]:
+        pos = start + ((key - arr[start]) * (end - start) // (arr[end] - arr[start]))
+        if arr[pos] == key:
+            return pos
+        elif arr[pos] < key:
+            return interpolation_search(arr, pos+1, end, key)
+        else:
+            return interpolation_search(arr, start, pos-1,key)
+    return False
+
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+key = 8
+print(interpolation_search(arr, 0, len(arr) - 1, key))
 ```
 
 
@@ -315,8 +333,8 @@ class Graph:
         ver_stack = []
         visited = []
         ver_stack.append(v)
-        while ver_queue:
-            node = ver_queue.pop(-1)
+        while ver_stack:
+            node = ver_stack.pop(-1)
             if node not in visited:
                 visited.append(node)
                 for edge in self.edges:
@@ -327,7 +345,7 @@ class Graph:
 vertices = [0, 1, 2, 3, 4]
 edges = [[0, 1], [0, 2], [1, 3], [2, 4]]
 g = Graph(vertices, edges)
-print(g.bfs(0))
+print(g.dfs(0))
 ```
 
 :::
@@ -440,7 +458,45 @@ for connection in route:
     print(f"从 {connection[0]} 到 {connection[1]} 的距离为 {connection[2]}")
 ```
 
+```python
+def heuristic(start, dists):
+    visited = [start]
+    connection = []
+    u = start
 
+    while len(visited) <= 4:
+        min_dist = float('inf')
+        v = None
+        for item in dists:
+            if item[0] == u and item[2] < min_dist and item[1] not in visited:
+                min_dist = item[2]
+                v = item[1]
+        if v is not None:
+            connection.append([u, v, min_dist])
+            visited.append(v)
+            u = v
+        else:
+            break
+        if len(visited) == 4:
+            for item in dists:
+                if item[0] == v and item[1] == start:
+                    connection.append(item)
+
+    return connection
+
+if __name__ == '__main__':
+    dists = [
+        ['A', 'B', 20], ['A', 'C', 35], ['A', 'D', 42],
+        ['B', 'A', 20], ['B', 'C', 34], ['B', 'D', 30],
+        ['C', 'A', 35], ['C', 'B', 34], ['C', 'D', 12],
+        ['D', 'A', 42], ['D', 'B', 30], ['D', 'C', 12]
+    ]
+    start = 'A'
+    route = heuristic(start, dists)
+    print("访问路径及距离：")
+    for connection in route:
+        print(f"从 {connection[0]} 到 {connection[1]} 的距离为 {connection[2]}")
+```
 
 :::
 
@@ -588,7 +644,7 @@ print("最优路径的总距离:", best_distance)
 
 
 
-### GRAPH
+### GRASP
 
 ::: details
 
@@ -738,3 +794,51 @@ if __name__ == "__main__":
 ```
 
 :::
+
+
+
+## week 10
+
+```python
+import asyncio
+import random
+import time
+
+async def part1(n: int) -> str:
+    i = random.randint(0,10)
+    print(f"part1 的第{n}个任务开始执行了，它将沉睡{i}秒。")
+    await asyncio.sleep(i)
+    result = f"第{n}个 part1 的衍生"
+    print(f"part1 的第{n}个任务结束了")
+    return result
+
+
+async def part2(n: int, arg: str) -> str:
+    i = random.randint(0,10)
+    print(f"part2 的第{n}:（{arg}）个任务开始执行了，它将沉睡{i}秒.")
+    await asyncio.sleep(i)
+    print(f"part2 的第{n}:（{arg}）个任务结束了")
+
+
+
+async def chain(n: int) -> None:
+    start = time.perf_counter()
+    p1 = await part1(n)
+    p2 = await part2(n,p1)
+    end = time.perf_counter()
+    print(f"第{n}个链执行的时间是：{end-start}")
+
+async def main(*args):
+    await asyncio.gather(*(chain(n) for n in args))
+
+
+if __name__ == "__main__":
+    import sys
+    random.seed(444)
+    args = [1, 2, 3] if len(sys.argv) == 1 else list(map(int, sys.argv[1:]))
+    start = time.perf_counter()
+    asyncio.run(main(*args))
+    end = time.perf_counter() - start
+    print(f"Program finished in {end:0.2f} seconds.")
+```
+

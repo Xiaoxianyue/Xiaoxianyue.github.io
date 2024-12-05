@@ -77,7 +77,7 @@ print(merge_string(str1, str2))
 
 <img src="./Week01_ass.assets/image-20240908163030766.png" alt="image-20240908163030766" style="zoom:67%;" />
 
-**Solution （by myself):**
+**Solution (by myself):**
 
 ```python
 num = input('Enter a integer and check whether it is a Armstrong Numbers or not: ')

@@ -316,7 +316,7 @@ while True:
 
 ::: code-tabs
 
-@tab concurrent-example-URLs.py
+@tab non-concurrent-example-URLs.py
 
 ```python
 # 导入 urllib.request 模块，用于处理 URL 请求
@@ -357,7 +357,7 @@ def non_concurrent_URLs_example():
 non_concurrent_URLs_example()
 ```
 
-@tab concurrent-example-URLs.timeit.py
+@tab non-concurrent-example-URLs.timeit.py
 
 ```python
 import timeit  # 导入 timeit 模块，用来计时代码执行的时间
@@ -415,7 +415,7 @@ elapsed_time = timeit.timeit(code_to_time, number=10) / 10  # 计算 10 次执�
 print(elapsed_time)
 ```
 
-@tab non-concurrent-example-URLs.py
+@tab concurrent-example-URLs.py
 
 ```python
 # 导入需要的库
@@ -468,53 +468,51 @@ def concurrent_URLs_example():
 concurrent_URLs_example()
 ```
 
-@tab non-concurrent-example-URLs.timeit.py
+@tab concurrent-example-URLs.timeit.py
 
 ```python
-# 引入用于发送 HTTP 请求的 urllib.request 模块
+import timeit
+
+code_to_time = """
+
+import concurrent.futures
 import urllib.request
+import threading
 
-# 定义一个包含多个 URL 的列表，这些是我们要尝试访问的地址
-URLS = [
-    'http://www.foxnews.com/',         # Fox News 网站
-    'http://www.cnn.com/',             # CNN 网站
-    'http://europe.wsj.com/',          # 欧洲版华尔街日报
-    'http://www.bbc.co.uk/',           # 英国广播公司
-    'http://some-made-up-domain.com/'  # 一个不存在的域名（用于测试异常处理）
-]
 
-# 定义一个函数，用于加载指定的 URL
+URLS = ['http://www.foxnews.com/',
+        'http://www.cnn.com/',
+        'http://europe.wsj.com/',
+        'http://www.bbc.co.uk/',
+        'http://some-made-up-domain.com/']
+
 def load_url(url, timeout):
-    """
-    通过指定的 URL 加载数据
-    :param url: 要访问的 URL 地址
-    :param timeout: 超时时间，单位为秒
-    :return: 返回从 URL 读取的内容
-    """
-    # 使用 urllib.request.urlopen 发送 GET 请求
-    # `with` 确保连接资源在使用完成后正确关闭
     with urllib.request.urlopen(url, timeout=timeout) as conn:
-        return conn.read()  # 从连接中读取返回的数据并返回
+        return conn.read()
 
-# 定义一个函数，按顺序加载 URL 并处理异常
-def non_concurrent_URLs_example():
-    """
-    按顺序（非并发）加载 URL，并对每个请求处理可能出现的异常
-    """
-    # 遍历 URL 列表
-    for url in URLS:
-        try:
-            # 尝试加载 URL，超时时间设为 60 秒
-            data = load_url(url, 60)
-        except Exception as exc:
-            # 如果出现任何异常，打印异常信息
-            print('%r generated an exception: %s' % (url, exc))
-        else:
-            # 如果成功加载 URL，打印页面大小（字节数）
-            print('%r page is %d bytes' % (url, len(data)))
+def concurrent_URLs_example():
 
-# 调用函数，运行非并发的 URL 加载示例
-non_concurrent_URLs_example()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        future_to_url = {executor.submit(load_url, url, 60): url for url in URLS}
+        for future in concurrent.futures.as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                data = future.result()
+            except Exception as exc:
+                print('%r generated an exception: %s' % (url, exc), \n)
+            else:
+                print('%r page is %d bytes' % (url, len(data)),\n)
+        print(\n)
+
+concurrent_URLs_example()
+
+
+"""
+
+
+#timeit requires a string so code to be timed appears in """...""" like a docstring
+elapsed_time = timeit.timeit(code_to_time, number=10)/10            #get the average of 10 cycles
+print(elapsed_time)                                               #time printed in seconds
 ```
 
 
@@ -843,7 +841,7 @@ Treading<Thread(Thread-2 (target), started 23740)> ended
 
 在这里我们首先声明了一个方法，叫作 target，它接收一个参数为 second，通过方法的实现可以发现，这个方法其实就是执行了一个 `time.sleep` 休眠操作，second 参数就是休眠秒数，其前后都 print了一些内容，其中线程的名字我们通过 `threading.current_thread().name` 来获取出来，如果是主线程的话，其值就是 `MainThread`，如果是子线程的话，其值就是 Thread-*。
 
-然后我们通过 Thead类新建了两个线程，target参数就是刚才我们所定义的方法名，`args`以列表的形式传递。两次循环中，这里 i 分别就是 1 和 5，这样两个线程就分别休眠 1 秒和 5 秒，声明完成之后，我们调用 start 方法即可开始线程的运行。
+然后我们通过 `Thead`类新建了两个线程，target参数就是刚才我们所定义的方法名，`args`以列表的形式传递。两次循环中，这里 i 分别就是 1 和 5，这样两个线程就分别休眠 1 秒和 5 秒，声明完成之后，我们调用 start 方法即可开始线程的运行。
 
 观察结果我们可以发现，这里一共产生了三个线程，分别是主线程 MainThread和两个子线程 Thread-1、Thread-2。另外我们观察到，主线程首先运行结束，紧接着 Thread-1、Thread-2 才接连运行结束，分别间隔了 1 秒和 4 秒。这说明主线程并没有等待子线程运行完毕才结束运行，而是直接退出了，有点不符合常理。
 

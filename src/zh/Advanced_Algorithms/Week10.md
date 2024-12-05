@@ -865,8 +865,6 @@ asyncio.run(main())
 运行结果：
 
 ```python
-C:\Users\clela\AppData\Local\Programs\Python\Python37\python.exe C:/Code/pycharm_daima/异步编程/test.py
-
 Process finished with exit code 0
 ```
 
