@@ -407,7 +407,7 @@ Moon in taurus
 
 ### 5.4 .title()
 
-将字符串中的每个单词的首字母，转换成大写。
+将字符串中的每个单词的首字母，转换成大写。（不仅如此，它还会把单词中非首个字符的字符转化成小写）
 
 ```python
 string = "moon in taurus"
@@ -450,6 +450,12 @@ startswith_string = string.startswith("sw")
 print(startswith_string)
 #output
 False
+
+s1 = 'aaa aB By yH HfdW WE'
+new_s1 = s1.startswith('aaa ')
+print(new_s1)
+#output
+True
 ```
 
 

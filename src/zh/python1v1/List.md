@@ -777,13 +777,8 @@ print(lst_total)
 lst_total.sort(reverse=False)
 print(lst_total)
 #output
-lst1 = [1, 2, 2, 3, 4, 5, 5]
-lst2 = [4, 5, 6, 7, 7, 8, 9]
-lst_total = lst1 + lst2
-lst_total.sort(reverse=True)
-print(lst_total)
-lst_total.sort(reverse=False)
-print(lst_total)
+[9, 8, 7, 7, 6, 5, 5, 5, 4, 4, 3, 2, 2, 1]
+[1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 7, 7, 8, 9]
 ```
 
 
