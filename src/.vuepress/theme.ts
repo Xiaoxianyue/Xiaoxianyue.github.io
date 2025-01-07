@@ -49,7 +49,7 @@ export default hopeTheme({
       // Rss: "https://example.com",
       // Steam: "https://example.com",
       // Twitter: "https://example.com",
-      // Wechat: "https://example.com",
+      //Wechat: "https://example.com",
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
