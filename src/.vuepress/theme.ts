@@ -115,7 +115,6 @@ export default hopeTheme({
       "/zh/TOEFL/":["tuofu107"],
       "/zh/Advanced_Algorithms/":["aa100"],
       "/zh/Diary/Daily_assignment.html":["aoligei"],
-      "/zh/Computer_Vision/":["cvjy"]
     },
   },
 

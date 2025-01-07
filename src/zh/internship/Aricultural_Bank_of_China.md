@@ -5,9 +5,9 @@ date: 2024-8-01 20:42:42
 author: XiaoXianYue
 isOriginal: true
 category: 
-    - 实习笔记
+    - 中国农业银行实习笔记
 tag:
-    - 实习笔记
+    - 中国农业银行实习笔记
 sticky: false
 star: false
 article: true
