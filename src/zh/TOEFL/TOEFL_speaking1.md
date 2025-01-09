@@ -125,7 +125,7 @@ night/light ; this/these
 
 -  逻辑结构：
 
-**因为（because，since，due to the reason that）**怎么怎么样的原因，**所以（ as a result, consequently, therefore, so)** 支持了什么论点，**比如（to be more specific, for instance)** 有一些实际的例子来说明这些情况
+**因为 because，since，due to the reason that** （怎么怎么样的原因），**所以 as a result, consequently, therefore, so** （支持了什么论点），**比如 to be more specific, for instance** （有一些实际的例子来说明这些情况）
 
 
 
@@ -137,13 +137,13 @@ night/light ; this/these
 
 - e.g.
 
-**point:** live in different places throughout one’s life
+**point**： live in different places throughout one’s life
 
-**动作：**meet ==different== culture + enjoy ==various== scenery + experience ==diverse== lifestyles + get to know people from all works of life
+**动作**：meet ==different== culture + enjoy ==various== scenery + experience ==diverse== lifestyles + get to know people from all works of life
 
-**直接结果：**widen our vision and keep a sense of freshness towards life deepen one’s insights 
+**直接结果**：widen our vision and keep a sense of freshness towards life deepen one’s insights 
 
-**间接结果：**live more positively and fruitfully
+**间接结果**：live more positively and fruitfully
 
 
 
@@ -163,15 +163,18 @@ night/light ; this/these
 
 **point** ：live with a roommates who is studying the same subject
 
-**并列动作：**1. discuss doubts from homework or assignment together
+**并列动作**：
 
-​                   2. make or adjust group work plans any time
+1. discuss doubts from homework or assignment together
 
-​                   3. inform each other professor’s requirements in time when one is sick
+2. make or adjust group work plans any time
+3. inform each other professor’s requirements in time when one is sick
 
-**并列结果：**1. ==not only== enhance studying efficiency
+**并列结果**：
 
-​                   2. ==but also== reduce the odds of social loafing happening when teamed up with someone who’s not near
+1. ==not only== enhance studying efficiency
+
+2. ==but also== reduce the odds of social loafing happening when teamed up with someone who’s not near
 
 
 
@@ -190,11 +193,11 @@ night/light ; this/these
 
     **让步句**：although it is very crowded and people always squeeze around, especially during festival seasons, the convenience it brings still attracts me.
 
-    **原因分析：** since one trip guarantees getting all the things that I want,
+    **原因分析**： since one trip guarantees getting all the things that I want,
 
-    **结果说明：**it can save me a lot of time on going about different tiny stores to get different items.
+    **结果说明**：it can save me a lot of time on going about different tiny stores to get different items.
 
-    **细化展开：**You know , not only you can get daily necessities such as cleaning detergent , but you also can come by snacks from all over the world.
+    **细化展开**：You know , not only you can get daily necessities such as cleaning detergent , but you also can come by snacks from all over the world.
 
 
 
@@ -202,7 +205,7 @@ night/light ; this/these
 
 - e.g.
 
-    **point :** discuss in groups help boost efficiency.
+    **point:** discuss in groups help boost efficiency.
 
     **explain:** Discuss in groups help boost efficiency, which means that a lot of can be save as compare to working by oneself. 
 
@@ -362,7 +365,7 @@ night/light ; this/these
     
     **后：**However, with this new piece of land,  students get a place near their dorms and don’t have to pay much. It’s good for improving students’ health.
 
-
+:::
 
 #### 1.3.7 好用的小 tips 或者逻辑结构
 
@@ -399,8 +402,6 @@ overall --> whole,conprehensive
     句子结构：结果 + 原因 + 背景
 
     - I felt very exhausted everyday by sitting in my bedroom.
-
-:::
 
 
 
@@ -476,7 +477,7 @@ B.高级
 后者：Secondly, it is conducive to avoiding forming a rigid study habit. Students who don't consider notes necessary tend to have a flexible mind, which usually makes them more creative.
 ```
 
-:::notes:
+::: info
 
 还可以添加一些反向的对比增加丰富程度
 
