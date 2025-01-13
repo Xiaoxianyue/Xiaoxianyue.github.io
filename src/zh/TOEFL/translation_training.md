@@ -24,7 +24,9 @@ backToTop: true
 toc: true  
 ---
 
-## **96**．A big party with many people or a small party just with family?
+## **Passage 96**
+
+>  **A big party with many people or a small party just with family?**
 
 ### 1.中文
 
@@ -321,7 +323,9 @@ absolutely/completely ——> definitely
 
 
 
-## 62．Is university education the most important factor in a person's success?
+## Passage 62
+
+> **Is university education the most important factor in a person's success?**
 
 ### 1. 中文
 
@@ -638,9 +642,13 @@ To conclude, the opportunity to receive higher education instills endless happin
 
 
 
-## 36. **Is it a good method to give the same grade to all the members who do the same project together?**
+## Passage 36
+
+> **Is it a good method to give the same grade to all the members who do the same project together?**
 
 ### 1. 第一段
+
+学校教育的建立带来了评分制的普及，评分制是一种最常用的评价学生表现和能力的方法。如今，任务型教学标志着教育界一个光辉的进步，其中就涉及小组协作。在一个小组内，每个成员都有自己的任务，任何一个人的贡献都不应被低估。毫无疑问，教育工作者给每个成员相同的分数是公平合理的。
 
 ####  自翻
 
@@ -648,11 +656,13 @@ The erection of school education bring wide-spread of grading system which is th
 
 #### 他翻
 
-The erection of school education brought forth==（向前，自…以后，副词）== the general adoption==（普及）== of grades, a most commonly-used method to assess==(评价，估价)== the performance==(表现)== and abilities of students. The task-based learning and teaching, which involve coherent==(连续的，一致的)== efforts of a group, marks a brilliant step forward in the field pf education. In a team, each member is assigned to fulfill his/her own duty and every contribution ought to be underestimated==(低估)==.  Without doubt, it is fair and appropriated==(合理的）== for educators==（教育工作者）== to give each group member the same mark at the moment when the evaluation is committed==（承认，委托，交付，犯罪）==.
+The erection of school education brought forth ==向前，自…以后，副词== the general adoption==普及== of grades, a most commonly-used method to assess==评价，估价== the performance==表现== and abilities of students. The task-based learning and teaching, which involve coherent==连续的，一致的== efforts of a group, marks a brilliant step forward in the field pf education. In a team, each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated ==低估==.  Without doubt, it is fair and appropriated==合理的== for educators==教育工作者== to give each group member the same mark at the moment when the evaluation==评价== is committed==承认，委托，交付，犯罪==.
 
 
 
 ### 第二段
+
+为证实我的观点，首先有必要强调团队协作的价值。团队协作是一个小组的成员为达到共同目标一起工作时所付出的协同努力。当团队协作糟糕的时候，小组成员有效率地完成任务很困难，并且通常为模糊的目标而挣扎。而当团队如运转良好的机器时，所有成员的心会连结在一起。正如一首著名歌曲的歌词，“团结就是力量”。的确，团队协作对于任何伟大事业的成功都是至关重要的。每个成员所起的指定作用都是不容轻视的。因此，为了鼓励团队协作，评判者给整个小组相同的分数是最合理的决定。
 
 #### 自翻
 
@@ -660,17 +670,35 @@ To prove my perspective, firstly, it is necessary to emphasize the value of the 
 
 #### 他翻
 
-In order to testify==(证实)== my standpoint, I would firstly place emphasis on the value of teamwork. Teamwork is a collaborative==()协作的== effort by members of the group working together to achieve common==(共同的)== goals. When the teamwork breaks down, members of the team will find it is difficult to complete tasks effectively and often ==struggle with== obscure==(模糊的，隐藏的，使模糊，使隐藏)== objective==(目标，客观的，公正的)==. When a team operates like a well-oiled==(运转良好的，熟练的)== machine, it will connect the hearts of all members. As is shown in the lyrics==(歌词)== of a famous song, “unity is paramount strength.” Truthfully, teamwork is essential to any success of any great ==cause==. Each member plays an assigned part that should never be looked down upon. Thus giving the entire group the same grade is the most appropriate decision on part of the assessors to encourage teamwork.
+In order to testify==证实== my standpoint, I would firstly place emphasis on the value of teamwork. Teamwork is a collaborative==协作的== effort by members of the group working together to achieve common==共同的== goals. When the teamwork breaks down, members of the team will find it is difficult to complete tasks effectively and often ==struggle with== obscure==模糊的，隐藏的，使模糊，使隐藏== objective==目标，客观的，公正的==. When a team operates like a well-oiled==运转良好的，熟练的== machine, it will connect the hearts of all members. As is shown in the lyrics==歌词== of a famous song, “unity is paramount strength.” Truthfully, teamwork is essential to any success of any great ==cause==. Each member plays an assigned part that should never be looked down upon. Thus giving the entire group the same grade is the most appropriate decision on part of the assessors to encourage teamwork.
 
 
 
 
 
+### 第三段
 
+除此之外，分数的均等会增强小组成员的责任感。在某种程度上，使每个人都发挥作用有助于消除偏见与抵触情绪，而这些对项目的进展和结果都是有害的。正是这种共同的责任搭建起了团队的坚固基础。有了责任感，就能鼓舞每个成员的士气。我的教授曾经为一个重点研究项目做评判。已定的评分规则提倡给每位参与者打出不同的分数。令他失望的是，由于那些被分配到非核心任务的人失去了责任感和热情，这个项目最终未达到理想的目标。
 
+#### 自翻
 
+Except from this, the even grade will strength the responsibilities of members of groups. In suspicious extent, it is helpful for everyone to （发挥作用） to decrease bias and (抵触) emotion which is harmful to the process and outcomes of (项目) . It is the common responsibilities that builds up the foundation of the teamwork. As the responsibility exits, (士气) of members can be (鼓舞). My professor used to assess a important (研究项目). Given grading (规则)  encourages to grade (参与者) differently. To his disappoint, because people who were assigned to not core task lost their responsibilities and  (热情), the (项目) didn’t reach (理想的) goal ultimately.
 
+#### 他翻
 
+Besides, the equality in grade may cultivate the group members' stronger sense of responsibility. To some degree==在某种程度上==,making each one count==发挥作用== helps **eliminate**==消除== prejudices==偏见== and undesirable==不良的== moods that are **destructive** to the progress and result of the project==项目~=program==. It is the associated==这样的== responsibility that builds up a solid==坚固的== **infrastructure**==基础设施、基础建设、公共设施、基础结构== of a group. Where there is responsibility, there is **inspirational morale** ==鼓舞士气== in each member. My professor used to act as the judge of a key research project==研究项目==. The settled==给定的== rules of assessment advocate==提倡、主张、支持== difference of grades for every participant==参与者==. To his great disappointment,this program didn't reach its satisfactory destination==理想的目标== due to the loss of responsibility and enthusiasm==热情== in those who were assigned unimportant tasks.
+
+> **process**（过程、处理）：
+>
+> - 强调一个具体的步骤、流程或方法，通常指的是系统性的操作或事件的进展。
+> - 更加具体，可以是固定的步骤或任务。
+>
+> **progress**（进展、进步）：
+>
+> - 强调向目标的前进或改进，通常指的是整体的发展情况。
+> - 更加抽象，侧重结果的积极变化。
+
+> where there is … there is … 有了，就有了 …
 
 
 

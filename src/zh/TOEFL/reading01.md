@@ -1,0 +1,152 @@
+---
+title: 托福阅读题型技巧总结 02
+icon: English
+date: 2025-1-13 11:48:29
+author: XiaoXianYue
+isOriginal: true
+category: 
+    - 托福学习
+tag:
+    - 托福学习
+sticky: false
+star: false
+article: true
+timeline: true
+image: false
+navbar: true
+sidebarIcon: true
+headerDepth: 5
+lastUpdated: true
+editLink: false
+backToTop: true
+toc: true
+---
+
+## 1. 否定事实题
+
+::: info 错误原因
+
+- 与原文矛盾
+- 原文根本没提及
+
+:::
+
+::: warning 一不要
+
+不要跳读！！！！
+
+:::
+
+### 1.1 例题
+
+The city of Teotihuacán, which lay about 50 kilometers northeast of modern-day Mexico City, began its growth by 200-100 B.C. At its height, between about A.D. 150 and 700, it probably had a population of more than 125,000 people and covered at least 20 square kilometers. It had over 2,000 apartment complexes, a great market, a large number of industrial workshops, an administrative==行政的== center, a number of massive religious edifices, and a regular grid pattern of streets and buildings. Clearly, much planning and central control were involved in the expansion and ordering of this great metropolis. Moreover, the city had economic and perhaps religious contacts with most parts of Mesoamerica (modern Central America and Mexico).
+
+In paragraph 1, each of the following is mentioned as a feature of the city of Teotihuacán between A.D. 150 and 700 EXCEPT
+
+A. regularly arranged streets
+
+B. several administrative centers spread across the city
+
+C. many manufacturing workshops
+
+D. apartment complexes
+
+选 B  [ 而不是 C ]
+
+文中只提到了一个行政中心，说许多显然不对。
+
+manufacturing 和 industrial 某种语义上可以一致。
+
+
+
+
+
+
+
+The earliest ceramics were fired to earthenware temperatures, but==这里的 but 是让步转折，最早的依然是低温烧制的瓷器== as early as the fifteenth century B.C., high-temperature stonewares were being made with glazed surfaces. During the Six Dynasties period (AD 265-589), kilns in north China were producing high-fired ceramics of good quality. Whitewares produced in Hebei and Henan provinces from the seventh to the tenth centuries evolved into the highly prized porcelains of the Song dynasty (AD. 960-1279), long regarded as one of the high points in the history of China's ceramic industry. The tradition of religious sculpture extends over most historical periods but is less clearly delineated than that of stonewares or porcelains, for it embraces the old custom of earthenware burial ceramics with later religious images and architectural ornament. Ceramic products also include leadglazed tomb models of the Han dynasty, three-color lead-glazed vessels and figures of the Tang dynasty, and Ming three-color temple ornaments, in which the motifs were outlined in a raised trail of slip—as well as the many burial ceramics produced in imitation of vessels made in materials of higher intrinsic value.
+
+Paragraph 3 supports all of the following concerning the history of the ceramic 
+
+industry in China EXCEPT:
+
+A. The earliest high-fired ceramics were of poor quality.
+
+B. Ceramics produced during the Tang and Ming dynasties sometimes incorporated 
+
+multiple colors.
+
+C. Earthenware ceramics were produced in China before stonewares were.
+
+D. The Song dynasty period was notable for the production of high quality porcelain 
+
+ceramics.
+
+
+
+### 1.2 判断技巧
+
+#### 标志 1
+
+::: important 定位技巧
+
+密集排列处易出答案！（大量分号，逗号）
+
+:::
+
+Location was an important factor for all four countries. ==All had immediate access to the sea, and this had important implications for a significant international resource, fish, as well as for cheap transport, merchant marines, and the shipbuilding industry.== Each took advantage of these opportunities in its own way. The people of the Netherlands, with a long tradition of fisheries and mercantile shipping, had difficulty in developing good harbors suitable for steamships: eventually they did so at Rotterdam and Amsterdam, with exceptional results for transit trade with Germany and central Europe and for the processing of overseas foodstuffs and raw materials (sugar, tobacco, chocolate, grain, and eventually oil). Denmark also had an admirable commercial history, particularly with respect to traffic through the Sound (the strait separating Denmark and Sweden). In 1857, in return for a payment of 63 million kronor from other commercial nations, Denmark abolished the Sound toll dues the fees it had collected since 1497 for the use of the Sound. This, along with other policy shifts toward free trade, resulted in a significant increase in traffic through the Sound and in the port of Copenhagen.
+
+According to paragraph 4, because of their location, the Netherlands and the Scandinavian countries had all of the following advantages when they began to industrialize EXCEPT
+
+A. low-cost transportation of goods
+
+B. access to fish
+
+C. shipbuilding industries
+
+D. military control of the sea
+
+很容易找到 ABC，选 D
+
+
+
+#### 标志 2
+
+::: important 定位技巧
+
+递进处易出答案。（标了序号1234，或者出现 one/thus/furthermore…）
+
+:::
+
+It is archaeologist Steven Mithen's thesis, brilliantly developed in his book *The Prehistory* *of the Mind* (1996), that approximately 40,000 years ago the human mind developed cognitive fluidity, that is, the integration of the specializations of the mind: technical, natural history (geared to understanding the behavior and distribution of natural resources), social intelligence, and the linguistic capacity. Cognitive fluidity explains the appearance of art, religion, and sophisticated speech. Once humans possessed such a mind, they were able to find an imaginative solution to a situation of severe economic crisis such as the farming dilemma described earlier. Mithen proposes the existence of four mental elements to account for the emergence of farming: (1) the ability to develop tools that could be used intensively to harvest and process plant resources; (2) the tendency to use plants and animals as the medium to acquire social prestige and power; (3) the tendency to develop "social relationships" with animals structurally similar to those developed with people—specifically, the ability to think of animals as people (anthropomorphism) and of people as animals (totemism); and (4) the tendency to manipulate plants and animals.
+
+According to paragraph 5, Steven Mithen believes that all of the following contributed to the emergence of farming EXCEPT 
+
+A. the development of a mind flexible enough to come up with solutions to complex problems
+
+B. the tendency to use plants and animals to acquire power
+
+C. the tendency to emphasize the differences between animals and people
+
+D. the ability to make tools that could be used for the large-scale harvesting of plants
+
+选 C
+
+> A 选项出现在第二排（不要只找递进部分哦！）
+
+
+
+
+
+In addition to exploring the possible antecedents of theater, scholars have also theorized about the motives that led people to develop theater. Why did theater develop, and why was it valued after it ceased to fulfill the function of ritual? Most answers fall back on the theories about the human mind and basic human needs. ==One==, set forth by Aristotle in the fourth century B.C., sees humans as naturally imitative—as taking pleasure in imitating persons, things, and actions and in seeing such imitations. ==Another==, advanced in the twentieth century, suggests that humans have a gift for fantasy, through which they seek to reshape reality into more satisfying forms than those encountered in daily life. ==Thus==, fantasy or fiction (of which drama is one form) permits people to objectify their anxieties and fears, confront them, and fulfill their hopes in fiction if not fact. The theater, ==then==, is one tool whereby people define and understand their world or escape from unpleasant realities.
+
+All of following are mentioned in paragraph 5 as possible reasons that led societies to develop theater EXCEPT
+
+A. Theater allows people to face that they are afraid of.
+
+B. Theater gives an opportunity to imagine a better reality.
+
+C. Theater is a way to enjoy imitating other people.
+
+D. Theater provides people the opportunity to better understand the human mind.
+
+ 选 D （递进词用亮黄色标出了）
