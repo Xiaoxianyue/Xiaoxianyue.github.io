@@ -136,3 +136,137 @@ According to the writing, the North Americans did not consider the silver coins 
      **修改建议：**
 - *Thus, the issue of money cannot be a reason why the Norse did not bring coins to America.*
 
+
+
+
+
+## OFF 37
+
+The passage claims that using turtle excluder device(TED) is not a good idea for three reasons, while the lecture casts doubt on it.
+
+First of all, the reading material states that the probability of turtles get caught is rarely, only one turtle trap in one shrimp boat's nets every month on average. Beside,shrimps may escape from the TEDs, which cause a loss to the shrimpers. In contrast, the listening material proposes an opposing view. Since a plenty of shrimp boats are operating nowadays, the number of turtles get trapped every year is a huge figure for an endangered specie. Although the single boat does not matter, but thousands of boats lead to great harm to the population of turtles. Also, we ought not to regard the TEDs as a loss for a single shrimper but think about that how the whole shrimp industry affect the whole turtles species.
+
+Contrary to the belief that shortening the time limit that keeping the nets of boats underwater can rise the turtles to the surface of sea to breathe in time in the passage, the speaker contends that the way only works out on theory. It is difficult for government to enforce every single shrimp boats to obey the time limit. Since there are thousands of boats on the ocean, government patrol==巡逻== boats cannot really monitor the time limits all these boats use. Conversely, the government can easily manage shrimping using TEDs, which just need to check whether the nets have a TED on it before boats leave port==港口==.
+
+Last but not least, according to the writing, some big turtles cannot fit through the escape passage that the TEDs offer. However, the listening asserts that the size of TEDs can be adjusted in certain areas. TEDs should be larger in somewhere and change the size doesn’t effect TEDs’ other functions.
+
+**语法错误修正**：
+
+- "the probability of turtles get caught" → "the probability of turtles getting caught"。
+- "which cause a loss to the shrimpers" → "causing a loss to shrimpers"。
+- "how the whole shrimp industry affect" → "how the whole shrimp industry affects"。
+- "change the size doesn’t effect" → "changing the size does not affect"。
+
+**表达优化**：
+
+- "only one turtle trap" → "only one turtle being trapped"。
+- "the number of turtles get trapped every year is a huge figure" → "the total number of turtles getting trapped ==annually== represents a significant figure"。
+- "we ought not to regard the TEDs as a loss for a single shrimper" → "TEDs should not be viewed as a loss for individual shrimpers"。
+- "the way only works out on theory" → "==this method works only in theory=="。
+
+**修正版**
+
+The passage claims that using a turtle excluder device (TED) is not a good idea for three reasons, while the lecture casts doubt on this argument.
+
+First of all, the reading material states that the probability of turtles getting caught is low, with only one turtle being trapped in one shrimp boat’s nets per month on average. Moreover, it argues that shrimps may escape from the TEDs, causing a loss to shrimpers. In contrast, the listening material offers an opposing view. Since numerous shrimp boats are operating nowadays, the total number of turtles getting trapped annually represents a significant figure for an endangered species. While a single boat’s impact might seem negligible, the combined effect of thousands of boats poses a grave threat to the turtle population. Additionally, the speaker emphasizes that TEDs should not be viewed as a loss for individual shrimpers but rather as a necessary measure to prevent the shrimping industry as a whole from harming the entire turtle species.
+
+Contrary to the belief in the passage that shortening the time nets are kept underwater can allow turtles to rise to the surface to breathe in time, the speaker contends that this method works only in theory. It is challenging for the government to ensure that every single shrimp boat adheres to the time limit. With thousands of boats on the ocean, government patrols cannot effectively monitor all the boats' compliance. On the other hand, the government can easily enforce the use of TEDs by simply checking whether the nets are equipped with a TED before the boats leave the port.
+
+Lastly, the passage argues that some large turtles cannot fit through the escape passage provided by TEDs. However, the listening material counters this by asserting that the size of TEDs can be adjusted in certain areas. For example, TEDs can be made larger where necessary, and altering the size does not affect the functionality of the device.
+
+
+
+
+
+## OFF 47
+
+The passage claims that Pterosaurs -- an ancient group of winged reptiles were not capable of powered flight, while the listening casts doubt on it.
+First of all, the reading material states that since the modern reptiles are cold-blooded, the ancients reptiles were probably also cold-blooded. Cold-blooded animals unlikely to create the energy need to fly. In contrast, the listening material presents an opposing view that some fossil from Pterosaurs shows the creature has a dense, hairlike covering which somewhat like fur. the fur, hair things symbolize that the Pterasaurs could be warm-blooded animals because only warm-blooded animals need fur to keep high body temperature in a cold circumstance. So they could supply the energy powered flight needed.
+Secondly, contrary to the belief that the Pterosaurs were too heavy to fly in the passage, the speakers contends that Pterosaurs had some features kept themselves light for their size. For instance, their bones were hollow instead of solid which decreased their wight and made them able to be airborn.
+Last but not least, according to the writing, the two back limbs of Pterasaurs were too weak and small to support Pterasaurs to run fast enough or jump high enough to fly. Conversely, the lecture refutes the standpoint. there are a significant difference between birds which use only two hind limbs to take off the ground and Pterasaurs which use all four limbs to take off the ground. Take bats for a example. The four limbs of bats are used to push off the ground, walk, jump and run. So the legs of bats do not need to be very strong or muscular and bats are also capable to jump high enough or run fast enough.
+
+**1. 原句：**
+"The passage claims that Pterosaurs -- an ancient group of winged reptiles were not capable of powered flight, while the listening casts doubt on it."
+
+**修改后：**
+"The passage claims that Pterosaurs, an ancient group of winged reptiles, were not capable of powered flight, while the listening casts doubt on this."
+
+------
+
+**2. 原句：**
+"Cold-blooded animals unlikely to create the energy need to fly."
+
+**修改后：**
+"Cold-blooded animals are unlikely to generate the energy needed for flight."
+
+------
+
+**3. 原句：**
+"the creature has a dense, hairlike covering which somewhat like fur."
+
+**修改后：**
+"the creature had a dense, hair-like covering ==similar to fur==."
+
+------
+
+**4. 原句：**
+"symbolize that the Pterasaurs could be warm-blooded animals because only warm-blooded animals need fur to keep high body temperature in a cold circumstance."
+
+**修改后：**
+"suggest that Pterosaurs could have been warm-blooded animals because only warm-blooded animals need fur to maintain a high body temperature ==in cold circumstances==."
+
+------
+
+**5. 原句：**
+"could supply the energy powered flight needed."
+
+**修改后：**
+"could have supplied the energy needed for powered flight."
+
+------
+
+**6. 原句：**
+"Secondly, contrary to the belief that the Pterosaurs were too heavy to fly in the passage, the speakers contends that Pterosaurs had some features kept themselves light for their size."
+
+**修改后：**
+"Secondly, contrary to the belief that Pterosaurs were too heavy to fly in the passage, the speaker contends that Pterosaurs had features that kept ==them== light for their size."
+
+------
+
+**7. 原句：**
+"For instance, their bones were hollow instead of solid which decreased their wight and made them able to be airborn."
+
+**修改后：**
+"For instance, their bones were hollow rather than solid==,== which reduced their weight and ==enabled== them ==to== be ==airborne==."
+
+------
+
+**8. 原句：**
+"Last but not least, according to the writing, the two back limbs of Pterasaurs were too weak and small to support Pterasaurs to run fast enough or jump high enough to fly."
+
+**修改后：**
+"Last but not least, according to the reading, the two back limbs of Pterosaurs were too weak and small to ==support the Pterosaurs in== running fast enough or jumping high enough to fly."
+
+------
+
+**9. 原句：**
+"Conversely, the lecture refutes the standpoint. there are a significant difference between birds which use only two hind limbs to take off the ground and Pterasaurs which use all four limbs to take off the ground."
+
+**修改后：**
+"Conversely, the lecture refutes this view. There is a significant difference between birds==,== which use only two hind limbs to take off the ground, and Pterosaurs==,== which use all four limbs to take off."
+
+------
+
+**10. 原句：**
+"Take bats for a example. The four limbs of bats are used to push off the ground, walk, jump and run."
+
+**修改后：**
+"==Take bats, for example==. The four limbs of bats are used to push off the ground, walk, jump, and run."
+
+------
+
+**11. 原句：**
+"So the legs of bats do not need to be very strong or muscular and bats are also capable to jump high enough or run fast enough."
+
+**修改后：**
+‘’==Therefore==, the legs of bats do not need to be very strong or muscular, and bats are also ==capable of== jumping high enough or running fast enough."

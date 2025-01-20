@@ -704,3 +704,93 @@ Besides, the equality in grade may cultivate the group members' stronger sense o
 
 
 
+### 第四段
+
+然而，我们还应提高意识，避免“滥竽充数”现象的滋生。如果所有小组成员都获得相同的分数，也有一种潜在的可能性，那就是某些成员会拒绝全身心地投入。正如那则著名的中国寓言所讲述的，一些人也许在装模作样地作贡献。此类不诚实的行为对团队质量同样有害，因此必须严格制止。
+
+#### 自翻
+
+However, we should remind ourselves to avoiding the increasing of the ‘滥竽充数’ phenomena.  There is a sort of potential probability if all members acquire the same score, some members will refuse to donate with full energy. （==There is a potential probability that if all members receive the same score, some members might refuse to contribute with full effort.==） As a famous Chinese saying goes, someon may be acting like they are 奉献. Since these unhonest behaviour are harmful to the quality of a team and must be strictly 制止.==disallow，halt，bar==
+
+#### 他翻
+
+However, awareness ought to be aroused to avoid the phenomenon of **filling a post without real qualifications**. If equal grade is given to all group members, there is a hidden possibility that certain members might refuse to contribute==贡献== wholeheartedly. Just as what is depicted in the famous Chinese fable, some players might pretend to make contributions **in disguise**. Such **dishonest** behavior is also destructive to the quality of a group and must be strictly avoided.
+
+
+
+#### 积累
+
+==arouse awareness== 引起意识 唤起警觉 激发关注
+
+==filling a post without real qualifications== 滥竽充数
+
+donate 常指捐赠钱等
+
+depict 描述，表现，描绘
+
+==in disguise 假装的==
+
+
+
+
+
+### 第五段
+
+总而言之，分数不仅仅可以用来评价学生的表现，还能提醒他们某些价值有多重要。只要团队协作得以保证，责任感得以加强，为所有成员打相同的分数无疑是教育学生的一个有效方法。
+
+#### 自翻
+
+In summary, score not only can evaluate the performance of students, but also remind them the importance of some value. Only the team work is guaranteed, the==a== sense of responsibility is strenghthened, give==ing== the same score to all members undoubtly is a effective way to students’ education.
+
+#### 他翻
+
+In summary, marks are used not just to evaluate the performance of students, but also to remind them the importance of certain values. As long as teamwork is ensured and a strong sense of responsibility is strengthened, giving all group members the same grade is by all means an effective method to educate students.
+
+#### 积累
+
+certain 代替 some 更高级
+
+As long as 只要
+
+==by all means== 毫无疑问的
+
+
+
+## Passage 14
+
+### 第一段
+
+进入成年期标志着一个崭新人生阶段的开始。同时，这也意味着即将遭遇在金色童年时期未曾出现过的无数挑战。在这样的现实面前，很多有责任感的家长试图帮助他们十几岁的孩子尽早适应未来的挑战。其中有些家长鼓励他们的孩子去做兼职。我认为这是可以达到此目的的一个好办法。
+
+#### 自翻
+
+Entering to the age as an adult indicates a begginning of a new stage of life. Meanwhile, this means they will encounter countless challenges that never happened in the golden childhood period. In the fact of this, many parents with a sense of responsibility try to help their teenager children to 适应 future challenges as earlier as possible. Some of them encourage their children to take a part time job. I consider this as a great manner to acheive their goals.
+
+#### 他翻
+
+Stepping into **adulthood** marks the beginning of a **brand newstage** of one's life. It also **denotes** numerous encounters with challenges that may have never **shown up** during the golden years of childhood. In the face of such a reality, many responsible parents attempt to help their teenage children **adapt to** future challenges as early as possible. Some of these children are encouraged to take part-time jobs. From my point of view, it could be a suitable way to meet that need.
+
+#### 积累
+
+- 步入成年：Stepping into **adulthood**
+
+- 标志：marks
+    - 虽然两者在某些情况下（如指示某种迹象或意义）可以互换使用，但 **"mark"** 更强调物理标记或具有象征性的表示，而 **"indicate"** 强调通过迹象、行为或信息来表达某种意思。
+
+- 全新的阶段：brand new stage
+    - **"Brand new"** means completely new, unused, or fresh, emphasizing something that is entirely new or hasn't been used before.
+- denote 表示、指代、象征，作“意味着”的意思时 ~= mean
+- happen ~= show up
+- 在这样的现实面前: in the face of such reality
+- try 可以替换成 attempt
+- teenage 形容词
+- 拓：二十几岁的人：people in their twenties
+- 适应：adapt to
+- as early as possible 不需要用比较级
+- From my point of view 我认为
+
+
+
+
+
+## OFF 

@@ -80,7 +80,25 @@ toc: true
 
 
 
+**Extremely** - 极其
 
+**Highly** - 高度地
+
+**Tremendously** - 极大地
+
+**Exceedingly** - 非常
+
+**Vastly** - 极大程度地
+
+**Immensely** - 非常，极其
+
+**Profoundly** - 深刻地，极大地
+
+**Overwhelmingly** - 压倒性地，极大地
+
+**Significantly** - 显著地
+
+**Remarkably** - 显著地，异常地
 
 
 
