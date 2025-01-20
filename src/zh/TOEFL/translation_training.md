@@ -791,6 +791,34 @@ Stepping into **adulthood** marks the beginning of a **brand newstage** of one's
 
 
 
+### 第二段
 
+#### 中文
 
-## OFF 
+首先，在兼职工作过程中，青少年将获得学习更多东西的机会，而且还能为他们将来的事业积累经验。无论他们从事的是哪方面的工作，都可以从中掌握一些实用的知识和技能。如果他们大学毕业后进入相关领域工作的话，这些无疑是很有用也很有价值的。有足够的实例来证明这一点。上中学时，我的朋友凯特利用暑假假期在一个服装店里做兼职销售员。这段有趣的经历教给她如何与顾客讨价还价，以及如何与他人巧妙地交流。现在，她已经成为一位成功的跨国服装公司的销售经理了。从某种程度上讲，那份兼职工作使她受益匪浅。
+
+#### 自翻
+
+First, during the part-time job, teenager will receive chances to learn more and also can accumulate experience for their future carrer. Whatever the aspects they are working on, they could grasp some practical knowledge and skills. If they enter related regions to work after graduating from college, the experiences are doubtless very useful and valuable. We have abundant instances to testify this point. During the high school, my friend Kate used the summer vacation to be a part-time saler in a cloth store. The interesting encounter taught her how to bargain with customers, and how to converse with others 巧妙地. Now, she has been a successful saling manager in a 跨国 custom company. 从某种程度上讲, the part-time job benefited her a lot.
+
+#### 他翻
+
+First of all, during the course of working part-time, teenagers will have the opportunity to learn more and accumulate experiences for their future careers. No matter what type of job they are engaged in, they could gain some practical knowledge and skills, which will prove useful and valuable if they are employed in a related field after graduating from college. There is enough evidence to testify to this. During a summer vacation in high school, my friend Kate took up a part-time job as a shop assistant in a clothesshop. Such an interesting experience taught her how to **bargain with** customers and how to communicate with people skillfully. Today, she has made herself a successful sales manager in a **multinational** clothing corporation. In a sense, the part-time job she once took benefited her considerably.
+
+#### 积累
+
+- 过程（课程）：course
+- 在 … 的过程中：during the course of doing …
+- 事业【拼写错误】：careers ==可数==
+- experiences：==可数==
+- 无论他们从事的是哪方面的工作： No matter what type of job they are engaged in
+- 进入相关领域工作：be employed in a related field
+- testify to
+- 销售：shop assistant
+- 服装店：clothesshop
+- 巧妙的：skillful
+- 她已经成为了 …：she has made herself …
+- 跨国服装公司：**multinational** clothing corporation
+- 表程度大的，可替换表达：considerably
+- 在某种程度上：In a sense
+- 

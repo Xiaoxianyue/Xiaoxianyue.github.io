@@ -99,7 +99,6 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
     - Higher education doubtlessly **constitutes** a crucial stage during the long journey toward shining success.
 - In spite of = although = even though = notwithstandimg
 - therefore = thus = hence = as a result
-
 - 否认：deny
 - 个人发展：self-development
 - play a important role in ~= Have a major impact on ~= Be crucial to
@@ -114,4 +113,34 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - 具备：equipped with
 - 掌握：grasp
 - 专业的：specialized
+- 把 … 视作：define/regard/consider/deem … as
+- 卓越的，杰出的：eminent / prominent / distinguish
+- 杰出的人物：eminent figure
+- abundant：丰富的，大量的【一般修饰不可数名词】
+- 令人惊奇的：astounding
+- … 成为关注的焦点：… be brought into the limelight
+- 支配：dominate
+- 征服，攻占：take … by storm
+- 行业：industry  市场：market
+- 得益于，归功于：… owe to …
+- ==坚定的意志：strong will==
+- 创造力：creativity
+- ==坚持不懈的努力：everlasting diligence = persistent effort==
+- 不言而喻的：evidently
+- 意义：significance = mean
+- **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
+- **possess** 拥有，同义替换 have
+- 从那时起【后接完成时】：Ever since / From that time on
+- 启发性的：enlightening
+- 理解，领悟，包含，包括：comprehend
+- 常识：common sense
+- 获得：acquire = gain = obtain = attain[达到] = receive[接受]
 
+- junior school 一般不指中学，指小学或初中
+- 表转折：Nevertheless
+- 忽视，不重视，疏忽：neglect
+- 文凭：diploma
+- ==坚持不懈的：unremitting = persistent = everlasting==
+- ==钢铁般的意志：iron determination==
+- 拼搏：endeavors
+- 到了 … 的年纪：arrive at … age
