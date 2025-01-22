@@ -821,4 +821,49 @@ First of all, during the course of working part-time, teenagers will have the op
 - 跨国服装公司：**multinational** clothing corporation
 - 表程度大的，可替换表达：considerably
 - 在某种程度上：In a sense
-- 
+
+
+
+### 第三段
+
+#### 中文
+
+此外，孩子们也许会逐渐懂得有关挣钱的真相，从而变得更加成熟。一个人对金钱的态度反映了他的价值观。在工作与领薪水的过程中，他们会自然而然地意识到，挣每一分钱都不容易。罗马不是一天建成的。只有通过坚持不懈的勤奋工作，并且拥有责任感，才有资格得到酬劳。的确，理解这个有关工作与报酬的事实标志着一个人思想上的进步，并使其更加接近成熟。
+
+
+
+#### 自翻
+
+<img src="./translation_training.assets/image-20250122110621002.png" alt="image-20250122110621002" style="zoom: 67%;" />
+
+Beside==s==, children will gradually realize the truth of making money, which makes them more mature. One’s attitude to money reflects one’s 价值观. On the process of working and receiving salary, they will recognize it’s hard to make every penny naturelly. Roman didn’t build up in one day. Only through persistent hard-working and equip with a sense of responsibility, one will have the qualification to be paid. Indeed, understanding the fact regarding  working and paying indicates one’s progress in mental, which make him/her to approach to the maturity. 
+
+
+
+#### 他翻
+
+In addition, children may gradually understand the reality of making money, thus becoming more mature. One's attitude toward money reflects his values. During the process of working and receiving payment for it, they will naturally comprehend that not a penny is easily gained. Rome was not built in a day. Only through diligent work, perseverance, and a strong sense of responsibility can a person deserve pay. Indeed, comprehending this fact about work and pay **symbolizes** one's mental progress, which brings him closer to **maturity**. 
+
+
+
+#### 积累
+
+- 此外：In addition = beside==s==
+- 真相：truth = reality
+- to 与 toward 的差别：**to** 强调动作的结果（达到目标），而 **toward** 强调动作的方向
+    - One's attitude toward money
+- 理解，领会：comprehend
+- 薪水：
+    - 如果是固定的月薪或年薪，通常用 **Salary**。
+    - 如果是按小时或日结算的工资，使用 **Wage** 更合适。
+    - 如果想强调“薪水”的整体概念或不限定支付形式，可以用 **Pay** 或 **Income**。
+
+- diligent==勤奋的，刻苦的== work, perseverance==毅力，坚持，恒心==, and a strong sense of responsibility
+- 标志着：symbolize
+
+
+
+- make sb. to do 太幼儿？试试：
+    - **正式场合**：Cause, Enable, Compel, Prompt
+    - **情感表达**：Inspire, Motivate, Encourage
+    - **中性/普适**：Lead, Urge, Drive
