@@ -153,11 +153,10 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - [sth] 标志着 …：mark
 - each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
     - fulfill 实现 达成 完成 履行 
-
 - appropriated 合理的
 - commit 承认，犯罪，交付
 - collaborative 合作的，协作的
--  struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
+- struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
 - When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
 - Indeed ~= Truthfully
 - 培养：cultivate
@@ -171,9 +170,30 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - 鼓舞士气：inspirational morale
 - advocate 提倡、主张、支持
 - satisfactory destination 理想的目标
--  the loss of responsibility and enthusiasm
+- the loss of responsibility and enthusiasm
 - arouse awareness 唤起/引起 … 意识
 - 滥竽充数：filling a post without real qualifications
 - wholehearted 全心全意的
 - 假装的：in disguise
+- certain 代替 some 更高级
+- but also to remind them the importance of certain values. 
+- As long as 只要
+- by all means ~= undoubted
+- Stepping into **adulthood** marks the beginning of a **brand new stage** of one's life.
+    - Step into adulthood
+    - mark 标志着
+    - brand-new 崭新的
+- 在这样的现实面前：In the face of such reality
+- try 可以替换为 attempt
+- 二十岁的人：people in their twenties
+- From my point of view
+- course ~= process 过程
+    - during the course of doing
+- 无论他们从事的是哪方面的工作：No matter what type of job they are engaged in
+- 进入相关领域工作：be employed in a related field
+- 巧妙的：skillful
+- 跨国服装公司：multinational clothing corporation
+- 表示程度大的：considerably
+- 在某种程度上：In a sense
+- 
 

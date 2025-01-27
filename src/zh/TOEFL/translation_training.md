@@ -944,3 +944,35 @@ Undeniably, any breakthrough made in the field of science symbolizes not only th
     - sb. be to blame   “某人应受到责备”或“某人应该为某事负责”
 - ==消除偏见：eliminate the prejudice==
 
+
+
+### 第二段
+
+#### 中文
+
+事实上，世间万物都具有两面性，科学发现也不例外。换句话说，科学是一把双刃剑。若能正确利用，它会极大地造福于人类。相反，对科学发现的滥用或误用可能会招致灾难。更糟糕的是，某些心怀叵测的人可能会利用一些科学成果犯罪或进行其他不道德的勾当。镭是居里夫人的重大发现。此元素所发出的X射线应用于医学时，可以治疗很多包括癌症在内的绝症。然而，倘若应用不当，这种辐射性射线会危害人类健康。核能是另一个例子。核能可以用于建设为人类服务的核电站。相反，使用核武器无疑将是全人类的灾难。因此，防止任何科学发现可能带来的威胁是所有人共同的职责。
+
+#### 自翻
+
+In fact, everything in the world have==has== two sides, also as the scientific discoveries. In other words, science is a double-edged sword. If can use it correctly, it will greatly benefit human. In contrary, too wide or incorrect use of scientific discoveries may lead to diaster. More worse, some people with bad idea may use certain scientific to commit or do unmoral trade. 
+
+#### 他翻
+
+In fact, everything in the world is **double-sided**, and scientific discoveries are **no exception to** this rule. In other words, science is a **two-edge sword**. If applied in the correct way, it will bring forth tremendous benefits to human beings. **Conversely**,  the **abuse** or misapplications of scientific discoveries might lead to **catastrophes**. What's worse, there is also the possibility that some **ill-intentioned** individuals take advantage of some scientific advancements to commit crimes or other immoral deeds.
+
+#### 积累
+
+- 两面性：double-sided
+- [关于…]不例外的：no exception to …
+- bring forth tremendous benifit
+- abuse 滥用
+- Conversely
+- misapplication 误用
+- 灾难：catastrophes
+- what’s worse
+- there is also the possibility that some **ill-intentioned** individuals take advantage of some scientific advancements to commit crimes or other immoral deeds.
+    - 不怀好意的：ill-intentioned
+    - 利用[贬义]：take advantage of
+    - scientific advancements 科学成果
+    - commit crimes
+    - immoral deeds[行为，功绩，证书]
