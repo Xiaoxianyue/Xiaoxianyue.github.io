@@ -116,6 +116,7 @@ export default hopeTheme({
       "/zh/Advanced_Algorithms/":["aa100"],
       "/zh/Diary/Daily_assignment.html":["aoligei"],
       "/zh/internship/istarshine.html":["istarshine2501"],
+      "/zh/internship/istarshine01.html":["istar_sum"],
     },
   },
 
