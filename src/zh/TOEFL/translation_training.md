@@ -861,9 +861,86 @@ In addition, children may gradually understand the reality of making money, thus
 - diligent==勤奋的，刻苦的== work, perseverance==毅力，坚持，恒心==, and a strong sense of responsibility
 - 标志着：symbolize
 
-
-
 - make sb. to do 太幼儿？试试：
     - **正式场合**：Cause, Enable, Compel, Prompt
     - **情感表达**：Inspire, Motivate, Encourage
     - **中性/普适**：Lead, Urge, Drive
+
+
+
+### 第四段
+
+#### 中文
+
+不可否认，还有很多其他有效的途径来帮助孩子们为未来作准备。比如说，参加各种夏令营就是一个不错的选择。夏令营的生活经历训练青少年在艰苦条件下独立生活。他们可以利用这样宝贵的机会掌握一些基本的生存技能。此外，家长带孩子到国外或者在国内旅游也是一种明智的选择。旅行拓宽他们的视野，并使其思想更加开明。所有这些素质都是每一位成功者必备的。
+
+
+
+#### 自翻
+
+There is no deny that plenties of effective way==s== can help children to prepare for the future. For instance, joining various summer campings is a good choice. The experience in summer campings could train teenager live independently in a tough environment. They can use the valuable choice to grasp some basic 生存 skills. Besides, parents take their children to travel aboard or in their nation is also a wide choice. Travelling can widen their view and prompt their mind to be more open. Every successful one must equip with all these qualities. 
+
+
+
+#### 他翻
+
+Undeniably, there are other effective ways available for parents to prepare their children for their future. To illustrate, joining in various summer camps could be a good choice. Life experience in a camp helps train teenagers to live independently **under tough conditions**. They could take advantage of such a precious chance to master some basic life skills. In addition, it is also advisable for parents to take their children out on international or national tours. Traveling broadens their **horizon** and makes them more open-minded. All these qualities can be found in every successful adult.
+
+
+
+#### 积累
+
+- 无可否认的是：undeniably
+- 举例子：To illustrate
+- 参加夏令营：join in summer camps
+- 在艰苦的环境下：under tough conditions
+- 利用这次宝贵的机会： take advantage of  such a precious chance
+- grasp ~= master 掌握 
+    - grasp 还有抓住之意
+    - master 还有 精通；大师 的意思
+- … be a good choice ~= it is advisable that …
+- 国外或国内旅游：on international or national tours
+- broadens their **horizon** and makes them more open-minded
+- All these qualities can be found in every successful adult
+
+
+
+## Passage 15
+
+### 第一段
+
+#### 中文
+
+不可否认，科学界的任何一项突破不仅是人类无敌智慧的象征，也是人类社会重要进步的标志。有些举世瞩目的发现使科学家声名显赫，因为他们的成就为全人类带来了深远的福音。诺贝尔奖及许多其他高级别的科学奖项进一步证明了科学发现的重要性。尽管如此，一提到某些发现所产生的负面影响，有些人会认为这都是科学家的错。在我看来，人们应当消除这样的偏见。
+
+#### 自翻
+
+Undeniably, every break in science not only is a symbol of human’s 无敌的 wisedom, but also a signal of important progress of human society. Some 举世瞩目的 finding makes scientists famous because their achievement bring far-reaching influence on the whole human-beings. Nobel and many other advancedly scientific 奖项 have proved the importance of scientific finding 进一步地. Although, once mention nagtive==(nagative)== effects that some finding produced, someone will think it should fully blame on scientists. From my perspective, people should erase the 偏见.
+
+#### 他翻
+
+Undeniably, any breakthrough made in the field of science symbolizes not only the **unmatchable** intelligence of mankind, but also significant progress of human society. Some of the most noteworthy discoveries have rendered **prestige** to scientists due to the far-reaching benefits their achievements have brought to the entire human race. The Nobel Prize and many other **high-ranking** rewards in science further testify to the importance of scientific discoveries. Nevertheless, regarding the negative impacts produced by some discoveries, a number of people believe that scientists are to blame. In my opinion, such a prejudice should be **eliminated**.
+
+#### 积累
+
+- 突破：breakthrough n.
+- 在 … 界；在 … 领域：in the field of …
+- 人类无敌的智慧：**unmatchable** intelligence of mankind
+- important 可以替换成 significant / essential / pivotal
+- **Some of the most noteworthy discoveries have rendered prestige to scientists due to the far-reaching benefits their achievements have brought to the entire human race. **
+    - 举世瞩目的：the most noteworthy 
+    - 发现：discovery   发明：invention
+    - render：使成为，使变得 / 提供，给予 / 表现，呈现 /
+    - prestige：声望，威望，名誉 / 影响力，权威  ~= reputation
+    - 全人类：entire human race
+- **The Nobel Prize and many other high-ranking rewards in science further testify to the importance of scientific discoveries. **
+    - 诺贝尔：Nobel prize 
+    - 高级奖项：high-ranking reward
+    - 进一步：further
+    - testify to 是一个固定搭配
+- Although ~= Neverthless
+- **regarding the negative impacts produced by some discoveries, a number of people believe that scientists are to blame.**
+    - effect ~= impact
+    - sb. be to blame   “某人应受到责备”或“某人应该为某事负责”
+- ==消除偏见：eliminate the prejudice==
+

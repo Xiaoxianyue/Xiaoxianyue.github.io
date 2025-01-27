@@ -1,5 +1,5 @@
 ---
-title: 托福写作
+title: 托福写作 + 积累词句
 icon: English
 date: 2024-9-20 10:31:16
 author: XiaoXianYue
@@ -135,7 +135,6 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - 理解，领悟，包含，包括：comprehend
 - 常识：common sense
 - 获得：acquire = gain = obtain = attain[达到] = receive[接受]
-
 - junior school 一般不指中学，指小学或初中
 - 表转折：Nevertheless
 - 忽视，不重视，疏忽：neglect
@@ -144,3 +143,37 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - ==钢铁般的意志：iron determination==
 - 拼搏：endeavors
 - 到了 … 的年纪：arrive at … age
+- bring forth
+    - The debate brought forth many new ideas for solving the problem. 提出；产生
+    - His actions brought forth widespread criticism from the public. 引起；导致
+    - The artist's creativity brings forth incredible masterpieces. 创造；使出现
+- 普及：general adoption
+- assess ~= evaluate ~=  estimate[估算] 评价；评估
+- 一致，连贯的努力：coherent effort
+- [sth] 标志着 …：mark
+- each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
+    - fulfill 实现 达成 完成 履行 
+
+- appropriated 合理的
+- commit 承认，犯罪，交付
+- collaborative 合作的，协作的
+-  struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
+- When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
+- Indeed ~= Truthfully
+- 培养：cultivate
+- ==在某种程度上：To some degree==
+- making each one count helps **eliminate** prejudices and undesirable moods that are **destructive** to the progress and result of the project.
+    - make sb count 使某人发挥作用
+    - eliminate prejudice 消除偏见
+    - undesirable mood 不良的情绪
+- It is the associated responsibility that builds up a solid **infrastructure** of a group.
+    - 正是这种共同的责任搭建起了团队的坚固基础。
+- 鼓舞士气：inspirational morale
+- advocate 提倡、主张、支持
+- satisfactory destination 理想的目标
+-  the loss of responsibility and enthusiasm
+- arouse awareness 唤起/引起 … 意识
+- 滥竽充数：filling a post without real qualifications
+- wholehearted 全心全意的
+- 假装的：in disguise
+
