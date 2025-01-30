@@ -270,3 +270,19 @@ Last but not least, according to the writing, the two back limbs of Pterasaurs w
 
 **修改后：**
 ‘’==Therefore==, the legs of bats do not need to be very strong or muscular, and bats are also ==capable of== jumping high enough or running fast enough."
+
+
+
+
+
+## Off 54 Task 2
+
+### 原文
+
+I disagree with the statement for two reasons. In the first place, increasing the money to support arts is not enough. Not only does the thriving of arts need money, but also a better cultural condition and education of the nation play an important role, which would take many years to form and systematize with persistent diligence. Besides, giving financial support to athletics is significantly efficient. The money could be used on good professional sports equipment to guarantee the athletes are trained in an appropriate and advanced way. And also Olympic game is a perfect approach to show the perseverance and iron determination of a country to the world, which deserves wholehearted attentiveness on the part of the government. A great Olympic team will be a pride of a nation, and the victory of the team is an inspirational moral.
+
+### 改进版
+
+I disagree with the statement for two reasons. In the first place, while increasing financial support for the arts is essential, it is not sufficient on its own. The flourishing of arts requires not only funding but also a strong cultural foundation and widespread education among the population, both of which take years of consistent effort to develop. 
+
+On the other hand, allocating financial resources to athletics is highly impactful. The money can be invested in advanced sports equipment and facilities, ensuring that athletes receive proper training to achieve excellence. Moreover, the Olympic Games provide a unique platform to showcase a nation’s perseverance and determination to the world, reflecting its collective strength and unity. A successful Olympic team becomes a source of pride for the entire nation.

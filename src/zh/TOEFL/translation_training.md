@@ -976,3 +976,83 @@ In fact, everything in the world is **double-sided**, and scientific discoveries
     - scientific advancements 科学成果
     - commit crimes
     - immoral deeds[行为，功绩，证书]
+
+
+
+### 第三段
+
+#### 中文
+
+为了使其科学发现造福于社会，科学家有责任提供有效的指导以帮助防止任何潜在的威胁。例如，在新发现被人类应用以前，发现者有义务制定出官方使用说明，其中必须包含最详细的介绍、最精确的使用方法和所有可应用的领域，并且列出其可能产生的潜在副作用或危害。这些准备工作都是至关重要的，因此值得科学家全身心地关注。另外，政府也有责任监督重大发现的应用，以确保其合法性与精确性。
+
+#### 自翻
+
+In order to enable their scientific discoveries bring forth benefits to society, scientists are responsible to provide effective instructions to help to prevent [from]==去掉== any potential threat[ing]==s==. For example, before the new discovery is applied by people, discoverier==discoverer== has duty to make official using explaination, must including==must后面怎么能加ing呢== the most detailed instructions, the most precise using approaches and all field the discovery can be applied, also needs to list its potential bad influences or harm that the discovery may produce. All those preparations are essential, so they are worth scientists to concentrate completely. Besides, the government has duty to 监督 pivotal discoveries application to make sure its 合法性 and preciseness.
+
+**逻辑修正**：
+
+- **"worth scientists to concentrate completely"** 改为 **"worth the scientists' full attention"**，更符合英语表达习惯。
+
+
+
+
+
+#### 他翻
+
+In order to make their discoveries beneficial to society, scientists have a duty to offer effective guidance that helps prevent any potential threats. For instance, before a new discovery is put to use for human needs, the discoverer is **obliged to formulate** official instructions which must include the most detailed introduction, the most accurate methods of application, and all the areas it can be used, as well as a list of potential **side effects** or threats it might bring. These preparations are of vital importance, thus deserving wholehearted attentiveness on the part of scientists. Besides,  governments should also shoulder the responsibility of supervising the applications of major discoveries, making sure that they are used legally and correctly.
+
+#### 积累
+
+- guidance ~= instruction
+
+<img src="./translation_training.assets/image-20250130172149866.png" alt="image-20250130172149866" style="zoom: 50%;" />
+
+- threat [威胁]，有名词词性
+
+- obliged to [被迫] formulate[制定]
+
+- 副作用：side effects
+
+- of vital importance 比 important 更好
+
+- governments should also shoulder the responsibility of supervising the applications of major discoveries, making sure that they are used legally and correctly.
+
+    - shoulder the responsibility of doing 肩负着…的责任
+    - ==监督: supervise==
+    - legally 合法的
+
+- 句式学习：sth. deserves wholehearted attentiveness on the part of sb.[scientists]
+
+    - 什么事值得什么人全身心的付出
+
+    
+
+
+
+## Passage 25
+
+### 第二段
+
+#### 中文
+
+童年时期接受的教育是一个人未来学术与职业生涯的基础。如果一座大厦的地基不牢固，它如何能承受上层建筑那难以抗拒的重量和高度呢？缺乏良好教育的儿童是不会拥有光明前途的。孩子的潜力正是在这段重要的早期学习时光中开始显现的，其知识框架也是在此时建立起来的。若政府、学校和家长忽视青少年教育的话，也许会导致严重的后果。儿童教育需要整个社会共同的努力。例如，九年义务教育政策已经在中国施行了几十年。全国所有的小学和中学都有义务给孩子们提供免费的教育。这进一步证明了青少年教育作为社会基础的重要性以及其长远的收益。
+
+#### 自翻
+
+Education accepted in childhood is the fundamental of one’s future academic and career. If the 地基 of a building is unstable, how could it 。。。？Children who are lack of good education won’t have a brilliant future. The 潜力 of children represent during the inportant period of earlier education when their knowledge framework also build up. If governments, schools and parents neglect teenage education, it may lead to serious consequence. Chidren’s education need common effort of the whole society. For example, …… This further prove teenage education’s importance as basis of society and far-reaching benefits.
+
+#### 他翻
+
+The education a person receives in childhood is the foundation of his future academic and career life. If the foundation of a **skyscraper** is unstable, how could it **endure** the **overwhelming** weight and height of its **superstructure**? A poorly-educated child will never have a promising tomorrow. It is during these critical early years of learning that a child's potential begins to show and their learningstructure is established. Neglect on the part of the government, schools and parents could lead to severe consequences. Children's education requires the combined efforts of an entire society. In China, for instance, the nine **year compulsory education** policy has been implemented **for decades**. All primary and high schools have an obligation to offer free education to young children around the country. It further testifies to the importance of young children's education as the foundation of a society, with far-reaching benefits.
+
+#### 积累
+
+- 接受教育一般用 receive
+- 基础：不是 fundamental 是 foundation
+- 摩天大楼：skyscraper
+- **endure** the **overwhelming** weight and height of its **superstructure**
+    - 承受：endure
+    - 压倒性的，势不可挡的：overwhelming
+    - 上层建筑：superstructure
+- 
+

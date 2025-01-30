@@ -61,9 +61,12 @@ toc: true
 ### 1.4 写作模版
 
 The passage claims that ..., while the lecture casts doubt on it.  
-The reading material states that ..., in contrast, the listening material presents an opposing view that…
-Contrary to the belief that … in the passage, the speaker contends that...  
-According to the writing, ... Conversely, the listening refutes the standpoint.
+
+In the first place, the reading material states that ... On the other hand, the listening material views in an opposing angle. …
+
+Besides, the writer makes the point that … On the contrary, the speaker demonstrates a different idea that …
+
+Finally, contrary to the belief of the author that … the lecturer says that …
 
 
 
@@ -195,5 +198,27 @@ According to the writing, ... Conversely, the listening refutes the standpoint.
 - 跨国服装公司：multinational clothing corporation
 - 表示程度大的：considerably
 - 在某种程度上：In a sense
+- ==diligent== work, perseverance==毅力==, and a strong sense of responsibility
+- 无可否认的是：undeniably
+- 在艰苦的条件下：under tough conditions
+- 利用这次宝贵的机会：take advantage of such a precious chance
+- 掌握：grasp ~= master
+-  国外的、国内的：international national
+- ==broadens their horizon and makes them more open-minded==
+- 突破：breakthrough
+- 在…的领域/界：in the field of …
+- 无敌的[智慧]：unmatchable [intelligence]
+- important ~= significant / pivotal / essential
+- 举世瞩目的：the most noteworthy
+- prestige ~= reputation
+- 全人类：the entire human race
+- effect ~= impact
+- 某人该受到责备/为某事负责：sb. be to blame
+- 消除偏见：eliminate the prejudice
+-  两面性：double-sided
+- abuse 滥用
+- misapplication 误用
+- 灾难：catastrophes
+- 犯罪和做不道德的事情：commit crimes and other immoral deeds
 - 
 
