@@ -286,3 +286,185 @@ I disagree with the statement for two reasons. In the first place, increasing th
 I disagree with the statement for two reasons. In the first place, while increasing financial support for the arts is essential, it is not sufficient on its own. The flourishing of arts requires not only funding but also a strong cultural foundation and widespread education among the population, both of which take years of consistent effort to develop. 
 
 On the other hand, allocating financial resources to athletics is highly impactful. The money can be invested in advanced sports equipment and facilities, ensuring that athletes receive proper training to achieve excellence. Moreover, the Olympic Games provide a unique platform to showcase a nation’s perseverance and determination to the world, reflecting its collective strength and unity. A successful Olympic team becomes a source of pride for the entire nation.
+
+
+
+
+
+## Off 45 Task 1
+
+❌ **The passage claims that the fossil structure exist in 200 million years ago may not be built by bees, while the lecture casts doubt on it.**
+✅ **The passage claims that the fossil structure that existed 200 million years ago may not have been built by bees, while the lecture casts doubt on this claim.**
+
+**错误分析：**
+
+1. **"exist" → "existed"**（时态错误，应使用过去式）
+2. **"in 200 million years ago" → "200 million years ago"**（==介词错误，“ago”不与“in”连用==）
+3. **"may not be built" → "may not have been built"**（==虚拟语气，表示对过去的怀疑==）
+4. **"it" → "this claim"**（代词不清，应明确指代）
+
+
+
+❌ **In the first place, the reading material states that there wasn't any bee's fossil was found so bees may not exit 200 million years ago.**
+✅ **In the first place, the reading material states that ==no bee fossils have been found, so bees may not have existed== 200 million years ago.**
+
+**错误分析：**
+
+1. **"wasn't any bee's fossil" → "no bee fossils"**（语法错误，"wasn't any" 不适用于可数名词，且 "bee's fossil" 应改为复数 "bee fossils"）
+2. **"was found" → 删除**（句子已经有“states that”，所以不需要另一个被动语态）
+3. **"exit" → "exist"**（拼写错误，应为“exist”）
+4. **"may not exit" → "may not have existed"**（时态错误，表示过去可能不存在，应使用“may not have done”结构）
+
+
+
+❌ **Fossils were made by animals' or plants body and the tree resin which was vary rare.**
+✅ **Fossils were formed from the bodies of animals or plants and tree resin, which was very rare.**
+
+**错误分析：**
+
+1. **"made by" → "formed from"**（fossils 是“形成的”，不是“被制造的”）
+2. **"animals' or plants body" → "the bodies of animals or plants"**（错误的所有格，"animals' or plants body" 应该改为 "the bodies of animals or plants"）
+3. **"vary rare" → "very rare"**（拼写错误，“vary” 应改为 “very”） 
+
+
+
+❌ **Therefore, it is possible that bees lived in 200 million years ago didn't have chances to wrap by tree resin.**
+✅ **Therefore, it is possible that bees that lived 200 million years ago did not have the chance to be wrapped in tree resin.**
+
+**错误分析：**
+
+1. **"bees lived in 200 million years ago" → "bees that lived 200 million years ago"**（=="lived" 需要由关系代词 "that" 引导==）
+2. **"didn't have chances to wrap by" → "did not have the chance to be wrapped in"**（"wrap" 需要被动语态 "==be wrapped in=="）
+
+
+
+❌ **Besides, the writer makes the point that no flowering plants existed 200 million years ago, which means bees also shouldn't exist because of the lack of the food supply.**
+✅ **Besides, the writer argues that no flowering plants existed 200 million years ago, which means bees also should not have existed due to the lack of a food supply.**
+
+**错误分析：**
+
+1. **"makes the point" → "argues"**（"argues" 更自然，"makes the point" 太口语化）
+2. **"shouldn't exist" → "should not have existed"**（==时态错误，应使用过去虚拟语气==）
+3. **"because of the lack of the food supply" → "due to the lack of a food supply"**（"due to" 更正式，=="a food supply" 更符合英语表达习惯==）
+
+
+
+❌ **Conversely the speaker demonstrates a different idea that bees lived in that period may be fed by non-flowering plants like ferns or pipe trees.**
+✅ **Conversely, the speaker presents a different idea: bees that lived in that period may have been fed by non-flowering plants like ferns or pine trees.**
+
+**错误分析：**
+
+1. **"demonstrates a different idea" → "presents a different idea"**（"presents" 更符合逻辑，"demonstrates" 通常指“展示”而非“提出观点”）
+2. **"bees lived in that period" → "bees that lived in that period"**（==缺少关系代词 "that"==）
+3. **"may be fed" → "may have been fed"**（==时态错误，应使用“may have been done”表示对过去的推测==）
+4. **"pipe trees" → "pine trees"**（可能的拼写错误，“pine trees” 松树比“pipe trees”更合理）
+
+
+
+
+
+❌ **Finally, contrary to the belief of the author that the nests' chambers lack of a spiral pattern of caps which modern bees' nests have, the lecturer says that there are chemical evidences shows a kind of special waterproofing substance that bees' produce to protect nests from damaging by water exists in both modern and ancient nests, which convince the fossilized structure might be created by bees.**
+✅ **Finally, contrary to the author's belief that the nests' chambers lack a spiral pattern of caps found in modern bee nests, the lecturer states that chemical evidence shows a special waterproofing substance produced by bees to protect nests from water damage, which exists in both modern and ancient nests. This evidence suggests that the fossilized structure might have been created by bees.**
+
+**错误分析：**
+
+1. **"contrary to the belief of the author" → "contrary to the author's belief"**（"belief of the author" 太啰嗦，"the author's belief" 更自然）
+2. **"lack of a spiral pattern" → "lack a spiral pattern"**（=="lack" 不能直接跟 "of"==）
+3. **"which modern bees' nests have"** → "==found in modern bee nests"（"which modern bees' nests have" 结构不自然==）
+4. **"chemical evidences" → "chemical evidence"**（=="evidence" 是不可数名词，没有复数==）
+5. **"shows" → "shows that"**（=="shows" 需要接从句==）
+6. **"that bees' produce" → "that bees produce"**（"bees'" 应该是 "bees"）
+7. **"protect nests from damaging by water" → "protect nests from water damage"**（=="from damaging by water" 语法错误，"water damage" 更自然==）
+8. **"which convince" → "which suggests"**（"convince" 用法错误，应该用 "suggests"）==convince是使信服的意思==
+9. **"might be created" → "might have been created"**（时态错误，过去的假设应使用 "might have been"）
+
+
+
+==过去的假设要用完成时==！！！！！
+
+==that== 能不漏就不漏！！！！！
+
+
+
+## Off 45 Task 2
+
+I agree with the idea for two reasons. Firstly, as is vastly acknowledged, making decisions independently is an essential ability in adults' world. Before children go to the college, the problems they should deal with are not very serious like picking a subject to learn and so on. The parents should understand that children ought to make small decisions on their own to cultivate the ability of facing important choices. Small decision means smaller responsibility if making the wrong choice, so parents could not be worry about their kids. Secondly, the world around us has significantly changed and is different from the generation of the parents. Although parents have more experience, making decision for their children who live in a total different society might not be a wise choice. To some degree, parents also might have some prejudice for their children's generation, which may increase the undesirable mood between children and parents when parents try to make decisions for their kids.
+
+
+
+❌ **Firstly, as is vastly acknowledged, making decisions independently is an essential ability in adults' world.**
+✅ **Firstly, as is widely acknowledged, making decisions independently is an essential skill in the adult world.**
+
+**问题：**
+
+1. **"ability in adults' world" → "skill in the adult world"**（"skill" 比 "ability" 更贴切，=="in the adult world" 是固定表达==）
+
+
+
+❌ **Before children go to the college, the problems they should deal with are not very serious like picking a subject to learn and so on.**
+✅ **Before children go to college, the problems they face are not very serious, such as choosing a subject to study.**
+
+**问题：**
+
+1. **"go to the college" → "go to college"**（=="college" 前不用加 "the"==）
+2. **"should deal with" → "face"**（"face" 更自然简洁）
+3. **"like picking a subject to learn and so on" → "such as choosing a subject to study"**（=="such as" 比 "like" 更正式，"and so on" 太随意，不够学术化==）
+
+
+
+❌ **The parents should understand that children ought to make small decisions on their own to cultivate the ability of facing important choices.**
+✅ **Parents should understand that children need to make small decisions on their own to develop the ability to handle important choices.**
+
+**问题：**
+
+1. **"The parents" → "Parents"**（=="The" 不必要，泛指时直接用 "Parents"==）
+2. **"ought to" → "need to"**（"need to" 更简洁常用）
+3. =="cultivate the ability of facing important choices" → "develop the ability to handle important choices"==（"develop" 更自然，"handle" 比 "face" 更贴合语境）
+
+
+
+❌ **Small decision means smaller responsibility if making the wrong choice, so parents could not be worry about their kids.**
+✅ **Making small decisions involves smaller responsibilities when mistakes occur, so parents do not need to worry about their kids.**
+
+**问题：**
+
+1. **"Small decision" → "Making small decisions"**（主语需一致）
+
+2. **"means smaller responsibility" → "involves smaller responsibilities"**（主谓搭配不当，需复数）
+
+3. **"could not be worry" → "do not need to worry"**（==语法错误，"be worry" 错误，"do not need to worry" 更符合语境==）
+
+    worried!
+
+    ==involve==
+
+    
+
+❌ **Secondly, the world around us has significantly changed and is different from the generation of the parents.**
+✅ **Secondly, the world around us has changed significantly and is very different from the world of the parents' generation.**
+
+**问题：**
+
+1. =="has significantly changed" → "has changed significantly"==（副词位置不当）
+2. **"is different from the generation of the parents" → "is very different from the world of the parents' generation"**（"generation of the parents" 不自然，需更改为 "the parents' generation"）
+
+
+
+❌ **Although parents have more experience, making decision for their children who live in a total different society might not be a wise choice.**
+✅ **Although parents have more experience, making decisions for their children who live in a completely different society might not be a wise choice.**
+
+**问题：**
+
+1. **"making decision" → "making decisions"**（应为复数）
+2. **"a total different society" → "a ==completely different== society"**（=="total" 不用来修饰 "different"==）
+
+
+
+❌ **To some degree, parents also might have some prejudice for their children's generation, which may increase the undesirable mood between children and parents when parents try to make decisions for their kids.**
+✅ **To some degree, parents might also hold certain prejudices against their children's generation, which may create tension between children and parents when parents try to make decisions for their kids.**
+
+**问题：**
+
+1. =="also might" → "might also" 副词顺序错误==
+2. **"have some prejudice for" → "hold certain prejudices against"**（=="prejudice" 后应接 "against" 而非 "for"==）
+3. **"increase the undesirable mood" → "create tension"**（==表达不自然，"create tension" 更贴切==）
