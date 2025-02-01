@@ -468,3 +468,23 @@ I agree with the idea for two reasons. Firstly, as is vastly acknowledged, makin
 1. =="also might" → "might also" 副词顺序错误==
 2. **"have some prejudice for" → "hold certain prejudices against"**（=="prejudice" 后应接 "against" 而非 "for"==）
 3. **"increase the undesirable mood" → "create tension"**（==表达不自然，"create tension" 更贴切==）
+
+
+
+
+
+## Off 38 Task 1
+
+In==去掉In，拜托了哪里来的In== The passage claims 3 ways to protect the forests from being damaged by P.ramorum, while the lecture casts doubt on all of them.
+In the first place, the reading material states that encouraging people to cleaning ==clean== their shoes or bicycle trails that may carry spores of P. ramorum would be an effective and low-cost way. On the other hand, the listening material presents an opposing view. Spores are not just carried by human-being, but also carried by water such as rainfall and stream, which make it harder to stop spores' spreading.
+Besides, the writer makes the point that using fungicidal chemicals is another way to help oak trees to ==help后面不需要加to，直接用动词原型== defend themselves. Conversely, the speaker demonstrates a different idea. Fungicidal chemicals is ==are== useful when they are injected directly to ==into== the trees' trunks, which means it is very expensive and impractical to use the ==this== approach to deal with the P. ramorum problem in large forests. Also, the injection should ==be== repeat==ed== every month, so this way only can ==can和only的位置交换== be used in a small group of trees like trees around the cities.
+Finally, contrary to the author’s belief that P. ramorum problem can be solved by cleaning up diseased oak trees and vegetation surrounding them, the lecturer says that some vegetation around silk trees are actually health==y==. Therefore, cutting down them is unfair. What's more, some plants nearby ==near== the oak trees are very rare and not easy to grow back again==去掉==, so the cleaning up method would cause bigger and more serious problems than the original one.
+
+
+
+
+
+## Off 38 Task 2
+
+I disagree with the ==this== statement for two reasons. The first reason is because ==that== there are always people with leadership around us. Although one person does ==is== not born with the ability of being ==to be== a leader, he or she can learn to be a leader through imitating or just simply copying the action==s== of the people who have leadership. They can watch the ways ==methods== or skills the leader used to solve some problems, and that is definitely helpful to follow ==in following== the pattern. Secondly, leadership is constituted by ==consists of== a variety of abilities, including how to communicate with others, or how to make the right decisions. All of those abilities do not come naturally. For example, making a decision for a community require==s== a leader with abundant experience and a wide horizon, which needs to be developed for many years. ==years of development==
+
