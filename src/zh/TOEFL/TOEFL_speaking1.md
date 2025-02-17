@@ -546,9 +546,78 @@ B.高级
 
 
 
+## 2. 语料总结
+
+### 2.1 举例例子
+
+#### 休闲玩乐
+
+I favor department stores more than those small specialty stores. One reason is that anything I want can be purchased from large grocery stores, s**o it is an ideal place for me to buy dresses, tops, shorts, bags and shoes at the same time.** Another reason is that other entertainment facilities can also be offered by large grocery stores. When I get bored and tired, my parents or friends can **go to café or restaurant and treat ourselves with a movie afterwards.**
 
 
 
+#### 没时间读书？
+
+I believe that people in the future will read fewer books than they do in the present. One obvious reason is that the **rapid pace of life allows less time for employees to immerse themselves in a wide range of books**. Another reason is that **various entertainments such as video games, soap operas and outdoor activities will distract people from focusing on studying**, even when they are in library. 
 
 
 
+#### 学习教育
+
+Well, I totally agree that the best way to improve a skill is by teaching others. Because first, before teaching others certain skills, we need to be well-prepare for the teaching. **For example, I need to do research on the internet, read academic journals, or even do mock teaching in front of mirror** before demonstrating the knowledge to other people. In that case, I could have a better understanding of what I am going to teach. 
+
+
+
+#### 父母出主意？
+
+For example, **when it comes to choosing a school, they will know what factors to consider like location, ranking, tuition,** and stuff like that.
+
+In addition, parents are more **resourceful than people of my age.** Like if I **want to apply for a job**, my parents may know someone who is working there, and they may introduce that person to me. In that case, I can get more information: **like working environment, how to prepare for the job interview and the company culture.**
+
+
+
+### 2.2 学习教育类
+
+#### 2.2.1 互帮互助
+
+Firstly, it can create a supportive environment and help with their study. When students are studying the same subject, t**hey can motivate and challenge each other to achieve academic success.** For example, if two psychology students are roommates, **they can help each other out with difficult assignments and study for exams. This can lead to better grades and let them have a deeper understanding of the course materials.**
+
+
+
+Plus, through the teaching process, the other person **may point out some different viewpoints or even mistakes I make during the short lesson. Those are things that I could not realize if I keep working on things alone.** Therefore, both the teachers and the learners can get accurate knowledge.
+
+
+
+#### 2.2.2 交朋友
+
+Besides, I think it is also easier to make friends with a roommate who is studying the same subject. **I mean, by attending the same classes, it's more likely for them to get along well with each other. This can help students feel connected to their academic community, which is definitely a good thing.**
+
+
+
+#### 2.2.3 体育锻炼对学习的好处
+
+Well, from my perspective, exercising regularly does play an important role in students’ academic performance. First, it helps students **increase their energy level as well as their learning efficiency because it is a great way to ease pressure.** If **students maintain physically active by doing sports daily, like football and frisbee, they can stay motivated and focused.** This way, it is easier for them to achieve academic success. Also, **doing exercise on a regular basis can help students form some good habits**. Students **will be more self-disciplined once doing exercise is added into their daily routine**. In that case, **students can learn how to stick to their learning goals as well**.
+
+
+
+#### 2.2.4 社区活动?专心学习
+
+That’s because students will only take something which is beneficial for their academic work seriously. If university forces students to volunteer in the community, it gonna make students **see it as a chore, a nuisance**, so **they are not gonna put their hearts into it**, and make them **have more negative feelings about it**, which is gonna make the university look bad. Plus, university students already **have a lot things on their plates**. Focusing on their schoolwork helps them **get better grades and achieve academic success.** Therefore, I think it'll be better for them to focus on their **major study, projects and researches** which are meaningful for them, you know, **to make every minute count**.
+
+
+
+#### 2.2.5 争议性演说家？
+
+College students **are mature enough to get viewpoints and opinions from all aspects.** For example, if the guest speaker has some thoughts **towards political issues or economical aspects**, then the critical thinking skill of students could be developed at the same time.
+
+
+
+#### 2.2.6 上不同的专业课
+
+To start with, it enables them to **broaden their horizons**. For example, **if an English major chooses to take a Geography course at the same time, he or she can be a project manager working for an environmental organization instead of just being an English teacher**.
+
+
+
+#### 2.2.7 课间休息可以干嘛
+
+That's because during the classes, **I usually learn a lot of things, you know, taking notes in a hurry. Therefore, I need a little time to organize my notes and process all the knowledge.** Also, it is very important for me to take a short break like **going to the bathroom, grabbing some snacks and drinking water.** Plus, taking this short break can help me better prepare for the next class **such as cleaning up the table and taking the textbooks out for the next class.** However, if I just have a long break when classes are all over, I may **end up getting exhausted**, so it will make my study less efficient.
