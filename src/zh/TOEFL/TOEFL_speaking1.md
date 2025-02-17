@@ -548,33 +548,45 @@ B.高级
 
 ## 2. 语料总结
 
-### 2.1 举例例子
+### 2.1 举例子型
 
-#### 休闲玩乐
+#### 2.1.1 休闲玩乐
 
 I favor department stores more than those small specialty stores. One reason is that anything I want can be purchased from large grocery stores, s**o it is an ideal place for me to buy dresses, tops, shorts, bags and shoes at the same time.** Another reason is that other entertainment facilities can also be offered by large grocery stores. When I get bored and tired, my parents or friends can **go to café or restaurant and treat ourselves with a movie afterwards.**
 
 
 
-#### 没时间读书？
+#### 2.1.2 没时间读书？
 
 I believe that people in the future will read fewer books than they do in the present. One obvious reason is that the **rapid pace of life allows less time for employees to immerse themselves in a wide range of books**. Another reason is that **various entertainments such as video games, soap operas and outdoor activities will distract people from focusing on studying**, even when they are in library. 
 
 
 
-#### 学习教育
+#### 2.1.3 学习教育
 
 Well, I totally agree that the best way to improve a skill is by teaching others. Because first, before teaching others certain skills, we need to be well-prepare for the teaching. **For example, I need to do research on the internet, read academic journals, or even do mock teaching in front of mirror** before demonstrating the knowledge to other people. In that case, I could have a better understanding of what I am going to teach. 
 
 
 
-#### 父母出主意？
+#### 2.1.4 父母出主意？
 
 For example, **when it comes to choosing a school, they will know what factors to consider like location, ranking, tuition,** and stuff like that.
 
 In addition, parents are more **resourceful than people of my age.** Like if I **want to apply for a job**, my parents may know someone who is working there, and they may introduce that person to me. In that case, I can get more information: **like working environment, how to prepare for the job interview and the company culture.**
 
 
+
+#### 2.1.5 在不同地方生活
+
+Well, I prefer to move around and live in many different places because I think it's gonna be more fun. I mean I **get to explore a variety of places and experience different lifestyles and try exotic foods I never tried before**.
+
+In addition, I think moving around and living in different cities would also allow me to become more independent. Like when I go to a new place, **I'll have to learn to do a lot of stuff by myself like finding an apartment, getting it furnished and even putting together furniture following the instruction manual**. And all these would definitely help me to become more independent so that I won't feel panic even though I have to move again.
+
+
+
+#### 2.1.6 老师的工作
+
+The main reason is that professors are already super busy. **They have to prepare handouts for the classes, stay after class to answer students’ questions and also grade students’ assignments. So, they don’t have the time and patience to keep an eye on the students.**
 
 ### 2.2 学习教育类
 
@@ -621,3 +633,47 @@ To start with, it enables them to **broaden their horizons**. For example, **if 
 #### 2.2.7 课间休息可以干嘛
 
 That's because during the classes, **I usually learn a lot of things, you know, taking notes in a hurry. Therefore, I need a little time to organize my notes and process all the knowledge.** Also, it is very important for me to take a short break like **going to the bathroom, grabbing some snacks and drinking water.** Plus, taking this short break can help me better prepare for the next class **such as cleaning up the table and taking the textbooks out for the next class.** However, if I just have a long break when classes are all over, I may **end up getting exhausted**, so it will make my study less efficient.
+
+
+
+#### 2.2.8 自学还是听讲座
+
+The main reason is that this **facilitates my learning process**. When I was a graduate student, although I’d do some pre-class reading, **I still found it hard to understand the abstract contents**. Yet during the lecture, **the professor would explain the theories in a more learner-friendly way, like citing examples and using educational games to help with our understanding**. And **whenever questions popped up, I could exchange ideas with other students in the class, which would definitely help me gain a better understanding of the course materials**. Instead, if I choose to learn something by reading textbooks, I think I may easily get bored. **I may end up learning nothing and it’s gonna be a total waste of my time**.
+
+
+
+#### 2.2.9 师生关系
+
+Besides, **supervising students too closely would also damage the relationship between students and professors. Students will think their teachers don’t trust them and there is gonna be a lot of conflicts and arguments between them. This will lead to resentment and sometimes even outright rebellion.**
+
+
+
+#### 2.2.10 学生参与讨论
+
+That is because firstly, it can turn students into active learners. **When they're doing this, they can actually start to think, they will brainstorm and they gonna write down their ideas on the notebook, and all those things they do can help students learn better, improve their study efficiency. Once their ideas are proved to be correct or you know, useful, it will give students a sense of achievement. Besides, it is also a way for teachers to get effective feedbacks from students about how students absorb the knowledge and whether they have any problems. It is the reflection of teachers’ teaching, also the teachers will know whether they elaborate the points.**
+
+### 2.3 生活类
+
+#### 2.3.1 通勤时听音乐？
+
+The first reason is because music can help me cope with my stress. I am a big fan of pop music, so every time when I put on my headphone and listen to pop songs, **I could feel like being in another world that helps me get refreshed especially after a long day of studying**. Another reason is that doing nothing on public transportations is kind of like a waste of time. What I mean is I usually spend more than an hour commuting everyday. Therefore, music is a great time-killer for me.
+
+
+
+#### 2.3.2 该不该让老年人运动
+
+Well, I personally don’t think it is a wise choice to let old people take risk and participate in adventurous events. The first reason is that doing challenging events like rock climbing or skydiving is likely to **cause them health issues. What I mean is old people usually have diseases such as heart disease, high blood pressure, and so on. Doing those extreme sports might trigger more severe illness.** Moreover, adventurous events are usually not **as affordable as** some daily sports activities like running or swimming. **Doing activities like this might cause them hundreds of dollars, because they need to get equipment, find a coach to get professional training and so forth. For those who only receive a limited amount of pension, it would definitely add more pressure to their financial burden.**
+
+
+
+#### 2.3.3 该不该记历史事件信息？
+
+Historical events in many parts of the world are usually intertwined, and remembering the time they happened enables us to view them together rather than treating them as isolated cases. If students can create a timeline of the events, and also know about what caused it and what happened after the event, students can better understand the effects and nuances of history.
+
+
+
+#### 2.3.4 白天兼职影响学习
+
+Because most universities do not offer evening classes or regular classes on the weekends. So a parttime job during the day can hardly fit into their hectic class schedules. **If students do not complete the degree requirement by the expected deadline, they have to delay their graduation, which is definitely a bad thing**. 
+
+Also, I think **the most important thing for college students is to do well academically**, but after working for like six or eight hours per day, many students are pretty wiped out. Some of them may find it hard to focus on their classes in the evenings, and **this will negatively affect their overall academic performance**.
