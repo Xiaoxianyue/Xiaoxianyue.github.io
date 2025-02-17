@@ -78,7 +78,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - prefer A to B= would rather do A than B
     - I would rather do … rather than do… or prefer to do… rather than do…
 - 设法处理，解决：address = handle
-- huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of 
+- ==a great number of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of==
 - 同时：whilst
 - 负责：in charge of 
 - 清洁：clean up the mess
@@ -94,7 +94,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 珍视，爱护：cherish = value
 - 费力做：take trouble to 
 - about = regarding
-- meaningful = significant 重大的重要的，意义重大的
+- 重大的重要的，意义重大的 meaningful = significant 
 - support = in favor of
 - destine to be
 - 正如人们普遍认为的：As is vastly acknowledge
@@ -104,7 +104,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - therefore = thus = hence = as a result
 - 否认：deny
 - 个人发展：self-development
-- play a important role in ~= Have a major impact on ~= Be crucial to
+- play an important role in ~= Have a major impact on ~= Be crucial to
 - 合格的：qualified
 - 在象牙塔（指学校）中获得的：accumulated inside this ivory tower
 - 有着长远影响：produce far-reaching influences on
@@ -119,7 +119,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 把 … 视作：define/regard/consider/deem … as
 - 卓越的，杰出的：eminent / prominent / distinguish
 - 杰出的人物：eminent figure
-- abundant：丰富的，大量的【一般修饰不可数名词】
+- 丰富的，大量的【一般修饰不可数名词】：abundant
 - 令人惊奇的：astounding
 - … 成为关注的焦点：… be brought into the limelight
 - 支配：dominate
@@ -128,7 +128,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 得益于，归功于：… owe to …
 - ==坚定的意志：strong will==
 - 创造力：creativity
-- ==坚持不懈的努力：everlasting diligence = persistent effort==
+- ==坚持不懈的努力：everlasting diligence = persistent/coherent effort==
 - 不言而喻的：evidently
 - 意义：significance = mean
 - **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
@@ -156,14 +156,14 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - [sth] 标志着 …：mark
 - each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
     - fulfill 实现 达成 完成 履行 
-- appropriated 合理的
-- commit 承认，犯罪，交付
-- collaborative 合作的，协作的
+- 合理的：appropriated
+-  commit 承认，犯罪，交付
+- 合作的，协作的：collaborative 
 - struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
 - When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
 - Indeed ~= Truthfully
 - 培养：cultivate
-- ==在某种程度上：To some degree==
+- ==在某种程度上：To some degree/extent==
 - making each one count helps **eliminate** prejudices and undesirable moods that are **destructive** to the progress and result of the project.
     - make sb count 使某人发挥作用
     - eliminate prejudice 消除偏见
@@ -172,11 +172,11 @@ Finally, contrary to the author’s belief that … the lecturer says that …
     - 正是这种共同的责任搭建起了团队的坚固基础。
 - 鼓舞士气：inspirational morale
 - advocate 提倡、主张、支持
-- satisfactory destination 理想的目标
+- 理想的目标：satisfactory destination 
 - the loss of responsibility and enthusiasm
-- arouse awareness 唤起/引起 … 意识
+- 唤起/引起 … 意识：arouse awareness 
 - 滥竽充数：filling a post without real qualifications
-- wholehearted 全心全意的
+- 全心全意的 be wholehearted on ~= be devoted to
 - 假装的：in disguise
 - certain 代替 some 更高级
 - but also to remind them the importance of certain values. 
@@ -220,5 +220,98 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - misapplication 误用
 - 灾难：catastrophes
 - 犯罪和做不道德的事情：commit crimes and other immoral deeds
+- of vital importance >= important
+- shoulder the responsibility of doing
+- ==sth. deserves wholehearted attentiveness on the part of sb==. 
+    - 什么事值得什么人全身心付出
+- 摩天大楼：skyscraper
+- foundation
+
+<img src="./TOEFL_writing.assets/image-20250213165514997.png" alt="image-20250213165514997" style="zoom: 50%;" />
+
+- extracurricular activity 课外活动
+- students clubs ; students government 学生社团 学生会
+- 监办：supervise
+- funds 资金
+- hygiene
 - 
 
+
+
+
+
+## 3. 独立写作
+
+### 3.1 主题段结构
+
+观点 + 解释 + 细节 + 总结/结果
+
+### 3.2 高分基础
+
+近义词替换：
+
+|             |               |              |              |          |      |      |
+| ----------- | ------------- | ------------ | ------------ | -------- | ---- | ---- |
+| important   | essential     | crucial      | significant  | critical |      |      |
+| expensive   | costly        | unaffordable | prohibitive  |          |      |      |
+| significant | substantial   | considerable |              |          |      |      |
+| good        | beneficial    | advantageous |              |          |      |      |
+| bad         | harmful       |              |              |          |      |      |
+| big         | enormous      | massive      |              |          |      |      |
+| small       | minor         | tiny         |              |          |      |      |
+| difficult   | challenging   | complicated  |              |          |      |      |
+| interesting | engaging      | fascinating  | intriguing   |          |      |      |
+| necessary   | indispensable | required     |              |          |      |      |
+| useful      | beneficial    | practical    | helpful      |          |      |      |
+| safe        | secure        | harmless     |              |          |      |      |
+| modern      | contemporary  | up-to-date   | cutting-edge |          |      |      |
+| traditional | conventional  | classic      | time-honored |          |      |      |
+| creative    | innovative    | imaginative  | inventive    |          |      |      |
+| difficult   | complex       | demanding    |              |          |      |      |
+| cheap       | inexpensive   | low-cost     | affordable   |          |      |      |
+| lessen      | reduce        | ease         | slow down    |          |      |      |
+
+### 3.3 虚拟语气
+
+- 与现在相反：
+
+    if 从句用过去式，主句用 should/could/would/might + 动词原形
+
+- 与过去相反：
+
+    if 从句用过去完成式，主句用 should/could/would/might + 现在完成时
+
+### 3.4 倒装
+
+- 部分倒装：
+    - Not only does… but also …
+    - Only can ….
+    - Never should …
+    - Under no circumstance should…
+
+### 3.5 [直给型]论述提纲
+
+1. 直接认可一位同学的观点
+2. 新的，该同学没说的支持理由 
+3. 细节补充
+
+#### 论证万能理由
+
+==方便 效率==
+
+==经济 耐久==
+
+==安全 环保==
+
+==交流 经验==
+
+==乐趣 成就==
+
+==情感 健康==
+
+#### 例证细节方法
+
+- 记叙文法
+- 引用数据
+- 对比分析 [虚拟语气，或说反情况]
+- 名人名言

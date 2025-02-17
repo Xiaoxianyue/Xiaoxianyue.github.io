@@ -488,3 +488,87 @@ Finally, contrary to the author’s belief that P. ramorum problem can be solved
 
 I disagree with the ==this== statement for two reasons. The first reason is because ==that== there are always people with leadership around us. Although one person does ==is== not born with the ability of being ==to be== a leader, he or she can learn to be a leader through imitating or just simply copying the action==s== of the people who have leadership. They can watch the ways ==methods== or skills the leader used to solve some problems, and that is definitely helpful to follow ==in following== the pattern. Secondly, leadership is constituted by ==consists of== a variety of abilities, including how to communicate with others, or how to make the right decisions. All of those abilities do not come naturally. For example, making a decision for a community require==s== a leader with abundant experience and a wide horizon, which needs to be developed for many years. ==years of development==
 
+
+
+## Off 52 Task 1
+
+The passage claims that asteroids would be a good choice to be colonies of our human being, while the lecture cast doubt on it.
+In the first place, the reading material states that the gravity is low on asteroids, which enables astronauts to land and take off more safely and [take]==carry== a lot of [stuff]==equipment== with them. On the other hand, the listening material presents an opposing view. Low gravity also means [heathy] ==health== risk [of]==to== human. Even the astronauts who [just] spent ==only== a few months on those asteroids have a reduction of muscle mass and bone density. Therefore, staying in the asteroids for a [long]==extended== period is definitely not a wise choice.
+Besides, the writer makes the point that there are thousands of valuable [metal]==Metals== on those asteroids, people [can]==could== bring them back to earth. Conversely, the speaker demonstrates a different idea. The cost of setting up a colony and transporting the mental back to Earth is very [huge]==enormous==, which means a decrease [of]==in== profits. Meanwhile, if the production quantity of the rare mental==s== is massive, the [prize]==price== of those mental will decrease. As a result, no one ==would== want to sell the mental==s== on asteroids anymore!
+Finally, contrary to the author's belief that it is easy to travel from ==E==arth to nearby asteroids because the asteroids are even closer   to Earth than ==the== Moon, the lecturer says that asteroids don't stay [at]==in== specific orbits like earth and moon do. They could travel far away. For instance, the asteroid may ==be== close to earth when astronauts arrive, however, it would be far away from the earth all of a sudden.
+
+
+
+## Off 52 Task 2
+
+I agree with the statement for two reasons. The first reason is that movies and television shows have no educational meaning anymore. For instance, in a movie or a soap opera, you are [gonna]==going to== see a superhero flying around to save the world or two teenagers fall==ing== in love and [argue]==arguing== with their parents. Directors are just interested in making more money but forget that they are suppose==d== to shoulder the responsibility to ==of== spread ==ing== positive energy or educating people. Watching too many movies and television is definitely a bad thing [to]==for== young people, whose values have not [be]==been== formed yet. Secondly, watching movies and television do==es== harm to teenagers’ health. They might [have]==develop== some issues like back pain or nearsightedness. They should spend less time on watching them as an entertainment. [Instead of]==Instead==, they ought to go out and [do]==play== some sports and get more fresh air.
+
+
+
+## Off 49 Task 1
+
+The passage claims that humpback whales may be navigating by the stars, while the lecture casts doubt on it.
+In the first place, the reading material states that the whales have a high degree of intelligence, which may [mean]==suggest== they can understand the complex system==s== ==,==such as the night sky==,== for orientation. On the other hand, the listening material presents an opposing view. The intelligence of a species seems ==to== have nothing to do with the ability to navigate by stars. Take ducks==,== for example. Ducks are averagely smart but they are [instinctive to be able to]==instinctively== navigate by ==the== stars. So there is no connection between intelligence and the ability has been [seen]==observed== yet.
+Besides, the writer makes the point that humpback whales swim in a straight line, which means they are [being oriented]==guide== by some external objects or force==s==, such as the stars. Conversely, the lecturer demonstrates a different idea that it is the Earth==‘s== magnetic field [navigates]==guide== the whales. The whales have a substance in their brain==s== called biomagnetite. The substance enables the whales to be sensitive to the magnetic field.
+Finally, contrary to the author's belief that [the explanation of the behavior called spy-hopping is]==the spy=hopping occur because== the whales are looking up to the sky to find the stars, the speaker [says that there is another reason to explain the behavior]==suggests an alternative explanation==. For instance, the sharks do the spy-hopping to hunt for other animals for foods. They do not migrate and do the spy-hopping during the day when there is no star. As a result, the whales may do the spy-hopping for some other reason instead of looking at stars.
+
+
+
+## Off 36 Task 2
+
+I disagree with the idea for two reasons. The first one is that the university education require==s== more [money]==funding== than the [preliminary]==primary== education . Academic [researches]==research== [in the]==at== universities need expensive equipment such as books in library and laboratory instruments, and so forth. Without [those]==this因为equipment不可数== high-quality equipment, the students in the university could receive advanced information widely. However, loads of money is unnecessary to the preliminary education. The second reason is it is more effective [if]==for== the government to give more financial support [on]==to== university. They are going to master specialized knowledge and put them into practice to keep pace with the times. More money means they have more opportunities to do [researches]==research== and explore their own contribution of the society, which they are soon going to be a part of. On the other hand, the improvement==s== [of]==in== the preliminary education take a long time to show [up]==results==.
+
+## Off 37 Task 2
+
+I agree with the statement. Firstly, it takes a very long [period]==time== of the experts [of]==in== any field to be==come== professional and successful. They always have iron determination and [persistently]==persistent== diligence [on]==in== one thing. That means [only through focusing on one thing for years people can do it well]==That means people can do something well only by focusing on it for years.==. Therefore, the people always have many stuff won't do them well. For instance, a student with a six-hours par==-==time job per day won't perform well academically. Secondly, [imaging]==imagine== that there are always many thing around your mind, you can not concentrate your attention on one thing. You are going to be distracted! However, the ability of concentration is a==n== essential [compose]==component== of the brilliant success. From my point of view, people have to give up certain less important things to put their whole heart [in]==into==固定搭配！ things that really matter.
+
+
+
+## Off 75 Task 2
+
+I agree with the idea for two reasons. The first reason is that we can find music and art everywhere. The radio in the cars or [taxes]==taxis== plays the music while we are commuting every day. Also, if we are attracted by art, we can go to the local museum to expose ourselves to some high-quality artworks. But there are [a few]==fewer== opportunities for us to learn how to use certain techniques, such as how to [use]==operate== computers. Secondly,  such technology is very useful in our daily lives. Although the majors of students are art or music, how to use computer is an essential [skills]==skill== that students are asked to [equip with]==require==. Learning those things in the stage of preliminary education enables students to use the technology more frequently because of [the] years of [the] practice. 
+
+
+
+## Off 74 Task 2
+
+I disagree with the statement for two reasons. The first reason is that more popular teacher==s== are always kind, friendly and have a sense of humor. Students [will]==are== more likely to ask them questions and accept their academic suggestions, which is definitely a good thing to improve students' learning efficiency. Also, whether being popular [is]==can serve as an==  effective feedback for teachers to know whether their teaching pattern and approaches are learner-friendly. ==After all==, a teacher who can not explain the knowledge clearly [won't]==is unlikely to== be loved by students. Secondly, being popular doesn't mean that students [do not]==lack== respect ==for== the teacher. A good relationship between teachers and students benefits the communication. [Conversely]==On the other hand==, teachers who are too strict can [trigger]==provoke== resentment [of]==among== students. 
+
+
+
+## Off 73 Task 2
+
+I agree with the statement for two reasons. 
+
+In the first place, people take ==a== long time to make an important decision often more careful and responsible than those one who make a choice quickly and [easily]==impulsively==. Also, they [will]==tend to== consider more ==factors== than normal people. For instance, if a man need==s== to buy a car, he will [consider]==evaluate== all aspects==,== including the prices of cars, [how much time the car may last]==it’s durability== and even whether his family can [seat]==sit== comfortably [in]==inside== the [car]==vehicle==. And the process of [balancing]==weighting different factors== [need]==requires== [a bit of]==more== time. 
+
+Secondly, someone who ==spend more time== [makes]==making== choices [longer ]may has a better ability to gather ==and analyze== information, which enables them to make [more wise]==wiser== and ==more== reasonable choices. For instance, a girl want to choose a school, she may spend time on [seeking information about]==researching== the school's ranking, location and tuition==, and other details==. So she can [choose]==select== a school that [make her satisfy]==satisfies her needs and preferences==.
+
+
+
+## Off 71 Task 2
+
+I totally agree with the statement for two reasons.
+In the first place, grading is a fair way to evaluate student's academic [work]==performance==. It is also a effective reflection of students’ diligence, creativity and the ability [of using]==to apply== the knowledge [into]==in== practice. ==Moreover== Teachers can see the difference==s== [of]==among== students and also the problems that their students have through exams. For students, getting a good grades means [win]==excelling== in the competition with other students, [so they will study more aggressively.]==which motivates them to study harder and more effectively.==
+Besides, grades plays an important role in the students' career, which also determines whether they [will earn enough money]==can gain access to secure well-paying jobs== to achieve their dreams. Therefore, marks could [force]==push== students to learn harder, which is definitely a good thing for the students' brilliant future.
+
+
+
+## Off 69 Task 2
+
+I prefer to take courses taught by professors with whom I have already had other classes for two main reasons.
+In the first place, I would be more familiar with the teaching pattern of those professor==s==. I may know how they are going to explain the knowledge so I can [preview]==prepare== more effectively. During the class, there [must]==will likely== be a lot of notes to take. And if I can have an [early]==prior== understanding of the course material, I can improve my study efficiency.
+Also, I [clearly know about]==am well aware of== the disadvantages of the professors with whose I had taken classes. For instance, some of them may focus on explaining the abstract [content]==concepts== but pay less attention [on]==to== the application of the knowledge. So I can gather some specific information about the abstract theories, which enables me to follow the professor ==more easily== during the class.
+
+
+
+## Off 68 Task 2
+
+I [totally]==completely== agree with the statement for two main reasons.
+In the first place, plenty of collections in the museum reflect the culture of the country and [routine]==daily lives== of the people who [used to]==once== live==d== in the country. Many [collections]==artifacts== were unearthed within the land of the country, [showing]==revealing== the [life]==lives== and spirit of the people who lived in the land hundreds ==of== years ago. Through the collections, we [have an understanding about]==gain insight into== their wisdom and creativity in the daily lives.
+[Besides]==Moreover==, it is a [good chance]==valuable opportunity== for people to know about the history of the country. We can learn [the information]==about events== like the wars that the country had [been through]==experienced== [from]==through== collections such as historical texts or even [photos]==photographs== in the museum.
+
+
+
+
+
