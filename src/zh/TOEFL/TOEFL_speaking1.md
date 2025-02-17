@@ -677,3 +677,9 @@ Historical events in many parts of the world are usually intertwined, and rememb
 Because most universities do not offer evening classes or regular classes on the weekends. So a parttime job during the day can hardly fit into their hectic class schedules. **If students do not complete the degree requirement by the expected deadline, they have to delay their graduation, which is definitely a bad thing**. 
 
 Also, I think **the most important thing for college students is to do well academically**, but after working for like six or eight hours per day, many students are pretty wiped out. Some of them may find it hard to focus on their classes in the evenings, and **this will negatively affect their overall academic performance**.
+
+
+
+#### 2.3.5 住农村还是城市
+
+Firstly, living in the countryside means we can **appreciate the healthier environment**. Nowadays, people living in city have to **suffer the air and water pollution caused by the high speeding development of industry**. Secondly, we can enjoy the slow pace of life in the countryside. In big cities, pedestrians are always walking fast and it seems like they would feel unwilling to stop. But with the easy life style of countryside, they don’t have to **deal with the high pressure resulted from working and living.**
