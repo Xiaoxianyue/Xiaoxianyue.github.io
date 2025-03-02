@@ -245,29 +245,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 
 ### 3.2 高分基础
 
-近义词替换：
-
-|             |               |              |              |         |      |      |
-| ----------- | ------------- | ------------ | ------------ | ------- | ---- | ---- |
-| important   | essential     | crucial      | significant  |         |      |      |
-| expensive   | costly        | unaffordable | prohibitive  |         |      |      |
-| significant | substantial   | considerable |              |         |      |      |
-| good        | beneficial    | advantageous |              |         |      |      |
-| bad         | harmful       |              |              |         |      |      |
-| big         | enormous      | massive      |              |         |      |      |
-| small       | minor         | tiny         |              |         |      |      |
-| difficult   | challenging   | complicated  |              |         |      |      |
-| interesting | engaging      | fascinating  | intriguing   |         |      |      |
-| necessary   | indispensable | required     |              |         |      |      |
-| useful      | beneficial    | practical    | helpful      |         |      |      |
-| safe        | secure        | harmless     |              |         |      |      |
-| modern      | contemporary  | up-to-date   | cutting-edge |         |      |      |
-| traditional | conventional  | classic      | time-honored |         |      |      |
-| creative    | innovative    | imaginative  | inventive    |         |      |      |
-| difficult   | complex       | demanding    |              |         |      |      |
-| cheap       | inexpensive   | low-cost     | affordable   |         |      |      |
-| lessen      | reduce        | ease         | slow down    |         |      |      |
-| hinder      | Obstruct      | interfere    | hamper       | prevent |      |      |
+![image-20250302165814211](./TOEFL_writing.assets/image-20250302165814211.png)
 
 ### 3.3 虚拟语气
 
