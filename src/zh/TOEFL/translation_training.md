@@ -1039,4 +1039,4 @@ In order to make their discoveries beneficial to society, scientists have a duty
 
 #### 自翻
 
-Besides, teamwork is emphasized in today’s world, because it is the key point of the carreer success. One person can grasp skills of cooperating only through interacting with partners. This presents the importance of good relationship vividely. 
+Besides, teamwork is emphasized in today’s world, because it is the key point of the carreer success. One person can grasp skills of cooperating only through interacting with partners. This presents the importance of good relationship vividely. In the school, there are many projects and team work assigned to students to accomplish. Engaging in any project need common effort of all members. During the process of working for group task, everyone ought to coordinate with partners. Because of the same object, all member will 竭尽全力 to finish their own job. Everyone is like a 部件 composing an entire engine and connects with each other very tightly. If one of them break, the whole engine will stop working in a suddern, and even break down throughoutly. That is the dramatic 效果 描绘 the value of working 和谐地, 
