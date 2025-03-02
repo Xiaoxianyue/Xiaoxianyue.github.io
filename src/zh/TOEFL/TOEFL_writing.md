@@ -227,8 +227,6 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 摩天大楼：skyscraper
 - foundation
 
-<img src="./TOEFL_writing.assets/image-20250213165514997.png" alt="image-20250213165514997" style="zoom: 50%;" />
-
 - extracurricular activity 课外活动
 - students clubs ; students government 学生社团 学生会
 - 监办：supervise
