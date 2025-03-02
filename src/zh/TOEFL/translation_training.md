@@ -1029,30 +1029,14 @@ In order to make their discoveries beneficial to society, scientists have a duty
 
 
 
-## Passage 25
+## Passage 2
 
-### 第二段
+### 第一段
 
 #### 中文
 
-童年时期接受的教育是一个人未来学术与职业生涯的基础。如果一座大厦的地基不牢固，它如何能承受上层建筑那难以抗拒的重量和高度呢？缺乏良好教育的儿童是不会拥有光明前途的。孩子的潜力正是在这段重要的早期学习时光中开始显现的，其知识框架也是在此时建立起来的。若政府、学校和家长忽视青少年教育的话，也许会导致严重的后果。儿童教育需要整个社会共同的努力。例如，九年义务教育政策已经在中国施行了几十年。全国所有的小学和中学都有义务给孩子们提供免费的教育。这进一步证明了青少年教育作为社会基础的重要性以及其长远的收益。
+其次，当今世界注重团队协作，因为团队协作是事业成功的关键。一个人只有通过与同伴互动才能掌握合作的技巧。这生动地展示了良好交际的重要性。在学校期间，有很多项目或团队任务分配给学生去完成。参与其中任何一个项目都需要所有成员的共同努力。在完成小组任务的过程中，每一个人都必须与同伴团结协作。由于怀着共同的目标，所有成员都会竭尽全力完成他们分内的工作。每个人如同构成一个引擎的部件一样紧密相连。如果某个部件出现故障，整个引擎就会突然停止运转，甚至彻底崩溃。正是这种戏剧性的效果描绘出了和谐工作以及克服任何冲突的价值所在。
 
 #### 自翻
 
-Education accepted in childhood is the fundamental of one’s future academic and career. If the 地基 of a building is unstable, how could it 。。。？Children who are lack of good education won’t have a brilliant future. The 潜力 of children represent during the inportant period of earlier education when their knowledge framework also build up. If governments, schools and parents neglect teenage education, it may lead to serious consequence. Chidren’s education need common effort of the whole society. For example, …… This further prove teenage education’s importance as basis of society and far-reaching benefits.
-
-#### 他翻
-
-The education a person receives in childhood is the foundation of his future academic and career life. If the foundation of a **skyscraper** is unstable, how could it **endure** the **overwhelming** weight and height of its **superstructure**? A poorly-educated child will never have a promising tomorrow. It is during these critical early years of learning that a child's potential begins to show and their learningstructure is established. Neglect on the part of the government, schools and parents could lead to severe consequences. Children's education requires the combined efforts of an entire society. In China, for instance, the nine **year compulsory education** policy has been implemented **for decades**. All primary and high schools have an obligation to offer free education to young children around the country. It further testifies to the importance of young children's education as the foundation of a society, with far-reaching benefits.
-
-#### 积累
-
-- 接受教育一般用 receive
-- 基础：不是 fundamental 是 foundation
-- 摩天大楼：skyscraper
-- **endure** the **overwhelming** weight and height of its **superstructure**
-    - 承受：endure
-    - 压倒性的，势不可挡的：overwhelming
-    - 上层建筑：superstructure
-- 
-
+Besides, teamwork is emphasized in today’s world, because it is the key point of the carreer success. One person can grasp skills of cooperating only through interacting with partners. This presents the importance of good relationship vividely. 

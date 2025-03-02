@@ -76,7 +76,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 
 - 每当这类特殊场合来临：whenever such special occasions arise
 - prefer A to B= would rather do A than B
-    - I would rather do … rather than do… or prefer to do… rather than do…
+    - I would rather do … rather than do… or ==prefer to do… rather than do==…
 - 设法处理，解决：address = handle
 - ==a great number of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of==
 - 同时：whilst
@@ -151,13 +151,13 @@ Finally, contrary to the author’s belief that … the lecturer says that …
     - His actions brought forth widespread criticism from the public. 引起；导致
     - The artist's creativity brings forth incredible masterpieces. 创造；使出现
 - 普及：general adoption
-- assess ~= evaluate ~=  estimate[估算] 评价；评估
+- 评价；评估：assess ~= evaluate ~=  estimate[估算] 
 - 一致，连贯的努力：coherent effort
 - [sth] 标志着 …：mark
 - each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
     - fulfill 实现 达成 完成 履行 
 - 合理的：appropriated
--  commit 承认，犯罪，交付
+-  承认，犯罪，交付：commit 
 - 合作的，协作的：collaborative 
 - struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
 - When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
@@ -172,7 +172,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
     - 正是这种共同的责任搭建起了团队的坚固基础。
 - 鼓舞士气：inspirational morale
 - advocate 提倡、主张、支持
-- 理想的目标：satisfactory destination 
+- ==理想的目标：satisfactory destination==
 - the loss of responsibility and enthusiasm
 - 唤起/引起 … 意识：arouse awareness 
 - 滥竽充数：filling a post without real qualifications
@@ -210,7 +210,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 无敌的[智慧]：unmatchable [intelligence]
 - important ~= significant / pivotal / essential
 - 举世瞩目的：the most noteworthy
-- prestige ~= reputation
+- 名誉：prestige ~= reputation
 - 全人类：the entire human race
 - effect ~= impact
 - 某人该受到责备/为某事负责：sb. be to blame
@@ -234,7 +234,6 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 监办：supervise
 - funds 资金
 - hygiene
-- 
 
 
 
@@ -250,26 +249,27 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 
 近义词替换：
 
-|             |               |              |              |          |      |      |
-| ----------- | ------------- | ------------ | ------------ | -------- | ---- | ---- |
-| important   | essential     | crucial      | significant  | critical |      |      |
-| expensive   | costly        | unaffordable | prohibitive  |          |      |      |
-| significant | substantial   | considerable |              |          |      |      |
-| good        | beneficial    | advantageous |              |          |      |      |
-| bad         | harmful       |              |              |          |      |      |
-| big         | enormous      | massive      |              |          |      |      |
-| small       | minor         | tiny         |              |          |      |      |
-| difficult   | challenging   | complicated  |              |          |      |      |
-| interesting | engaging      | fascinating  | intriguing   |          |      |      |
-| necessary   | indispensable | required     |              |          |      |      |
-| useful      | beneficial    | practical    | helpful      |          |      |      |
-| safe        | secure        | harmless     |              |          |      |      |
-| modern      | contemporary  | up-to-date   | cutting-edge |          |      |      |
-| traditional | conventional  | classic      | time-honored |          |      |      |
-| creative    | innovative    | imaginative  | inventive    |          |      |      |
-| difficult   | complex       | demanding    |              |          |      |      |
-| cheap       | inexpensive   | low-cost     | affordable   |          |      |      |
-| lessen      | reduce        | ease         | slow down    |          |      |      |
+|             |               |              |              |         |      |      |
+| ----------- | ------------- | ------------ | ------------ | ------- | ---- | ---- |
+| important   | essential     | crucial      | significant  |         |      |      |
+| expensive   | costly        | unaffordable | prohibitive  |         |      |      |
+| significant | substantial   | considerable |              |         |      |      |
+| good        | beneficial    | advantageous |              |         |      |      |
+| bad         | harmful       |              |              |         |      |      |
+| big         | enormous      | massive      |              |         |      |      |
+| small       | minor         | tiny         |              |         |      |      |
+| difficult   | challenging   | complicated  |              |         |      |      |
+| interesting | engaging      | fascinating  | intriguing   |         |      |      |
+| necessary   | indispensable | required     |              |         |      |      |
+| useful      | beneficial    | practical    | helpful      |         |      |      |
+| safe        | secure        | harmless     |              |         |      |      |
+| modern      | contemporary  | up-to-date   | cutting-edge |         |      |      |
+| traditional | conventional  | classic      | time-honored |         |      |      |
+| creative    | innovative    | imaginative  | inventive    |         |      |      |
+| difficult   | complex       | demanding    |              |         |      |      |
+| cheap       | inexpensive   | low-cost     | affordable   |         |      |      |
+| lessen      | reduce        | ease         | slow down    |         |      |      |
+| hinder      | Obstruct      | interfere    | hamper       | prevent |      |      |
 
 ### 3.3 虚拟语气
 
