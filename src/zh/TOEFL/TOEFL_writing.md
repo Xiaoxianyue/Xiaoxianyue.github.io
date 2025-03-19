@@ -60,9 +60,9 @@ toc: true
 
 ### 1.4 写作模版
 
-The passage claims that ..., while the lecture casts doubt on this claim.  
+The passage claims that ..., while the lecture casts doubt on this claim.  这句话可以改成原文的一些词。
 
-In the first place, the reading material states that ... On the other hand,  the listening material presents an opposing view. …
+In the first place, the reading material states that ... On the other hand,  the listening material presents an opposing view. … 这句也可以用原文话，这样显得听得更多。
 
 Besides, the writer makes the point that … Conversely, the speaker demonstrates a different idea that …
 
@@ -78,7 +78,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - prefer A to B= would rather do A than B
     - I would rather do … rather than do… or ==prefer to do… rather than do==…
 - 设法处理，解决：address = handle
-- ==a great number of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of==
+- a great number of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of
 - 同时：whilst
 - 负责：in charge of 
 - 清洁：clean up the mess
@@ -104,7 +104,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - therefore = thus = hence = as a result
 - 否认：deny
 - 个人发展：self-development
-- play an important role in ~= Have a major impact on ~= Be crucial to
+- **play an important role in ~= Have a major impact on ~= Be crucial to**
 - 合格的：qualified
 - 在象牙塔（指学校）中获得的：accumulated inside this ivory tower
 - 有着长远影响：produce far-reaching influences on
@@ -128,7 +128,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 得益于，归功于：… owe to …
 - ==坚定的意志：strong will==
 - 创造力：creativity
-- ==坚持不懈的努力：everlasting diligence = persistent/coherent effort==
+- **坚持不懈的努力：everlasting diligence = persistent/coherent effort**
 - 不言而喻的：evidently
 - 意义：significance = mean
 - **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
@@ -142,7 +142,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 表转折：Nevertheless
 - 忽视，不重视，疏忽：neglect
 - 文凭：diploma
-- ==坚持不懈的：unremitting = persistent = everlasting==
+- **坚持不懈的：unremitting = persistent = everlasting**
 - ==钢铁般的意志：iron determination==
 - 拼搏：endeavors
 - 到了 … 的年纪：arrive at … age
@@ -157,7 +157,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
     - fulfill 实现 达成 完成 履行 
 - 合理的：appropriated
--  承认，犯罪，交付：commit 
+- 承认，犯罪，交付：commit 
 - 合作的，协作的：collaborative 
 - struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
 - When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
@@ -203,7 +203,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 在艰苦的条件下：under tough conditions
 - 利用这次宝贵的机会：take advantage of such a precious chance
 - 掌握：grasp ~= master
--  国外的、国内的：international national
+- 国外的、国内的：international national
 - ==broadens their horizon and makes them more open-minded==
 - 突破：breakthrough
 - 在…的领域/界：in the field of …
@@ -215,7 +215,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - effect ~= impact
 - 某人该受到责备/为某事负责：sb. be to blame
 - 消除偏见：eliminate the prejudice
--  两面性：double-sided
+- 两面性：double-sided
 - abuse 滥用
 - misapplication 误用
 - 灾难：catastrophes
@@ -226,12 +226,69 @@ Finally, contrary to the author’s belief that … the lecturer says that …
     - 什么事值得什么人全身心付出
 - 摩天大楼：skyscraper
 - foundation
-
 - extracurricular activity 课外活动
 - students clubs ; students government 学生社团 学生会
 - 监办：supervise
 - funds 资金
 - hygiene
+- 不怀好意的：ill-intentioned
+- 科学成果：scientific advancements
+- 被迫：be obliged to ~= have to
+- Only through / through 后接半倒装句
+- … 的技巧/艺术：the art of …
+- … 的重要性：the significance of …
+- 良好交际：relate well to others
+- 共同的努力：united effort
+- course ~= process
+- 怀着共同的目标：bearing in mind the common goal
+- 忍受，携带：bear     牢记；记住：bear in mind
+- 竭尽全力的做：are devoted to
+- 分内的工作：the assigned apart of …
+- 紧密相连：interrelated
+- urge sb. to do
+- 神圣的：sacred
+- competition conflict score 都可数
+- 更努力说：make greater efforts to …
+- 卓越的成果：superior result
+- 抹去失误：erase mistakes
+- 心理状态：mental state
+- 首先：Firstly ~= Primarily
+- 毋庸置疑：Needless to say
+- 吸收知识：absorb ~= assimilate
+- 一定的：a suitable amount of
+- 有了进一步的理解：further comprehension is obtained
+- 之后：Afterwards
+- 使 … 熟悉：familiarize … with
+- 占据了…的休闲世界：take up one’s leisure time
+- 教育不应该局限于学校所教的内容：
+    - Education should not be confined to what has been taught at school.
+
+- considerably ~= significantly
+- 热情褪去：enthusiasm fade
+- 逆反心理：rebel psychology
+- 综合素质：overall quality
+- …是重要的 ~= …应该被强调：should be to be emphasized
+- 争议产生了：a controversy rises up
+- 重视：attach greater importance to…
+- …持有相反意见：hold the opposite attitude
+- 世界名人：world-renowned celebrities ~= influential people
+- 掌握在…手中：be held in the palm of one’s own hand
+- 幸运的机遇：a fortunate encounter
+- 被挖掘、被承认：be discovered / be acknowledged
+- 美差：satisfactory post
+- 表转折： Nonetheless
+- consistent effort ~= persistent diligence
+- 先前的成就：previous accomplishments
+- 提升能力：develop strengths
+- 机会会流失浪费：he opportunities are wasted and futile
+- As far as I concerned ~= From my point of view
+- 决定性因素：decisive factors
+
+
+
+
+
+
 
 
 

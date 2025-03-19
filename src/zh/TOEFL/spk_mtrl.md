@@ -88,7 +88,7 @@ help me learn more knowledge than just prepare a speech. To … I need to resear
 
 The first reason and also the most important one I wanna say is that, **printed materials like books and newspapers actually are a kind of culture throughout the whole world which represents the wisdom of our ancestors**. What’s more, although electronic devices are convenient nowadays, **the screen of it is bad for our eyes, we should never stare it for too long. And it’ll have radiation too**. So **for the sake of our health**, that’s why I insist that the printed materials will always be popular.
 
-
+wisdom culture electronic 
 
 ### 41 用钱放电影或者专注于学术
 
@@ -180,7 +180,7 @@ Besides, I think it is also easier to make friends with a roommate who is studyi
 
 #### 2.2.3 体育锻炼对学习的好处
 
-Well, from my perspective, exercising regularly does play an important role in students’ academic performance. First, it helps students **increase their energy level as well as their learning efficiency because it is a great way to ease pressure.** If **students maintain physically active by doing sports daily, like football and frisbee, they can stay motivated and focused.** This way, it is easier for them to achieve academic success. Also, **doing exercise on a regular basis can help students form some good habits**. Students **will be more self-disciplined once doing exercise is added into their daily routine**. In that case, **students can learn how to stick to their learning goals as well**.
+Well, from my perspective, exercising regularly does play an important role in students’ academic performance. First, it helps students **increase their energy level as well as their learning efficiency because it is a great way to ease pressure.** If **students maintain physically ac  tive by doing sports daily, like football and frisbee, they can stay motivated and focused.** This way, it is easier for them to achieve academic success. Also, **doing exercise on a regular basis can help students form some good habits**. Students **will be more self-disciplined once doing exercise is added into their daily routine**. In that case, **students can learn how to stick to their learning goals as well**.
 
 
 
@@ -260,56 +260,3 @@ Firstly, living in the countryside means we can **appreciate the healthier envir
 
 
 
-## 3. 自己总结
-
-### 3.1 方便 效率
-
-- enhance the effectiveness and efficiency. 
-
-- sth. can be very time-efficient
-- sth. will not put a drag on efficiency and effectiveness
-
-![image-20250218235635591](./spk_mtrl.assets/image-20250218235635591.png)
-
-![image-20250219000136451](./spk_mtrl.assets/image-20250219000136451.png)
-
-
-
-### 3.2 经济 耐久
-
-
-
-### 3.3 安全 环保
-
-
-
-### 3.4 交流 经验
-
-![image-20250218234806304](./spk_mtrl.assets/image-20250218234806304.png)
-
-### 3.5 乐趣 成就
-
-增长知识拓宽视野：
-
-- broaden sb’s knowledge base and sb’s insight
-- widen the scope of sb’s knowledge
-
-各种各样的娱乐：
-
-- **various entertainments such as video games, soap operas and outdoor activities will distract people from focusing on studying**, even when they are in library.
-
-### 3.6 情感 健康
-
-![image-20250218231631494](./spk_mtrl.assets/image-20250218231631494.png)
-
-交朋友：
-
-- get acquainted with
-- social connection can be widened
-- This can help students feel connected to their academic community
-
-放松身心：
-
-- gets freshen up and energy can be recharged full again
-- help loosening one’s belt
-- create a relaxing atmosphere

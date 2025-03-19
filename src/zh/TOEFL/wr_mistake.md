@@ -486,11 +486,13 @@ Finally, contrary to the author’s belief that P. ramorum problem can be solved
 
 ## Off 38 Task 2
 
-I disagree with the ==this== statement for two reasons. The first reason is because ==that== there are always people with leadership around us. Although one person does ==is== not born with the ability of being ==to be== a leader, he or she can learn to be a leader through imitating or just simply copying the action==s== of the people who have leadership. They can watch the ways ==methods== or skills the leader used to solve some problems, and that is definitely helpful to follow ==in following== the pattern. Secondly, leadership is constituted by ==consists of== a variety of abilities, including how to communicate with others, or how to make the right decisions. All of those abilities do not come naturally. For example, making a decision for a community require==s== a leader with abundant experience and a wide horizon, which needs to be developed for many years. ==years of development==
+I disagree with the ==this== statement for two reasons. The first reason is because ==that== there are always people with leadership around us. Although one person does ==is== not born with the ability of being ==to be== a leader, he or she can learn to be a leader through imitating or just simply copying the action==s== of the people who have leadership. They can watch the ways ==methods== or skills the leader used to solve some problems, and that is definitely helpful to follow ==in following== the pattern. Secondly, leadership is constituted by ==consists of== a variety of abilities, including how to communicate with others, or how to make the right decisions. All of those abilities do not come naturally. For example, making a decision for a community require==s== a leader with abundant experience and a wide horizon, which needs to be developed for many years. ==years of development=
 
 
 
+## Off 68 Task 1
 
+The passage claims that the negatives dated from the 1920s were created by Ansel Adams, while the lecture casts doubt on it.
 
-
+On the first place, the reading material states that some of the negatives are about a pine tree which appeared in another photo of Adams. So Adams probably owned those negatives. On the other hand, the listening material presents an opposing idea. The pine tree is not a random one. Conversely, it is a famous landmark of Y park and the most visited site during 1920s. A great number of photographer have taken photos of it.
 

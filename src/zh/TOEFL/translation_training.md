@@ -1039,4 +1039,214 @@ In order to make their discoveries beneficial to society, scientists have a duty
 
 #### 自翻
 
-Besides, teamwork is emphasized in today’s world, because it is the key point of the carreer success. One person can grasp skills of cooperating only through interacting with partners. This presents the importance of good relationship vividely. In the school, there are many projects and team work assigned to students to accomplish. Engaging in any project need common effort of all members. During the process of working for group task, everyone ought to coordinate with partners. Because of the same object, all member will 竭尽全力 to finish their own job. Everyone is like a 部件 composing an entire engine and connects with each other very tightly. If one of them break, the whole engine will stop working in a suddern, and even break down throughoutly. That is the dramatic 效果 描绘 the value of working 和谐地, 
+Besides, teamwork is emphasized in today’s world, because it is the key point of the carreer success. One person can grasp skills of cooperating only through interacting with partners. This presents the importance of good relationship vividely. In the school, there are many projects and team work assigned to students to accomplish. Engaging in any project need common effort of all members. During the process of working for group task, everyone ought to coordinate with partners. Because of the same object, all member will 竭尽全力 to finish their own job. Everyone is like a 部件 composing an entire engine and connects with each other very tightly. If one of them break, the whole engine will stop working in a suddern, and even break down throughoutly. That is the dramatic 效果 描绘 the value of working 和谐地 and overcoming any conflict.
+
+#### 他翻
+
+Secondly, the modern world values teamwork, which is a key to career success. Only through **interactions** with partners can one master the art of cooperation. This vividly demonstrates the significance of relating well to others. At school, there are many projects or group work assigned to students. The participation in any project requires the united efforts of all group members. During the course of a group task, each individual has to work together with their partners. **Bearing in mind** their common goal, all members are devoted to their **assigned** part of the task. Just like different components of an engine, everyone is interrelated. If a single part refuses to function, the whole engine may suddenly stop or even break down. **It is** such a **dramatic** effect **that depicts** the value of working harmoniously and **resolving** any conflicts.
+
+#### 积累
+
+- 事业成功的关键：a key to career success
+- 互动：interactions
+- Only through 是半倒装句
+- 合作的技巧：the art of cooperation
+- 展示：demonstrate
+- 良好交际的重要性：the significance of relating well to others
+- 在学校期间：At school
+- 共同的努力：united effort
+- course ~= process
+- 怀着共同的目标：bearing in mind the common goal
+- 竭尽全力的做：are devoted to
+- 分内的工作：assigned part of …
+- 每个人如同构成一个引擎的部件一样紧密相连：
+    - Just like different components of an engine, everyone is interrelated.
+- 出现故障：refuse to function
+- 描绘：depict
+- 解决矛盾、冲突：resolve
+- 和谐地：harmoniously
+- conflict 可数
+
+
+
+## Passage 3
+
+### 第一段
+
+#### 中文
+
+不言而喻，评分制促使学生为争得“第一名”而努力学习。第一名在他们眼中是一个神圣的位置。没有人愿意落后。于是，一旦竞争在学生中展开，学习效率也许会得到提升。那些获胜者会更加努力捍卫自己的优势地位，而那些在竞争中失败的学生也会更加努力，从而抹去以前的失误并继续为下次能取得更好的成绩而奋斗。正是这种心理状态给予了学生学习的动力。
+
+#### 自翻
+
+Evidently, grading facilitates students studying hardly for competing for the ‘first place’. The first place is a 神圣的 position in their view. No one is willing to be left behind. Therefore, once competation happen among students, the efficiency of learning may improve. The winner will spend more effort on defending their advantage, while those students who fail in the competation will be more hard-working in order to remove the previous failure and continue to fight for better score in the next time. It is exactly this 心理状态 gives students motivation to study.
+
+#### 他翻
+
+Evidently, the grading system **urges** students to study hard for the "Top One", a **sacred** position in their eyes. No one wishes to fall behind. Thus, once a competition is started among the classmates, learning efficiency might be enhanced. Those who win will make greater efforts to **safeguard** their **superior** results, whereas those who lose in the competition will work harder to erase past mistakes and continue the fight for a better outcome next time. It is due to such a mental state that students gain the **initiative** to learn.
+
+#### 积累
+
+- 力劝，催促，驱策，推进：urge   
+- urge sb to do
+- 第一名：“Top One”
+- 神圣的：sacred
+- 落后：fall behind
+- competition 可数
+- 效率“增加”可以用：enhance
+- make greater efforts to 更加努力做…
+- 捍卫：safeguard
+- 卓越的成果：superior result
+- whereas ~= while
+- 抹去失误：erase mistakes
+- score 可数
+- in the next time 不是正确用法，next time 就行
+- 心理状态：mental state
+- initiative
+    - 名词：主动性；积极性；新方案
+    - 主动的；自发的
+
+<img src="./translation_training.assets/image-20250302200511452.png" alt="image-20250302200511452" style="zoom:33%;" />
+
+
+
+## Passage 4
+
+### 第一段
+
+#### 中文
+
+首先，家庭作业帮助学生复习学过的知识并预习新内容。毋庸置疑，学生们需要利用一段时间来仔细消化所积累的知识，而写作业就是吸收知识的有效途径之一。通过完成适量的练习题以及一些记忆任务，学生可以进一步理解所学知识。之后简单的预习可以使学生初步熟悉新知识，这样他们更容易理解第二天老师即将教授的内容。
+
+#### 自翻
+
+First, homework help==s== students review learned knowledge and preview new content. Undoubtly, students need some time to digest knowledge accumulated carefully, and doing homework is one of effective ways to absorb knowledge. Through accomplishing an appropriate amount of practicing questions and some memorizing tasks, students can faster conprehend knowledge that they have learned. After that simply preview allows students to be fimilar with new knowledge 初步地. In that case, they can understand content that their teachers are going to teach next day more easily.
+
+#### 他翻
+
+**Primarily**, homework helps the students to review what has been learned and prepare for the new. Needless to say, a period of time is needed to carefully **digest** the accumulated knowledge. Doing homework is an effective way to **assimilate** knowledge. Through having a suitable amount of exercises and memorizing tasks, further comprehension is obtained. Afterwards, a brief preview **familiarizes** the students **with** the new knowledge, thus making it easier for them to understand what will be taught the next day.
+
+#### 积累
+
+- 首先：primarily
+- 预习新知识：prepare for the new
+- 毋庸置疑：Needless to say
+- 一段时间：a period of time  
+- 吸收知识不要一直单一的 absorb 还可以用 assimilate
+- 一定的练习题和记忆任务：a suitable amount of exercises and memorizing tasks
+- 进一步：further 不是 faster
+- 对…有进一步的理解：further comprehension is obtained
+- 之后：Afterwards
+- 使 … 熟悉：familiarize … with
+
+
+
+### 第三段
+
+#### 中文
+
+然而，每天过多的作业负担占据了学生的课余时间。他们应当有更多的时间放松身心，培养自己的爱好或参与其他有益的活动。教育不应当仅仅限制在课堂上所学的知识范围内。如果剥夺了他们做自己喜欢做的事的自由，那么，他们的学习热情也可能将被极大地削弱。此外，功课的负担应当减轻。超负荷的作业量只能导致学生的逆反心理。劳逸结合对于一个人的全面发展是至关重要的。
+
+#### 自翻
+
+However, the 负担 of too many homework everyday occupy the the 课余 time of students. They should have more time to relax, cultivate their own habits or engaging in other beneficial activities. Education do not surpose to be elimilated inside the scale of knowledge learned in class. If students are taken of the freedom to do things their love, in that case, the learning passion also could be lessen significantly. Otherwise, the 负担 of the homework should be lessen. Overload homework only lead to the rebellion of students. The balance of relaxing and working is crucial for one’s overall development. 
+
+#### 他翻
+
+However, too much homework every day **takes up** the students' leisure time. They deserve more time for relaxing and for hobbies and other beneficial activities. Education should not **be confined to** what has been taught at school. If they are deprived of the freedom to do anything they like, their enthusiasm in learning might fade considerably. In addition, the amount of homework should be reduced. Excessive homework can only lead **to rebel psychology** on the part of the students. The balance between work and play is of paramount importance for the comprehensive development of an individual
+
+#### 积累
+
+- 占据：take up
+- 课余时间【空闲时间】：leisure time
+- 爱好：hobby
+- 局限于：be confined to
+- 剥夺：deprive ~= take away
+    - deprive sb of sth
+- 热情：enthusiasm
+- 热情褪去：enthusiasm fade
+- 过多的：excessive
+- 逆反心理：rebel psychology
+- 重要的：paramount 
+
+
+
+## Passage 5
+
+### 第一段
+
+#### 中文
+
+一个人综合素质的主要因素是什么呢？答案就隐藏在任何渴望光明前途的人应该具备的基本技能里。在这些技能中，口头表达能力和写作能力都需要引起足够重视。当两者同时被提出时，争议便油然而生。一部分人更注重口头表达能力，而另一部分人与之相反。
+
+#### 自翻
+
+What is the overall ability of one person?  The answer is hidden in the basic skills of any person who is thirsty of brighten future. Among those skills, the ability of verbal experssion and writing need to be emphasize. When they are pointed out meanwhile, controversy exists. Some of people pay more attention to verbal experssion, the other are on the contrast.
+
+1. "experssion" → "expression" (spelling error)
+
+2. "need to be emphasize" → "need to be emphasized" (wrong verb form, "emphasized" should be in past participle form)
+
+3. "Some of people" → "Some people" (incorrect usage of "of")
+
+4. "the other are on the contrast" → "the others are on the contrary" (incorrect phrase; "the other" should be "the others," and "on the contrast" should be "on the contrary")
+
+#### 他翻
+
+What **is supposed to** be the major elements that make up one's overall quality? The answer lies in those essential skills that anyone who dreams of a bright future ought to be equipped with. Among these abilities, both speaking and writing are to be **emphasized**. A general **controversy** rises up when the two are presented together. Some people attach greater importance to speaking than writing, while others hold the opposite attitude.
+
+#### 积累
+
+- 综合素质：overall quality
+- 基本技能：essential skills
+- bright future
+- 强调：emphasize
+- 争议产生：a controversy rises up
+- 更注重：attach greater importance to
+- …持有相反意见：hold the opposite attitude
+
+
+
+## Passage 6
+
+#### 中文
+
+无数世界名人的成功事迹证明了一个道理，那就是，光明的前途是掌握在自己手中的。能够被有影响力的人或潜在的雇主所发掘和承认仅仅是一个幸运的机遇或一个好机会而已。利用他们的帮助也许可以更轻易地得到某个美差。然而，一个人是否能最终获得成功大多取决于其不懈的努力。以前的成就已成为历史。因此，他／她的实力应该得到加强，并且需要取得崭新的成就，否则那些机遇就会被荒废，徒劳无果。我认为，得到他人的接受与支持仅仅是成功的外因，而并非决定性因素。
+
+#### 自翻
+
+The success of numerous famous people verity a truth, that is, bright future is grasped in our own hands. Enabling to be 发掘 and admit by influenced poeple or potential employers is only a fortuanate 机遇 or a good chance. It may be easier to get certain good job through their help. However, whether one person can achieve success almost depends on the persistent diligence. Former achievement have been the history. Therefore, the ability of his/her should be stregthen, and need to achieve bigger success,  or the chances will be 荒废, 徒劳无果. From my point of view, acquiring the support and 接受 from others only is the 外部的 reason, but not the 决定性的 factor.
+
+1. "verity a truth" → "verify a truth"
+     *原因：* “verity” 是名词，意思是“真实性”，但这里需要动词“verify”（验证、证明）。
+2. Enabling” 这里用法错误，应该用被动结构“Being discovered and recognized”。
+3. “fortuanate” 拼写错误，应为 “fortunate”。
+4. “certain good job” 语法错误，应该是 “a good job”。
+5. “almost depends” 语法错误，应该用 “largely depends”。
+6. “Former achievement” 语法错误，应该是 “Past achievements”（过去的成就）。
+7. “stregthen” 拼写错误，应为 “strengthened”。
+
+#### 他翻
+
+The success stories of numerous world-renowned celebrities justify the idea that one's bright future **is held in the palm of his own hand**. Being discovered and acknowledged by influential people, or potential employers, is only a fortunate encounter, or a good opportunity. Taking advantage of their help might make it easier to obtain a satisfactory post. Nonetheless, whether one can finally succeed or not depends largely on his **consistent** efforts. Previous accomplishments have already become history. Therefore, one's strengths should be further developed and new accomplishments achieved, otherwise such opportunities will be wasted and **futile**. As far as I am concerned, being accepted and sustained by others is only an **external** rather than **decisive factor** of success.
+
+#### 积累
+
+- 世界名人：world-renowned celebrities
+- 证实：justify
+- 掌握在…手中：be held in the palm of his own hand
+- 被…发掘和承认：Being discovered and acknowledged
+- 有影响力的：influential
+- 机遇：[fortunate] encounter
+- 利用…[为自己谋取便宜]：take advantage of 
+- 表转折： Nonetheless
+- consistent effort ~= persistent diligence
+- 先前的成就：previous accomplishments
+- Therefore, one's strengths should be further developed and new accomplishments achieved, otherwise such opportunities will be wasted and **futile**.
+    - one’s strengths are developed
+    - new accomplishments achieve
+    - the opportunities are wasted and futile[徒劳的]
+- From my point of view ~= As far as I concerned
+- 别人的支持和接受：being accepted and sustained by others
+- 外因：external
+- 决定性因素：decisive factor
