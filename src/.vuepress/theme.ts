@@ -12,8 +12,6 @@ export default hopeTheme({
     name: "XiaoXianYue",
     url: "https://bougiemoonintaurus.com",
   },
-  iconPrefix: "iconfont icon-",
-  iconAssets: "https://bornforthis.cn/icon/iconfont.css",
 
   logo: "/logo.jpg",
 
@@ -119,8 +117,69 @@ export default hopeTheme({
       "/zh/internship/istarshine01.html":["istar_sum"],
     },
   },
+  markdown: {
+    figure: true,
+    imgLazyload: true,
+    imgMark: true,
+    imgSize: true,
+    mark: true,
+    codeTabs: true,
+    tabs: true,
+    math: true,
+    hint: true,
+    alert: true,
+    chartjs: false,
+    echarts: false,
+    mermaid: false,
+    vuePlayground: false,
+    sub: true,
+    spoiler: true,
+    sup: true,
+    demo: true,
+    tasklist: true,
+    include: true,
+    attrs: false,
+    footnote: true,
+    align: true,
+    flowchart: false,
+    gfm: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    highlighter: {
+      type: "shiki",
+      collapsedLines: 15,
+      //   lineNumbers: 1,
+      notationDiff: true,
+      notationFocus: true,
+      highlightLines: true,
+      notationHighlight: true,
+      langAlias: {
+        ["arduino"]: "python",
+      },
+      theme: "monokai",
+
+    },
+    vPre: true,
+  },
 
   plugins: {
+    icon: {
+      prefix: "iconfont icon-",
+      assets: [
+        "https://bornforthis.cn/icon/iconfont.css",
+      ],
+    },
     search: {
       maxSuggestions: 16,
       hotKeys: [],
@@ -142,73 +201,7 @@ export default hopeTheme({
     // },
 
     // all features are enabled for demo, only preserve features you need here
-    markdownImage: {
-      mark: true,
-      size: true,
-      lazyload: true,
-      figure: true,
-    },
-    markdownHint: {
-      hint: true,
-      alert: true,
-    },
-    markdownTab: {
-      codeTabs: true,
-      tabs: true,
-    },
-    markdownMath: true,
-    mdEnhance: {
-      align: true,
-      attrs: true,
-
-      // install chart.js before enabling it
-      // chart: true,
-
-      // insert component easily
-      // component: true,
-
-      demo: true,
-
-      include: true,
-
-      // install katex before enabling it
-      // katex: true,
-
-      // install mathjax-full before enabling it
-      // mathjax: true,
-
-      mark: true,
-
-      // install mermaid before enabling it
-      // mermaid: true,
-
-      playground: {
-        presets: ["ts", "vue"],
-      },
-
-      // install reveal.js before enabling it
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      vPre: true,
-
-    },
+  
 
   },
 });
