@@ -24,15 +24,24 @@ toc: true
 
 #### 大学生要学习，没空做别的事情
 
-很多事做 —— 作为一个大学上，被 schoolwork 充满 —— 写论文，做研究，参加社团活动 —— 没时间做其他事情
+- 很多事做 —— 作为一个大学上，被 schoolwork 充满 —— 写论文，做研究，参加社团活动 —— 没时间做其他事情
 
-对大学生来说，最重要的就是 to do well academically —— 学业成功和拿到好成绩是很有意义的 —— 进入社会后，他们在大学优异的表现可能会给 on 他们面试 apply to的公司的HR带来 leave 好印象 —— 认真学习到的知识也对以后的事业有帮助
+- 对大学生来说，最重要的就是 to do well academically —— 学业成功和拿到好成绩是很有意义的 —— 进入社会后，他们在大学优异的表现可能会给 on 他们面试 apply to的公司的HR带来 leave 好印象 —— 认真学习到的知识也对以后的事业有帮助
 
 > 如果强迫他们做其他除了学习以外的事呢
+>
+> 这点也可以用在父母，老师，朋友强迫对方做啥做啥
 
-他们只会严肃对待对 academic work 有好处的事情 —— 别的事：chore nuisance —— 不会投入精力 —— 产生不好情绪
+- 他们只会严肃对待对 academic work 有好处的事情 —— 别的事：chore nuisance —— 不会投入精力 —— 产生不好情绪 —— 争执，outright rebellion
 
 
+
+#### 朋友之间
+
+> 观点不同
+
+- 不同的 world views/ outlooks on life / moral value ——engaging in various standpoints ——  让我们批判性思考、不同 perspective 看世界 —— 加强我们的理解力包容力 reasoning and tolerance —— 让友谊变得更有价值
+- 朋友是独立的个体 —— 他们有自己的想法和价值 —— 我们应该承认对方的自主权，鼓励独立思考 —— 建立健康平衡的关系
 
 
 

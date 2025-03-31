@@ -1,5 +1,5 @@
 ---
-title: 早停调参
+title: 卷积神经网络
 icon: alias
 date: 2025-3-18 15:52:11
 author: XiaoXianYue

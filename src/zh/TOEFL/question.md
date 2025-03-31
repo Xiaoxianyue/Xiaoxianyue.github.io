@@ -22,6 +22,24 @@ backToTop: true
 toc: true
 ---
 
+### 听力不熟单词
+
+| 重要单词      | 中文         |
+| ------------- | ------------ |
+| topography    | 地形（学）   |
+| precipitation | 降水         |
+| arctic        | 北极的；北极 |
+| layer         | 层           |
+| pile          | 堆           |
+| vapor         | 蒸汽         |
+|               |              |
+|               |              |
+|               |              |
+
+
+
+
+
 阅读：
 
 - 短句可以直接看
@@ -75,6 +93,7 @@ toc: true
 | secrete       | 分泌                 |
 | descend       | 遗传，下降           |
 | apparatus     | 器械 设备            |
+| trait         | 特性；属性           |
 
 
 
