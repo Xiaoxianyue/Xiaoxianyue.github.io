@@ -72,6 +72,9 @@ toc: true
 | debris        | 碎片                 |
 | revolve       | 旋转                 |
 | stationary    | 固定的，静止的       |
+| secrete       | 分泌                 |
+| descend       | 遗传，下降           |
+| apparatus     | 器械 设备            |
 
 
 

@@ -1250,3 +1250,44 @@ The success stories of numerous world-renowned celebrities justify the idea that
 - 别人的支持和接受：being accepted and sustained by others
 - 外因：external
 - 决定性因素：decisive factor
+
+
+
+
+
+## Passage 7
+
+### 中文
+
+首先，一旦任务启动，分分秒秒都要充分利用。节约一秒也就等于赢得了一秒。刻意的拖延是浪费时间，而且可能会导致严重的后果。因此，需要制定可行的日程表并严格遵守。任何人都不允许拖拖拉拉地工作。可以这么说，确定好的期限是敦促人们专注于工作的最有效刺激因素。在多数情况下，能提前做完工作也会给人一种自我满足感，于是，在将来的工作中，他们会保持这种热情。
+
+### 自翻
+
+Ppreliminarily once the task start, every second should be fully used. Saving one second means that we win one seconds. Delaying deliberately is a waste of time, and it may lead to serious consequence. Therefore, we need to make an available plan and strictly follow it. No one is allowed to work lazily. We can say that, assuring the deadline is the most effective stimulating factor to encourage people to focus on working. In most case, being able to finish the work early makes people feel fulfilled. In that case, they will maintain the enthusiasm in the future work.
+
+### 他翻
+
+In the first place, every minute should be made full use of once a task is **initiated**. A second saved is a second gained. Any **intentional** delay is a waste of time and might lead to **severe consequences**. Therefore, a feasible schedule should be drafted and strictly followed. Nobody is allowed to work slowly. In a sense, deadlines that have been settled are the most effective stimulus urging people to concentrate on their work. In most cases, completing a job ahead of time can also give a person that sense of self-fulfillment, thus helping maintain their enthusiasm in the future.
+
+### 积累
+
+initiate ~= start 开始 发起
+
+格言：a second saved is a second gained.
+
+severe ~= serious
+
+故意的：intentional
+
+制定可行的日程表：draft a feasible schedule 
+
+在某种程度上：In a sense/To some degree/To some extent
+
+设置日期：settle deadlines
+
+激励因素：stimulus
+
+提前：ahead of time
+
+满足感：a sense of self-fulfillment
+
