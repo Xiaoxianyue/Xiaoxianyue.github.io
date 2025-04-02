@@ -24,17 +24,31 @@ toc: true
 
 ### 听力不熟单词
 
-| 重要单词      | 中文         |
-| ------------- | ------------ |
-| topography    | 地形（学）   |
-| precipitation | 降水         |
-| arctic        | 北极的；北极 |
-| layer         | 层           |
-| pile          | 堆           |
-| vapor         | 蒸汽         |
-|               |              |
-|               |              |
-|               |              |
+| 重要单词         | 中文               |
+| ---------------- | ------------------ |
+| topography       | 地形（学）         |
+| precipitation    | 降水               |
+| arctic           | 北极的；北极       |
+| layer            | 层                 |
+| pile             | 堆                 |
+| vapor            | 蒸汽               |
+| fascinate        | 使着迷             |
+| module           | 单元；宇宙飞船     |
+| satellite        | 卫星               |
+| lava             | 熔岩 岩浆          |
+| formation        | 形成 构成          |
+| magma            | 岩浆               |
+| in the same spot | 在同一处           |
+| sloping          | 有坡度的           |
+| tectonic plate   | 构造的 plate读音！ |
+| discrete         | 独立的，不连续的   |
+| scatter          | 分散               |
+| sulfur           | 硫                 |
+| fluctuation      | 波动               |
+|                  |                    |
+|                  |                    |
+|                  |                    |
+|                  |                    |
 
 
 

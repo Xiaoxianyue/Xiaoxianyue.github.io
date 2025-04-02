@@ -19,14 +19,16 @@ headerDepth: 5
 lastUpdated: true
 editLink: false
 backToTop: true
-toc: true
+toc: true 
 ---
 
-#### 大学生要学习，没空做别的事情
 
-- 很多事做 —— 作为一个大学上，被 schoolwork 充满 —— 写论文，做研究，参加社团活动 —— 没时间做其他事情
 
-- 对大学生来说，最重要的就是 to do well academically —— 学业成功和拿到好成绩是很有意义的 —— 进入社会后，他们在大学优异的表现可能会给 on 他们面试 apply to的公司的HR带来 leave 好印象 —— 认真学习到的知识也对以后的事业有帮助
+>  大学生要学习，没空做别的事情
+
+- 很多事做 —— 作为一个大学上，被 schoolwork 充满 [overwhelmed] —— 写论文，做研究，参加社团活动 —— 没时间做其他事情
+
+- 对大学生来说，最重要的就是 to do well academically —— 学业成功和拿到好成绩是很有意义的 —— 进入社会后，他们在大学优异的表现可能会给 on 他们面试 apply to的公司的HR带来 leave 好印象 —— 认真学习到的知识也对以后的事业有帮助 —— 这意味他们完成工作得更好
 
 > 如果强迫他们做其他除了学习以外的事呢
 >
@@ -36,20 +38,45 @@ toc: true
 
 
 
-#### 朋友之间
+
 
 > 观点不同
 
 - 不同的 world views/ outlooks on life / moral value ——engaging in various standpoints ——  让我们批判性思考、不同 perspective 看世界 —— 加强我们的理解力包容力 reasoning and tolerance —— 让友谊变得更有价值
+
+> 这点也可以用在父母，老师，朋友强迫对方做啥做啥
+
 - 朋友是独立的个体 —— 他们有自己的想法和价值 —— 我们应该承认对方的自主权，鼓励独立思考 —— 建立健康平衡的关系
 
 
 
+> 住大房子
+
+- 我有更多日常活动空间 —— 我还有额外的空间 —— 我可能有一个小房子没有的厨房 —— 不然我只能出去吃油腻不健康的食物  —— 
 
 
-#### 学画画[艺术]的好处
 
-> Do you agree or disagree with the following statement? **It is important for children to learn to draw or paint.** Use details and examples to explain your opinion.
+> 体育运动，健身
+
+- 做一些体育运动， 如 … —— 来保持身体活跃 —— focused motivated —— 提升学习效率 —— 提升能量水平
+
+- 养成好习惯 —— doing exercise on a regular basis 成为日常 —— 自律 —— stick to 学习目标
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> 学画画[艺术]的好处
 
 1. 培养创造力 —— 通过观察学习他人的作品 —— 对一些细节，情感能更敏感 —— 提升观察力和想象力 —— 激发创造力
 2. 丰富精神世界 —— 带来情感共鸣和释放 —— 更好地了解自己和他人 —— 提升内在修养 [enhance inner cultivation] 与生活品质
