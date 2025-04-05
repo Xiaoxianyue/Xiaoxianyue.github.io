@@ -45,10 +45,29 @@ toc: true
 | scatter          | 分散               |
 | sulfur           | 硫                 |
 | fluctuation      | 波动               |
+| blood            | 血                 |
+| make up          | 组成               |
+| dives            | 不是die啊          |
+| organ            | 器官               |
+| mystify          | 迷惑住             |
+| arguably         | 可论证的；可以说   |
+| administrative   | 行政的             |
+| linguistic       | 语言上的           |
+| essentially      | 基本上             |
+| interpret        | 理解               |
+| equip            | 读音！             |
+| astronaut        | 宇航员             |
+| expand shrink    | 扩大 收缩          |
+| rupture          | 破裂               |
+| manufacture      | 制造               |
+| rhythm           | 节奏               |
+| coral            | 珊瑚               |
 |                  |                    |
 |                  |                    |
-|                  |                    |
-|                  |                    |
+
+
+
+
 
 
 
