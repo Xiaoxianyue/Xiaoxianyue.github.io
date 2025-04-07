@@ -50,16 +50,18 @@
 
 - **上传数据集**：
 
-这里文本文件上传不上去，改成了 JSONL 格式的。忘记截图了。后面可以看到只能导出 JSONL 格式的文件。
-
 <img src="./s_ass12.assets/image-20250401212238512.png" alt="image-20250401212238512" style="zoom: 25%;" />
 
 - **创建标签**
 
-<img src="./s_ass12.assets/image-20250402001439402.png" alt="image-20250402001439402" style="zoom: 25%;" />
+![image-20250405205335946](./s_ass12.assets/image-20250405205335946.png)
 
 - **开始手动标注**
 
 ![image-20250402001942673](./s_ass12.assets/image-20250402001942673.png)
 
 - 导出标注好的文件
+
+![image-20250405205736375](./s_ass12.assets/image-20250405205736375.png)
+
+![image-20250405205851373](./s_ass12.assets/image-20250405205851373.png)

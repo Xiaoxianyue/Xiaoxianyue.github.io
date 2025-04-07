@@ -22,48 +22,66 @@ backToTop: true
 toc: true
 ---
 
-### 听力不熟单词
+### 听力不熟单词/词组
 
-| 重要单词         | 中文               |
-| ---------------- | ------------------ |
-| topography       | 地形（学）         |
-| precipitation    | 降水               |
-| arctic           | 北极的；北极       |
-| layer            | 层                 |
-| pile             | 堆                 |
-| vapor            | 蒸汽               |
-| fascinate        | 使着迷             |
-| module           | 单元；宇宙飞船     |
-| satellite        | 卫星               |
-| lava             | 熔岩 岩浆          |
-| formation        | 形成 构成          |
-| magma            | 岩浆               |
-| in the same spot | 在同一处           |
-| sloping          | 有坡度的           |
-| tectonic plate   | 构造的 plate读音！ |
-| discrete         | 独立的，不连续的   |
-| scatter          | 分散               |
-| sulfur           | 硫                 |
-| fluctuation      | 波动               |
-| blood            | 血                 |
-| make up          | 组成               |
-| dives            | 不是die啊          |
-| organ            | 器官               |
-| mystify          | 迷惑住             |
-| arguably         | 可论证的；可以说   |
-| administrative   | 行政的             |
-| linguistic       | 语言上的           |
-| essentially      | 基本上             |
-| interpret        | 理解               |
-| equip            | 读音！             |
-| astronaut        | 宇航员             |
-| expand shrink    | 扩大 收缩          |
-| rupture          | 破裂               |
-| manufacture      | 制造               |
-| rhythm           | 节奏               |
-| coral            | 珊瑚               |
-|                  |                    |
-|                  |                    |
+| 重要单词          | 中文                 |
+| ----------------- | -------------------- |
+| topography        | 地形（学）           |
+| precipitation     | 降水                 |
+| arctic            | 北极的；北极         |
+| layer             | 层                   |
+| pile              | 堆                   |
+| vapor             | 蒸汽                 |
+| fascinate *       | 使着迷               |
+| module *          | 单元；宇宙飞船       |
+| satellite *       | 卫星                 |
+| lava              | 熔岩 岩浆            |
+| formation         | 形成 构成            |
+| magma             | 岩浆                 |
+| in the same spot  | 在同一处             |
+| sloping           | 有坡度的             |
+| tectonic plate    | 构造的 plate读音！   |
+| discrete          | 独立的，不连续的     |
+| scatter           | 分散                 |
+| sulfur            | 硫                   |
+| fluctuation       | 波动                 |
+| blood             | 血                   |
+| make up           | 组成                 |
+| dives             | 不是die啊            |
+| organ             | 器官                 |
+| mystify           | 迷惑住               |
+| arguably          | 可论证的；可以说     |
+| administrative    | 行政的               |
+| linguistic        | 语言上的             |
+| essentially       | 基本上               |
+| interpret         | 理解                 |
+| equip             | 读音！               |
+| astronaut         | 宇航员               |
+| expand shrink     | 扩大 收缩            |
+| rupture *         | 破裂                 |
+| manufacture       | 制造                 |
+| rhythm            | 节奏                 |
+| coral             | 珊瑚                 |
+| in essence        | 本质上               |
+| monument          | 纪念碑               |
+| display           | 展示                 |
+| be concerned with | 关心                 |
+| impressed         | 印象深刻的           |
+| for that matter   | 甚至，就此方面而言   |
+| bring an end      | 有连读               |
+| inspiration       | 灵感                 |
+| skeptics          | 怀疑者 （skeptical） |
+| sharpen           | 清晰                 |
+| assertiveness     | 自信，魄力           |
+| poetry            | 诗歌                 |
+| innovative        | 创新                 |
+| heritage          | 遗产                 |
+| incorporate       | 合并，包含，吸收     |
+|                   |                      |
+|                   |                      |
+|                   |                      |
+|                   |                      |
+|                   |                      |
 
 
 
@@ -127,6 +145,8 @@ toc: true
 | descend       | 遗传，下降           |
 | apparatus     | 器械 设备            |
 | trait         | 特性；属性           |
+| membrane      | 膜                   |
+| receptacle    | 容器                 |
 
 
 

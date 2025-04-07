@@ -139,3 +139,9 @@ toc: true
 
 2. 家里用的食材更干净 —— 我可以在 farmers‘ markets 或者 local store 中挑选新鲜的食材【from】—— 但在外面，没 guarantee 外面的食材是有机新鲜的
 
+
+
+> 大学管理部门来设置大学生课程体系
+
+1. 能做出更合理的的决定 —— 他们有更多经验设计syllabus —— 知道学生改上什么课，其他是不必要的 —— 提供系统的课程表 
+2. 无法满足所有学生需求 —— conflict rebellion —— 如果一个学生被迫遵守其他学生的想法，他会不高兴resentment
