@@ -77,9 +77,9 @@ toc: true
 | innovative        | 创新                 |
 | heritage          | 遗产                 |
 | incorporate       | 合并，包含，吸收     |
-|                   |                      |
-|                   |                      |
-|                   |                      |
+| asteroid          | 小行星               |
+| comet             | 彗星                 |
+| encounter         | 遭遇                 |
 |                   |                      |
 |                   |                      |
 
