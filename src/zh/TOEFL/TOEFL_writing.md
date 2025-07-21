@@ -78,7 +78,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - prefer A to B= would rather do A than B
     - I would rather do … rather than do… or ==prefer to do… rather than do==…
 - 设法处理，解决：address = handle
-- a great number of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of
+- **a large number/amount of = huge quantities of = heaps of = loads of = tons of = a crowd of =不可数= plenty of = a great deal of+不可数**
 - 同时：whilst
 - 负责：in charge of 
 - 清洁：clean up the mess
@@ -86,39 +86,39 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 给人感觉：give others the impression
 - 爱出风头，自大：attach too much importance to oneself
 - 群体，集体：community
-- way = manner
+- **way = manner**
 - 至交：intimate
 - 无忧无虑的：carefree
 - 干涉，介入：interference
 - 在 （毕业，生日，工作）的日子里：On (birthdays or graduation) days
 - 珍视，爱护：cherish = value
 - 费力做：take trouble to 
-- about = regarding
-- 重大的重要的，意义重大的 meaningful = significant 
+- **about = regarding**
+- **重大的重要的，意义重大的 meaningful = significant** 
 - support = in favor of
 - destine to be
-- 正如人们普遍认为的：As is vastly acknowledge
+- **正如人们普遍认为的：As is vastly acknowledged**
 - 构成；组成：constitute
-    - Higher education doubtlessly **constitutes** a crucial stage during the long journey toward shining success.
-- In spite of = although = even though = notwithstandimg
-- therefore = thus = hence = as a result
+    - Higher education doubtlessly **constitutes a crucial stage** during the long journey toward shining success.
+- **In spite of = although = even though = notwithstanding**
+- **therefore = thus = hence = as a result**
 - 否认：deny
 - 个人发展：self-development
 - **play an important role in ~= Have a major impact on ~= Be crucial to**
 - 合格的：qualified
 - 在象牙塔（指学校）中获得的：accumulated inside this ivory tower
-- 有着长远影响：produce far-reaching influences on
+- **有着长远影响：produce far-reaching influences on**
 - 与。。。不同的是：unlike …, …
 - 初等教育：preliminary education
 - 将知识应用于实践：put knowledge into practice
 - 实事求是：seek truth from the facts
 - 抒发观点：express opinions
 - 具备：equipped with
-- 掌握：grasp
+- **掌握：grasp**
 - 专业的：specialized
-- 把 … 视作：define/regard/consider/deem … as
+- **把 … 视作：define/regard/consider/deem … as**
 - 卓越的，杰出的：eminent / prominent / distinguish
-- 杰出的人物：eminent figure
+- **杰出的人物：eminent figure**
 - 丰富的，大量的【一般修饰不可数名词】：abundant
 - 令人惊奇的：astounding
 - … 成为关注的焦点：… be brought into the limelight
@@ -129,29 +129,29 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - ==坚定的意志：strong will==
 - 创造力：creativity
 - **坚持不懈的努力：everlasting diligence = persistent/coherent effort**
-- 不言而喻的：evidently
-- 意义：significance = mean
+- **不言而喻的：evidently**
+- **意义：significance = mean**
 - **process** 作名词有：进程，过程，流程，程序的意思。这里着重强调教育是一直进行的一个东西，可以用 process 。
 - **possess** 拥有，同义替换 have
 - 从那时起【后接完成时】：Ever since / From that time on
 - 启发性的：enlightening
-- 理解，领悟，包含，包括：comprehend
+- **理解，领悟，包含，包括：comprehend**
 - 常识：common sense
-- 获得：acquire = gain = obtain = attain[达到] = receive[接受]
+- **获得：acquire = gain = obtain = attain[达到] = receive[接受]**
 - junior school 一般不指中学，指小学或初中
-- 表转折：Nevertheless
+- **表转折：Nevertheless**
 - 忽视，不重视，疏忽：neglect
 - 文凭：diploma
-- **坚持不懈的：unremitting = persistent = everlasting**
-- ==钢铁般的意志：iron determination==
-- 拼搏：endeavors
+- **坚持不懈的：unremitting = persistent = everlasting = coherent + diligence/effort/endeavors** 
+- **钢铁般的意志：iron determination**
+- **拼搏：endeavors**
 - 到了 … 的年纪：arrive at … age
 - bring forth
     - The debate brought forth many new ideas for solving the problem. 提出；产生
     - His actions brought forth widespread criticism from the public. 引起；导致
     - The artist's creativity brings forth incredible masterpieces. 创造；使出现
 - 普及：general adoption
-- 评价；评估：assess ~= evaluate ~=  estimate[估算] 
+- **评价；评估：assess ~= evaluate ~=  estimate[估算]** 
 - 一致，连贯的努力：coherent effort
 - [sth] 标志着 …：mark
 - each member is assigned to fulfill his/her own duty and every contribution ought not to be underestimated【低估】
@@ -161,9 +161,9 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 合作的，协作的：collaborative 
 - struggle with obscure[模糊的，隐藏的，使模糊，使隐藏] objective[目标，客观的，公正的]
 - When a team operates like a well-oiled machine, it will connect the hearts of all members. [比喻手法]
-- Indeed ~= Truthfully
+- **Indeed ~= Truthfully**
 - 培养：cultivate
-- ==在某种程度上：To some degree/extent==
+- **在某种程度上：To some degree/extent**
 - making each one count helps **eliminate** prejudices and undesirable moods that are **destructive** to the progress and result of the project.
     - make sb count 使某人发挥作用
     - eliminate prejudice 消除偏见
@@ -176,7 +176,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - the loss of responsibility and enthusiasm
 - 唤起/引起 … 意识：arouse awareness 
 - 滥竽充数：filling a post without real qualifications
-- 全心全意的 be wholehearted on ~= be devoted to
+- **全心全意的 be wholehearted on ~= be devoted to**
 - 假装的：in disguise
 - certain 代替 some 更高级
 - but also to remind them the importance of certain values. 
@@ -187,17 +187,17 @@ Finally, contrary to the author’s belief that … the lecturer says that …
     - mark 标志着
     - brand-new 崭新的
 - 在这样的现实面前：In the face of such reality
-- try 可以替换为 attempt
+- **try 可以替换为 attempt**
 - 二十岁的人：people in their twenties
 - From my point of view
-- course ~= process 过程
+- **course ~= process 过程**
     - during the course of doing
 - 无论他们从事的是哪方面的工作：No matter what type of job they are engaged in
 - 进入相关领域工作：be employed in a related field
 - 巧妙的：skillful
 - 跨国服装公司：multinational clothing corporation
-- 表示程度大的：considerably
-- 在某种程度上：In a sense
+- **表示程度大的：considerably~=significantly**
+- **在某种程度上：In a sense~=To some degree/extent**
 - ==diligent== work, perseverance==毅力==, and a strong sense of responsibility
 - 无可否认的是：undeniably
 - 在艰苦的条件下：under tough conditions
@@ -208,14 +208,14 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 突破：breakthrough
 - 在…的领域/界：in the field of …
 - 无敌的[智慧]：unmatchable [intelligence]
-- important ~= significant / pivotal / essential
+- **important ~= significant / pivotal / essential**
 - 举世瞩目的：the most noteworthy
-- 名誉：prestige ~= reputation
+- **名誉：prestige ~= reputation**
 - 全人类：the entire human race
 - effect ~= impact
 - 某人该受到责备/为某事负责：sb. be to blame
-- 消除偏见：eliminate the prejudice
-- 两面性：double-sided
+- **消除偏见：eliminate the prejudice**
+- **两面性：double-sided**
 - abuse 滥用
 - misapplication 误用
 - 灾难：catastrophes
@@ -232,7 +232,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - funds 资金
 - hygiene
 - 不怀好意的：ill-intentioned
-- 科学成果：scientific advancements
+- **科学成果：scientific advancements**
 - 被迫：be obliged to ~= have to
 - Only through / through 后接半倒装句
 - … 的技巧/艺术：the art of …
@@ -241,7 +241,7 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 共同的努力：united effort
 - course ~= process
 - 怀着共同的目标：bearing in mind the common goal
-- 忍受，携带：bear     牢记；记住：bear in mind
+- 忍受，携带：bear     **牢记；记住：bear in mind**
 - 竭尽全力的做：are devoted to
 - 分内的工作：the assigned apart of …
 - 紧密相连：interrelated
@@ -251,9 +251,9 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 更努力说：make greater efforts to …
 - 卓越的成果：superior result
 - 抹去失误：erase mistakes
-- 心理状态：mental state
+- 心理状态：mental state ~= psychological  
 - 首先：Firstly ~= Primarily
-- 毋庸置疑：Needless to say
+- **毋庸置疑：Needless to say ~= Evidently ~= Indeed ~= Truthfully**
 - 吸收知识：absorb ~= assimilate
 - 一定的：a suitable amount of
 - 有了进一步的理解：further comprehension is obtained
@@ -262,16 +262,15 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 占据了…的休闲世界：take up one’s leisure time
 - 教育不应该局限于学校所教的内容：
     - Education should not be confined to what has been taught at school.
-
 - considerably ~= significantly
 - 热情褪去：enthusiasm fade
 - 逆反心理：rebel psychology
-- 综合素质：overall quality
+- **综合素质：overall quality**
 - …是重要的 ~= …应该被强调：should be to be emphasized
 - 争议产生了：a controversy rises up
-- 重视：attach greater importance to…
+- **重视：attach greater importance to…**
 - …持有相反意见：hold the opposite attitude
-- 世界名人：world-renowned celebrities ~= influential people
+- **世界名人：world-renowned celebrities ~= influential people**
 - 掌握在…手中：be held in the palm of one’s own hand
 - 幸运的机遇：a fortunate encounter
 - 被挖掘、被承认：be discovered / be acknowledged
@@ -281,14 +280,24 @@ Finally, contrary to the author’s belief that … the lecturer says that …
 - 先前的成就：previous accomplishments
 - 提升能力：develop strengths
 - 机会会流失浪费：he opportunities are wasted and futile
-- As far as I concerned ~= From my point of view
+- **As far as I concerned ~= From my point of view**
 - 决定性因素：decisive factors
-
-
-
-
-
-
+- 开始着手，发起：initiate ~= start
+- 节约时间的格言： A second saved is a second gained
+- 严重的：severe ~= serious
+- 故意的：intentional
+- 制定可行的日程表：draft a feasible schedule
+- 在某种程度：In a sense/To some degree/To some extent
+- 满足感：a sense of self-fulfillment
+- **专心**：attentiveness ~= concentration
+- 时间限制：time restriction
+- 沉浸在：immerse himself in
+- 手头上的工作：task at hand
+- **the ability to 不是of**
+- youth 年轻人
+- **动力，推动力：impetus ~= motivation**
+- **为…努力奋斗：strive for** 
+- 提前，预先：in advance ~= ahead of time ~= beforehand
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: 听力课上课笔记
 icon: English
-date: 2024-3-12 15:58:21
+date: 2025-3-12 15:58:21
 author: XiaoXianYue
 isOriginal: true
 category: 
@@ -23,6 +23,10 @@ editLink: false
 backToTop: true
 toc: true
 ---
+
+![image-20250412105835444](./listen_class.assets/image-20250412105835444.png)
+
+
 
 ![image-20250312162736634](./listen_class.assets/image-20250312162736634.png)
 

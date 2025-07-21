@@ -1261,13 +1261,21 @@ The success stories of numerous world-renowned celebrities justify the idea that
 
 首先，一旦任务启动，分分秒秒都要充分利用。节约一秒也就等于赢得了一秒。刻意的拖延是浪费时间，而且可能会导致严重的后果。因此，需要制定可行的日程表并严格遵守。任何人都不允许拖拖拉拉地工作。可以这么说，确定好的期限是敦促人们专注于工作的最有效刺激因素。在多数情况下，能提前做完工作也会给人一种自我满足感，于是，在将来的工作中，他们会保持这种热情。
 
+第三，专心与谨慎有助于降低高速工作时犯错的几率。有了时间限制带来的精神压力，一个人的注意力就不会轻易分散。沉浸于手头的任务之中有助于避免犯下粗心的错误。鉴于这点，速度和质量也许并不完全相对立，反而与个人工作的满意度相辅相成。
+
 ### 自翻
 
-Ppreliminarily once the task start, every second should be fully used. Saving one second means that we win one seconds. Delaying deliberately is a waste of time, and it may lead to serious consequence. Therefore, we need to make an available plan and strictly follow it. No one is allowed to work lazily. We can say that, assuring the deadline is the most effective stimulating factor to encourage people to focus on working. In most case, being able to finish the work early makes people feel fulfilled. In that case, they will maintain the enthusiasm in the future work.
+Preliminarily once the task start, every second should be fully used. Saving one second means that we win one seconds. Delaying deliberately is a waste of time, and it may lead to serious consequence. Therefore, we need to make an available plan and strictly follow it. No one is allowed to work lazily. We can say that, assuring the deadline is the most effective stimulating factor to encourage people to focus on working. In most case, being able to finish the work early makes people feel fulfilled. In that case, they will maintain the enthusiasm in the future work.
+
+Thirdly, concentration and caution are helpful to decrease the possibility==likelihood== of making mistakes during 高速==high-speed== working. The concentration==attention== of a person will not be scattered==distracted== easily if there is the mental pressure brought by limitation of time. Devoting in processing tasks==being fully engaged in a task== enables people to avoid making careless mistakes. At this point, velocity==speed== and qualify==quality== may not absolute contradiction==contradictory==. On the other hand, it connected with the content of personal work.
+
+==From this perspective==
 
 ### 他翻
 
 In the first place, every minute should be made full use of once a task is **initiated**. A second saved is a second gained. Any **intentional** delay is a waste of time and might lead to **severe consequences**. Therefore, a feasible schedule should be drafted and strictly followed. Nobody is allowed to work slowly. In a sense, deadlines that have been settled are the most effective stimulus urging people to concentrate on their work. In most cases, completing a job ahead of time can also give a person that sense of self-fulfillment, thus helping maintain their enthusiasm in the future.
+
+In the third place, attentiveness and care help reduce the possibility of making mistakes when speed is required. With the mental pressure of time **restrictions**, one's attention may not be so easily **distracted**. **Immersing himself in** the task **at hand** can help him avoid careless mistakes. Taking this aspect into consideration, speed and quality may not be totally contradictory to one another, but rather complimentary to personal job satisfaction.
 
 ### 积累
 
@@ -1290,4 +1298,106 @@ severe ~= serious
 提前：ahead of time
 
 满足感：a sense of self-fulfillment
+
+专心：attentiveness ~= concentration
+
+谨慎：care
+
+时间限制： time restrictions
+
+分心： distract
+
+沉浸在： immersing himself in… 
+
+手头上的工作：task at hand
+
+鉴于： Taking this aspect in consideration\
+
+complementary 互补的
+
+complimentary 称赞的，免费的
+
+
+
+## Passage 8
+
+### 中文
+
+首先，计划组织才能为青年人迎接未来学业和事业中的挑战作准备。由于胸中怀有了明确的目标，他们就有动力为其拼搏，而且不易在中途迷路。预先的计划使所付出的努力有意义，同时还可提前预防意外发生。在大多数情况下，计划能力还使青年人远离对充满困难和迷惑的未来的恐惧与忧虑。
+
+### 自翻
+
+In the first place, the talent of planning and organizing enables young people to prepare for the challenges in future academic and career. With the specific goal in mind, they are motivative to put effort and hardly lost their way. Previous plans make the effort they put into meaningful, and also can avoid accidents. In most cases, the ability of planning can help young people to stay away from the fear and concern to the future with difficulties and confuses. 
+
+`the talent of` 是不自然的搭配，英文中更常说 “**the ability to plan**” 或 “**planning skills**”
+
+不是正确词。正确的形容词应为 “**motivated**”
+
+应为 “**put in effort**” 是固定搭配
+
+make the their effort more meaningful
+
+主语是 `plans`，但 `avoid accidents` 是人的行为, 可以说prevent problems
+
+confusion 名词形式！！
+
+### 他翻
+
+Above all, the ability to plan and organize prepares the youth for future academic and career challenges. With a clear goal in mind, they will have the **impetus** to strive for it and are less likely to **get lost** on the way. Planning ahead of time makes each endeavor meaningful. Besides, unwanted situations might be prevented in advance. In most cases, the ability to plan also keeps young people away from worry or fear of the future that is full of obstacles and mysteries.
+
+### 积累
+
+The ability ==to== 不是 of！！！！
+
+年轻人：youth
+
+动力，推动力：impetus ~= motivation
+
+为…努力奋斗：strive for …
+
+在途中迷失：get lost on the way
+
+拼搏：endeavor 可数
+
+提前，预先：in advance ~= ahead of time ~= beforehand
+
+the worry of/about, the fear of
+
+### 中文
+
+此外，早年的计划组织经验帮助青年人变得成熟起来。一旦一个孩子学会了计划组织的基本技巧，他／她也许会产生某些心理变化，从而帮助他们获得对周围世界更客观的认识。例如，如果他们曾经将几乎所有的课外时间都用在玩电脑游戏或看电视上，那么制订崭新的课外活动计划的机会到来了，他们有可能会逐渐意识到沉迷于电脑游戏是有害的。于是，诸如帮父母做家务、进行体育锻炼以及阅读有趣书籍之类的活动会增加。这标志着一个显著的进步：孩子变得更加成熟与明智了。由此可见，计划组织才能是多么重要。
+
+### 自翻
+
+Moreover, experience of planning in early years helps youth become mature. Once a child learn basical technologies of planning, he or she may go through certain mental changes, so that they can obtain a more 客观的 perspect to the surrounding. For instance, if they used to spend all leisure time playing computer games or watching TV, then when there are chances to make plans of extracurricular activities, they may realize that it is harmful to be addicted to computer games gradually. As a result, activities like helping parents do housework, doing exercise and reading interesting books will increase.  It presents a distinctive progress: children have become more mature and sensible. Therefore, we can see the importance of the ability to plan.
+
+### 他翻
+
+In addition, early planning and organizing experience helps young people to become mature. Once a child learns basic skills about how to plan and organize, there can be psychological changes that take place in the brain. These may help them obtain more objective views of the world around them. For example, if they used to spend almost all their leisure time playing computer games or watching TV and they are given an opportunity to make a new plan on **after-class activities**, they might gradually realize that the **obsession with** computer games was harmful to them. Activities like helping parents with housework, doing sports, and reading interesting books may increase. This marks a big step forward. The child becomes more mature and **sensible**, which indicates the importance of planning and organizing skills.
+
+
+
+### 积累
+
+==basic== 不是 basical
+
+==objective perspective==
+
+plan sth. 比较自然
+
+help sb. with sth. 更自然
+
+标志显著进步：mark a significant improvement/ a big step forward
+
+心理的： psychological
+
+客观的：objective
+
+课外活动：after-class activities
+
+对…的痴迷：obsession with…   addiction to（更侧重“上瘾”） 
+
+
+
+
 

@@ -134,7 +134,7 @@ I believe that people in the future will read fewer books than they do in the pr
 
 
 
-#### 2.1.3 学习教育
+#### 2.1.3 教别人
 
 Well, I totally agree that the best way to improve a skill is by teaching others. Because first, before teaching others certain skills, we need to be well-prepare for the teaching. **For example, I need to do research on the internet, read academic journals, or even do mock teaching in front of mirror** before demonstrating the knowledge to other people. In that case, I could have a better understanding of what I am going to teach. 
 
