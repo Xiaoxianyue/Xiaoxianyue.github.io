@@ -110,11 +110,11 @@ export default hopeTheme({
       "/zh/demo/encrypt.html": ["1234"],
       "/zh/internship/Aricultural_Bank_of_China.html":["internship"],
       "/zh/python1v1/":["python1v1"],
-      "/zh/TOEFL/":["tuofu107"],
-      "/zh/Advanced_Algorithms/":["aa100"],
       "/zh/Diary/Daily_assignment.html":["aoligei"],
       "/zh/internship/istarshine.html":["istarshine2501"],
       "/zh/internship/istarshine01.html":["istar_sum"],
+      "/zh/internship/self_introduce.html":["xxy040518"],
+      "/zh/TOEFL/":["toefl103"],
     },
   },
   markdown: {

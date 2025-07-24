@@ -15,7 +15,7 @@ export default defineUserConfig({
     "/zh/": {
       lang: "zh-CN",
       title: "奶酪奶酪",
-      description: "CS我跟你爆了",
+      description: "我跟你爆了",
     },
   },
 
